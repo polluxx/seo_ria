@@ -1,0 +1,12 @@
+{
+  "name": "seoriacom",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bazalt": "*",
+    "bootstrap": "~3.0.0",
+    "requirejs": "*"
+  },
+  "dependencies": {
+    "angular-local-storage": "~0.1.5"
+  }
+}

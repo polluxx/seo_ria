@@ -1,0 +1,63 @@
+<h1>Редагування елементів - <div class="view-link">{{view.link}}</div></h1>
+
+<div class="glyphicon glyphicon-floppy-save saveBtn" ng-show="dataCanSave" ng-click="saveData()"></div>
+
+<div class="view-wrap">
+    <ul class="nav nav-tabs">
+        <li ng-repeat="lang in langs" role="presentation"  ng-class="{'active': selectedLang == lang}" ><a ng-class="{'errors-has': lang.$error > 0}" ng-click="langSelect(lang)" href="javascript:void(0)">{{lang.name}}</a></li>
+    </ul>
+</div>
+
+<div class="content" ng-repeat="lang in langs" ng-show="selectedLang == lang">
+    <div class="col col-lg-6">
+        <div class="form-group has-feedback">
+            <label class="control-label" for="title_{{lang.id}}">Title</label>
+
+            <textarea  validate-input changeble="checkData()" class="form-control inputbox" id="title_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2"></textarea>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="description_{{lang.id}}">Description</label>
+
+            <textarea validate-input changeble="checkData()" class="form-control inputbox" id="description_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6"></textarea>
+        </div>
+
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="h1_{{lang.id}}">H1</label>
+
+            <textarea validate-input changeble="checkData()" class="form-control inputbox" id="h1_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2"></textarea>
+        </div>
+
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="seo_title_{{lang.id}}">Seo Title</label>
+
+            <input changeble="checkData()" class="form-control inputbox" id="seo_title_{{lang.id}}" aria-describedby="inputWarning2Status" type="text"/>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label class="control-label" for="seo_text_{{lang.id}}">Seo Text</label>
+
+            <textarea changeble="checkData()" class="form-control inputbox" id="seo_text_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6"></textarea>
+        </div>
+    </div>
+
+    <div class="col col-lg-6 variables">
+        <div class="form-group has-success has-feedback variables-block">
+            <label class="control-label" for="vars_{{lang.id}}">Список змінних до проекту "{{view.projectName}}"</label>
+
+            <textarea id="vars_{{lang.id}}" class="form-control inputbox variables-textbox" ng-focus="slideIn(lang)" ng-blur="slideOut(lang)" aria-describedby="inputWarning2Status" rows="27"></textarea>
+        </div>
+
+        <div class="passive view-variables" id="view-variables-{{lang.id}}">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                <button type="button" class="btn btn-default inputbox" ng-repeat="variable in variables" ng-click="selectVars(variable)">{{variable.name}}</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
