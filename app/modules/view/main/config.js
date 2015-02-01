@@ -9,7 +9,7 @@ define([
     module.config(['$routeSegmentProvider','bzConfigProvider', 'bzUserProvider',
         function($routeSegmentProvider, bzConfigProvider, bzUserProvider) {
             $routeSegmentProvider
-                .when('/view/:id', 'view')
+                .when('/view', 'view')
                 .segment('view', {
                     templateUrl: bzConfigProvider.templateUrl('/view.html'),
                     resolve: {

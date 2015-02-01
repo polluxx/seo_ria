@@ -50,15 +50,20 @@ requirejs.config({
         'ckeditor': '../assets/ckeditor/ckeditor',
         'select2': '../bower_components/select2/select2',
 
+
         'jquery-sticky': '../bower_components/jquery.sticky/jquery.sticky',
 
         'bootstrap-datepicker': '../bower_components/bootstrap-datepicker/js/bootstrap-datepicker',
-        'bootstrap-datepicker-locale': '../bower_components/bootstrap-datepicker/js/locales'
+        'bootstrap-datepicker-locale': '../bower_components/bootstrap-datepicker/js/locales',
+
+        'angular-bootstrap': '../bower_components/angular-bootstrap/ui-bootstrap.min',
+        'angular-bootstrap-tpl': '../bower_components/angular-bootstrap/ui-bootstrap-tpls.min'
     },
     shim: {
         'jquery': { exports: 'jQuery' },
         'angular': { exports: 'angular', deps: ['jquery'] },
         'angular-analytics': { deps: ['angular'] },
+        //'angular-bootstrap': { deps: ['angular-bootstrap-tpl'] },
         'angular-resource': { deps: ['angular'] },
         'angular-route': { deps: ['angular'] },
         'angular-animate': { deps: ['angular'] },

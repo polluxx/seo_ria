@@ -7,25 +7,16 @@ define([
         return $resource("view/", {}, {
             get: {
                 method:"GET",
-                url:'/view/:id',
-                params: {
-                    id:"@id"
-                },
+                url:'http://seo.ria.local:8081/seo/doc',
                 isArray:false
             },
             post: {
                 method:"POST",
-                url:'/view/:id',
-                params: {
-                    id:"@id"
-                }
+                url:'http://seo.ria.local:8081/seo/doc'
             },
             update: {
                 method:"PUT",
-                url:'/view/:id',
-                params: {
-                    id:"@id"
-                }
+                url:'http://seo.ria.local:8081/doc'
             }
         });
     }]);

@@ -8,7 +8,7 @@ define([
     module.config(['$routeSegmentProvider', 'bzConfigProvider', 'bzUserProvider',
         function($routeSegmentProvider, bzConfigProvider, bzUserProvider) {
             $routeSegmentProvider
-                .when('/childs/:id', 'childs')
+                .when('/childs/:project', 'childs')
                 .segment('childs', {
                     templateUrl: bzConfigProvider.templateUrl('/list.html'),
                     resolve: {

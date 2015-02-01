@@ -1,23 +1,45 @@
 <div class="main-list-wrap">
-    <div class="list-box" ng-repeat="link in list">
-        <div class="data-block" id="{{link.id}}">
-            <div class="list-name input-group-btn"><input class="form-control inputbox middle" type="text" value="{{link.name}}"></div>
+
+    <div  class="progress-button hide">
+
+        <button><span>Submit</span></button>
+
+        <svg id="progress-circle" class="progress-circle" width="70" height="70">
+            <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/>
+        </svg>
+        <!-- checkmark to show on success -->
+        <svg class="checkmark" width="70" height="70">
+            <path d="m31.5,46.5l15.3,-23.2"/>
+            <path d="m31.5,46.5l-8.5,-7.1"/>
+        </svg>
+
+        <!-- cross to show on error -->
+        <svg class="cross" width="70" height="70">
+            <path d="m35,35l-9.3,-9.3"/>
+            <path d="m35,35l9.3,9.3"/>
+            <path d="m35,35l-9.3,9.3"/>
+            <path d="m35,35l9.3,-9.3"/>
+        </svg>
+    </div>
+
+    <div ng-if="listData.data" class="list-box" ng-repeat="link in listData.data">
+        <div class="data-block" id="{{link._id}}">
+            <div class="list-name input-group-btn">
+
+            <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}"></div>
             <div class="list-link text">{{link.link}}</div>
-            <div class="list-op text"><a href="/view/{{link.id}}">Перегляд</a></div>
-            <div class="list-op text" ng-if="!link.parent"><a href="/childs/{{link.id}}">Нащадки</a></div>
+            <div class="list-op text"><a href="/view?q={{link._id}}">Перегляд</a></div>
+            <div class="list-op text" ng-if="!isChild"><a href="/childs/{{link.project}}?parent={{link._id}}">Нащадки</a></div>
         </div>
     </div>
-    <div class="paging">
+    <div ng-show="listData.data" class="paging">
         <nav>
-            <ul class="pagination pagination-sm">
-                <li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-            </ul>
+            <pagination total-items="listData.total" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="listData.pages"></pagination>
         </nav>
+
+    </div>
+
+    <div class="errorBox" ng-if="listData.data == undefined || listData.data.length == 0">
+        {{ listData.message || 'Данних не знайдено'}}
     </div>
 </div>

@@ -498,6 +498,8 @@ input.middle {
 
 .data-block .text {
     padding-top: 10px;
+    max-width: 400px;
+
 }
 
 .data-block .list-date{
@@ -705,12 +707,14 @@ svg:not(:root) {
     position: relative;
 }
 .search-icon {
-    position:absolute;
+    position:absolute  !important;
     right:1px;
-    top:2px;
+    top:1px;
     padding:11px;
     overflow:hidden;
     background: #fff;
+    width: 38px !important;
+    height: 38px;
 }
 
 
@@ -746,6 +750,10 @@ svg:not(:root) {
     width: 100%;
 }
 
+.view-link {
+    fon
+}
+
 .variables {
     position: relative;
 }
@@ -754,11 +762,11 @@ svg:not(:root) {
     position: fixed !important;
     font-size: 36px;
     color:#008000;
-    opacity: 0.7;
+    opacity: 0.4;
     transition: all 0.3s ease-in-out;
     z-index: 9999;
     left: 25px;
-    top: 40px !important;
+    top: 100px !important;
 }
 .saveBtn:hover {
     opacity: 1;
@@ -776,4 +784,131 @@ svg:not(:root) {
 
 .robots-block {
     padding: 20px 0 0 0 !important;
+}
+
+.variables-textbox {
+    min-height: 300px;
+}
+.variable-names {
+    display: table;
+    font-size: 18px;
+    margin: 10px;
+    padding: 2px 4px;
+    color: #1F6264;
+    background-color: #F2F8F9;
+    white-space: nowrap;
+    border-radius: 1px;
+}
+
+.view-link{
+    color: #1F6264;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.nav-seo {
+
+}
+
+.navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    background-color: #93C795 !important;
+    color: #000011;
+}
+
+.pagination>li>a, .pagination>li>span {
+    padding: 5px 10px !important;
+}
+
+
+
+
+.progress-button button {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #1ECD97;
+    border-radius: 40px;
+    background: transparent;
+    color: #1ECD97;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: all 0.7s, background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: all 0.7s, background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    position: fixed;
+    right: 19px;
+    top: 70px;
+    z-index: 10000;
+}
+
+
+.progress-button svg {
+    position: fixed;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+    top: 70px;
+    right: -15px;
+    z-index: 10000;
+}
+
+.progress-button svg path {
+    opacity: 0;
+    fill: none;
+}
+
+.success.progress-button button {
+    border-color: #1ECD97;
+    background-color: #1ECD97;
+}
+
+.error.progress-button button {
+    border-color: #FB797E;
+    background-color: #FB797E;
+}
+
+.progress-button svg.progress-circle path {
+    stroke: #1ECD97;
+    stroke-width: 5;
+}
+
+.progress-button svg.checkmark path,
+.progress-button svg.cross path {
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-width: 4;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+.loading.progress-button button {
+    width: 70px; /* make a circle */
+    border-width: 5px;
+    border-color: #ddd;
+    background-color: transparent;
+    color: #fff;
+}
+
+.loading.progress-button svg.progress-circle path,
+.success.progress-button svg.checkmark path,
+.error.progress-button svg.cross path {
+    opacity: 1;
+    -webkit-transition: stroke-dashoffset 0.3s;
+    transition: stroke-dashoffset 0.3s;
+}
+
+.elastic.progress-button button {
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1), border-width 0.3s, border-color 0.3s;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+}
+
+.loading.elastic.progress-button button {
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
 }

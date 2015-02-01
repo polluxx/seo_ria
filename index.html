@@ -9,24 +9,25 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link href="/build/assets/css/theme.css" rel="stylesheet" media="all">
 </head>
-<body>
+<body ng-cloak>
 
 
 <nav root-item class="navbar navbar-default collapse navbar-collapse bs-navbar-collapse nav-seo" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#!/page"><span class="glyphicon glyphicon-stats top-icon"></span></a>
+        <a class="navbar-brand" href="#!/page" title="Головна"><span class="glyphicon glyphicon-th-list top-icon"></span></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-random top-icon" title="Robots"></span></a></li>
-            <li><a href="#!/add/{{currentProject}}"><span class="glyphicon glyphicon-plus-sign top-icon" title="Add"></span></a></li>
+            <li ng-if="currentProject"><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-barcode top-icon" title="Robots"></span></a></li>
+            <li ng-if="currentProject"><a href="#!/list/{{currentProject}}"><span class="glyphicon glyphicon-list-alt top-icon" title="Список"></span></a></li>
+
         </ul>
 
         <form class="navbar-form navbar-right" role="search">
             <div class="form-group search">
-                <input type="text" class="form-control inputbox middle" placeholder="Пошук">
-                <!--span class="search-icon glyphicon glyphicon-search"></span-->
+                <input style="height: 40px; padding-right: 38px;" type="text" keysearch ng-model="searchval" id="mainSearch" class="form-control inputbox middle" placeholder="Пошук">
+                <span class="search-icon glyphicon glyphicon-search"></span>
             </div>
             <!--button type="submit" class="btn btn-default">Submit</button-->
         </form>

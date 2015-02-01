@@ -7,19 +7,24 @@ define([
         return $resource("list/", {}, {
             get: {
                 method:"GET",
-                url:'/list/:id',
+                url:'http://seo.ria.local:8081/list/:id',
                 params: {
                     id:"@id"
                 },
                 isArray:false
             },
+            childs: {
+                method:"GET",
+                url:'http://seo.ria.local:8081/seo/childs',
+                isArray:false
+            },
             post: {
                 method:"POST",
-                url:'/list'
+                url:'http://seo.ria.local:8081/seo/list'
             },
             update: {
                 method:"PUT",
-                url:'/list/:id',
+                url:'http://seo.ria.local:8081/list/:id',
                 params: {
                     id:"@id"
                 }

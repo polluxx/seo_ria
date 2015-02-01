@@ -1,6 +1,7 @@
 define([
     'angular',
 
+    //'angular-bootstrap',
     'modules/list/page/config',
     'modules/list/main/config',
     'modules/list/childs/config',

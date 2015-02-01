@@ -3,6 +3,7 @@ define([
     '../bazalt',
     'angular-local-storage',
     'bz',
+    'alertify',
 
     'base/config',
     'modules/auth/config',
@@ -17,6 +18,7 @@ define([
         'bz',
         'LocalStorageModule',
         'base',
+        'ui.bootstrap',
 
         'module.auth',
         'module.list',
