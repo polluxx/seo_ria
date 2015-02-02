@@ -4,7 +4,7 @@
 
 <div class="view-wrap">
     <ul class="nav nav-tabs">
-        <li ng-repeat="lang in langs" role="presentation"  ng-class="{'active': selectedLang == lang}" ><a ng-class="{'errors-has': lang.$error > 0}" ng-click="langSelect(lang)" href="javascript:void(0)">{{lang.name}}</a></li>
+        <li ng-hide="!doc.blocks[lang.name]" ng-repeat="lang in langs" role="presentation"  ng-class="{'active': selectedLang == lang}" ><a ng-class="{'errors-has': lang.$error > 0}" ng-click="langSelect(lang)" href="javascript:void(0)">{{lang.name}}</a></li>
     </ul>
 </div>
 
@@ -55,7 +55,7 @@
 
         <div ng-if="variables">
             <div class="form-group has-success has-feedback variables-block">
-                <label class="control-label" for="vars_{{lang.id}}">Список змінних до проекту "{{view.projectName}}"</label>
+                <label class="control-label" for="vars_{{lang.id}}">Список змінних</label>
 
                 <div contenteditable="true"  id="vars_{{lang.id}}" class="form-control inputbox variables-textbox" ng-focus="slideIn(lang)" ng-blur="slideOut(lang)" aria-describedby="inputWarning2Status" rows="27">
                     <div class="variable-names" ng-repeat="var in doc.vars[selectedVarType]">{{ var }}</div>

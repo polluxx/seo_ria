@@ -7,7 +7,7 @@ define([
         return $resource("robots/", {}, {
             get: {
                 method:"GET",
-                url:'/robots/:id',
+                url:'http://seo.ria.local:8081/seo/robots',
                 params: {
                     id:"@id"
                 },
@@ -15,7 +15,7 @@ define([
             },
             update: {
                 method:"PUT",
-                url:'/robots/:id',
+                url:'http://seo.ria.local:8081/seo/robots',
                 params: {
                     id:"@id"
                 }

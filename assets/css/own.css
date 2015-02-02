@@ -787,7 +787,7 @@ svg:not(:root) {
 }
 
 .variables-textbox {
-    min-height: 300px;
+    min-height: 500px;
 }
 .variable-names {
     display: table;

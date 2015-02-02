@@ -29,7 +29,7 @@
             <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}"></div>
             <div class="list-link text">{{link.link}}</div>
             <div class="list-op text"><a href="/view?q={{link._id}}">Перегляд</a></div>
-            <div class="list-op text" ng-if="!isChild"><a href="/childs/{{link.project}}?parent={{link._id}}">Нащадки</a></div>
+            <div class="list-op text" ng-if="link.hasChilds"><a href="/childs/{{link.project}}?parent={{link._id}}">Нащадки</a></div>
         </div>
     </div>
     <div ng-show="listData.data" class="paging">

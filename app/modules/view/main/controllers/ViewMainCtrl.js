@@ -11,7 +11,6 @@ define([
 
             if (resp.code == undefined || resp.code != 200) {
                 // error
-
                 return;
             }
 
