@@ -19,7 +19,7 @@ requirejs.config({
 
         'bootstrap': '../bower_components/bootstrap/js',
 
-        'angular': '../bower_components/angular/angular',
+        'angular': '../bower_components/angular/angular.min',
         'angular-resource': '../bower_components/angular-resource/angular-resource',
         'angular-route': '../bower_components/angular-route/angular-route',
         'angular-animate': '../bower_components/angular-animate/angular-animate',
@@ -108,7 +108,7 @@ requirejs.config({
     priority: [
         'jquery', 'angular'
     ],
-    urlArgs: 'v=1.1'
+    urlArgs: 'v=1.2'
 });
 
 require(['_bootstrap']);
