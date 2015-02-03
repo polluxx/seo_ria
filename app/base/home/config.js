@@ -9,8 +9,10 @@ define([
     module.config(['$routeSegmentProvider', 'bzConfigProvider', 'bzUserProvider',
         function($routeSegmentProvider, bzConfigProvider, bzUserProvider) {
             $routeSegmentProvider
-                .when('/', 'home')
+                .when('/home', 'home')
+
                 .segment('home', {
+                    redirectTo: "/page",
                     templateUrl: bzConfigProvider.templateUrl('/home.html'),
                     resolve: {
                         permissions: bzUserProvider.access()

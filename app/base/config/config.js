@@ -17,7 +17,7 @@ define([
             bzLanguageProvider.id((window.bazalt || {}).language || null);
 
             $routeProvider.otherwise({
-                redirectTo: '/'
+                redirectTo: '/page'
             });
         }]);
 
