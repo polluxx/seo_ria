@@ -11,7 +11,7 @@ define(['base/home/module'], function (module) {
                 $rootScope.listData = {};
 
                 $rootScope.$watch("searchval", function() {
-                    if (0 < $rootScope.searchval.length < 3) return;
+                    if ($rootScope.searchval.length < 3 && $rootScope.searchval.length >0 ) return;
 
 
                     currentText = $rootScope.searchval;
