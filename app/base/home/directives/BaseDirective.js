@@ -11,9 +11,14 @@ define(['base/home/module'], function (module) {
                 $rootScope.listData = {};
 
                 $rootScope.$watch("searchval", function() {
-                    //if (0 < $rootScope.searchval.length < 3) return;
+                    if (0 < $rootScope.searchval.length < 3) return;
 
-                    time = performance.now();
+
+                    currentText = $rootScope.searchval;
+                    $rootScope.issearch = true;
+                    $rootScope.$apply();
+
+                    /*time = performance.now();
 
                     if (timeout != null) return;
 
@@ -24,7 +29,7 @@ define(['base/home/module'], function (module) {
                         $rootScope.issearch = true;
                         $rootScope.$apply();
                         timeout = null;
-                    }, 500);
+                    }, 500);*/
                 })
             }
         }
