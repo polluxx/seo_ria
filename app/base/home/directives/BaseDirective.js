@@ -16,7 +16,7 @@ define(['base/home/module'], function (module) {
 
                     currentText = $rootScope.searchval;
                     $rootScope.issearch = true;
-                    $rootScope.$apply();
+                    //$rootScope.$apply();
 
                     /*time = performance.now();
 
