@@ -3,20 +3,20 @@ define([
 ], function (module) {
     'use strict';
 
-    module.factory("ViewFactory", ["$resource", function($resource) {
+    module.factory("ViewFactory", ["$resource", "bzConfig", function($resource, bzConfig) {
         return $resource("view/", {}, {
             get: {
                 method:"GET",
-                url:'http://seo.ria.local:8081/seo/doc',
+                url:bzConfig.api()+'/seo/doc',
                 isArray:false
             },
             post: {
                 method:"POST",
-                url:'http://seo.ria.local:8081/seo/doc'
+                url:bzConfig.api()+'/seo/doc'
             },
             update: {
                 method:"PUT",
-                url:'http://seo.ria.local:8081/doc'
+                url:bzConfig.api()+'/doc'
             }
         });
     }]);

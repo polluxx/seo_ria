@@ -3,12 +3,12 @@ define([
 ], function (module) {
     'use strict';
 
-    module.factory("ListFactory", ["$resource", function($resource) {
-        var link = "http://avp.ria.com:8071";
+    module.factory("ListFactory", ["$resource", "bzConfig", function($resource, bzConfig) {
+
         return $resource("list/", {}, {
             get: {
                 method:"GET",
-                url:link+'/list/:id',
+                url:bzConfig.api()+'/list/:id',
                 params: {
                     id:"@id"
                 },
@@ -16,16 +16,16 @@ define([
             },
             childs: {
                 method:"GET",
-                url:link+'/seo/childs',
+                url:bzConfig.api()+'/seo/childs',
                 isArray:false
             },
             post: {
                 method:"POST",
-                url:link+'/seo/list'
+                url:bzConfig.api()+'/seo/list'
             },
             update: {
                 method:"PUT",
-                url:link+'/list/:id',
+                url:bzConfig.api()+'/list/:id',
                 params: {
                     id:"@id"
                 }

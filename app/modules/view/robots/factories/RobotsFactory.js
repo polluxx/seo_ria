@@ -3,11 +3,11 @@ define([
 ], function (module) {
     'use strict';
 
-    module.factory("RobotsFactory", ["$resource", function($resource) {
+    module.factory("RobotsFactory", ["$resource", "bzConfig", function($resource, bzConfig) {
         return $resource("robots/", {}, {
             get: {
                 method:"GET",
-                url:'http://seo.ria.local:8081/seo/robots',
+                url:bzConfig.api()+'/seo/robots',
                 params: {
                     id:"@id"
                 },
@@ -15,7 +15,7 @@ define([
             },
             update: {
                 method:"PUT",
-                url:'http://seo.ria.local:8081/seo/robots',
+                url:bzConfig.api()+'/seo/robots',
                 params: {
                     id:"@id"
                 }
