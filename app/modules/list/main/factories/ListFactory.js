@@ -4,10 +4,11 @@ define([
     'use strict';
 
     module.factory("ListFactory", ["$resource", function($resource) {
+        var link = "http://avp.ria.com:8071";
         return $resource("list/", {}, {
             get: {
                 method:"GET",
-                url:'http://seo.ria.local:8081/list/:id',
+                url:link+'/list/:id',
                 params: {
                     id:"@id"
                 },
@@ -15,16 +16,16 @@ define([
             },
             childs: {
                 method:"GET",
-                url:'http://seo.ria.local:8081/seo/childs',
+                url:link+'/seo/childs',
                 isArray:false
             },
             post: {
                 method:"POST",
-                url:'http://seo.ria.local:8081/seo/list'
+                url:link+'/seo/list'
             },
             update: {
                 method:"PUT",
-                url:'http://seo.ria.local:8081/list/:id',
+                url:link+'/list/:id',
                 params: {
                     id:"@id"
                 }
