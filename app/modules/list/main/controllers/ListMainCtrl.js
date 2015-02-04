@@ -29,7 +29,7 @@ define([
                     $rootScope.issearch = false;
                     //$rootScope.$apply();
                 }
-                $scope.$loading = true;
+                $scope.$loading = false;
                 if (response.code != 200) {
                     console.info(response.message);
                     //alertify.error(data.message || "Помилка доступу до сервіса. Спробуйте пізніше");
@@ -38,7 +38,7 @@ define([
                 $rootScope.listData = response.data;
             });
 
-        }
+        };
 
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;

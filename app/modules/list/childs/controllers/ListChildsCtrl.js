@@ -27,7 +27,7 @@ define([
                 if (isSearch == true) {
                     $rootScope.issearch = false;
                 }
-                $scope.$loading = true;
+                $scope.$loading = false;
 
                 $scope.bigTotalItems = resp.data.pages;
                 $scope.listData = resp.data;

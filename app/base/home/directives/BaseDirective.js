@@ -182,4 +182,19 @@ define(['base/home/module'], function (module) {
         }
     })
 
+    module.directive('loadingContainer', function () {
+        return {
+            restrict: 'A',
+            scope: false,
+            link: function(scope, element, attrs) {
+                var loadingLayer = angular.element('<div class="bz-loading"></div>');
+                element.append(loadingLayer);
+                element.addClass('bz-loading-container');
+                scope.$watch(attrs.loadingContainer, function(value) {
+                    loadingLayer.toggleClass('ng-hide', !value);
+                });
+            }
+        };
+    });
+
 });

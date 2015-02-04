@@ -21,9 +21,13 @@ a.disabled {
 }
 
 .bz-loading-container .bz-loading:after {
-    background-image: url(/img/loader/preloader-64x64.gif);
+    background-image: url(/build/assets/img/loader/preloader.gif);
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.op-icon {
+    font-size: 18px;
 }
 
 .loading-text {
