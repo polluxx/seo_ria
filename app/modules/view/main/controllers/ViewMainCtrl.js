@@ -1,6 +1,7 @@
 define([
-    'modules/view/main/module'
-], function (module) {
+    'modules/view/main/module',
+    'alertify'
+], function (module, alertify) {
     'use strict';
 
     module.controller('ViewMainCtrl', ['$scope', '$routeParams', 'ViewFactory', '$rootScope', 'localStorageService', function($scope, $routeParams, ViewFactory, $rootScope, localStorageService) {
@@ -11,6 +12,7 @@ define([
 
             if (resp.code == undefined || resp.code != 200) {
                 // error
+                alertify.error('помилка отримання данних');
                 return;
             }
 
@@ -74,7 +76,11 @@ define([
 
             $scope.doc._id = $scope.doc.link;
             ViewFactory.update($scope.doc, function(resp) {
-                console.log(resp);
+                if(!resp) {
+                    alertify.error('помилка запису данних');
+                    return;
+                }
+                alertify.success('данні успішно записані');
             });
 
         }

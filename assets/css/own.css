@@ -61,6 +61,10 @@ a.disabled {
 
 }
 
+.list-op.text {
+    float: right;
+}
+
 .container {
     width: 1200px;
 }

@@ -1,6 +1,7 @@
 define([
-    'modules/view/robots/module'
-], function (module) {
+    'modules/view/robots/module',
+    'alertify'
+], function (module, alertify) {
     'use strict';
 
 
@@ -10,6 +11,7 @@ define([
         RobotsFactory.get($routeParams, function(resp) {
             if (resp.code == undefined || resp.code != 200) {
                 // error
+                alertify.error('помилка отримання файлу');
                 return;
             }
 
@@ -19,7 +21,12 @@ define([
         $scope.putData = function() {
             $routeParams['robots'] = $scope.robots;
             RobotsFactory.update($routeParams, function(resp) {
-                console.log(resp);
+                if(resp.code != 200) {
+                    alertify.error(resp.message);
+                    return;
+                }
+
+                alertify.success('файл записано успішно');
             })
         }
     }]);

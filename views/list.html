@@ -28,8 +28,10 @@
 
             <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}"></div>
             <div class="list-link text">{{link.link}}</div>
-            <div class="list-op text"><a href="/view?q={{link._id}}" title="view"><span class="glyphicon glyphicon-zoom-in"></span></a></div>
+
             <div class="list-op text" ng-if="link.hasChilds"><a href="/childs/{{link.project}}?parent={{link._id}}" title="childs"><span class="glyphicon glyphicon-folder-open"></span></a></div>
+            <div class="list-op text"><a href="/view?q={{link._id}}" title="view"><span class="glyphicon glyphicon-zoom-in"></span></a></div>
+
         </div>
     </div>
     <div ng-show="listData.data" class="paging">
