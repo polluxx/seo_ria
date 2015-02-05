@@ -61,10 +61,10 @@
                     <div class="variable-names" ng-repeat="var in doc.vars[selectedVarType]">{{ var }}</div>
                 </div>
             </div>
-
+{{variables}}
             <div class="passive view-variables" id="view-variables-{{lang.id}}">
                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                    <button type="button" class="btn btn-default inputbox" ng-repeat="variable in variables" ng-click="selectVars($index)">{{variable}}</button>
+                    <button type="button" class="btn btn-default inputbox" ng-repeat="variable in variables" ng-click="selectVars($index)">{{variable[0]}}</button>
                 </div>
             </div>
         </div>
