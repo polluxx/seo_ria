@@ -58,7 +58,7 @@
                 <label class="control-label" for="vars_{{lang.id}}">Список змінних</label>
 
                 <div contenteditable="true"  id="vars_{{lang.id}}" class="form-control inputbox variables-textbox" ng-focus="slideIn(lang)" ng-blur="slideOut(lang)" aria-describedby="inputWarning2Status" rows="27">
-                    <div class="variable-names" ng-repeat="var in doc.vars[selectedVarType]">{{ var }}</div>
+                    <div class="variable-names" ng-repeat="var in doc.vars">{{ var }}</div>
                 </div>
             </div>
 
