@@ -1,33 +1,34 @@
 define([
-    'modules/list/main/module',
+    'modules/list/history/module',
     'angular-bootstrap-tpl',
+    'alertify'
 
-], function (module) {
+], function (module, bootstrap, alertify) {
     'use strict';
 
-    module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', function($scope, $rootScope, $routeParams, ListFactory) {
+    module.controller('HistoryMainCtrl', ['$scope', '$rootScope', '$routeParams', 'HistoryFactory', function($scope, $rootScope, $routeParams, HistoryFactory) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
-        $scope.total = 1;
-        $scope.radioModel = '10';
+        //$scope.limit = 10;
+
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
-            //$routeParams.page = 1;
-            $routeParams.limit = +$scope.radioModel;
-            //if (params.page != undefined) {
-                $routeParams.page = $scope.bigCurrentPage;
-            //}
+
+            $routeParams.limit = $scope.bigTotalItems;
+
+            if (params.page != undefined) {
+                $routeParams.page = params.page;
+            }
 
             $routeParams.project = $routeParams.id;
 
-
-            if (params != undefined && params.q != undefined) {
+            if (params.q != undefined) {
                 $routeParams.q = params.q;
             }
 
-            ListFactory.get($routeParams, function(response) {
+            HistoryFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
                     $rootScope.issearch = false;
                     //$rootScope.$apply();
@@ -35,13 +36,10 @@ define([
                 $scope.$loading = false;
                 if (response.code != 200) {
                     console.info(response.message);
-                    //alertify.error(data.message || "Помилка доступу до сервіса. Спробуйте пізніше");
+                    alertify.error(response.message || "Помилка доступу до сервіса. Спробуйте пізніше");
                 }
                 $scope.bigTotalItems = response.data.pages;
-                $scope.total = response.data.total;
-                console.log($scope.total)
                 $rootScope.listData = response.data;
-                //$rootScope.$apply();
             });
 
         };
@@ -55,9 +53,6 @@ define([
             $scope.refresh({page:$scope.bigCurrentPage})
         });
 
-        $scope.$watch("radioModel", function() {
-            $scope.refresh()
-        });
 
 
     }]);

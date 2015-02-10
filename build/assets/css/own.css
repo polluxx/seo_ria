@@ -756,10 +756,11 @@ svg:not(:root) {
     z-index: 10;
     position: absolute;
     width: 100%;
+    overflow: hidden;
 }
 
 .view-link {
-    fon
+
 }
 
 .variables {
@@ -795,7 +796,7 @@ svg:not(:root) {
 }
 
 .variables-textbox {
-    min-height: 500px;
+    min-height: 720px;
 }
 .variable-names {
     display: table;

@@ -756,10 +756,16 @@ svg:not(:root) {
     z-index: 10;
     position: absolute;
     width: 100%;
+    overflow: hidden;
+}
+
+.list-count {
+    float: right;
+    margin-top: 15px;
 }
 
 .view-link {
-    fon
+
 }
 
 .variables {

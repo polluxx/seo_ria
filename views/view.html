@@ -1,6 +1,6 @@
 <h1>Редагування елементів - <div class="view-link">{{doc.link}}</div></h1>
 
-<div class="glyphicon glyphicon-floppy-save saveBtn" ng-show="dataCanSave" ng-click="saveData()"></div>
+<div class="glyphicon glyphicon-floppy-save-file saveBtn" ng-show="dataCanSave" ng-click="saveData()"></div>
 
 <div class="view-wrap">
     <ul class="nav nav-tabs">
@@ -13,7 +13,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="title_{{lang.id}}">Title</label>
 
-            <textarea ng-model="doc.blocks[lang.name].title" validate-input changeble="checkData()" class="form-control inputbox" id="title_{{lang.id}}" aria-describedby="inputWarning2Status" rows="4">
+            <textarea ng-model="doc.blocks[lang.name].title" changeble="checkData()" class="form-control inputbox" id="title_{{lang.id}}" aria-describedby="inputWarning2Status" rows="4">
 
             </textarea>
         </div>
@@ -21,7 +21,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="description_{{lang.id}}">Description</label>
 
-            <textarea ng-model="doc.blocks[lang.name].description" validate-input changeble="checkData()" class="form-control inputbox" id="description_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
+            <textarea ng-model="doc.blocks[lang.name].description" changeble="checkData()" class="form-control inputbox" id="description_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
 
             </textarea>
         </div>
@@ -30,7 +30,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="h1_{{lang.id}}">H1</label>
 
-            <textarea ng-model="doc.blocks[lang.name].h1" validate-input changeble="checkData()" class="form-control inputbox" id="h1_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2">
+            <textarea ng-model="doc.blocks[lang.name].h1" changeble="checkData()" class="form-control inputbox" id="h1_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2">
 
             </textarea>
         </div>
@@ -64,7 +64,7 @@
 
             <div class="passive view-variables" id="view-variables-{{lang.id}}">
                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                    <button type="button" class="btn btn-default inputbox" ng-repeat="variable in doc.vars" ng-click="selectVars($index)">{{variable}}</button>
+                    <button type="button" class="btn btn-default inputbox" ng-repeat="variable in doc.vars" ng-click="selectVars(variable)">{{variable}}</button>
                 </div>
             </div>
         </div>

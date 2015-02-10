@@ -11,15 +11,16 @@ define([
         $scope.bigCurrentPage = 1;
         $routeParams.priority = 2; // set children priority
         $scope.listData = [];
+        $scope.radioModel = '10';
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
+            $routeParams.limit = $scope.bigTotalItems;
+            $routeParams.limit = +$scope.radioModel;
 
-            if (params.page != undefined) {
-                $routeParams.page = params.page;
-            }
+            $routeParams.page = $scope.bigCurrentPage;
 
-            if (params.q != undefined) {
+            if (params != undefined && params.q != undefined) {
                 $routeParams.q = params.q;
             }
 
@@ -37,10 +38,13 @@ define([
 
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;
-            $scope.refresh({q:$rootScope.searchval}, true)
+            $scope.refresh({q:$rootScope.searchval}, true);
         })
         $scope.$watch("bigCurrentPage", function() {
-            $scope.refresh({page:$scope.bigCurrentPage})
+            $scope.refresh({page:$scope.bigCurrentPage});
+        });
+        $scope.$watch("radioModel", function() {
+            $scope.refresh();
         });
 
 

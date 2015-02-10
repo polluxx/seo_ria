@@ -1,0 +1,34 @@
+<div class="main-list-wrap">
+
+
+    <div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
+
+
+
+
+    <div ng-if="listData.data" class="list-box" ng-repeat="link in listData.data">
+
+        <div class="data-block" id="{{link._id}}">
+            <div class="list-name input-group-btn">
+
+            
+                <div class="list-link text">{{link.link}}</div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="listData.data" class="paging">
+        <nav>
+            <pagination total-items="listData.total" items-per-page="radioModel" ng-model="bigCurrentPage" max-size="bigTotalItems" class="pagination-sm" boundary-links="true" rotate="false" num-pages="listData.pages"></pagination>
+            <div class="btn-group list-count">
+                <label class="btn btn-primary" ng-model="radioModel" btn-radio="'10'">10</label>
+                <label class="btn btn-primary" ng-model="radioModel" btn-radio="'50'">50</label>
+                <label class="btn btn-primary" ng-model="radioModel" btn-radio="'100'">100</label>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="errorBox" ng-if="listData.data == undefined || listData.data.length == 0">
+        {{ listData.message || 'Данних не знайдено'}}
+    </div>
+</div>
