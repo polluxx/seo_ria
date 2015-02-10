@@ -11,6 +11,7 @@ define([
         $scope.bigCurrentPage = 1;
         $scope.total = 1;
         $scope.radioModel = '10';
+        $rootScope.listData = [];
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;

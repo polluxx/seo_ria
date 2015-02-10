@@ -11,7 +11,7 @@ define([
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
         //$scope.limit = 10;
-
+        $rootScope.listData = [];
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
@@ -35,7 +35,7 @@ define([
                 }
                 $scope.$loading = false;
                 if (response.code != 200) {
-                    console.info(response.message);
+
                     alertify.error(response.message || "Помилка доступу до сервіса. Спробуйте пізніше");
                 }
                 $scope.bigTotalItems = response.data.pages;

@@ -10,7 +10,7 @@ define([
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
         $routeParams.priority = 2; // set children priority
-        $scope.listData = [];
+        $rootScope.listData = [];
         $scope.radioModel = '10';
 
         $scope.refresh = function(params, isSearch) {
@@ -33,7 +33,7 @@ define([
                 $scope.$loading = false;
 
                 $scope.bigTotalItems = resp.data.pages;
-                $scope.listData = resp.data;
+                $rootScope.listData = resp.data;
             })
         }
 
