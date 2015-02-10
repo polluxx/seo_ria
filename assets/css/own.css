@@ -765,8 +765,9 @@ svg:not(:root) {
 }
 .list-time {
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     color: dodgerblue;
+    padding-right: 10px;
 }
 
 .view-link {
