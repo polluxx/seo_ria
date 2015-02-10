@@ -759,6 +759,11 @@ svg:not(:root) {
     overflow: hidden;
 }
 
+.list-count {
+    float: right;
+    margin-top: 15px;
+}
+
 .view-link {
 
 }

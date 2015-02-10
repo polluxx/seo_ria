@@ -763,6 +763,11 @@ svg:not(:root) {
     float: right;
     margin-top: 15px;
 }
+.list-time {
+    display: block;
+    font-size: 15px;
+    color: dodgerblue;
+}
 
 .view-link {
 
