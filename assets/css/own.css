@@ -767,7 +767,7 @@ svg:not(:root) {
     display: block;
     font-size: 13px;
     color: dodgerblue;
-    padding-right: 10px;
+    padding-right: 4px;
 }
 
 .view-link {
