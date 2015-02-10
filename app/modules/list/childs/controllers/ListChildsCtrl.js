@@ -18,7 +18,9 @@ define([
             $routeParams.limit = $scope.bigTotalItems;
             $routeParams.limit = +$scope.radioModel;
 
-            $routeParams.page = $scope.bigCurrentPage;
+            if (params != undefined && params.page != undefined) {
+                $routeParams.page = params.page;
+            }
 
             if (params != undefined && params.q != undefined) {
                 $routeParams.q = params.q;

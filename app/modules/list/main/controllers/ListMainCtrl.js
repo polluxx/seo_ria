@@ -16,9 +16,9 @@ define([
             $scope.$loading = true;
             //$routeParams.page = 1;
             $routeParams.limit = +$scope.radioModel;
-            //if (params.page != undefined) {
-                $routeParams.page = $scope.bigCurrentPage;
-            //}
+            if (params != undefined && params.page != undefined) {
+                $routeParams.page = params.page;
+            }
 
             $routeParams.project = $routeParams.id;
 

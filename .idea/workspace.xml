@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" afterPath="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" afterPath="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/history.html" afterPath="$PROJECT_DIR$/views/history.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -74,26 +75,26 @@
         <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1050">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="33" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListChildsCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListChildsCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="870">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.4649266" vertical-offset="45" max-vertical-offset="900">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="history.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/history.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3565365" vertical-offset="0" max-vertical-offset="589">
+            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="570">
               <caret line="14" column="105" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -172,14 +173,14 @@
         <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/modules/list/module.js" />
         <option value="$PROJECT_DIR$/app/modules/list/history/controllers/HistoryMainCtrl.js" />
-        <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
         <option value="$PROJECT_DIR$/views/list.html" />
-        <option value="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/list/history/factories/HistoryFactory.js" />
         <option value="$PROJECT_DIR$/views/view.html" />
         <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/views/history.html" />
+        <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
+        <option value="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
       </list>
     </option>
   </component>
@@ -1091,22 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1050">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="870">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/list/history/factories/HistoryFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
@@ -1158,12 +1143,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/history.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3565365" vertical-offset="0" max-vertical-offset="589">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="570">
           <caret line="14" column="105" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1050">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4649266" vertical-offset="45" max-vertical-offset="900">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
