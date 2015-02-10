@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="add fixes">
+    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/history.html" afterPath="$PROJECT_DIR$/views/history.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -92,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="history.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/history.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="570">
-              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.3565365" vertical-offset="0" max-vertical-offset="589">
+              <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -126,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="own.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/own.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68189234" vertical-offset="11087" max-vertical-offset="14085">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11087" max-vertical-offset="14085">
               <caret line="767" column="17" selection-start-line="767" selection-start-column="17" selection-end-line="767" selection-end-column="17" />
               <folding />
             </state>
@@ -179,8 +177,8 @@
         <option value="$PROJECT_DIR$/app/modules/list/history/factories/HistoryFactory.js" />
         <option value="$PROJECT_DIR$/views/view.html" />
         <option value="$PROJECT_DIR$/bazalt.js" />
-        <option value="$PROJECT_DIR$/views/history.html" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
+        <option value="$PROJECT_DIR$/views/history.html" />
       </list>
     </option>
   </component>
@@ -1149,21 +1147,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/history.html">
+    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="570">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="11087" max-vertical-offset="14085">
+          <caret line="767" column="17" selection-start-line="767" selection-start-column="17" selection-end-line="767" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
+    <entry file="file://$PROJECT_DIR$/views/history.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68189234" vertical-offset="11087" max-vertical-offset="14085">
-          <caret line="767" column="17" selection-start-line="767" selection-start-column="17" selection-end-line="767" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.3565365" vertical-offset="0" max-vertical-offset="589">
+          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
