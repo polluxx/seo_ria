@@ -8,20 +8,26 @@ define([
         var variablesBlock,
             width;
         $scope.doc = {};
-        ViewFactory.get($routeParams, function(resp) {
 
-            if (resp.code == undefined || resp.code != 200) {
-                // error
-                alertify.error('помилка отримання данних');
-                return;
-            }
+        $scope.getDoc = function() {
+            ViewFactory.get($routeParams, function(resp) {
 
-            $scope.doc = resp.doc;
+                if (resp.code == undefined || resp.code != 200) {
+                    // error
+                    alertify.error('помилка отримання данних');
+                    return;
+                }
 
-            $scope.variables = $scope.doc.vars;
+                $scope.doc = resp.doc;
+
+                $scope.variables = $scope.doc.vars;
 
 
-        })
+            })
+        }
+
+        $scope.getDoc();
+
 
         $scope.langs = [{"id":1, "name":"ru"}, {"id":2, "name":"uk"}];
         $scope.selectedLang = $scope.langs[0];
@@ -29,6 +35,7 @@ define([
         $scope.selectedVarType = 0;
         $scope.dataCanSave = false;
         $scope.validate = false;
+        $scope.rewriteItem = "";
         $scope.errors = [];
 
         $scope.langSelect = function(langID) {
@@ -77,7 +84,53 @@ define([
 
 
 
+        // REWRITE
 
+        $scope.addRewrite = function (rewriteItem) {
+
+            var post = {rewrite:rewriteItem, type:"add", id:$scope.doc.link};
+
+            if(post.rewrite.length < 2) {
+                alertify.error("rewrite length must be more than 2 symbols");
+                return;
+            }
+
+            $scope.rewriteItem = "";
+
+            if($scope.doc.rewrites == undefined) {
+                $scope.doc.rewrites = [];
+            }
+            $scope.doc.rewrites.push(post.rewrite);
+            $scope.rewriteSend(post);
+        }
+        $scope.removeRewrite = function (rewriteItem) {
+
+            alertify.confirm("are you sure?", function(e) {
+                if(e) {
+                    var post = {rewrite:rewriteItem, type:"remove", id:$scope.doc.link};
+
+                    $scope.rewriteSend(post, function() {
+                        $scope.getDoc();
+                    });
+                }
+            })
+        }
+
+        $scope.rewriteSend = function(post, callback) {
+
+            ViewFactory.rewrite(post, function(resp) {
+                if(resp.code == undefined || resp.code != 200) {
+                    alertify.error(resp.message || "error when sending rewrite");
+                    return;
+                }
+
+                alertify.success("added");
+
+                callback();
+            });
+        }
+
+        // END
 
         $scope.saveData = function() {
             $scope.validate=true;

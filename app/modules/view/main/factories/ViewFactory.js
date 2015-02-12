@@ -14,6 +14,10 @@ define([
                 method:"POST",
                 url:bzConfig.api()+'/seo/doc'
             },
+            rewrite: {
+                method:"POST",
+                url:bzConfig.api()+'/seo/rewrite'
+            },
             update: {
                 method:"PUT",
                 url:bzConfig.api()+'/doc'

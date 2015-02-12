@@ -1,4 +1,4 @@
-<h1>Редагування елементів - <div class="view-link">{{doc.link}}</div></h1>
+<h1><div class="view-link">{{doc.link}}</div></h1>
 
 <div class="glyphicon glyphicon-floppy-save saveBtn" ng-show="dataCanSave" ng-click="saveData()"></div>
 
@@ -48,6 +48,17 @@
             <textarea ng-model="doc.blocks[lang.name].seotext" changeble="checkData()" class="form-control inputbox" id="seo_text_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
 
             </textarea>
+        </div>
+
+        <div class="form-group rewrites">
+            <label class="control-label">AVP rewrites</label>
+
+            <div style="padding-bottom: 20px">
+                <div class="rewrite" ng-repeat="rewrite in doc.rewrites" ng-click="removeRewrite($index, rewrite)">{{rewrite}}</div>
+            </div>
+            <div>
+                <input class="form-control inputbox add-rewrite" type="text" ng-init="rewriteItem" ng-model="rewriteItem"/><div class="glyphicon glyphicon-plus-sign add-project-btn-sm text-success" ng-click="addRewrite(rewriteItem)"></div>
+            </div>
         </div>
     </div>
 

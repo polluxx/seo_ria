@@ -932,3 +932,36 @@ h1 {
     -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
     transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
 }
+
+
+
+
+.add-project-btn-sm {
+    font-size: 16px;
+    opacity: 0.6;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.add-project-btn-sm:hover {
+    opacity: 1;
+}
+.add-rewrite {
+    display: inline-block !important;
+    width: 100px !important;
+}
+.add-rewrite-btn {
+    display: inline-block !important;
+    padding-left: 10px;
+}
+
+.rewrite {
+    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    background-color: #009998;
+    cursor: pointer;
+}
+
+.rewrite:hover {
+    background-color: #138999;
+}
