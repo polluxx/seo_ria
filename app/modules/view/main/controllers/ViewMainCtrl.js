@@ -124,7 +124,9 @@ define([
                     return;
                 }
 
-                alertify.success("added");
+                var message = post.type == "add" ? "added successfully" : "removed successfully";
+
+                alertify.success(message);
 
                 callback();
             });
