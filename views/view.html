@@ -54,7 +54,7 @@
             <label class="control-label">AVP rewrites</label>
 
             <div style="padding-bottom: 20px">
-                <div class="rewrite" ng-repeat="rewrite in doc.rewrites" ng-click="removeRewrite($index, rewrite)">{{rewrite}}</div>
+                <div class="rewrite" ng-repeat="rewrite in doc.rewrites" ng-click="removeRewrite(rewrite)">{{rewrite}}</div>
             </div>
             <div>
                 <input class="form-control inputbox add-rewrite" type="text" ng-init="rewriteItem" ng-model="rewriteItem"/><div class="glyphicon glyphicon-plus-sign add-project-btn-sm text-success" ng-click="addRewrite(rewriteItem)"></div>

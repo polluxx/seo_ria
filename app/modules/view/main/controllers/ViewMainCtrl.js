@@ -90,11 +90,6 @@ define([
 
             var post = {rewrite:rewriteItem, type:"add", id:$scope.doc.link};
 
-            if(post.rewrite.length < 2) {
-                alertify.error("rewrite length must be more than 2 symbols");
-                return;
-            }
-
             $scope.rewriteItem = "";
 
             if($scope.doc.rewrites == undefined) {
@@ -117,7 +112,10 @@ define([
         }
 
         $scope.rewriteSend = function(post, callback) {
-
+            if(post.rewrite.length < 2) {
+                alertify.error("rewrite length must be more than 2 symbols");
+                return;
+            }
             ViewFactory.rewrite(post, function(resp) {
                 if(resp.code == undefined || resp.code != 200) {
                     alertify.error(resp.message || "error when sending rewrite");
