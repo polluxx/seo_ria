@@ -953,3 +953,15 @@ h1 {
     display: inline-block !important;
     padding-left: 10px;
 }
+
+.rewrite {
+    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    background-color: #009998;
+    cursor: pointer;
+}
+
+.rewrite:hover {
+    background-color: #138999;
+}

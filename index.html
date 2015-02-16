@@ -14,14 +14,14 @@
 
 <nav root-item class="navbar navbar-default collapse navbar-collapse bs-navbar-collapse nav-seo" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#!/page" title="Головна"><span class="glyphicon glyphicon-th-list top-icon"></span></a>
+        <a class="navbar-brand" href="#!/page" title="Головна"><span class="glyphicon glyphicon-th-list top-icon">Main</span></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li ng-if="currentProject"><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-barcode top-icon" title="Robots"></span></a></li>
-            <li ng-if="currentProject"><a href="#!/list/{{currentProject}}"><span class="glyphicon glyphicon-list-alt top-icon" title="Список"></span></a></li>
-            <li ng-if="currentProject"><a href="#!/history/{{currentProject}}"><span class="glyphicon glyphicon-calendar top-icon" title="Історія"></span></a></li>
+            <li ng-if="currentProject"><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-barcode top-icon" title="Robots">Robots</span></a></li>
+            <li ng-if="currentProject"><a href="#!/list/{{currentProject}}"><span class="glyphicon glyphicon-list-alt top-icon" title="Список">Links</span></a></li>
+            <li ng-if="currentProject"><a href="#!/history/{{currentProject}}"><span class="glyphicon glyphicon-calendar top-icon" title="Історія">History</span></a></li>
 
         </ul>
 
