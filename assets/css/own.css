@@ -965,3 +965,18 @@ h1 {
 .rewrite:hover {
     background-color: #138999;
 }
+
+.updated-link {
+    position: absolute;
+    bottom: -22px;
+}
+
+.list-box.largebox {
+    height: 85px !important;
+}
+
+.top-icon span {
+    padding-left: 5px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
