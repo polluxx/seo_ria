@@ -25,15 +25,16 @@
         </svg>
     </div>
 
-    <div ng-if="listData.data" class="list-box" ng-repeat="link in listData.data">
+    <div ng-if="listData.data" ng-class="{'largebox':link.updated}" class="list-box" ng-repeat="link in listData.data">
 
         <div class="data-block" id="{{link._id}}">
-            <div class="list-name input-group-btn">
 
-            <div class="changed-lisk" ng-if="link.updated">
+            <div class="updated-link" ng-if="link.updated">
                 <div class="glyphicon glyphicon-time list-time" style="padding-right: 5px !important;"></div>
                 <div class="list-time">{{link.updated}}</div>
             </div>
+
+            <div class="list-name input-group-btn">
 
             <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}"></div>
             <div class="list-link text">{{link.link}}</div>
