@@ -49,6 +49,18 @@ define([
         })
 
         $scope.slideIn = function(langId) {
+
+            if($scope.varsRewrites == {}) {
+                $scope.getVarsNames(function() {
+                    $scope.slideMake();
+                });
+            } else {
+                $scope.slideMake();
+            }
+
+        }
+
+        $scope.slideMake = function(){
             variablesBlock = angular.element(document.getElementById("view-variables-"+langId.id));
             width = variablesBlock[0].offsetWidth;
             variablesBlock.css("left","-"+width+"px");
@@ -154,8 +166,9 @@ define([
 
         }
 
-        $scope.getVarsNames = function() {
+        $scope.getVarsNames = function(callback) {
             if($scope.doc.vars == undefined || $scope.doc.vars.length == 0) {
+                callback();
                 return;
             }
 
@@ -172,6 +185,7 @@ define([
                }
 
                 $scope.varsRewrites = response.vars;
+                callback();
             });
         }
 
