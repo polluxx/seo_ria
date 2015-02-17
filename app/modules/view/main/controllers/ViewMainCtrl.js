@@ -177,7 +177,7 @@ define([
             $routeParams.vars = $scope.doc.vars;
 
 
-            ViewFactory.rewrite($routeParams, function(response) {
+            ViewFactory.vars($routeParams, function(response) {
                console.log(response);
                 $scope.varsLoading = false;
                if(response.code == undefined || response.code != 200) {
