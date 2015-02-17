@@ -52,7 +52,11 @@ define([
 
             if($scope.varsRewrites.length == 0) {
                 $scope.getVarsNames(function() {
-                    $scope.slideMake(langId);
+                    setTimeout(function() {
+                        console.log(langId);
+                        $scope.slideMake(langId);
+                    }, 1000);
+
                 });
             } else {
                 $scope.slideMake(langId);
