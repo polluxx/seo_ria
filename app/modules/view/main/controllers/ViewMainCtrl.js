@@ -174,7 +174,7 @@ define([
             }
 
             $scope.varsLoading = true;
-            $routeParams.vars = JSON.stringify($scope.doc.vars);
+            //$routeParams.vars = JSON.stringify($scope.doc.vars);
 
 
             ViewFactory.vars($routeParams, function(response) {

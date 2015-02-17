@@ -24,8 +24,7 @@ define([
             },
             vars: {
                 method:"GET",
-                url:bzConfig.api()+'/seo/vars',
-                isArray:false
+                url:bzConfig.api()+'/seo/vars'
             }
         });
     }]);
