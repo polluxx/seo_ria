@@ -37,6 +37,8 @@ define([
         $scope.validate = false;
         $scope.rewriteItem = "";
         $scope.errors = [];
+        $scope.varsRewrites = {};
+        $scope.varsLoading = false;
 
         $scope.langSelect = function(langID) {
             $scope.selectedLang = langID;
@@ -150,6 +152,27 @@ define([
                 alertify.success('данні успішно записані');
             });
 
+        }
+
+        $scope.getVarsNames = function() {
+            if($scope.doc.vars == undefined || $scope.doc.vars.length == 0) {
+                return;
+            }
+
+            $scope.varsLoading = true;
+            $routeParams.vars = $scope.doc.vars;
+
+
+            ViewFactory.rewrite($routeParams, function(response) {
+               console.log(response);
+                $scope.varsLoading = false;
+               if(response.code == undefined || response.code != 200) {
+                   alertify.error('помилка отримання змімнних з проекту');
+                   return;
+               }
+
+                $scope.varsRewrites = response.vars;
+            });
         }
 
 

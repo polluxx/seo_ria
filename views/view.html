@@ -65,6 +65,9 @@
     <div class="col col-lg-3 variables">
 
         <div ng-if="variables">
+
+            <div class="overlay-box1" style="z-index:100000;" loading-container="varsLoading"></div>
+
             <div class="form-group has-success has-feedback variables-block">
                 <label class="control-label" for="vars_{{lang.id}}">Список змінних</label>
 
@@ -75,7 +78,7 @@
 
             <div class="passive view-variables" id="view-variables-{{lang.id}}">
                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                    <button type="button" class="btn btn-default inputbox" ng-repeat="variable in doc.vars" ng-click="selectVars(variable)">{{variable}}</button>
+                    <button type="button" class="btn btn-default inputbox" ng-repeat="(variable,varIndex) in varsRewrites" ng-click="selectVars(variable)">{{varIndex}} - {{variable}}</button>
                 </div>
             </div>
         </div>

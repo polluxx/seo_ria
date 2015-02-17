@@ -21,6 +21,11 @@ define([
             update: {
                 method:"PUT",
                 url:bzConfig.api()+'/doc'
+            },
+            vars: {
+                method:"GET",
+                url:bzConfig.api()+'/seo/vars',
+                isArray:false
             }
         });
     }]);

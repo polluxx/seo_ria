@@ -485,7 +485,7 @@ path.link {
 .data-block {
     bottom: 19px;
     left: 24px;
-    overflow: hidden;
+
     overflow-wrap: break-word;
     position: absolute;
     right: 24px;
@@ -968,7 +968,8 @@ h1 {
 
 .updated-link {
     position: absolute;
-    bottom: -22px;
+    bottom: -26px;
+    left: 4px;
 }
 
 .list-box.largebox {
