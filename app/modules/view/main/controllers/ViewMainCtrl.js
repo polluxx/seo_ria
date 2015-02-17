@@ -4,7 +4,7 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('ViewMainCtrl', ['$scope', '$routeParams', 'ViewFactory', '$rootScope', 'localStorageService', function($scope, $routeParams, ViewFactory, $rootScope, localStorageService) {
+    module.controller('ViewMainCtrl', ['$scope', '$routeParams', 'ViewFactory', '$resource', function($scope, $routeParams, ViewFactory, $resource) {
         var variablesBlock,
             width;
         $scope.doc = {};
@@ -174,9 +174,12 @@ define([
             }
 
             $scope.varsLoading = true;
-            //$routeParams.vars = JSON.stringify($scope.doc.vars);
-
-
+            var vars = JSON.stringify($scope.doc.vars);
+            var link = "http://market.rest.ria.ua/seo/seo_example_for_param/"+vars;
+            $resource.get(link, function(resp) {
+                console.log(resp)
+            })
+/*
             ViewFactory.vars($routeParams, function(response) {
                console.log(response);
                 $scope.varsLoading = false;
@@ -188,6 +191,7 @@ define([
                 $scope.varsRewrites = response.vars;
                 callback();
             });
+            */
         }
 
 
