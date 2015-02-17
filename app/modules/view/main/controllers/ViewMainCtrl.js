@@ -37,7 +37,7 @@ define([
         $scope.validate = false;
         $scope.rewriteItem = "";
         $scope.errors = [];
-        $scope.varsRewrites = {};
+        $scope.varsRewrites = [];
         $scope.varsLoading = false;
 
         $scope.langSelect = function(langID) {
@@ -50,7 +50,7 @@ define([
 
         $scope.slideIn = function(langId) {
 
-            if($scope.varsRewrites == {}) {
+            if($scope.varsRewrites.length == 0) {
                 $scope.getVarsNames(function() {
                     $scope.slideMake(langId);
                 });
