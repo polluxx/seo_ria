@@ -10,6 +10,9 @@ define([
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
         $routeParams.priority = 2; // set children priority
+
+        console.log($routeParams)
+
         $rootScope.listData = [];
         $scope.radioModel = '10';
 
