@@ -52,15 +52,15 @@ define([
 
             if($scope.varsRewrites == {}) {
                 $scope.getVarsNames(function() {
-                    $scope.slideMake();
+                    $scope.slideMake(langId);
                 });
             } else {
-                $scope.slideMake();
+                $scope.slideMake(langId);
             }
 
         }
 
-        $scope.slideMake = function(){
+        $scope.slideMake = function(langId){
             variablesBlock = angular.element(document.getElementById("view-variables-"+langId.id));
             width = variablesBlock[0].offsetWidth;
             variablesBlock.css("left","-"+width+"px");
