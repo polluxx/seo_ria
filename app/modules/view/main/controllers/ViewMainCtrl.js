@@ -178,7 +178,8 @@ define([
             }
 
             $scope.varsLoading = true;
-            /*var vars = JSON.stringify($scope.doc.vars);
+            $routeParams.vars = JSON.stringify($scope.doc.vars);
+            /*
             var link = "http://market.rest.ria.ua/seo/seo_example_for_param/"+vars;
             var rewrites = $resource(link, {}, {
                 charge: {method:'GET', params:{charge:true}}
