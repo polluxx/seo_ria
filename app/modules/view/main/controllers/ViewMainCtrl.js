@@ -193,7 +193,7 @@ define([
                    return;
                }
 
-                $scope.varsRewrites = JSON.decode(response.vars);
+                $scope.varsRewrites = JSON.parse(response.vars);
                 callback();
             });
 
