@@ -174,7 +174,7 @@ define([
             }
 
             $scope.varsLoading = true;
-            var vars = JSON.stringify($scope.doc.vars);
+            /*var vars = JSON.stringify($scope.doc.vars);
             var link = "http://market.rest.ria.ua/seo/seo_example_for_param/"+vars;
             var rewrites = $resource(link, {}, {
                 charge: {method:'GET', params:{charge:true}}
@@ -182,8 +182,8 @@ define([
 
             rewrites.query(function(resp) {
                 console.log(resp);
-            });
-/*
+            });*/
+
 
             ViewFactory.vars($routeParams, function(response) {
                console.log(response);
@@ -196,7 +196,7 @@ define([
                 $scope.varsRewrites = response.vars;
                 callback();
             });
-            */
+
         }
 
 
