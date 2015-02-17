@@ -167,6 +167,7 @@ define([
         }
 
         $scope.getVarsNames = function(callback) {
+            console.log($scope.doc);
             if($scope.doc.vars == undefined || $scope.doc.vars.length == 0) {
                 callback();
                 return;
