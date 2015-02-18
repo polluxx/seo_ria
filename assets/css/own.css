@@ -753,7 +753,8 @@ svg:not(:root) {
     position: absolute;
     top: 26px;
     left: 0;
-    width: auto;
+    width: 100%;
+    overflow: hidden;
 }
 .variables-block {
     z-index: 10;
