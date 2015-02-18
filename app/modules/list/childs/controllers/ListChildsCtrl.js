@@ -11,10 +11,6 @@ define([
         $scope.bigCurrentPage = 1;
         $routeParams.priority = 2; // set children priority
 
-        console.log($rootScope)
-
-        $routeParams.project = $rootScope.projectSet;
-
         $rootScope.listData = [];
         $scope.radioModel = '10';
 
@@ -22,6 +18,8 @@ define([
             $scope.$loading = true;
             $routeParams.limit = $scope.bigTotalItems;
             $routeParams.limit = +$scope.radioModel;
+
+            $routeParams.project = $rootScope.currentProject;
 
             if (params != undefined && params.page != undefined) {
                 $routeParams.page = params.page;
