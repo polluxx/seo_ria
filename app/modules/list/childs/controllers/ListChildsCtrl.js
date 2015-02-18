@@ -11,7 +11,7 @@ define([
         $scope.bigCurrentPage = 1;
         $routeParams.priority = 2; // set children priority
 
-        console.log($rootScope)
+        $routeParams.project = $rootScope.projectSet;
 
         $rootScope.listData = [];
         $scope.radioModel = '10';
