@@ -35,19 +35,80 @@ define(['base/home/module'], function (module) {
         }
     });
 
-    module.directive('changeble', function() {
+    module.directive('changeble', function($compile, ViewFactory) {
         return {
             restrict:"A",
             scope:{
-                changeble:"&"
+                changeble:"&",
+                info: '=ngModel'
             },
             link: function(scope, element, attrs) {
-                element.on("change", function() {
-                    scope.changeble();
+                var items = [];
+
+                scope.checkVariables = function(text) {
+                    if(text == undefined) return;
+
+                    items = text.match(/(\[[a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
+                    if(items == undefined) return;
+
+                    element[0].disabled = true;
+
+
+                    scope.changeble({items:items, callback:function(response) {
+
+                        console.log(response);
+                        element[0].disabled = false;
+                    }});
+                    //console.log(items);
+                }
+
+                scope.$watch("info", function() {
+
+                    //console.log(scope.info)
+                    scope.checkVariables(scope.info);
+
                 })
+
+                scope.checkSymbols = function() {
+
+                    var left = scope.itemText = +attrs.symbolsLeft;
+                    var res = "";
+                    var item = angular.element("<div></div>");
+                    item.addClass("symbolsLeft");
+
+                    item.text("{{itemText}} symbols left");
+                    scope.$watch("info", function() {
+                        if(scope.info == undefined) {
+                            return;
+                        }
+
+                        res = scope.info.replace(/\s/gi, "");
+
+                        left = +attrs.symbolsLeft - res.length;
+
+                        if (left <= 0) {
+                            item.addClass("red");
+                            element.parent().addClass("has-error");
+                        } else {
+                            item.removeClass("red");
+                            element.parent().removeClass("has-error");
+                        }
+
+                        //if(left < 0) left = 0;
+                        scope.itemText = left;
+                    })
+                    element.after(item);
+                    $compile(item)(scope);
+                }
+
+
+                if(attrs.symbolsLeft != undefined) {
+                    scope.checkSymbols();
+                }
             }
         }
     });
+
 
     module.directive('validateInput', function() {
         return {

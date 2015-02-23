@@ -13,7 +13,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="title_{{lang.id}}">Title</label>
 
-            <textarea ng-model="doc.blocks[lang.name].title" changeble="checkData()" class="form-control inputbox" id="title_{{lang.id}}" aria-describedby="inputWarning2Status" rows="4">
+            <textarea changeble="checkData(items, callback)" ng-model="doc.blocks[lang.name].title" symbols-left="55" class="form-control inputbox" id="title_{{lang.id}}" aria-describedby="inputWarning2Status" rows="4">
 
             </textarea>
         </div>
@@ -21,7 +21,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="description_{{lang.id}}">Description</label>
 
-            <textarea ng-model="doc.blocks[lang.name].description" changeble="checkData()" class="form-control inputbox" id="description_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
+            <textarea changeble="checkData(items, callback)" ng-model="doc.blocks[lang.name].description" symbols-left="156" class="form-control inputbox" id="description_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
 
             </textarea>
         </div>
@@ -30,7 +30,7 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="h1_{{lang.id}}">H1</label>
 
-            <textarea ng-model="doc.blocks[lang.name].h1" changeble="checkData()" class="form-control inputbox" id="h1_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2">
+            <textarea ng-model="doc.blocks[lang.name].h1" changeble="checkData(items, callback)" class="form-control inputbox" id="h1_{{lang.id}}" aria-describedby="inputWarning2Status" rows="2">
 
             </textarea>
         </div>
@@ -39,13 +39,13 @@
         <div class="form-group has-feedback">
             <label class="control-label" for="seo_title_{{lang.id}}">Seo Title</label>
 
-            <input changeble="checkData()" class="form-control inputbox" id="seo_title_{{lang.id}}" aria-describedby="inputWarning2Status" ng-model="doc.blocks[lang.name].seotitle" type="text"/>
+            <input changeble="checkData(items, callback)" class="form-control inputbox" id="seo_title_{{lang.id}}" aria-describedby="inputWarning2Status" ng-model="doc.blocks[lang.name].seotitle" type="text"/>
         </div>
 
         <div class="form-group has-feedback">
             <label class="control-label" for="seo_text_{{lang.id}}">Seo Text</label>
 
-            <textarea ng-model="doc.blocks[lang.name].seotext" changeble="checkData()" class="form-control inputbox" id="seo_text_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
+            <textarea ng-model="doc.blocks[lang.name].seotext" changeble="checkData(items, callback)" class="form-control inputbox" id="seo_text_{{lang.id}}" aria-describedby="inputWarning2Status" rows="6">
 
             </textarea>
         </div>
@@ -91,4 +91,8 @@
 
 
 
+</div>
+
+<div class="form-group">
+    <button type="submit" class="save-btn form-control inputbox" ng-click="saveData()">Save</button>
 </div>

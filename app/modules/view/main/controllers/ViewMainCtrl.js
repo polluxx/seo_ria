@@ -44,9 +44,9 @@ define([
             $scope.selectedLang = langID;
         }
 
-        $scope.$watch("selectedLang", function() {
+        /*$scope.$watch("selectedLang", function() {
             console.log($scope.selectedLang)
-        })
+        })*/
 
         $scope.slideIn = function(langId) {
 
@@ -94,11 +94,18 @@ define([
             console.log(variable);
         }
 
-        $scope.checkData = function() {
-            $scope.dataCanSave = true;
-            $scope.validate = false;
-            $scope.$apply();
-        }
+        $scope.checkData = function(items, callback) {
+            //console.log(items);
+
+            if($scope.varsRewrites.length > 0) {
+                callback($scope.varsRewrites);
+            } else {
+                $scope.getVarsNames(function () {
+                    callback($scope.varsRewrites);
+                });
+            }
+
+        };
 
 
 

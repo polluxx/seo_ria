@@ -182,6 +182,13 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true
                 }
+            },
+            js: {
+                files: '**/*.js',
+                tasks: ['requirejs', 'uglify'],
+                options: {
+                    livereload: true
+                }
             }
         },
         htmlmin: {

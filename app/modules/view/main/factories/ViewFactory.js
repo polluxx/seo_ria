@@ -25,6 +25,10 @@ define([
             vars: {
                 method:"GET",
                 url:bzConfig.api()+'/seo/vars'
+            },
+            varsRewrite: {
+                method:"GET",
+                url:bzConfig.api()+'/seo/vars-rewrites'
             }
         });
     }]);

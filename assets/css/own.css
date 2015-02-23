@@ -778,6 +778,20 @@ svg:not(:root) {
 
 }
 
+
+.symbolsLeft {
+    font-size: 11px;
+    color: cornflowerblue;
+}
+.symbolsLeft.red {
+    color: #d85442;
+}
+
+.save-btn {
+    width: 200px !important;
+    clear: both;
+}
+
 .variables {
     position: relative;
 }
