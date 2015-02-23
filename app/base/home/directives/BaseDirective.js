@@ -56,6 +56,7 @@ define(['base/home/module'], function (module) {
 
                     scope.changeble({items:items, callback:function(response) {
                         for(itemResp in response) {
+                            console.log(itemResp)
                             text.replace(new RegExp(itemResp, 'g'), response[itemResp]);
                         }
 
