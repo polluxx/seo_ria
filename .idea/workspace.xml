@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="add fixes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.js" afterPath="$PROJECT_DIR$/build/_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.map" afterPath="$PROJECT_DIR$/build/_bootstrap.map" />
+    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -58,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6948882" vertical-offset="465" max-vertical-offset="4080">
-              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="4080">
+              <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -118,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.125" vertical-offset="654" max-vertical-offset="1245">
-              <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.72325975" vertical-offset="654" max-vertical-offset="1245">
+              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -164,7 +162,6 @@
         <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/list/history/controllers/HistoryMainCtrl.js" />
         <option value="$PROJECT_DIR$/views/list.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/build/assets/css/own.css" />
@@ -174,6 +171,7 @@
         <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" />
         <option value="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -1097,14 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.125" vertical-offset="654" max-vertical-offset="1245">
-          <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="945">
@@ -1175,6 +1165,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="4080">
+          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1262" max-vertical-offset="3585">
@@ -1183,10 +1181,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6948882" vertical-offset="465" max-vertical-offset="4080">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.72325975" vertical-offset="654" max-vertical-offset="1245">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
           <folding />
         </state>
       </provider>
