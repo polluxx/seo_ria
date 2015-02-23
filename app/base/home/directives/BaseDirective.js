@@ -55,9 +55,13 @@ define(['base/home/module'], function (module) {
 
 
                     scope.changeble({items:items, callback:function(response) {
+                        var indexed = "";
                         for(itemResp in response) {
-                            console.log(itemResp)
-                            text.replace(new RegExp(itemResp, 'g'), response[itemResp]);
+                            indexed = itemResp;
+                            indexed.replace(/\[/g, "\[")
+                                .replace(/\]/g, "\]")
+
+                            text.replace(new RegExp(indexed, 'g'), response[itemResp]);
                         }
 
                         console.log(response);
