@@ -58,8 +58,8 @@ define(['base/home/module'], function (module) {
                         var indexed = "";
                         for(itemResp in response) {
                             indexed = itemResp;
-                            indexed.replace(/\[/g, "\[")
-                                .replace(/\]/g, "\]")
+                            indexed.replace(/[/g, "\[")
+                                .replace(/]/g, "\]")
 
                             text.replace(new RegExp(indexed, 'g'), response[itemResp]);
                         }
