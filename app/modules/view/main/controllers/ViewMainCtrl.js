@@ -94,18 +94,35 @@ define([
             console.log(variable);
         }
 
-        $scope.checkData = function(items, callback) {
-            //console.log(items);
-
-            if($scope.varsRewrites.length > 0) {
+        $scope.checkForRewrites = function (callback) {
+            if($scope.varsLoading) {
+                setInterval(function() {
+                    return $scope.checkForRewrites();
+                }, 200);
+            } else if($scope.varsRewrites.length > 0) {
                 callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
                     callback($scope.varsRewrites);
                 });
             }
+        };
+
+
+        $scope.checkData = function(items, callback) {
+            //console.log(items);
+
+            if($scope.varsRewrites.length > 0) {
+                callback($scope.varsRewrites);
+            } else {
+
+                return $scope.checkForRewrites();
+
+            }
 
         };
+
+
 
 
 
