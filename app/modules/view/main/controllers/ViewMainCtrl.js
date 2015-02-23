@@ -116,7 +116,7 @@ define([
                 callback($scope.varsRewrites);
             } else {
 
-                return $scope.checkForRewrites();
+                return $scope.checkForRewrites(callback);
 
             }
 
