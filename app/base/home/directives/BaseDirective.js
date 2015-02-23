@@ -56,9 +56,15 @@ define(['base/home/module'], function (module) {
 
                     scope.changeble({items:items, callback:function(response) {
 
+                        var result = response.forEach(replacer);
                         console.log(response);
+                        console.log(result);
                         element[0].disabled = false;
                     }});
+
+                    function replacer(element, index) {
+                        return text.replace(/index/gi, element);
+                    }
                     //console.log(items);
                 }
 
