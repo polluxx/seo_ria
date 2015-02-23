@@ -55,17 +55,15 @@ define(['base/home/module'], function (module) {
 
 
                     scope.changeble({items:items, callback:function(response) {
+                        for(itemResp in response) {
+                            text.replace(/itemResp/gi, response[itemResp]);
+                        }
 
-                        //var result = response.forEach(replacer);
                         console.log(response);
-                        //console.log(result);
+                        console.log(text);
                         element[0].disabled = false;
                     }});
 
-                    function replacer(element, index) {
-                        return text.replace(/index/gi, element);
-                    }
-                    //console.log(items);
                 }
 
                 scope.$watch("info", function() {
