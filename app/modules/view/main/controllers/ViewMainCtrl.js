@@ -178,7 +178,7 @@ define([
         }
 
         $scope.getVarsNames = function(callback) {
-            console.log($scope.doc);
+            //console.log($scope.doc);
             if($scope.doc.vars == undefined || $scope.doc.vars.length == 0) {
                 callback();
                 return;
@@ -198,7 +198,7 @@ define([
 
 
             ViewFactory.vars($routeParams, function(response) {
-               console.log(response);
+               //console.log(response);
                 $scope.varsLoading = false;
                if(response.code == undefined || response.code != 200) {
                    alertify.error('помилка отримання змімнних з проекту');
