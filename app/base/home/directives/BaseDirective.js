@@ -48,9 +48,9 @@ define(['base/home/module'], function (module) {
                 scope.checkVariables = function(text) {
                     if(text == undefined) return;
 
-                    items = text.match(/(\[[a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
+                    items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
 
-                    console.log(text.match(/\[[_0-9a-zA-Zа-яА-Я]+\]/g));
+
                     if(items == undefined) return;
 
                     element[0].disabled = true;
@@ -60,8 +60,6 @@ define(['base/home/module'], function (module) {
                         for(itemResp in response) {
                             text = text.replace(itemResp, response[itemResp]);
                         }
-                        console.log(text)
-                        element.text(text);
                         element[0].value = text;
                         element[0].disabled = false;
                     }});
