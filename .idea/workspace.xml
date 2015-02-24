@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" afterPath="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.js" afterPath="$PROJECT_DIR$/build/_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.map" afterPath="$PROJECT_DIR$/build/_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="ViewMainCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3670473" vertical-offset="1305" max-vertical-offset="3600">
-              <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.3846154" vertical-offset="555" max-vertical-offset="3600">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -1178,8 +1176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3670473" vertical-offset="1305" max-vertical-offset="3600">
-          <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.3846154" vertical-offset="555" max-vertical-offset="3600">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
           <folding />
         </state>
       </provider>

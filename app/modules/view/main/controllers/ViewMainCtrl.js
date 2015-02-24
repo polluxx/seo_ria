@@ -37,7 +37,7 @@ define([
         $scope.validate = false;
         $scope.rewriteItem = "";
         $scope.errors = [];
-        $scope.varsRewrites = [];
+        $scope.varsRewrites = {};
         $scope.varsLoading = false;
 
         $scope.langSelect = function(langID) {
@@ -50,7 +50,7 @@ define([
 
         $scope.slideIn = function(langId) {
 
-            if($scope.varsRewrites.length == 0) {
+            if($scope.varsRewrites == {}) {
                 $scope.getVarsNames(function() {
                     setTimeout(function() {
                         console.log(langId);
@@ -99,7 +99,7 @@ define([
                 setInterval(function() {
                     return $scope.checkForRewrites(callback);
                 }, 200);
-            } else if($scope.varsRewrites != []) {
+            } else if($scope.varsRewrites != {}) {
                 console.log($scope.varsRewrites)
                 callback($scope.varsRewrites);
             } else {
@@ -113,7 +113,7 @@ define([
         $scope.checkData = function(items, callback) {
             //console.log(items);
 
-            if($scope.varsRewrites.length > 0) {
+            if($scope.varsRewrites != {}) {
                 callback($scope.varsRewrites);
             } else {
 
