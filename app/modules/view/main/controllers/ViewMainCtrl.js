@@ -98,12 +98,12 @@ define([
         $scope.checkForRewrites = function (callback) {
 
             if($scope.varsLoading) {
-                interval = setInterval(function() {
+                interval = setTimeout(function() {
                     $scope.checkForRewrites(callback);
                 }, 200);
             } else if(Object.keys($scope.varsRewrites).length > 0) {
                 console.log($scope.varsRewrites)
-                clearInterval(interval);
+                clearTimeout(interval);
                 callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
