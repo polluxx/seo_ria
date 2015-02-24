@@ -103,8 +103,8 @@ define([
                 }, 200);
             } else if(Object.keys($scope.varsRewrites).length > 0) {
                 console.log($scope.varsRewrites)
-                clearTimeout(interval);
-                callback($scope.varsRewrites);
+                //clearTimeout(interval);
+                return callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
                     callback($scope.varsRewrites);
