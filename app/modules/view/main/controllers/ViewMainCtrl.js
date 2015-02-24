@@ -50,7 +50,7 @@ define([
 
         $scope.slideIn = function(langId) {
 
-            if($scope.varsRewrites == {}) {
+            if(Object.keys($scope.varsRewrites).length == 0) {
                 $scope.getVarsNames(function() {
                     setTimeout(function() {
                         console.log(langId);
@@ -95,12 +95,12 @@ define([
         }
 
         $scope.checkForRewrites = function (callback) {
-            console.log($scope.varsRewrites)
+
             if($scope.varsLoading) {
                 setInterval(function() {
                     return $scope.checkForRewrites(callback);
                 }, 200);
-            } else if($scope.varsRewrites != {}) {
+            } else if(Object.keys($scope.varsRewrites).length > 0) {
                 console.log($scope.varsRewrites)
                 callback($scope.varsRewrites);
             } else {
@@ -113,8 +113,8 @@ define([
 
         $scope.checkData = function(items, callback) {
             //console.log(items);
-            console.log($scope.varsRewrites)
-            if($scope.varsRewrites != {}) {
+
+            if(Object.keys($scope.varsRewrites).length > 0) {
                 callback($scope.varsRewrites);
             } else {
 
