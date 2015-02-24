@@ -43,7 +43,7 @@ define(['base/home/module'], function (module) {
                 info: '=ngModel'
             },
             link: function(scope, element, attrs) {
-                var items = [];
+                var items = [], replacement="";
                 scope.rewrites = {};
                 scope.checkVariables = function(text) {
                     if(text == undefined) return;
@@ -68,7 +68,14 @@ define(['base/home/module'], function (module) {
 
                 scope.setVariables = function(text, response) {
                     for(itemResp in response) {
-                        text = text.replace(itemResp, response[itemResp]);
+                        replacement = response[itemResp];
+                        replacement.replace("[", "")
+                            .replace("]", "")
+                            .replace("{", "")
+                            .replace("}", "")
+                            .replace("&", "");
+
+                        text = text.replace(itemResp, replacement);
                     }
                     element[0].value = text;
                     element[0].disabled = false;
