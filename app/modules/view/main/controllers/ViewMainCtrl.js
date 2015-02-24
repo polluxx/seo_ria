@@ -102,7 +102,6 @@ define([
                     $scope.checkForRewrites(callback);
                 }, 200);
             } else if(Object.keys($scope.varsRewrites).length > 0) {
-                console.log($scope.varsRewrites)
                 //clearTimeout(interval);
                 return callback($scope.varsRewrites);
             } else {
