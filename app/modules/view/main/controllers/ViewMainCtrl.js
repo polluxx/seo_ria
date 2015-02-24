@@ -99,7 +99,7 @@ define([
                 setInterval(function() {
                     return $scope.checkForRewrites(callback);
                 }, 200);
-            } else if($scope.varsRewrites.length > 0) {
+            } else if($scope.varsRewrites != []) {
                 callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
