@@ -97,7 +97,7 @@ define([
         $scope.checkForRewrites = function (callback) {
             if($scope.varsLoading) {
                 setInterval(function() {
-                    return $scope.checkForRewrites();
+                    return $scope.checkForRewrites(callback);
                 }, 200);
             } else if($scope.varsRewrites.length > 0) {
                 callback($scope.varsRewrites);
