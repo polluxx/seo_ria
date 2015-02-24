@@ -113,7 +113,7 @@ define([
 
         $scope.checkData = function(items, callback) {
             //console.log(items);
-
+            console.log($scope.varsRewrites)
             if($scope.varsRewrites != {}) {
                 callback($scope.varsRewrites);
             } else {
