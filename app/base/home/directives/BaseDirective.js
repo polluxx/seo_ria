@@ -58,15 +58,15 @@ define(['base/home/module'], function (module) {
                     if(Object.keys(scope.rewrites).length == 0) {
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
-                            scope.setVariables(response);
+                            scope.setVariables(text, response);
                         }});
                     } else {
-                        scope.setVariables(scope.rewrites);
+                        scope.setVariables(text, scope.rewrites);
                     }
 
                 }
 
-                scope.setVariables = function(response) {
+                scope.setVariables = function(text, response) {
                     for(itemResp in response) {
                         text = text.replace(itemResp, response[itemResp]);
                     }
