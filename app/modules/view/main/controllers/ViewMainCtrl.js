@@ -100,6 +100,7 @@ define([
                     return $scope.checkForRewrites(callback);
                 }, 200);
             } else if($scope.varsRewrites != []) {
+                console.log($scope.varsRewrites)
                 callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
