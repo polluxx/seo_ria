@@ -102,7 +102,7 @@ define([
                 }, 200);
             } else if(Object.keys($scope.varsRewrites).length > 0) {
                 console.log($scope.varsRewrites)
-                callback($scope.varsRewrites);
+                return callback($scope.varsRewrites);
             } else {
                 $scope.getVarsNames(function () {
                     callback($scope.varsRewrites);
@@ -115,7 +115,7 @@ define([
             //console.log(items);
 
             if(Object.keys($scope.varsRewrites).length > 0) {
-                callback($scope.varsRewrites);
+                return callback($scope.varsRewrites);
             } else {
 
                 return $scope.checkForRewrites(callback);
