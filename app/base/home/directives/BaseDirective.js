@@ -50,7 +50,7 @@ define(['base/home/module'], function (module) {
 
                     items = text.match(/(\[[a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
 
-                    console.log(text.match(/\[[a-zA-Zа-яА-Я]+\]/));
+                    console.log(text.match(/\[[0-9a-zA-Zа-яА-Я]+\]/));
                     if(items == undefined) return;
 
                     element[0].disabled = true;
@@ -62,7 +62,7 @@ define(['base/home/module'], function (module) {
                         }
                         console.log(text)
                         element.text(text);
-                        element[0].innerHTML = text;
+                        element[0].value = text;
                         element[0].disabled = false;
                     }});
 
