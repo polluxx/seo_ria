@@ -55,7 +55,7 @@ define(['base/home/module'], function (module) {
 
                     element[0].disabled = true;
 
-                    var rewrites = Object.values(scope.rewrites);
+                    var rewrites = Object.getOwnPropertyNames(scope.rewrites);
                     if(rewrites.length == 0) {
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
@@ -63,14 +63,16 @@ define(['base/home/module'], function (module) {
                         }});
                     } else {
                         // check if there is new vars that we can renew
-
                         var varsIn = false;
-                        for(itemvar in items) {
-                            if(rewrites.indexOf(items[itemvar]) != -1) {
+                        rewrites.forEach(function(val, idx, array) {
+                            console.log(rewrites[val]);
+                            console.log(items);
+                            if(items.indexOf(rewrites[val]) != -1) {
                                 varsIn = true;
-                                break;
+                                return;
                             }
-                        }
+                        });
+
                         if(!varsIn) return;
                         // end
                         scope.setVariables(text, scope.rewrites);
