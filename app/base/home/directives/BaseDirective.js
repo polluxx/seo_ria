@@ -76,46 +76,52 @@ define(['base/home/module'], function (module) {
 
                     element[0].disabled = false;
 
-                    scope.checkSymbols();
                 }
 
                 scope.$watch("info", function() {
 
                     //console.log(scope.info)
-                    scope.checkVariables(scope.info);
+                    scope.checkVariables(scope.info, function() {
+                        scope.setupSymbols();
+                    });
 
                 })
 
+                var item = angular.element("<div></div>");
                 scope.checkSymbols = function() {
 
-                    var left = scope.itemText = +attrs.symbolsLeft;
-                    var res = "";
-                    var item = angular.element("<div></div>");
                     item.addClass("symbolsLeft");
 
                     item.text("{{itemText}} symbols left");
-                    scope.$watch("info", function() {
-                        if(scope.info == undefined) {
-                            return;
-                        }
+                    //scope.$watch("info", function() {
 
-                        res = scope.info.replace(/\s/gi, "");
-
-                        left = +attrs.symbolsLeft - res.length;
-
-                        if (left <= 0) {
-                            item.addClass("red");
-                            element.parent().addClass("has-error");
-                        } else {
-                            item.removeClass("red");
-                            element.parent().removeClass("has-error");
-                        }
-
-                        //if(left < 0) left = 0;
-                        scope.itemText = left;
-                    })
+                    //})
                     element.after(item);
                     $compile(item)(scope);
+                }
+
+                scope.setupSymbols = function() {
+                    if(scope.info == undefined) {
+                        return;
+                    }
+
+                    var left = scope.itemText = +attrs.symbolsLeft;
+                    var res = "";
+
+                    res = scope.info.replace(/\s/gi, "");
+
+                    left = +attrs.symbolsLeft - res.length;
+
+                    if (left <= 0) {
+                        item.addClass("red");
+                        element.parent().addClass("has-error");
+                    } else {
+                        item.removeClass("red");
+                        element.parent().removeClass("has-error");
+                    }
+
+                    //if(left < 0) left = 0;
+                    scope.itemText = left;
                 }
 
 
