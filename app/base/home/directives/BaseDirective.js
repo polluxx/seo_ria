@@ -71,7 +71,10 @@ define(['base/home/module'], function (module) {
                             }
                         });
 
-                        if(!varsIn) return;
+                        if(!varsIn) {
+                            element[0].disabled = false;
+                            return;
+                        }
                         // end
                         scope.setVariables(text, scope.rewrites);
                     }
