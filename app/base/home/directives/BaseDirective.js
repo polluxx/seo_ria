@@ -61,9 +61,11 @@ define(['base/home/module'], function (module) {
                         // check if there is new vars that we can renew
 
                         var varsIn = false;
-                        for(item in items) {
-                            console.log(rewrites.indexOf(items[item]))
-                            if(rewrites.indexOf(items[item]) != -1) {
+                        for(itemvar in items) {
+                            console.log(rewrites);
+                            console.log(items[itemvar]);
+                            console.log(rewrites.indexOf(items[itemvar]))
+                            if(rewrites.indexOf(items[itemvar]) != -1) {
                                 varsIn = true;
                                 break;
                             }
