@@ -78,6 +78,12 @@ define([
         $scope.selectVars = function(variable) {
             $scope.selectedVarType = variable;
 
+
+            window.prompt("Copy to clipboard: Ctrl+C, Enter", variable);
+
+
+            return;
+
             if (window.clipboardData && clipboardData.setData) {
                 clipboardData.setData('text', variable);
             } else {
