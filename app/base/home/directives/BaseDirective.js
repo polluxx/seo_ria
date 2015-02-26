@@ -55,13 +55,15 @@ define(['base/home/module'], function (module) {
 
                     element[0].disabled = true;
 
-
-                    if(Object.keys(scope.rewrites).length == 0) {
+                    var rewrites = Object.keys(scope.rewrites);
+                    if(rewrites.length == 0) {
 
                         // check if there is new vars that we can renew
+
                         var varsIn = false;
-                        for(item in scope.rewrites) {
-                            if(items.indexOf(scope.rewrites[item]) != -1) {
+                        for(item in items) {
+                            console.log(rewrites.indexOf(items[item]))
+                            if(rewrites.indexOf(items[item]) != -1) {
                                 varsIn = true;
                                 break;
                             }
