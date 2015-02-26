@@ -55,7 +55,7 @@ define(['base/home/module'], function (module) {
 
                     element[0].disabled = true;
 
-                    var rewrites = Object.keys(scope.rewrites);
+                    var rewrites = Object.values(scope.rewrites);
                     if(rewrites.length == 0) {
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
