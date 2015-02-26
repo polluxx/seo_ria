@@ -45,7 +45,7 @@ define(['base/home/module'], function (module) {
             link: function(scope, element, attrs) {
                 var items = [], replacement="";
                 scope.rewrites = {};
-                scope.checkVariables = function(text, callback) {
+                scope.checkVariables = function(text) {
                     if(text == undefined) return;
 
                     items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
@@ -58,19 +58,15 @@ define(['base/home/module'], function (module) {
                     if(Object.keys(scope.rewrites).length == 0) {
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
-                            scope.setVariables(text, response, function() {
-                                callback();
-                            });
+                            scope.setVariables(text, response);
                         }});
                     } else {
-                        scope.setVariables(text, scope.rewrites, function() {
-                            callback();
-                        });
+                        scope.setVariables(text, scope.rewrites);
                     }
 
                 }
 
-                scope.setVariables = function(text, response, callback) {
+                scope.setVariables = function(text, response) {
                     for(itemResp in response) {
                         text = text.replace(itemResp, response[itemResp], "g");
                     }
@@ -79,16 +75,14 @@ define(['base/home/module'], function (module) {
                     element.text(text);
 
                     element[0].disabled = false;
-                    callback();
+
                 }
 
                 scope.$watch("info", function() {
 
                     //console.log(scope.info)
-                    scope.checkVariables(scope.info, function() {
-                        scope.setupSymbols();
-                    });
-
+                    scope.checkVariables(scope.info);
+                    scope.setupSymbols();
                 })
 
                 var item = angular.element("<div></div>");
