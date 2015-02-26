@@ -68,15 +68,15 @@ define(['base/home/module'], function (module) {
 
                 scope.setVariables = function(text, response) {
                     for(itemResp in response) {
-                        replacement = response[itemResp];
-
-                        text = text.replace(itemResp, replacement);
+                        text = text.replace(itemResp, response[itemResp], "g");
                     }
                     element[0].value = text;
                     element[0].innerHTML = text;
                     element.text(text);
 
                     element[0].disabled = false;
+
+                    scope.checkSymbols();
                 }
 
                 scope.$watch("info", function() {
