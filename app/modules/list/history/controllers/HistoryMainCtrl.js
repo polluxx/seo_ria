@@ -12,6 +12,7 @@ define([
         $scope.bigCurrentPage = 1;
         //$scope.limit = 10;
         $rootScope.listData = [];
+        $scope.radioModel = '10';
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
@@ -51,6 +52,9 @@ define([
 
         $scope.$watch("bigCurrentPage", function() {
             $scope.refresh({page:$scope.bigCurrentPage})
+        });
+        $scope.$watch("radioModel", function() {
+            $scope.refresh();
         });
 
 
