@@ -57,14 +57,15 @@ define(['base/home/module'], function (module) {
 
                     var rewrites = Object.keys(scope.rewrites);
                     if(rewrites.length == 0) {
-
+                        scope.changeble({items:items, callback:function(response) {
+                            scope.rewrites = response;
+                            scope.setVariables(text, response);
+                        }});
+                    } else {
                         // check if there is new vars that we can renew
 
                         var varsIn = false;
                         for(itemvar in items) {
-                            console.log(rewrites);
-                            console.log(items[itemvar]);
-                            console.log(rewrites.indexOf(items[itemvar]))
                             if(rewrites.indexOf(items[itemvar]) != -1) {
                                 varsIn = true;
                                 break;
@@ -72,13 +73,6 @@ define(['base/home/module'], function (module) {
                         }
                         if(!varsIn) return;
                         // end
-
-
-                        scope.changeble({items:items, callback:function(response) {
-                            scope.rewrites = response;
-                            scope.setVariables(text, response);
-                        }});
-                    } else {
                         scope.setVariables(text, scope.rewrites);
                     }
 
