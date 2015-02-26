@@ -45,7 +45,7 @@ define(['base/home/module'], function (module) {
             link: function(scope, element, attrs) {
                 var items = [], replacement="";
                 scope.rewrites = {};
-                scope.checkVariables = function(text) {
+                scope.checkVariables = function(text, callback) {
                     if(text == undefined) return;
 
                     items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
@@ -58,15 +58,19 @@ define(['base/home/module'], function (module) {
                     if(Object.keys(scope.rewrites).length == 0) {
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
-                            scope.setVariables(text, response);
+                            scope.setVariables(text, response, function() {
+                                callback();
+                            });
                         }});
                     } else {
-                        scope.setVariables(text, scope.rewrites);
+                        scope.setVariables(text, scope.rewrites, function() {
+                            callback();
+                        });
                     }
 
                 }
 
-                scope.setVariables = function(text, response) {
+                scope.setVariables = function(text, response, callback) {
                     for(itemResp in response) {
                         text = text.replace(itemResp, response[itemResp], "g");
                     }
@@ -75,7 +79,7 @@ define(['base/home/module'], function (module) {
                     element.text(text);
 
                     element[0].disabled = false;
-
+                    callback();
                 }
 
                 scope.$watch("info", function() {
