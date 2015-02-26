@@ -69,15 +69,13 @@ define(['base/home/module'], function (module) {
                 scope.setVariables = function(text, response) {
                     for(itemResp in response) {
                         replacement = response[itemResp];
-                        replacement.replace("[", "")
-                            .replace("]", "")
-                            .replace("{", "")
-                            .replace("}", "")
-                            .replace("&", "");
 
                         text = text.replace(itemResp, replacement);
                     }
                     element[0].value = text;
+                    element[0].innerHTML = text;
+                    element.text(text);
+
                     element[0].disabled = false;
                 }
 
