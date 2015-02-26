@@ -64,10 +64,11 @@ define(['base/home/module'], function (module) {
                     } else {
                         // check if there is new vars that we can renew
                         var varsIn = false;
-                        rewrites.forEach(function(val, idx, array) {
-                            console.log(rewrites[val]);
+
+                        Object.getOwnPropertyNames(scope.rewrites).forEach(function(val, idx, array) {
+                            console.log(scope.rewrites[val]);
                             console.log(items);
-                            if(items.indexOf(rewrites[val]) != -1) {
+                            if(items.indexOf(scope.rewrites[val]) != -1) {
                                 varsIn = true;
                                 return;
                             }
