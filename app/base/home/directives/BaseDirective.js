@@ -60,8 +60,8 @@ define(['base/home/module'], function (module) {
 
                         // check if there is new vars that we can renew
                         var varsIn = false;
-                        for(item in items) {
-                            if(scope.rewrites.indexOf(items[item]) != -1) {
+                        for(item in scope.rewrites) {
+                            if(items.indexOf(scope.rewrites[item]) != -1) {
                                 varsIn = true;
                                 break;
                             }
