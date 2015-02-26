@@ -55,7 +55,21 @@ define(['base/home/module'], function (module) {
 
                     element[0].disabled = true;
 
+
                     if(Object.keys(scope.rewrites).length == 0) {
+
+                        // check if there is new vars that we can renew
+                        var varsIn = false;
+                        for(item in items) {
+                            if(scope.rewrites.indexOf(items[item]) != -1) {
+                                varsIn = true;
+                                break;
+                            }
+                        }
+                        if(!varsIn) return;
+                        // end
+
+
                         scope.changeble({items:items, callback:function(response) {
                             scope.rewrites = response;
                             scope.setVariables(text, response);
