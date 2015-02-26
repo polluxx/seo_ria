@@ -65,12 +65,9 @@ define(['base/home/module'], function (module) {
                         // check if there is new vars that we can renew
                         var varsIn = false;
 
-                        rewrites.forEach(function(val, idx, array) {
-                            console.log(val);
-                            console.log(items);
+                        rewrites.forEach(function(val) {
                             if(items.indexOf(val) != -1) {
                                 varsIn = true;
-                                return;
                             }
                         });
 
