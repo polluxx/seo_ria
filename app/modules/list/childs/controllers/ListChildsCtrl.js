@@ -3,7 +3,7 @@ define([
 ], function (module) {
     'use strict';
 
-    module.controller('ListChildsCtrl', ['$scope', 'bzUser', '$routeParams', 'ListFactory', '$rootScope', function($scope, bzUser, $routeParams, ListFactory, $rootScope) {
+    module.controller('ListChildsCtrl', ['$scope', 'bzUser', '$routeParams', 'ListFactory', '$rootScope', '$location', function($scope, bzUser, $routeParams, ListFactory, $rootScope, $location) {
         var normalized = "/childs/";
         $scope.isChild = true;
         $scope.maxSize = 5;
@@ -28,6 +28,8 @@ define([
             if (params != undefined && params.q != undefined) {
                 $routeParams.q = params.q;
             }
+
+            $location.search($routeParams);
 
             ListFactory.childs($routeParams, function (resp) {
                 if (isSearch == true) {

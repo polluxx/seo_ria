@@ -5,7 +5,7 @@ define([
 ], function (module) {
     'use strict';
 
-    module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', function($scope, $rootScope, $routeParams, ListFactory) {
+    module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', '$location', function($scope, $rootScope, $routeParams, ListFactory, $location) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
@@ -28,6 +28,8 @@ define([
                 $routeParams.q = params.q;
             }
 
+            $location.search($routeParams);
+
             ListFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
                     $rootScope.issearch = false;
@@ -40,7 +42,7 @@ define([
                 }
                 $scope.bigTotalItems = response.data.pages;
                 $scope.total = response.data.total;
-                console.log($scope.total)
+
                 $rootScope.listData = response.data;
                 //$rootScope.$apply();
             });
@@ -49,6 +51,9 @@ define([
 
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;
+
+            $routeParams.q = $rootScope.searchval;
+            //console.log($location.path);
             $scope.refresh({q:$rootScope.searchval}, true)
         })
 

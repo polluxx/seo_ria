@@ -6,7 +6,7 @@ define([
 ], function (module, bootstrap, alertify) {
     'use strict';
 
-    module.controller('HistoryMainCtrl', ['$scope', '$rootScope', '$routeParams', 'HistoryFactory', function($scope, $rootScope, $routeParams, HistoryFactory) {
+    module.controller('HistoryMainCtrl', ['$scope', '$rootScope', '$routeParams', 'HistoryFactory', '$location', function($scope, $rootScope, $routeParams, HistoryFactory, $location) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
         $scope.bigCurrentPage = 1;
@@ -28,6 +28,8 @@ define([
             if (params.q != undefined) {
                 $routeParams.q = params.q;
             }
+
+            $location.search($routeParams);
 
             HistoryFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
