@@ -85,13 +85,14 @@ define(['base/home/module'], function (module) {
                     for(itemResp in response) {
                         text = text.replace(itemResp, response[itemResp], "g");
                     }
-                    element[0].value = text;
-                    element[0].text = text;
-                    element[0].innerHTML = text;
-                    element.text(text);
+                    //element[0].value = text;
+                    //element[0].text = text;
+                    //element[0].innerHTML = text;
+                    //element.text(text);
 
-                    element[0].disabled = false;
+                    //element[0].disabled = false;
                     scope.info = text;
+                    scope.$apply();
                 }
 
                 scope.$watch("info", function() {
