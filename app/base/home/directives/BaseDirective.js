@@ -91,7 +91,7 @@ define(['base/home/module'], function (module) {
                     element.text(text);
 
                     element[0].disabled = false;
-
+                    scope.info = text;
                 }
 
                 scope.$watch("info", function() {
