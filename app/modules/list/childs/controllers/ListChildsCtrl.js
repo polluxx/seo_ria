@@ -29,7 +29,7 @@ define([
                 $routeParams.q = params.q;
             }
 
-            $location.search($routeParams);
+            //$location.search($routeParams);
 
             ListFactory.childs($routeParams, function (resp) {
                 if (isSearch == true) {

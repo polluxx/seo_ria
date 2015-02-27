@@ -28,7 +28,7 @@ define([
                 $routeParams.q = params.q;
             }
 
-            $location.search($routeParams);
+            //$location.search($routeParams);
 
             ListFactory.get($routeParams, function(response) {
                 if (isSearch == true) {

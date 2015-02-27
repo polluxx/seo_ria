@@ -29,7 +29,7 @@ define([
                 $routeParams.q = params.q;
             }
 
-            $location.search($routeParams);
+            //$location.search($routeParams);
 
             HistoryFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
