@@ -86,6 +86,7 @@ define(['base/home/module'], function (module) {
                         text = text.replace(itemResp, response[itemResp], "g");
                     }
                     element[0].value = text;
+                    element[0].text = text;
                     element[0].innerHTML = text;
                     element.text(text);
 
