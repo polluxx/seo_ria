@@ -90,7 +90,7 @@ define(['base/home/module'], function (module) {
                     //element[0].innerHTML = text;
                     //element.text(text);
 
-                    //element[0].disabled = false;
+                    element[0].disabled = false;
                     scope.info = text;
                     //scope.$apply();
                 }
