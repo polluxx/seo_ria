@@ -8,10 +8,12 @@ define([
         var variablesBlock,
             width;
         $scope.doc = {};
+        $scope.$loading = true;
 
         $scope.getDoc = function() {
+            $scope.$loading = true;
             ViewFactory.get($routeParams, function(resp) {
-
+                $scope.$loading = false;
                 if (resp.code == undefined || resp.code != 200) {
                     // error
                     alertify.error('помилка отримання данних');
@@ -24,7 +26,7 @@ define([
 
 
             })
-        }
+        };
 
         $scope.getDoc();
 
@@ -172,9 +174,11 @@ define([
 
                 return;
             }
+            $scope.$loading = true;
 
             $scope.doc._id = $scope.doc.link;
             ViewFactory.update($scope.doc, function(resp) {
+                $scope.$loading = false;
                 if(!resp) {
                     alertify.error('помилка запису данних');
                     return;
