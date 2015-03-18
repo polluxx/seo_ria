@@ -83,8 +83,8 @@
       <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58401304" vertical-offset="1457" max-vertical-offset="5535">
-              <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.36378467" vertical-offset="4502" max-vertical-offset="5535">
+              <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -946,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58401304" vertical-offset="1457" max-vertical-offset="5535">
-          <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.36378467" vertical-offset="4502" max-vertical-offset="5535">
+          <caret line="315" column="38" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
           <folding />
         </state>
       </provider>

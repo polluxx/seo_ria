@@ -104,7 +104,7 @@ define([
                 get: {
                     method: "GET",
                     url: link,
-                    isArray: true
+                    isArray: false
                 },
                 post: {
                     method: "POST",
@@ -313,7 +313,7 @@ define([
                     get: {
                         method: "GET",
                         url: link,
-                        isArray: true
+                        isArray: false
                     }
                 });
                 Adverts.get(function(res) {
