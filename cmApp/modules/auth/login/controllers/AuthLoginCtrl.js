@@ -10,7 +10,7 @@ define([
 
         $scope.setErrors = function(errors) {
             $scope.errors = errors;
-            $scope.$apply();
+            //$scope.$apply();
             console.log(errors);
         };
 
