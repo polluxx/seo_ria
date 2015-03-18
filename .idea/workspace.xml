@@ -4,7 +4,9 @@
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/signIn.html" afterPath="$PROJECT_DIR$/views/cm/signIn.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/home.html" afterPath="$PROJECT_DIR$/views/cm/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -40,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="own.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/own.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7937" max-vertical-offset="20535">
-              <caret line="550" column="0" selection-start-line="550" selection-start-column="0" selection-end-line="550" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.95106035" vertical-offset="19952" max-vertical-offset="20640">
+              <caret line="1369" column="16" selection-start-line="1369" selection-start-column="16" selection-end-line="1369" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -60,11 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signIn.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="signIn.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24916944" vertical-offset="0" max-vertical-offset="602">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="420">
               <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cm/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="79" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -122,16 +134,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="1035">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -145,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build/assets/codrops/component.css" />
         <option value="$PROJECT_DIR$/bower_components/codrops/uiMorphingButton_fixed.js" />
         <option value="$PROJECT_DIR$/build/assets/css/custom_1.css" />
         <option value="$PROJECT_DIR$/cmApp/base/config/config.js" />
@@ -187,7 +188,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/cmApp/requireConfig.js" />
         <option value="$PROJECT_DIR$/bazalt.js" />
-        <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/views/view.html" />
         <option value="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
@@ -196,6 +196,8 @@
         <option value="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
         <option value="$PROJECT_DIR$/indexCm.html" />
         <option value="$PROJECT_DIR$/views/cm/signIn.html" />
+        <option value="$PROJECT_DIR$/views/cm/home.html" />
+        <option value="$PROJECT_DIR$/assets/css/own.css" />
       </list>
     </option>
   </component>
@@ -540,14 +542,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower_components/trumbowyg/examples/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1928934" vertical-offset="114" max-vertical-offset="705">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="300">
@@ -900,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7937" max-vertical-offset="20535">
-          <caret line="550" column="0" selection-start-line="550" selection-start-column="0" selection-end-line="550" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="15180">
@@ -958,8 +944,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24916944" vertical-offset="0" max-vertical-offset="602">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="420">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cm/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="79" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95106035" vertical-offset="19952" max-vertical-offset="20640">
+          <caret line="1369" column="16" selection-start-line="1369" selection-start-column="16" selection-end-line="1369" selection-end-column="16" />
           <folding />
         </state>
       </provider>

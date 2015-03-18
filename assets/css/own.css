@@ -1362,3 +1362,10 @@ sign-in .error-message {
     transition: display 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
     padding-left: 20px;
 }
+
+.homepage-lock {
+    margin: 50% auto;
+    font-size: 45px;
+    color: #91998d;
+    opacity: .3;
+}
