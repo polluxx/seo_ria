@@ -36,11 +36,15 @@ define([
             $scope.$loading = false;
         });
 
+
+
         $rootScope.$watch("authors", function () {
             $scope.$loading = true;
             $scope.authors = $rootScope.authors;
             if($scope.authors == undefined) return;
 
+
+            console.log(bzUser);
             $scope.doc.author = $scope.authors[0];
             $scope.$loading = false;
         });
