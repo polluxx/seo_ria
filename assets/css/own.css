@@ -548,9 +548,9 @@ input.middle {
 }
 
 .data-block .text {
-    padding-top: 10px;
-    max-width: 400px;
 
+    max-width: 400px;
+    font-family: "Open Sans";
 }
 
 .data-block .list-date{
