@@ -25,11 +25,6 @@ define([
             toDate.setDate(0);
 
 
-            $rootScope.$watch("currentProject", function() {
-                if($rootScope.currentProject == undefined) return;
-
-                $scope.makeRequest();
-            });
 
             $scope.makeRequest = function() {
                 var paramsToSet = {
@@ -97,6 +92,12 @@ define([
 
         };
         $scope.makeRequest();
+
+        $rootScope.$watch("currentProject", function() {
+            if($rootScope.currentProject == undefined) return;
+
+            $scope.makeRequest();
+        });
         // END
 
 
