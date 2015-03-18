@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -31,20 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="15180">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.122349106" vertical-offset="45" max-vertical-offset="15210">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="own.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/own.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92659056" vertical-offset="20102" max-vertical-offset="20775">
+            <state vertical-scroll-proportion="0.0" vertical-offset="20102" max-vertical-offset="20775">
               <caret line="1378" column="20" selection-start-line="1378" selection-start-column="20" selection-end-line="1378" selection-end-column="20" />
               <folding />
             </state>
@@ -191,12 +192,12 @@
         <option value="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/user/list/controllers/UserListCtrl.js" />
-        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
         <option value="$PROJECT_DIR$/indexCm.html" />
         <option value="$PROJECT_DIR$/views/cm/signIn.html" />
         <option value="$PROJECT_DIR$/views/cm/home.html" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
+        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
       </list>
     </option>
   </component>
@@ -893,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="15180">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2565" max-vertical-offset="3495">
@@ -949,6 +942,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20102" max-vertical-offset="20775">
+          <caret line="1378" column="20" selection-start-line="1378" selection-start-column="20" selection-end-line="1378" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/cm/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
@@ -957,10 +958,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
+    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92659056" vertical-offset="20102" max-vertical-offset="20775">
-          <caret line="1378" column="20" selection-start-line="1378" selection-start-column="20" selection-end-line="1378" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.122349106" vertical-offset="45" max-vertical-offset="15210">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding />
         </state>
       </provider>
