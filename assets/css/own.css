@@ -1364,8 +1364,15 @@ sign-in .error-message {
 }
 
 .homepage-lock {
-    margin: 50% auto;
+    margin: 200px 45%;
     font-size: 45px;
     color: #91998d;
     opacity: .3;
+}
+
+
+.homepage-lock p{
+    font-family: "SegoeUI-Light",sans-serif;
+    font-size: 28px;
+    display: inline-block;
 }
