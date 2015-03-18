@@ -9,7 +9,6 @@
             <div class="content-style-form content-style-form-1">
                 <span class="icon icon-close">Закрыть</span>
                 <h2>Авторизация</h2>
-                {{errors}}
                 <form>
                     <p><label>Логин</label><input ng-model="user.email" type="text" autocomplete="true"/></p>
                     <i class="error-message" ng-repeat="error in errors['email']">{{error}}</i>
