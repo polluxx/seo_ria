@@ -1,0 +1,47 @@
+<div class="portlet" id="yw2">
+    <div class="portlet-content">
+        <div class="row">
+            <div class="span2">
+                <label class="label">заголовок обычный</label>
+                <div class="input">
+                    <select class="span2" reload="reload" styles="styles" id="riaTitle_fontFamily" ng-options="font.name for font in fonts track by font.id" ng-model="bfont" constructor="true"></select>
+                </div>
+            </div>
+            <div class="span1">
+                <label class="label">Px</label>
+                <div class="input">
+                    <input class="span1" reload="reload" styles="styles" id="riaTitle_fontSize" ng-model="bsize" constructor="true" type="number">
+                </div>
+            </div>
+
+            <div class="span">
+                <label class="label-check" style="font-style:italic;">I</label>
+                <div class="input">
+                    <input class="span" reload="reload" constructor="true" styles="styles" ng-model="bstyle" id="riaTitle_fontStyle"  optionval="italic" type="checkbox">
+                </div>
+            </div>
+            <div class="span">
+                <label class="label-check bold">B</label>
+                <div class="input">
+                    <input class="span" reload="reload" constructor="true" styles="styles" ng-model="bweight" id="riaTitle_fontWeight"  optionval="bold" type="checkbox">
+                </div>
+            </div>
+            <div class="span">
+                <label class="label-check" style="text-decoration:underline;">U</label>
+                <div class="input">
+                    <input class="span" reload="reload"  constructor="true" styles="styles" ng-model="bdecoration" optionval="underline" id="riaTitle_textDecoration" type="checkbox"/>
+                </div>
+            </div>
+
+            <div class="span1">
+                <label class="label">цвет</label>
+                <div class="input">
+                    <input class="span1" reload="reload" styles="styles" id="riaTitle_color"
+                           colorpicker="hex" ng-model="bcolor" colorpick="true" constructor="true"
+                           colorpicker-fixed-position="true"
+                           colorpicker-parent="true" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<section ng-if="boardType == 1">
+    <div class="col col-lg-12">
+        <statistic-board ng-controller="DashboardStatisticCtrl"></statistic-board>
+    </div>
+    <div class="col col-lg-6">
+        <posts-board ng-controller="DashboardPostsCtrl"></posts-board>
+    </div>
+    <div class="col col-lg-6">
+        <comments-board ng-controller="DashboardCommentsCtrl"></comments-board>
+    </div>
+</section>
+<section ng-if="boardType == 2">
+    <calendar ng-controller="DashboardCalendarCtrl"></calendar>
+</section>

@@ -1,0 +1,409 @@
+
+    <div class="morph-button morph-button-overlay morph-button-fixed morph-button-textarea">
+        <button type="button">Информер</button>
+        <div class="morph-content">
+            <div>
+                <div class="content-style-overlay">
+                    <span class="icon icon-close">Close the overlay</span>
+                    <h2>Конструктор</h2>
+
+
+
+                    <!-- INFORMER FORM -->
+                    <div loading-container="$loading" ng-controller="PostInformerCtrl">
+                        <form class="content" method="POST" name="InformerForm" enctype="multipart/form-data">
+
+                            <div class="form-group has-feedback">
+                                <div class="inline">
+                                    <label for="project">Проект</label>
+                                    <select width="200px" ng-model="info.project" disabled="disabled" name="project" class="form-control inputbox" ng-options="project.name for project in projects track by project.id"></select>
+                                </div>
+                                <div class="inline">
+                                    <label for="clientUrl">Url клиента</label>
+                                    <input class="form-control inputbox" disabled="disabled" type="text" ng-model="info.clientUrl"/>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <div class="inline">
+                                    <label for="category">Категория</label>
+                                    <select width="200px" ng-model="info.category" name="category" class="form-control inputbox" ng-options="category.name for category in rubrics track by category.id"></select>
+                                </div>
+                                <div class="inline">
+                                    <label for="subcategory">Подкатегория</label>
+                                    <select width="200px" ng-model="info.subcategory" name="subcategory" class="form-control inputbox" ng-options="subcategory.name for subcategory in params.subcategories track by subcategory.id"></select>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <div class="inline">
+                                    <label for="options">Опции</label>
+                                    <select width="200px" ng-model="info.option" name="options" class="form-control inputbox" ng-options="option.name for option in params.options track by option.id"></select>
+                                </div>
+                            </div>
+
+                            <br/>
+
+
+
+
+                            <div class="row">
+                                <div class="span6">
+                                    <h4 class="title">Количество тизеров</h4>
+
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">По горизонтали</label>
+                                            <div class="input">
+                                                <select class='span3 inputbox'
+                                                    id="tizers_horisontal"
+                                                    constructor='true'
+                                                    ng-model="info.filters.tizers_horisontal"
+                                                    ng-options="num.name for num in tizersNum track by num.id"
+                                                    styles="styles"
+                                                    reload="reload"
+                                                    ng-change="checkInfo()"></select>
+                                            </div>
+                                        </div>
+                                        <div class="span3">
+                                            <label class="label">По вертикали</label>
+                                            <div class="input">
+                                                <select
+                                                class='span3 inputbox'
+                                                id="tizers_vertical"
+                                                ng-model="info.filters.tizers_vertical"
+                                                ng-options="num.name for num in tizersNum track by num.id"
+                                                constructor='true'
+                                                styles="styles"
+                                                reload="reload"
+                                                ng-change="checkInfo()"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--   ШИРИНА     -->
+                                    <h4 class="title">Ширина информера</h4>
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">Ширина</label>
+                                            <div class="input">
+                                                <input
+                                                class='span3 inputbox'
+                                                id="riaBanner_width"
+                                                constructor="true"
+                                                ng-model="info.filters.riaBanner_width"
+                                                styles="styles"
+                                                reload="reload"
+                                                ng-blur="checkInfo()"
+                                                checkInfo="checkInfo()"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="span3">
+                                            <label class="label">Расположение лого</label>
+                                            <div class="input">
+                                                <select
+                                                class='span3 inputbox'
+                                                id="tizers_axis"
+                                                ng-model="info.filters.tizers_axis"
+                                                ng-options="axis.name for axis in axises track by axis.id"
+                                                constructor=true
+                                                styles="styles"
+                                                reload="reload"
+                                                ng-change="checkInfo()"></select>
+                                            </div>
+                                        </div>
+
+
+                                        <div id="widthError" class="span4 hide" style="margin-top: 25px">
+                                            <span class="description-field" style="color: #AFAFAF;
+                                            font-size: 12px;
+                                            padding-left: 10px;margin-top: 20px">
+                                                <span class="red">Минимальный размер тизера - 120px</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!--   ШИРИНА     -->
+                                    <h4 class="title">Цвет фона информера</h4>
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">Цвет фона</label>
+                                            <div class="input">
+                                                <input
+                                                class='span3'
+                                                id="riaBanner_backgroundColor"
+                                                colorpicker="hex"
+                                                colorpick='true'
+                                                styles="styles"
+                                                reload="reload"
+                                                colorpicker-fixed-position="true"
+                                                colorpicker-parent="true"
+                                                ng-model="info.filters.riaBanner_backgroundColor"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                        <div class="span3">
+                                            <label class="label">Цвет тизера</label>
+                                            <div class="input">
+                                                <input
+                                                class='span3'
+                                                id="riaTizer_backgroundColor"
+                                                colorpicker="hex"
+                                                colorpick='true'
+                                                styles="styles"
+                                                colorpicker-fixed-position="true"
+                                                colorpicker-parent="true"
+                                                ng-model="info.filters.riaTizer_backgroundColor"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--   Настройки тизеров  -->
+
+                                    <h4 class="title">Цвет цены</h4>
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">цвет фона</label>
+                                            <div class="input">
+                                                <input
+                                                class='span3'
+                                                id="riaPrice_backgroundColor"
+                                                colorpicker="hex"
+                                                colorpick='true'
+                                                styles="styles"
+                                                reload="reload"
+                                                ng-model="info.filters.riaPrice_backgroundColor"
+                                                colorpicker-fixed-position="true"
+                                                colorpicker-parent="true"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                        <div class="span3">
+                                            <label class="label">цвет при наведении</label>
+                                            <div class="input">
+                                                <input
+                                                class='span3'
+                                                id="riaPrice_hover_backgroundColor"
+                                                colorpicker='hex'
+                                                colorpick='true'
+                                                styles="styles"
+                                                ng-model="info.filters.riaPrice_hover_backgroundColor"
+                                                reload="reload"
+                                                colorpicker-fixed-position="true"
+                                                colorpicker-parent="true"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--  ШРИФТ ЗАГОЛОВКА  -->
+                                    <h4 class="title">Шрифт описания</h4>
+
+                                    <font-block
+                                            bcolor="info.filters.riaTitle_color"
+                                            bdecoration="info.filters.riaTitle_textDecoration"
+                                            bweight="info.filters.riaTitle_fontWeight"
+                                            bstyle="info.filters.riaTitle_fontStyle"
+                                            bsize="info.filters.riaTitle_fontSize"
+                                            bfont="info.filters.riaTitle_fontFamily"
+
+                                            dsize="14"
+                                            dcolor="256799"
+                                            ddecoration="true"
+                                            styles="styles"
+                                            reload="reload"
+                                            ></font-block>
+
+                                    <font-block
+                                            bcolor="info.filters.riaTitle_hover_color"
+                                            bdecoration="info.filters.riaTitle_hover_textDecoration"
+                                            bweight="info.filters.riaTitle_hover_fontWeight"
+                                            bstyle="info.filters.riaTitle_hover_fontStyle"
+                                            bsize="info.filters.riaTitle_hover_fontSize"
+                                            bfont="info.filters.riaTitle_hover_fontFamily"
+
+                                            dsize="14"
+                                            dcolor="256799"
+                                            ddecoration="true"
+                                            styles="styles"
+                                            reload="reload"
+                                            ></font-block>
+
+
+                                    <!--  END  -->
+
+                                </div>
+                                <div class="span6">
+                                    <!--   Отступы между тизерами     -->
+
+                                    <h4 class="title">Отступы между тизерами</h4>
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">по горизонтали</label>
+                                            <div class="input">
+                                                <input
+                                                    type="number"
+                                                    class='span3'
+                                                    id="riaTizer_marginRight"
+                                                    constructor='true'
+                                                    ng-model="info.filters.riaTizer_marginRight"
+                                                    styles="styles"
+                                                    reload="reload"
+                                                    ng-change="checkInfo()" />
+                                            </div>
+                                        </div>
+                                        <div class="span3">
+                                            <label class="label">по вертикали</label>
+                                            <div class="input">
+                                                <input
+                                                    type="number"
+                                                    class='span3'
+                                                    id="riaTizer_marginBottom"
+                                                    styles="styles"
+                                                    reload="reload"
+                                                    ng-model="info.filters.riaTizer_marginBottom"
+                                                    constructor='true' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--   Обводка     -->
+                                    <h4 class="title">Обводка</h4>
+                                    <div class="row">
+                                        <div class="span3">
+                                            <label class="label">линия обводки</label>
+                                            <div class="input">
+                                                <select class="span2" styles="styles" id="riaBanner_borderStyle" ng-options="line.name for line in linesTypes track by line.id" ng-model="info.filters.riaBanner_borderStyle" constructor="1"></select>
+                                            </div>
+                                        </div>
+                                        <div class="span1">
+                                            <label class="label">толщина</label>
+                                            <div class="input">
+                                                <input
+                                                type="number"
+                                                class='span1'
+                                                id="riaBanner_borderWidth"
+                                                ng-model="info.filters.riaBanner_borderWidth"
+                                                styles="styles"
+                                                reload="reload"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                        <div class="span1">
+                                            <label class="label">цвет</label>
+                                            <div class="input">
+                                                <input
+                                                class='span1'
+                                                id="riaBanner_borderColor"
+                                                colorpicker="hex"
+                                                ng-model="info.filters.riaBanner_borderColor"
+                                                colorpick='true'
+                                                styles="styles"
+                                                reload="reload"
+                                                colorpicker-fixed-position="true"
+                                                colorpicker-parent="true"
+                                                constructor='true' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--  ШРИФТ РЕГИОНА  -->
+                                    <h4 class="title">Шрифт региона / категории</h4>
+
+
+                                    <font-block
+                                            bcolor="info.filters.riaRegion_color"
+                                            bdecoration="info.filters.riaRegion_textDecoration"
+                                            bweight="info.filters.riaRegion_fontWeight"
+                                            bstyle="info.filters.riaRegion_fontStyle"
+                                            bsize="info.filters.riaRegion_fontSize"
+                                            bfont="info.filters.riaRegion_fontFamily"
+
+                                            dsize="12"
+                                            reload="reload"
+                                            styles="styles"
+                                            ></font-block>
+
+                                    <font-block
+                                            bcolor="info.filters.riaRegion_hover_color"
+                                            bdecoration="info.filters.riaRegion_hover_textDecoration"
+                                            bweight="info.filters.riaRegion_hover_fontWeight"
+                                            bstyle="info.filters.riaRegion_hover_fontStyle"
+                                            bsize="info.filters.riaRegion_hover_fontSize"
+                                            bfont="info.filters.riaRegion_hover_fontFamily"
+
+                                            dsize="12"
+                                            reload="reload"
+                                            styles="styles"
+                                            ></font-block>
+
+                                    <!--  END  -->
+
+
+
+                                </div>
+
+                                <h4 class="title">Общие настройки</h4>
+                                <div class="row">
+                                    <div class="span3">
+                                        <label class="label">без города</label>
+                                        <div class="input">
+                                            <input
+                                                    type="checkbox"
+                                                    class='span3'
+                                                    id="riaTizer_withoutCity"
+                                                    constructor='true'
+                                                    ng-model="info.filters.riaTizer_withoutCity"
+                                                    styles="styles"
+                                                    reload="reload"
+                                                    ng-change="checkInfo()" />
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <label class="label">без телефона</label>
+                                        <div class="input">
+                                            <input
+                                                    type="checkbox"
+                                                    class='span3'
+                                                    id="riaTizer_withoutPhone"
+                                                    styles="styles"
+                                                    reload="reload"
+                                                    ng-model="info.filters.riaTizer_withoutPhone"
+                                                    constructor='true' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <style id="styles"></style>
+
+                            <div class="preview-search-form preview">
+                                <infoblock></infoblock>
+                            </div>
+                            <br/>
+                            <input id="tizerWidthId" name="InformerForm[filters][riaTizer_width]" ng-model="info.filters.riaTizer_width" type="hidden"/>
+
+            <!--h2 class="boxed head-page">Код</h2>
+            <textarea class="span8" rows="3">
+&lt;div id="riainfo_<?php echo $informer["code"];?>"&gt;&lt;/div&gt;
+&lt;script type="text/javascript" src="http://cobrand.ria.com/js/ria_informer.js?riacode=<?php echo $informer["code"];?>" &gt;&lt;/script&gt;
+            </textarea-->
+
+
+                            <div class="form-group has-feedback">
+                                <button class="btn btn-success inputbox" ng-click="infoSave()">Сохранить</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- END -->
+
+                </div>
+            </div>
+        </div>
+    </div><!-- morph-button -->

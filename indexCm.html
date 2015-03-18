@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/"/>
+
+    <link href='http://cobrand.ria.com/css/informer.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="/build/assets/css/theme.css" rel="stylesheet" media="all">
+    <script src="bower_components/codrops/modernizr.custom.js"></script>
+    <script src="bower_components/codrops/classie.js"></script>
+    <script src="bower_components/codrops/uiMorphingButton_fixed.js"></script>
+
+    <link rel="stylesheet" href="bower_components/trumbowyg/dist/ui/trumbowyg.min.css">
+
+
+</head>
+<body ng-cloak>
+
+
+<!--nav root-item class="ng-cloak navbar navbar-default collapse navbar-collapse bs-navbar-collapse nav-seo" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#!/dashboard"><span class="glyphicon glyphicon-th-list top-icon"><span>Dashboard</span></span></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li ng-if="currentProject"><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-barcode top-icon" title="Robots"><span>Robots</span></span></a></li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group search">
+                <input style="height: 40px; padding-right: 38px;" type="text" ng-model="searchval" id="mainSearch" class="form-control inputbox middle" placeholder="Пошук">
+                <span class="search-icon glyphicon glyphicon-search"></span>
+            </div>
+
+        </form>
+
+    </div>
+</nav-->
+
+<left-panel ng-if="!$user.is_guest"></left-panel>
+<sign-in ng-if="$user.is_guest"></sign-in>
+
+<div class="container ng-cloak" id="container">
+
+
+    <div class="row">
+
+        <div class="col col-lg-12" app-view-segment="0">
+
+        </div>
+
+        <!--div ng-hide="true" class="col col-lg-3 ng-cloak">
+            {{'Test'|translate}}
+            <form ng-if="$user.is_guest" ng-controller="AuthLoginCtrl" ng-submit="login(user)" ng-init="user = { 'email': 'admin', 'password': '1' }">
+                <div class="form-group">
+                    <label for="email">Login / Email:</label>
+                    <input id="email" class="form-control" type="text" ng-model="user.email"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" class="form-control" type="password" ng-model="user.password"/>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Login" />
+                </div>
+            </form>
+            <div ng-if="!$user.is_guest">
+                ID: {{ $user.id }}
+                <a href="" data-ng-click="$user.$logout()">Log out</a>
+            </div>
+
+        </div-->
+    </div>
+</div>
+
+<script src="/bazalt.js"></script>
+<!--script src="/bower_components/requirejs/require.js" data-main="cmApp/requireConfig"></script-->
+<!--data-main="app/requireConfig"-->
+<script src="/bower_components/requirejs/require.js" data-main="build/_cm_bootstrap"></script>
+<!--script src="/build/_cm_bootstrap.js"></script-->
+</body>
+</html>

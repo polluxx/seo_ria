@@ -1,0 +1,57 @@
+
+<div loading-container="tableParams.settings().$loading">
+    <table ng-table="tableParams" class="table-new">
+        <tbody>
+        <tr ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft'}">
+            <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="post.added">
+                <span>{{post.added | date:'yyyy-MM-dd' }}</span>
+                <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.added" is-open="opened[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close"/-->
+            </td>
+
+            <td data-title="'Дата публикации'" ng-click="openPublication($event)" sortable="post.publication.date">
+                <span>{{post.publication.date | date:'yyyy-MM-dd' }}</span>
+
+                <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.publication.date" is-open="openedPublication[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close" /-->
+            </td>
+
+            <td data-title="'Автор'" sortable="post.author.name">
+                <a href="/user/{{post.author.id}}"><span>{{post.author.name}}</span></a>
+            </td>
+            <td data-title="'Заголовок'" sortable="post.title">
+                <a href="{{post.link}}"><span>{{post.title}}</span></a>
+                <!--input type="text" ng-if="post.$editableTitle" ng-blur="post.$editableTitle = false" ng-model="post.title"/-->
+            </td>
+            <td data-title="'Описание'" sortable="post.description">
+                <span>{{post.description}}</span>
+                <!--input type="text" ng-if="post.$editableDescription" ng-blur="post.$editableDescription = false" ng-model="post.description"/-->
+            </td>
+
+            <td data-title="'Рубрика'" sortable="post.rubric.name">
+                <span ng-if="!post.$editableRubric" ng-click="post.$editableRubric = !this.$editableRubric" >{{post.rubric.name}}</span>
+                <select chengable="docUpdate(post)"  width="200px" ng-if="post.$editableRubric" ng-blur="post.$editableRubric = false" ng-model="post.rubric" name="rubrics" class="form-control inputbox" ng-options="rubric.name for rubric in rubrics track by rubric.id"></select>
+            </td>
+            <td data-title="'smm'" ng-show="post.doctype == 'planned'">
+                <morph-btn class="morph" update="docUpdate(post)" name="Smm" btn="Smm" confirm="Сохранить" fields="post.smm" ng-init="post.smm = post.smm != undefined ? post.smm : [{name:'email SMM', doctype:'email'},{name:'email руководителя проекта', doctype:'emailLeader'}]"></morph-btn>
+            </td>
+            <td data-title="'email'" ng-show="post.doctype == 'planned'" >
+                <morph-btn class="morph" update="docUpdate(post)" name="Email" btn="Email" confirm="Сохранить" fields="post.email" ng-init="post.email = post.email != undefined ? post.email : [{name:'email маркетинг', doctype:'spec'}]"></morph-btn>
+            </td>
+            <td ng-show="post.doctype == 'planned'" data-title="'Операции'">
+                <a href="/post/add/{{post._id}}">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </a>
+
+                <a href="/post/report/{{post._id}}">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </a>
+
+                <a href="javascript:void(0)" ng-click="remove(post._id)">
+                    <span class="glyphicon glyphicon-trash text-danger" aria-hidden="true"></span>
+                </a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+

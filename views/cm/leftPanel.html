@@ -1,0 +1,47 @@
+<!--div>
+    <div ng-repeat="link in links">
+        <a href="{{link.url}}">{{link.name}}</a>
+
+        <div style="margin-left: 20px" ng-if="link.content" ng-repeat="child in link.content">
+            <a href="{{child.url}}">{{child.name}}</a>
+        </div>
+    </div>
+</div-->
+
+
+<div class="morph-button morph-button-sidebar icon-settings-btn morph-button-fixed">
+    <button type="button"><span class="icon icon-cog icon-settings">Settings Menu</span></button>
+    <div class="morph-content">
+        <div>
+            <div class="content-style-sidebar">
+                <span class="icon icon-close">Close the overlay</span>
+                <h2>{{$user.userdata.username}}</h2>
+                <ul>
+                    <li><a class="icon icon-briefcase icon-left-panel" href="javascript:void(0)"><select ng-model="currentProject" ng-options="project.name for project in projects track by project.id"></select></a></li>
+                    <li ng-repeat="link in links">
+                        <a class="icon icon-camera icon-left-panel" ng-click="link.$opened = !link.$opened" href="{{link.url}}" ng-init="link.$opened = false" ng-class="{'parent-block':link.content}">
+                            {{link.name}}
+                        </a>
+
+                        <ul ng-if="link.content" class="child-block" ng-show="link.$opened">
+                            <li ng-repeat="child in link.content"><a href="{{child.url}}">{{child.name}}</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="icon icon-user icon-left-panel" ng-controller="AuthLoginCtrl" ng-click="logout()" href="javascript:void(0)">Выход</a></li>
+                    <!--li><a class="icon icon-camera icon-left-panel" href="#">Default filters</a></li>
+                    <li><a class="icon icon-server icon-left-panel" href="#">Storage Use</a></li>
+                    <li><a class="icon icon-heart icon-left-panel" href="#">Favorites</a></li>
+                    <li><a class="icon icon-zoom-in icon-left-panel" href="#">Readability</a></li>
+                    <li><a class="icon icon-microphone icon-left-panel" href="#">Speech</a></li>
+                    <li><a class="icon icon-cloud icon-left-panel" href="#">Uploads</a></li>
+                    <li><a class="icon icon-user icon-left-panel" href="#">Profile</a></li>
+                    <li><a class="icon icon-briefcase icon-left-panel" href="#">Documents</a></li>
+                    <li><a class="icon icon-globe icon-left-panel" href="#">Global Options</a></li-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- morph-button -->
+
+
+<!--script src="bower_components/codrops/uiMorphingButton_fixed.js"></script-->

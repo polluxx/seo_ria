@@ -1,0 +1,22 @@
+
+
+<div class="users">
+    <div class="add-user-btn1">
+        <morph-btn
+                class="morph"
+                update="userAdd(user)" name="User add"
+                btn="Add" confirm="Сохранить"
+                fields="user"
+                errors="errors"
+                ng-init="user = [{name:'email юзера', doctype:'email'},
+                {name:'имя юзера', doctype:'name'},
+                {name:'пароль', doctype:'password'},
+                {name:'роль', doctype:'select', select:selects[0]}]"
+        ></morph-btn>
+    </div>
+
+    <div ng-repeat="useritem in users">
+        <div>{{user.name}}</div>
+        <div>{{user.email}}</div>
+    </div>
+</div>

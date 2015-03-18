@@ -1,0 +1,55 @@
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+
+
+<div class="riaBanner" loading-container="$loading" ng-show="info.project">
+    <div ng-show="info.filters.tizers_axis.id==1" class="headerBanner">
+        <a href="#" class="riaLogo" target="_blank" ng-if="projectName"><img src="http://cobrand.ria.com/images/{{projectName}}_ria.png" /></a>
+        <a href="#" id="addItemRia" ng-hide="hideAddBtn" class="riaAdd" target="_blank"><img src="http://cobrand.ria.com/images/auto_add.png" /></a>
+    </div>
+
+    <span ng-show="info.filters.tizers_axis.id==2" class="headerBannerLeft">
+        <a href="#" class="riaLogo" target="_blank" ng-if="projectName" ><img class="riaLogoImg" id="riaLogoImg" src="http://cobrand.ria.com/images/{{projectName}}_ria_vert.png" /></a>
+    </span>
+    <div class="riaContainer">
+        <div class="riaViewBanner">
+            <div ng-repeat="result in informers" ng-if="$index < toDisplay" class="riaTizer">
+                <a href="{{result | link:project}}" class="result" target="_blank">
+
+
+                    <span ng-if="category == 777 && result.title != undefined" class="riaTitle lineInTwo">{{result.title | news}}</span>
+                    <span ng-if="category != 777" class="riaTitle lineInOne">{{result | title:project}} {{result.model}}</span>
+
+
+                    <span class="riaImages">
+                        <img ng-if="category != 777" src="{{result | image:project}}" />
+                        <img ng-if="category == 777" src="{{result.image}}" />
+
+                        <span ng-if="result.price" project class="riaPrice">{{result | price:project}} <span></span></span>
+                    </span>
+                    <span ng-hide="project == 6 || info.filters.riaTizer_withoutCity" class="riaRegion">{{result | city:project}}</span>
+
+
+                    <span ng-show="result.salon == undefined && project != 6" class="riaContact" >
+                        <span class="contactWith">Связаться с продавцом -></span>
+                    </span>
+                    <span ng-show="result.salon != undefined" class="riaContact" ng-if="result.userPhone">
+                         <span ng-if="result.salon != undefined" class="riaPhoneName">{{result.userName.substr(0, 20)+"..."}}</span>
+                        <span ng-class="{'newAutoPhone':result.salon != undefined}" ng-if="!info.filters.riaTizer_withoutPhone" class="riaPhone">{{result.userPhone | userPhone:result}}</span>
+                    </span>
+                    <span ng-show="project == 6" ng-if="!info.filters.riaTizer_withoutCity" class="riaRegion">{{result | city:project}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="  height: 15px;
+          text-align: right;
+          clear: both;
+          margin-top: -15px;">
+        <a style="font-family: Arial, Helvetica, sans-serif;font-size: 9px; color: #ccc; line-height:5px;"  href="http://cobrand.ria.com" target="_blank">cobrand.ria.com</a></div>
+    <div style="clear: both;"></div>
+
+</div>

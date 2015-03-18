@@ -1,0 +1,25 @@
+<div class="search-box">
+    <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" searchable="search()"/>
+</div>
+<div loading-container="tableParams.settings().$loading">
+    <table ng-table="tableParams" class="table-new">
+        <tbody>
+        <tr ng-repeat="post in $data">
+
+            <td data-title="'Заголовок'" sortable="title">
+                <a href="{{post.link}}"><span>{{post.title}}</span></a>
+            </td>
+            <td data-title="'Показы'" sortable="statistic.shows">
+                <span>{{post.statistic.shows || 0}}</span>
+            </td>
+            <td data-title="'Комментарии'" sortable="statistic.comments">
+                <span>{{post.statistic.comments || 0}}</span>
+            </td>
+            <td data-title="'Переходов информера'" sortable="statistic.informerShows">
+                <span>{{post.statistic.informerShows || 0}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

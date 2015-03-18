@@ -1,0 +1,22 @@
+
+<div ng-controller="AuthLoginCtrl" class="morph-button icon-user-btn morph-button-sidebar morph-button-fixed auth-btn">
+
+
+    <button type="button"><span class="icon icon-user icon-settings">Signin Menu</span></button>
+    <div class="morph-content">
+
+        <div>
+            <div class="content-style-form content-style-form-1">
+                <span class="icon icon-close">Закрыть</span>
+                <h2>Авторизация</h2>
+                <form>
+                    <p><label>Логин</label><input ng-model="user.email" type="text" autocomplete="true"/></p>
+                    <i class="error-message" ng-repeat="error in errors['email']">{{error}}</i>
+                    <p><label>Пароль</label><input ng-model="user.password" type="password"/></p>
+                    <i class="error-message" ng-repeat="error in errors['password']">{{error}}</i>
+                    <p><button ng-click="login(user)">Логин</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

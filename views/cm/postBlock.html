@@ -1,0 +1,27 @@
+    <span ng-if="item.time != 'nulled'" class="fc-date">{{item.time | date : "d"}}</span>
+    <span ng-if="item.time != 'nulled'" class="fc-weekday">{{returnWeekDay(index)}}</span>
+
+    <div class="mockup-content">
+
+        <div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed morph-block">
+            <button type="button">
+
+            <div class="btnPost post-block" ng-repeat="post in item.value">
+                <p class="post-title">{{post.title}}</p>
+            </div>
+            </button>
+
+            <div class="morph-content">
+                <div>
+                    <div class="content-style-text">
+                        <span class="icon icon-close">Close the dialog</span>
+
+                        <div class="drag-wrap">
+                            <p class="drag-post" drag-post draggable="true" ng-repeat="post in item.value"><i class="fa fa-fw fa-code"></i><span>{{post.title}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- morph-button -->
+    </div><!-- /form-mockup -->
+

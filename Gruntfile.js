@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         'build', 'compress', 'bazalt_upload', 'bump'
     ]);
     grunt.registerTask('serve', [
-        'copy:assets', 'copy:theme', 'cssmin', 'connect:dev', 'watch'
+        'copy:assets', 'copy:theme', 'cssmin', 'connect:dev', 'connect:cm', 'watch'
     ]);
     grunt.registerTask('serve-build', [
         'copy:assets', 'connect:build', 'watch'
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         'copy:assets',
 
         // HTML
-        'html2js',
+        //'html2js',
         'htmlmin',
         'replace',
 
@@ -67,6 +67,7 @@ module.exports = function (grunt) {
         'requirejs',
         'uglify:requirejs',
         'uglify:app',
+        'uglify:cmApp'
     ]);
     grunt.registerTask('default', [
         'build', 'serve-build'
@@ -79,7 +80,8 @@ module.exports = function (grunt) {
         build_dir: './build',
         releases_dir: './releases',
         app_build_file: '_bootstrap.js',
-        banner: 'Developed by supercoder', // write your copyright
+        cm_app_build_file: '_cm_bootstrap.js',
+        banner: 'Developed by me', // write your copyright
 
         copy: {
             assets: {
@@ -118,6 +120,15 @@ module.exports = function (grunt) {
                     '<%= build_dir %>/assets/css/theme.css': [
                         'assets/css/init.css',
                         'assets/css/own.css',
+                        'assets/css/calendar.css',
+                        'assets/css/custom_1.css',
+                        'assets/css/colorpicker.css',
+                        'assets/css/font-awesome.min.css',
+                        'assets/codrops/component.css',
+                        'assets/codrops/content.css',
+                        'bower_components/trumbowyg/dist/ui/trumbowyg.min.css',
+                        'bower_components/ng-table/dist/ng-table.min.css',
+                        'assets/codrops/normalize.css',
                         'assets/css/alertify/alertify.core.css',
                         'assets/css/alertify/alertify.default.css',
                         'assets/css/theme.css'
@@ -132,6 +143,7 @@ module.exports = function (grunt) {
         requirejs: {
             frontend: {
                 options: {
+
                     baseUrl: './app',
                     optimize: 'none',
                     preserveLicenseComments: false,
@@ -141,6 +153,20 @@ module.exports = function (grunt) {
                     include: [],
                     exclude: ['./views.js'],
                     out: '<%= build_dir %>/<%= app_build_file %>'
+
+                }
+            },
+            cmApp: {
+                options: {
+                    baseUrl: './cmApp',
+                    optimize: 'none',
+                    preserveLicenseComments: false,
+                    useStrict: true,
+                    mainConfigFile: 'cmApp/requireConfig.js',
+                    name: '_cm_bootstrap',
+                    include: [],
+                    exclude: ['./views.js'],
+                    out: '<%= build_dir %>/<%= cm_app_build_file %>'
                 }
             }
         },
@@ -152,6 +178,10 @@ module.exports = function (grunt) {
             app: {
                 src: ['<%= build_dir %>/<%= app_build_file %>'],
                 dest: '<%= build_dir %>/<%= app_build_file %>'
+            },
+            cmApp: {
+                src: ['<%= build_dir %>/<%= cm_app_build_file %>'],
+                dest: '<%= build_dir %>/<%= cm_app_build_file %>'
             },
             options: {
                 compress: false,
@@ -206,13 +236,76 @@ module.exports = function (grunt) {
             }
         },
         connect: {
+
+            seo: {
+                options: {
+                    port: 8000,
+                    hostname: 'seo.ria.local',
+                    base: './'
+                },
+                dev: {
+                    options: {
+                        middleware: function (connect, options) {
+                            return [
+                                urlRewrite('.'),
+                                connect["static"](options.base),
+                                connect.directory(options.base)
+                            ];
+                        }
+                    }
+                },
+                build: {
+                    options: {
+                        base: './build',
+                        middleware: function (connect, options) {
+                            return [
+                                urlRewrite('./build'),
+                                connect["static"](options.base),
+                                connect.directory(options.base)
+                            ];
+                        }
+                    }
+                }
+            },
+            cm: {
+                options: {
+                    port: 8001,
+                    hostname: 'cm.ria.local',
+                    base: "./",
+                    index: 'cmIndex.html'
+                },
+                dev: {
+                    options: {
+                        middleware: function (connect, options) {
+                            return [
+                                urlRewrite('.'),
+                                connect["static"](options.base),
+                                connect.directory(options.base)
+                            ];
+                        }
+                    }
+                },
+                build: {
+                    options: {
+                        base: './build',
+                        middleware: function (connect, options) {
+                            return [
+                                urlRewrite('./build'),
+                                connect["static"](options.base),
+                                connect.directory(options.base)
+                            ];
+                        }
+                    }
+                }
+            },
             options: {
                 port: 8000,
-                hostname: 'seo.ria.local'
+                hostname: 'seo.ria.local',
+                base: './'
             },
             dev: {
                 options: {
-                    middleware: function(connect, options) {
+                    middleware: function (connect, options) {
                         return [
                             urlRewrite('.'),
                             connect["static"](options.base),
@@ -224,7 +317,7 @@ module.exports = function (grunt) {
             build: {
                 options: {
                     base: './build',
-                    middleware: function(connect, options) {
+                    middleware: function (connect, options) {
                         return [
                             urlRewrite('./build'),
                             connect["static"](options.base),

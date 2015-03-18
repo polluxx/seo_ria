@@ -9,28 +9,36 @@ define(['base/home/module'], function (module) {
                 $rootScope.searchval = "";
                 $rootScope.issearch = false;
                 $rootScope.listData = {};
+                var searchStr, interval, searchlength;
 
-                $rootScope.$watch("searchval", function() {
-                    if ($rootScope.searchval.length < 3 && $rootScope.searchval.length >0 ) return;
+                scope.$watch("searchval", function() {
+                    searchlength = $rootScope.searchval;
+                    if($rootScope.searchval == undefined) return;
+                    searchStr = $rootScope.searchval;
+
+                    scope.makeSearch(searchStr);
+
+                });
+
+                scope.makeSearch = function(search) {
+
+                    interval = setTimeout(function() {
+                        console.log(search);
+                        console.log($rootScope.searchval);
+                        if(search.length == $rootScope.searchval.length) {
+
+                            $rootScope.issearch = true;
+                            $rootScope.$apply();
+                            clearTimeout(interval);
+                        } else {
+                            scope.makeSearch(search);
+                        }
+
+                        clearTimeout(interval);
+                    }, 300);
+                };
 
 
-                    currentText = $rootScope.searchval;
-                    $rootScope.issearch = true;
-                    //$rootScope.$apply();
-
-                    /*time = performance.now();
-
-                    if (timeout != null) return;
-
-                    if (currentText != $rootScope.searchval) clearInterval(timeout);
-
-                    timeout = setTimeout(function() {
-                        currentText = $rootScope.searchval;
-                        $rootScope.issearch = true;
-                        $rootScope.$apply();
-                        timeout = null;
-                    }, 500);*/
-                })
             }
         }
     });

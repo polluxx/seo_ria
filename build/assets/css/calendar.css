@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'fontawesome-selected';
+    src: url("build/assets/fonts/awesome/fontawesome-selected.eot");
+    src: url("build/assets/fonts/awesome/fontawesome-selected.eot?#iefix") format('embedded-opentype'), url("build/assets/fonts/awesome/fontawesome-selected.woff") format('woff'), url("build/assets/fonts/awesome/fontawesome-selected.ttf") format('truetype'), url("build/assets/fonts/awesome/fontawesome-selected.svg#fontawesome-selected") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fc-calendar-container {
+	position: relative;
+	height: 400px;
+	width: 400px;
+}
+
+.fc-calendar {
+	width: 100%;
+	height: 100%;
+}
+
+.fc-calendar .fc-head {
+	height: 30px;
+	line-height: 30px;
+	background: #ccc;
+	color: #fff;
+}
+
+.fc-calendar .fc-body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	height: -moz-calc(100% - 30px);
+	height: -webkit-calc(100% - 30px);
+	height: calc(100% - 30px);
+	border: 1px solid #ddd;
+}
+
+.fc-calendar .fc-row {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+
+.fc-four-rows .fc-row  {
+	height: 25%;
+}
+
+.fc-five-rows .fc-row  {
+	height: 20%;
+}
+
+.fc-six-rows .fc-row {
+	height: 16.66%;
+	height: -moz-calc(100%/6);
+	height: -webkit-calc(100%/6);
+	height: calc(100%/6);
+}
+
+.fc-calendar .fc-row > div,
+.fc-calendar .fc-head > div {
+	float: left;
+	height: 100%;
+	width:  14.28%; /* 100% / 7 */
+	width: -moz-calc(100%/7);
+	width: -webkit-calc(100%/7);
+	width: calc(100%/7);
+	position: relative;
+}
+
+/* IE 9 is rounding up the calc it seems */
+.ie9 .fc-calendar .fc-row > div,
+.ie9 .fc-calendar .fc-head > div {
+	width:  14.2%;
+}
+
+.fc-calendar .fc-row > div {
+	border-right: 1px solid #ddd;
+	padding: 4px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fc-calendar .fc-head > div {
+	text-align: center;
+}
+
+.fc-calendar .fc-row > div > span.fc-date {
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #ddd;
+	text-shadow: 0 -1px 0 rgba(255,255,255,0.8);
+	bottom: 5px;
+	right: 5px;
+	text-align: right;
+}
+
+.fc-calendar .fc-row > div > span.fc-weekday {
+	padding-left: 5px;
+	display: none;
+}
+
+.fc-calendar .fc-row > div.fc-today {
+	background: #fff4c3;
+}
+
+.fc-calendar .fc-row > div.fc-out {
+	opacity: 0.6;
+}
+
+.fc-calendar .fc-row > div:last-child,
+.fc-calendar .fc-head > div:last-child {
+	border-right: none;
+}
+
+.fc-calendar .fc-row:last-child {
+	border-bottom: none;
+}
+
+.fc-calendar .grid-item {
+    float: left;
+    margin: 0.5%;
+    width: 100%;
+    height: 2.05em;
+    padding: 0.35em 0.5em;
+    border-radius: 4px;
+    background: #62b989;
+    color: #a3e0be;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.fc-calendar .grid-item::after {
+    content: '';
+    position: absolute;
+    top: 0.3em;
+    left: 2.25em;
+    bottom: 0.3em;
+    right: 0.3em;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+.fc-content {
+    background-color: #553445;
+    margin-bottom: -1px;
+}
+.fc-content button {
+    padding: 0 !important;
+}
+
+.drag-post {
+    float: left;
+    margin: .5%;
+    width: 100%;
+    /*height: 2.05em;*/
+    padding: 5px;
+    border-radius: 1px;
+    background: #62b989;
+    color: #a3e0be;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+    height: 100%;
+}
+.drag-post span {
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
+    padding: 5px !important;
+    font-size: 15px !important;
+    margin-left: 10px;
+}
+
+.drag-in {
+    border: 2px dashed #e85657 !important;
+}
+
+post-block .fc-date {
+    color: rgba(255,255,255,.9);
+    font-size: 26px !important;
+    font-weight: 300;
+    bottom: auto;
+    right: auto;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    padding: 0;
+}

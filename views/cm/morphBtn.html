@@ -1,0 +1,21 @@
+<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+    <button type="button">{{dialog.btn}}</button>
+    <div class="morph-content">
+        <div>
+            <div class="content-style-form content-style-form-1">
+                <span class="icon icon-close">Закрыть</span>
+                <h2>{{dialog.name}}</h2>
+                <form>
+                    <p ng-repeat="field in fields" ng-if="field.select == undefined">
+                        <label>{{field.name}}</label>
+                        <input ng-model="field.value" type="text"/>
+                        <i ng-repeat="err in errors[field.doctype]">{{err}}</i>
+                    </p>
+
+                    <p ng-repeat="field in fields" ng-if="field.select != undefined"><label>{{field.name}}</label><select ng-model="field.select.value" ng-options="option.name for option in field.select.options track by option.id"></select></p>
+                    <p><button ng-click="confirm()">{{dialog.confirm}}</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,34 @@
+.trumbowyg-box, .trumbowyg-editor {
+    width: 100% !important;
+}
+
+.pushed.container {
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+    content: " ";
+    background-color: white;
+    opacity: 0.5;
+}
+
+
+.container {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+    transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+    width: 80% !important;
+}
+
+.icon-left-panel {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none !important;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 a.disabled {
     pointer-events: none;
@@ -186,6 +217,15 @@ hr{
 .grid-span2 .input, .grid-span2 .select, .grid-span2 .indent {
     margin-left: 10px !important;
     margin-right: 10px;
+}
+
+
+.morph-content .span3 {
+    width: 46%;
+}
+
+.morph-content .span6 {
+    width: 48%;
 }
 
 select.span3 {
@@ -665,7 +705,7 @@ svg:not(:root) {
     margin: 100px auto;
     text-align: center;
     font-size: 26px;
-    color: cornflowerblue;
+    color: #e75854;
 }
 
 .view-wrap ul {
@@ -980,6 +1020,7 @@ h1 {
     margin: 5px;
     background-color: #009998;
     cursor: pointer;
+    color: #fff;
 }
 
 .rewrite:hover {
@@ -1005,4 +1046,318 @@ h1 {
     padding-left: 5px;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+}
+
+.grid__item {
+    display: inline-block;
+    margin: 0.2em 0.1em;
+    padding-top: 2.25em;
+    width: 5.5em;
+    height: 5.5em;
+    font-size: 2em;
+    border-radius: 1px;
+    background: #f4a8a8;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.addImageBlock {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 6px;
+}
+
+.morph-content {
+    z-index: 99999;
+}
+.icon-settings-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px !important;
+}
+.icon-settings {
+    height: 65px;
+}
+
+.add-img-params {
+    width: 100px !important;
+    margin-right: 10px !important;
+    display: inline-block !important;
+}
+
+.add-img {
+    width: 200px;
+    height: 200px;
+}
+
+.img-preload {
+    display: inline-block;
+    max-width: 600px;
+}
+
+.img-preloaded {
+    max-width: 1000px  !important;
+    max-height: 1000px  !important;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    display: inline-block;
+    border-radius: 1px;
+}
+
+.img-loader-input {
+    display: inline-block !important;
+    width: 49%  !important;
+
+}
+.img-loader-input:nth-child(1) {
+   padding-right: 10px  !important;
+    width: 50%  !important;
+}
+
+.publication-date {
+    display: inline-block;
+    width: 49%;
+}
+
+.publication-date.datepick {
+    float: right;
+}
+
+.date-item {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+}
+.date-item.datepick {
+    margin-top: 15px;
+}
+.datepick td{
+    width: 0px !important;
+}
+.timepick button{
+    padding: 7px 7px 8px 7px !important;
+}
+
+
+.table-new {
+    margin-top: 30px;
+}
+.table-new .header {
+    display: table-cell;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+.table-new td {
+    text-align: left;
+    vertical-align: middle;
+}
+.table-new td:hover {
+    cursor: pointer;
+    background-color: rgba(145, 153, 141, 0.10);
+}
+.table-new tr.draft:hover {
+    cursor: pointer;
+    background-color: rgba(145, 153, 141, 0.10);
+}
+.table-new a {
+    display: table-cell;
+    padding: 5px;
+}
+
+.ng-valid-date {
+    min-height: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.morph h2 {
+    font-size: 3.5em !important;
+}
+
+.loading-container {
+    position: relative;
+}
+.loading-container .loading:before, .loading-container .loading:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.loading-container .loading:before {
+    background-color: #FFF;
+    opacity: .7;
+    z-index: 99999;
+}
+
+.loading-container .loading:after {
+    background-image: url(/build/assets/img/loader/preloader_cm.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 99999;
+}
+
+.inline {
+    display: inline-block;
+    width: 40%;
+}
+.inline:nth-child(2) {
+    float: right;
+    clear: right;
+}
+
+/* SEARCH */
+.search-box {
+    margin: 30px auto;
+}
+.search-box input {
+    font-family: "SegoeUI-Light",sans-serif !important;
+    font-weight: 300;
+    font-size: 2em;
+    margin: 0px;
+    color: #BB4445;
+}
+.searchbox {
+    border: none !important;
+    font-size: 24px !important;
+    font-family: "SegoeUI-Light",sans-serif;
+    color: #464545;
+    text-rendering: geometricprecision;
+}
+
+.add-user-btn {
+    position: fixed;
+    left: 10px;
+    top: 80px;
+}
+
+.users {
+    margin-top: 30px;
+}
+
+.auth-btn {
+    position: fixed;
+    left: 10px !important;
+    top: 10px;
+}
+
+sign-in h2 {
+    font-size: 28px !important;
+    color: #f9f6e5 !important;
+}
+
+sign-in form button {
+    background: #f9f6e5 !important;
+    color: #e75854 !important;
+}
+
+sign-in input {
+    color: #f9f6e5 !important;
+}
+
+sign-in .error-message {
+    font-size: 12px;
+    color: #f9f6e5;
+}
+
+.content-style-form select {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ebd3bd;
+    background: transparent;
+    color: #b09a86;
+    font-weight: 300;
+    font-size: 2.2em;
+}
+
+.content-style-sidebar select {
+    padding: 5px;
+    width: 70%;
+    border: none;
+    background: transparent;
+    color: #b09a86;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.morph-button h2 {
+    font-family: "SegoeUI-Light",sans-serif;
+}
+
+.post-block .post-title {
+    display: inline-block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.79);
+    line-height: 22px;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+.post-block {
+    line-height: 22px;
+}
+
+.morph-block {
+    width: 100% !important;
+    height: 100% !important;
+    float: none;
+}
+
+.post-block div, .post-block p {
+    line-height: 22px;
+}
+
+.riaBanner {
+    position: relative;
+    -moz-box-sizing: initial; /* Для Firefox */
+    box-sizing: initial; /* Ширина блока с полями */
+    -webkit-box-sizing: initial;
+}
+
+.preview {
+    padding: 30px;
+}
+
+.preview-search-form {
+    background-image: -webkit-repeating-linear-gradient(45deg, #ededed, #ededed 1px, transparent 1px, transparent 10px),-webkit-repeating-linear-gradient(315deg, #ededed, #ededed 1px, transparent 1px, transparent 10px);
+    background-image: repeating-linear-gradient(45deg, #ededed, #ededed 1px, transparent 1px, transparent 10px),repeating-linear-gradient(135deg, #ededed, #ededed 1px, transparent 1px, transparent 10px);
+    background-color: #f8f8f8;
+    -webkit-background-size: 15px 15px,15px 15px;
+    background-size: 15px 15px,15px 15px;
+}
+
+.trumbowyg-upload-button {
+    background-position: 5px -20px;
+}
+
+.content-style-sidebar ul.child-block {
+    -webkit-transition: -webkit-display 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+    transition: display 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+    padding-left: 20px;
 }
