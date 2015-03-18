@@ -133,6 +133,8 @@ define([
                     return;
                 }
 
+                $scope.doc.informer = resp.key;
+
                 //localStorageService.set("currentInformer_"+$scope.info.project.id, resp.key);
                 console.log(resp);
                 $scope.informerBlock.toggle();
