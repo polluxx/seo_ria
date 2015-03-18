@@ -835,13 +835,13 @@ define(['base/home/module'], function (module) {
         }
     })
 
-    module.directive("signIn", function() {
+    module.directive("signIn", function($rootScope) {
         return {
             restrict: "E",
             templateUrl: "views/cm/signIn.html",
             link: function(scope, element, attrs) {
 
-                scope.errors = [];
+                $rootScope.errors = [];
 
                 var docElem = window.document.documentElement, didScroll, scrollPosition,
                     container = document.getElementById( 'container' );

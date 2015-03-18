@@ -3,13 +3,14 @@ define([
 ], function (module) {
     'use strict';
 
-    module.controller('AuthLoginCtrl', ['$scope', 'bzUser', '$location', function($scope, bzUser, $location) {
-        $scope.errors = [];
+    module.controller('AuthLoginCtrl', ['$scope', 'bzUser', '$location', '$rootScope', function($scope, bzUser, $location, $rootScope) {
+        //$scope.errors = [];
         $scope.user = {};
 
 
         $scope.setErrors = function(errors) {
-            $scope.errors = errors;
+            $rootScope.errors = errors;
+            //$rootScope.errors = [];
             //$scope.$apply();
             console.log(errors);
         };
@@ -22,7 +23,7 @@ define([
                     $scope.setErrors(resp.errors);
                     return;
                 }
-
+                $rootScope.errors = [];
                 $location.path('/dashboard');
 
             });
