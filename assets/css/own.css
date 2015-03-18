@@ -1368,6 +1368,7 @@ sign-in .error-message {
     font-size: 45px;
     color: #91998d;
     opacity: .3;
+    text-align: center;
 }
 
 
@@ -1375,4 +1376,5 @@ sign-in .error-message {
     font-family: "SegoeUI-Light",sans-serif;
     font-size: 28px;
     display: inline-block;
+    text-align: left;
 }

@@ -4,7 +4,6 @@
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/home.html" afterPath="$PROJECT_DIR$/views/cm/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="own.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/own.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8776509" vertical-offset="20102" max-vertical-offset="20745">
-              <caret line="1376" column="26" selection-start-line="1376" selection-start-column="26" selection-end-line="1376" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.92659056" vertical-offset="20102" max-vertical-offset="20775">
+              <caret line="1378" column="20" selection-start-line="1378" selection-start-column="20" selection-end-line="1378" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -960,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/own.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8776509" vertical-offset="20102" max-vertical-offset="20745">
-          <caret line="1376" column="26" selection-start-line="1376" selection-start-column="26" selection-end-line="1376" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.92659056" vertical-offset="20102" max-vertical-offset="20775">
+          <caret line="1378" column="20" selection-start-line="1378" selection-start-column="20" selection-end-line="1378" selection-end-column="20" />
           <folding />
         </state>
       </provider>
