@@ -25,69 +25,78 @@ define([
             toDate.setDate(0);
 
 
+            $rootScope.$watch("currentProject", function() {
+                if($rootScope.currentProject == undefined) return;
 
-            var paramsToSet = {
-                'project': $rootScope.currentProject.id,
-                'range': {
-                    'publication_date': {
-                        'from': returnFormattedDate(fromDate),
-                        'to': returnFormattedDate(toDate)
-                    }
-                }
-            };
-
-
-            DashboardFactory.list(paramsToSet, function(resp) {
-                $scope.$loading = false;
-                if(resp.code != 200) {
-                    alertify.error("Не найдено данных. Пожалуйста, попробуйте позже");
-                    return;
-                }
-
-                $scope.posts = resp.items.data;
-
-                if($scope.posts) {
-                    var posts = [], postItem, postTime;
-                    for(var post in $scope.posts) {
-                        postItem = $scope.posts[post];
-                        if(postItem.publication == undefined) continue;
-
-                        postTime = postItem.publication.date;
-
-                        if(posts[postTime] == undefined) {
-                            posts[postTime] = [];
-                        }
-                        posts[postTime].push(postItem);
-                    }
-
-                    var items = $scope.daysList;
-
-                    items.forEach(function(item) {
-                        if(item.time == 'nulled') return;
-
-                        timeFor = returnFormattedDate(new Date(item.time));
-                        item.value = posts[timeFor] != undefined ? posts[timeFor] : [];
-                    });
-                }
-
-                $scope.updatePost = function(post) {
-                    $scope.$loading = true;
-
-                    PostFactory.send(post, function(resp) {
-                        if(resp.code != 200) {
-                            alertify.error(resp.message);
-                            $scope.$loading = false;
-                            return;
-                        }
-                        //$scope.daysList = [];
-                        $scope.daysList = [];
-
-                        $scope.dateSet($scope.settedDate, true);
-                    });
-                }
-
+                $scope.makeRequest();
             });
+
+            $scope.makeRequest = function() {
+                var paramsToSet = {
+                    'project': $rootScope.currentProject.id,
+                    'range': {
+                        'publication_date': {
+                            'from': returnFormattedDate(fromDate),
+                            'to': returnFormattedDate(toDate)
+                        }
+                    }
+                };
+
+
+                DashboardFactory.list(paramsToSet, function(resp) {
+                    $scope.$loading = false;
+                    if(resp.code != 200) {
+                        alertify.error("Не найдено данных. Пожалуйста, попробуйте позже");
+                        return;
+                    }
+
+                    $scope.posts = resp.items.data;
+
+                    if($scope.posts) {
+                        var posts = [], postItem, postTime;
+                        for(var post in $scope.posts) {
+                            postItem = $scope.posts[post];
+                            if(postItem.publication == undefined) continue;
+
+                            postTime = postItem.publication.date;
+
+                            if(posts[postTime] == undefined) {
+                                posts[postTime] = [];
+                            }
+                            posts[postTime].push(postItem);
+                        }
+
+                        var items = $scope.daysList;
+
+                        items.forEach(function(item) {
+                            if(item.time == 'nulled') return;
+
+                            timeFor = returnFormattedDate(new Date(item.time));
+                            item.value = posts[timeFor] != undefined ? posts[timeFor] : [];
+                        });
+                    }
+
+                    $scope.updatePost = function(post) {
+                        $scope.$loading = true;
+
+                        PostFactory.send(post, function(resp) {
+                            if(resp.code != 200) {
+                                alertify.error(resp.message);
+                                $scope.$loading = false;
+                                return;
+                            }
+                            //$scope.daysList = [];
+                            $scope.daysList = [];
+
+                            $scope.dateSet($scope.settedDate, true);
+                        });
+                    }
+
+                });
+            }
+
         };
+        $scope.makeRequest();
         // END
 
 
