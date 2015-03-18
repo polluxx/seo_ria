@@ -32,7 +32,8 @@ define([
         }
 
         $rootScope.$watch("roles", function() {
-            if($rootScope.roles == undefined) return;
+            console.log($rootScope.roles);
+            if(!$rootScope.roles.length) return;
 
             $scope.selects = [
                 {
