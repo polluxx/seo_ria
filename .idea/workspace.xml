@@ -2,190 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/blokk/BLOKKRegular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/blokk/BLOKKRegular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/blokk/BLOKKRegular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/MyriadProLight/MyriadProLight.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/MyriadProLight/MyriadProLight.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/MyriadProLight/MyriadProLight.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/MyriadProLight/MyriadProLight.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/MyriadProLight/MyriadProLight.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/MyriadProLight/MyriadProLight.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/MyriadProLight/MyriadProLight.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/MyriadProLight/MyriadProLight.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/PTSans/PTSans.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/PTSans/PTSans.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/PTSans/PTSans.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/PTSans/PTSans.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/PTSans/PTSans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/PTSans/PTSans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/PTSans/PTSans.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/PTSans/PTSans.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/codropsicons/codropsicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/codropsicons/codropsicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/codropsicons/codropsicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/awesome/fontawesome-selected.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/awesome/fontawesome-selected.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/awesome/fontawesome-selected.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/icomoon/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/icomoon/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/icomoon/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/img/loader/preloader_cm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/SegoeUI-Light/segoeui-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/font/SegoeUI-Light/segoeui-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/SegoeUI-Light/segoeui-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/SegoeUI-Light/segoeui-light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/font/SegoeUI-Light/segoeui-light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/SegoeUI-Light/segoeui-light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/SegoeUI-Light/segoeui-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/font/SegoeUI-Light/segoeui-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/SegoeUI-Light/segoeui-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/SegoeUI-Light/segoeui-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/font/SegoeUI-Light/segoeui-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/SegoeUI-Light/segoeui-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/error/403.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/blokk/BLOKKRegular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/home/controllers/BaseHomeCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/calendar/controllers/DashboardCalendarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/comments/controllers/DashboardCommentsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/main/controllers/DashboardCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/main/factories/DashboardFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/posts/controllers/DashboardPostsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/statistic/controllers/DashboardStatisticCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/MyriadProLight/MyriadProLight.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/MyriadProLight/MyriadProLight.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/PTSans/PTSans.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/PTSans/PTSans.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/drafts/controllers/PostDraftsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/controllers/PostListCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/statistic/controllers/PostStatisticCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/factories/UserFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/controllers/UserListCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/view/controllers/UserViewCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/_cm_bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/post/add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/alertify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/bootstrap-colorpicker-module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/calendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/css/calendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/dashboard/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/cm.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/css/cm.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/codropsicons/codropsicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/colorpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/css/colorpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/dashboard/comments.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/codrops/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/colorpicker/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/config/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/home/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/trumbowyg/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/wysiwyg/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/auth/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/calendar/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/comments/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/main/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/posts/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/statistic/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/drafts/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/statistic/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/view/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/content.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/codrops/content.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/custom_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/css/custom_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/codrops/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/home/filters/filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/filters/filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/awesome/fontawesome-selected.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/icomoon/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/indexCm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/infoblock.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/post/informer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/informerFontBlock.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/leftPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/codropsicons/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/post/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/user/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/dashboard/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/colorpicker/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/config/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/home/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/trumbowyg/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/base/wysiwyg/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/auth/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/calendar/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/comments/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/main/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/posts/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/statistic/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/drafts/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/post/statistic/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/modules/user/view/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/morphBtn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/codrops/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/postBlock.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/dashboard/posts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/requireConfig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/SegoeUI-Light/segoeui-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/font/SegoeUI-Light/segoeui-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/SegoeUI-Light/segoeui-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/signIn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/dashboard/statistic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/post/statistic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/other/trumbowygUpload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmApp/views.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.js" afterPath="$PROJECT_DIR$/build/_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.map" afterPath="$PROJECT_DIR$/build/_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bazalt.js" afterPath="$PROJECT_DIR$/bazalt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/assets/codrops/ProgressButtonStyles/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" afterPath="$PROJECT_DIR$/build/assets/codrops/ProgressButtonStyles/css/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/r.js" afterPath="$PROJECT_DIR$/build/r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/r.map" afterPath="$PROJECT_DIR$/build/r.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/theme.css" afterPath="$PROJECT_DIR$/assets/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/view.html" afterPath="$PROJECT_DIR$/views/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -231,16 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostStatisticCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmApp/modules/post/statistic/controllers/PostStatisticCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="informerFontBlock.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/cm/informerFontBlock.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -264,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1245">
               <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bazalt.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bazalt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11980831" vertical-offset="0" max-vertical-offset="626">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -347,7 +166,6 @@
         <option value="$PROJECT_DIR$/assets/codrops/content.css" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/informer/filters/filter.js" />
-        <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/views/cm/infoblock.html" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/informer/config.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/informer/module.js" />
@@ -378,6 +196,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/cmApp/requireConfig.js" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
+        <option value="$PROJECT_DIR$/bazalt.js" />
       </list>
     </option>
   </component>
@@ -721,6 +540,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -736,7 +556,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -760,24 +579,19 @@
     </option>
     <MESSAGE value="add fixes" />
     <MESSAGE value="build" />
-    <option name="LAST_COMMIT_MESSAGE" value="build" />
+    <MESSAGE value="add CM" />
+    <option name="LAST_COMMIT_MESSAGE" value="add CM" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/post/list/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -785,6 +599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,6 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04893964" vertical-offset="0" max-vertical-offset="7545">
           <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -799,6 +615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,6 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16773163" vertical-offset="0" max-vertical-offset="626">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -813,6 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2625">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,6 +997,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bazalt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11980831" vertical-offset="0" max-vertical-offset="626">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
