@@ -41,7 +41,7 @@
 </nav-->
 
 <left-panel ng-if="!$user.is_guest"></left-panel>
-<sign-in ng-controller="AuthLoginCtrl" ng-if="$user.is_guest"></sign-in>
+<sign-in ng-if="$user.is_guest"></sign-in>
 
 <div class="container ng-cloak" id="container">
 

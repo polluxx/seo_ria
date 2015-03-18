@@ -11,7 +11,7 @@ define([
         $scope.setErrors = function(errors) {
             $rootScope.errors = errors;
             //$rootScope.errors = [];
-            //$scope.$apply();
+            $rootScope.$apply();
             console.log(errors);
         };
 
