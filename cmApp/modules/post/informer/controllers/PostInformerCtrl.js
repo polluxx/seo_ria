@@ -58,7 +58,7 @@ define([
         // END
 
 
-        var link = cobrandLink+"/service/get/filtertypes",
+        var link = bzConfig.api()+"/cm/filtertypes",
             postInfoLink = bzConfig.api()+"/cm/informer";
         var params = {"json":true, "forDeep":true};
 
@@ -308,7 +308,7 @@ define([
                     categoryLinkAttr = "&categories["+$scope.info.category.id+"]=1"
                 }
 
-                var link = cobrandLink+"/service/get/adverts?project=" + $scope.info.project.id + categoryLinkAttr + "&limit=50" + categories;
+                var link = bzConfig.api()+"/cm/adverts?project=" + $scope.info.project.id + categoryLinkAttr + "&limit=50" + categories;
                 var Adverts = $resource(link, {}, {
                     get: {
                         method: "GET",
