@@ -841,6 +841,7 @@ define(['base/home/module'], function (module) {
             templateUrl: "views/cm/signIn.html",
             link: function(scope, element, attrs) {
 
+                scope.errors = [];
 
                 var docElem = window.document.documentElement, didScroll, scrollPosition,
                     container = document.getElementById( 'container' );
