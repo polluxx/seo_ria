@@ -13,7 +13,7 @@ define([
                 .segment('userList', {
                     templateUrl: bzConfigProvider.templateUrl('/user/list.html'),
                     resolve: {
-                        permissions: bzUserProvider.access()
+                        permissions: bzUserProvider.access(['admin'])
                     },
                     controller: 'UserListCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

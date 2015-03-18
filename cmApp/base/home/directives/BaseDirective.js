@@ -6,11 +6,6 @@ define(['base/home/module'], function (module) {
             templateUrl: "views/cm/leftPanel.html",
             link: function(scope, element, attrs) {
 
-                $rootScope.roles = [
-                    {id:1, "name":"админ"},
-                    {id:2, "name":"автор"}
-                ];
-
                 $rootScope.projects = [
                     {id:1, "name":"AUTO.ria"},
                     {id:2, "name":"RIA.com"},
