@@ -119,7 +119,7 @@ define([
             }
 
             api.get(inputParams, function(resp) {
-                callback(resp);
+                callback(resp.results);
             })
         };
 
@@ -313,12 +313,12 @@ define([
                     get: {
                         method: "GET",
                         url: link,
-                        isArray: false
+                        isArray: true
                     }
                 });
-                var response = Adverts.get(function(res) {
+                Adverts.get(function(res) {
                     $scope.$loading = false;
-                    $scope.informers = res.data.results;
+                    $scope.informers = res.results;
                 });
                 //$scope.margr = document.getElementById("riaTizer_marginRight").value;
 
