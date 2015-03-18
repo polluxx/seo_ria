@@ -4,14 +4,13 @@ define([
     'use strict';
 
     module.controller('AuthLoginCtrl', ['$scope', 'bzUser', '$location', '$rootScope', function($scope, bzUser, $location, $rootScope) {
-        //$scope.errors = [];
+        $scope.errors = [];
         $scope.user = {};
 
 
         $scope.setErrors = function(errors) {
-            $rootScope.errors = errors;
+            $scope.errors = errors;
             //$rootScope.errors = [];
-            $rootScope.$apply();
             console.log(errors);
         };
 
@@ -23,7 +22,7 @@ define([
                     $scope.setErrors(resp.errors);
                     return;
                 }
-                $rootScope.errors = [];
+                //$rootScope.errors = [];
                 $location.path('/dashboard');
 
             });
