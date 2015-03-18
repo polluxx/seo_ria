@@ -1,7 +1,7 @@
 define([
     'modules/post/list/module',
     'alertify',
-    'angular-bootstrap-tpl'
+    //'angular-bootstrap-tpl'
 ], function (module, alertify) {
     'use strict';
 

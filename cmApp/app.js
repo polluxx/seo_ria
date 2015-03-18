@@ -14,13 +14,14 @@ define([
     'modules/post/config',
     'modules/user/config',
 
-    'angular-bootstrap',
+    'angular-bootstrap-tpl',
     'ng-table',
     //'angular-bootstrap-tpl',
 
     'trumbowyg',
     'trumbowygUpload',
-    'alertify'
+    'alertify',
+    'polyfills'
 ], function (angular) {
     'use strict';
 
@@ -39,5 +40,6 @@ define([
 
         'ui.bootstrap',
         'ngTable'
+
     ]);
 });

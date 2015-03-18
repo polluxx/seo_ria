@@ -55,6 +55,7 @@ requirejs.config({
         'trumbowyg': '../bower_components/trumbowyg/dist/trumbowyg',
         'trumbowygUpload': 'other/trumbowygUpload',
         'alertify': 'alertify',
+        'polyfills': 'polyfills',
 
         'jquery-sticky': '../bower_components/jquery.sticky/jquery.sticky',
 
@@ -73,7 +74,7 @@ requirejs.config({
         'angular-analytics': { deps: ['angular'] },
         'angular-bootstrap-tpl': { deps: ['angular'] },
         //'angular-bootstrap': { deps: ['angular'] },
-        //'angular-bootstrap': { deps: ['angular-bootstrap-tpl'] },
+        'angular-bootstrap': { deps: ['angular-bootstrap-tpl'] },
         'angular-resource': { deps: ['angular'] },
         'angular-route': { deps: ['angular'] },
         'angular-animate': { deps: ['angular'] },

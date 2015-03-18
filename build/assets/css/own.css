@@ -548,9 +548,9 @@ input.middle {
 }
 
 .data-block .text {
-    padding-top: 10px;
-    max-width: 400px;
 
+    max-width: 400px;
+    font-family: "Open Sans";
 }
 
 .data-block .list-date{
@@ -1169,6 +1169,7 @@ h1 {
 .table-new td {
     text-align: left;
     vertical-align: middle;
+    padding: 5px 5px 5px 10px;
 }
 .table-new td:hover {
     cursor: pointer;
@@ -1360,4 +1361,20 @@ sign-in .error-message {
     -webkit-transition: -webkit-display 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
     transition: display 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
     padding-left: 20px;
+}
+
+.homepage-lock {
+    margin: 200px 45%;
+    font-size: 45px;
+    color: #91998d;
+    opacity: .3;
+    text-align: center;
+}
+
+
+.homepage-lock p{
+    font-family: "SegoeUI-Light",sans-serif;
+    font-size: 28px;
+    display: inline-block;
+    text-align: left;
 }

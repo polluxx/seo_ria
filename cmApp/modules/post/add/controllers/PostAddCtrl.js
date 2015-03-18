@@ -1,7 +1,7 @@
 define([
     'modules/post/add/module',
     'alertify',
-    'angular-bootstrap-tpl'
+    //'angular-bootstrap'
 ], function (module, alertify) {
     'use strict';
 
@@ -18,7 +18,7 @@ define([
         $scope.doc.project = $rootScope.currentProject.id;
         //$scope.rubrics = $rootScope.rubrics[$rootScope.currentProject.id];
         //$scope.authors = $rootScope.authors;
-        var linkTo, linksTo = {draft:"drafts", planned:"list"};
+        var linkTo, linksTo = {draft:"drafts", planned:"list"}, userIndex;
 
         $rootScope.$watch("currentProject", function() {
             if($rootScope.currentProject == undefined) return;
@@ -41,11 +41,17 @@ define([
         $rootScope.$watch("authors", function () {
             $scope.$loading = true;
             $scope.authors = $rootScope.authors;
-            if($scope.authors == undefined) return;
+            if($scope.authors == undefined || bzUser.userdata == undefined) return;
 
+            function getUserIndex(element, index) {
+                if(element.id == bzUser.userdata.id) {
+                    return index;
+                }
+                //return -1;
+            }
 
-            console.log(bzUser);
-            $scope.doc.author = $scope.authors[0];
+            userIndex = $scope.authors.findIndex(getUserIndex);
+            $scope.doc.author = $scope.authors[userIndex];
             $scope.$loading = false;
         });
 
