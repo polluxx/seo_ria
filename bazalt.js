@@ -4,5 +4,6 @@ bazalt = {
     language: 'en',
     languages: ['en', 'uk'],
     api: 'http://avp.ria.com:8071',
+
     checkSessionOnStart: true
 }
