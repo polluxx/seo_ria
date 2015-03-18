@@ -30,13 +30,19 @@ define([
             });
 
         }
-        $scope.selects = [
-            {
-                name: "Роли",
-                value:$rootScope.roles[0],
-                options: $rootScope.roles
-            }
-        ];
+
+        $rootScope.$watch("roles", function() {
+            if($rootScope.roles == undefined) return;
+
+            $scope.selects = [
+                {
+                    name: "Роли",
+                    value:$rootScope.roles[0],
+                    options: $rootScope.roles
+                }
+            ];
+        })
+
     }]);
 
 
