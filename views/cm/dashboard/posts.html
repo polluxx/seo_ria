@@ -1,1 +1,8 @@
-posts
+<div class="dashboard-posts" loading-container="$loading">
+    <div class="post" ng-repeat="post in posts">
+        <a href="post/add/{{post._id}}">
+            <span class="post-modified">{{post.updated}}</span>
+            <span>{{post.title}}</span>
+        </a>
+    </div>
+</div>

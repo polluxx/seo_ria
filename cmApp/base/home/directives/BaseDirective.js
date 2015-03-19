@@ -43,7 +43,8 @@ define(['base/home/module'], function (module) {
                 $rootScope.currentProject = currProject || $rootScope.projects[0];
 
                 // DASHBOARD
-                $rootScope.boardType = 2;
+                var boardType = localStorageService.get('boardType');
+                $rootScope.boardType = boardType || 0;
                 // DASH END
 
                 $rootScope.rubrics = [];

@@ -219,6 +219,9 @@ define([
             $scope.styles[".riaTizer"]["width"] = calcWidth+"px";
             //document.getElementById("riaTizer_width").value = calcWidth;
             document.getElementById("tizerWidthId").value = calcWidth;
+            //if($scope.filters.riaTizer == undefined) $scope.info.riaTizer = {};
+            $scope.info.filters.riaTizer_width = calcWidth;
+
 
             if (calcWidth <= $scope.minWidth) {
                 var withMarginWidth = ($scope.minWidth*hor)+calcMargin+logoLeftWidth;

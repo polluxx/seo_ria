@@ -15,7 +15,8 @@ define([
         $scope.doc.publication = {};
         $scope.doc.publication.doctype = 'deferred';
         $scope.fileLoading = false;
-        $scope.doc.project = $rootScope.currentProject.id;
+
+        //$scope.doc.project = $rootScope.currentProject.id;
         //$scope.rubrics = $rootScope.rubrics[$rootScope.currentProject.id];
         //$scope.authors = $rootScope.authors;
         var linkTo, linksTo = {draft:"drafts", planned:"list"}, userIndex;

@@ -1378,3 +1378,45 @@ sign-in .error-message {
     display: inline-block;
     text-align: left;
 }
+
+.dashboard-posts .post {
+    font-family: "SegoeUI-Light",sans-serif;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 13px;
+}
+.dashboard-posts .post span {
+    display: block;
+    font-size: 15px;
+}
+.dashboard-posts .post .post-modified {
+    color: rgba(21, 134, 151, 0.71);
+    font-size: 11px;
+}
+
+.dashboard-posts .post:hover, .dashboard-posts .post:hover a  {
+    background-color: rgba(209, 20, 40, 0.59);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.dashboard-statistic {
+
+}
+
+.grey-text {
+    text-align: center;
+    margin: 100px auto;
+    font-size: 28px;
+    font-family: "SegoeUI-Light",sans-serif;
+    opacity: .6;
+}
+
+.change-board {
+    position: absolute !important;
+    top: 30px !important;
+    right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
