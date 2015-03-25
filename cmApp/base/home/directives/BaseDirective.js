@@ -11,6 +11,17 @@ define(['base/home/module'], function (module) {
                     {id:2, "name":"автор"}
                 ];
 
+                $rootScope.formats = [
+                    {id:1, name: "Статья"},
+                    {id:2, name: "Инфографика"}
+                ];
+
+                $rootScope.priorities = [
+                    {id:1, name: "Высокий"},
+                    {id:2, name: "Средний"},
+                    {id:3, name: "Низкий"}
+                ];
+
                 $rootScope.projects = [
                     {id:1, "name":"AUTO.ria"},
                     {id:2, "name":"RIA.com"},
@@ -50,12 +61,14 @@ define(['base/home/module'], function (module) {
                 $rootScope.rubrics = [];
 
                 var userMethod = $resource(bzConfig.api() + "/auth/userdata", {});
+                scope.$loading = true;
                 userMethod.get({}, function(resp) {
-
+                    scope.$loading = false;
                     $rootScope.links = resp.items.links;
                     $rootScope.authors = resp.items.authors;
                     $rootScope.roles = resp.items.roles;
                     $rootScope.allRubrics = resp.items.rubrics;
+
                     //$rootScope.$apply();
 
                 });
@@ -241,17 +254,49 @@ define(['base/home/module'], function (module) {
            },
            link: function(scope, element, attrs) {
                scope.dialog = {};
+               if(scope.errors == undefined) {
+                   scope.errors = [];
+               }
+               var errorskeys;
+
+
+               scope.openDial = function($event, field) {
+                   //console.log(field);
+                   $event.preventDefault();
+                   $event.stopPropagation();
+                   field.opened = true;
+                   //scope.$apply();
+               };
 
                scope.dialog.name = (attrs.name != undefined) ? attrs.name : "name";
                scope.dialog.btn = (attrs.btn != undefined) ? attrs.btn: "btn";
                scope.dialog.confirm = (attrs.confirm != undefined) ? attrs.confirm : "confirm";
 
                 scope.confirm = function() {
-                    //console.log(scope.fields);
-                    scope.update();
-                    morphB.toggle();
+
+
+                    scope.checkNone(scope.fields, function(errors) {
+                        if(errors.length > 0) return;
+
+                        scope.update();
+                        morphB.toggle();
+                    })
+
 
                 }
+
+               scope.checkNone = function(fields, callback) {
+                   scope.errors = [];
+                   fields.forEach(function(field, index) {
+                        console.log(typeof field.value);
+                       if(field.value === null || typeof field.value == "undefined" || field.value != undefined && field.value.length === 0) {
+                           scope.errors[field.doctype] = ["должно быть значение"];
+                           scope.errors.length++;
+                       }
+                   });
+
+                   callback(scope.errors);
+               }
 
                var docElem = window.document.documentElement, didScroll, scrollPosition;
 
@@ -1007,6 +1052,63 @@ define(['base/home/module'], function (module) {
             }
         }
     });
+
+    module.directive('symbols-check', function() {
+        return {
+            restrict: "A",
+            scope: {
+                model: "=ngModel"
+            },
+            link: function(scope, element, attrs) {
+                scope.$watch("model", function() {
+                    scope.checkVariables(scope.model);
+                    scope.setupSymbols();
+                })
+
+                var item = angular.element("<div></div>");
+                scope.checkSymbols = function() {
+
+                    item.addClass("symbolsLeft");
+
+                    item.text("{{itemText}} symbols left");
+                    //scope.$watch("info", function() {
+
+                    //})
+                    element.after(item);
+                    $compile(item)(scope);
+                }
+
+                scope.setupSymbols = function() {
+                    if(scope.info == undefined) {
+                        return;
+                    }
+
+                    var left = scope.itemText = +attrs.symbolsLeft;
+                    var res = "";
+
+                    res = scope.info.replace(/\s/gi, "");
+
+                    left = +attrs.symbolsLeft - res.length;
+
+                    if (left <= 0) {
+                        item.addClass("red");
+                        element.parent().addClass("has-error");
+                    } else {
+                        item.removeClass("red");
+                        element.parent().removeClass("has-error");
+                    }
+
+                    //if(left < 0) left = 0;
+                    scope.itemText = left;
+                }
+
+
+                if(attrs.symbolsLeft != undefined) {
+                    scope.checkSymbols();
+                }
+            }
+        }
+    })
 
     /* !!! END !!! */
 

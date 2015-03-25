@@ -1,0 +1,100 @@
+
+<div loading-container="tableParams.$loading">
+
+    <div class="top-block">
+        <div class="search-box">
+            <input type="text" placeholder="поиск" ng-model="q" class="searchbox head-page" searchable="search()"/>
+        </div>
+        <div class="form-group has-feedback">
+            <a href="/storage/add">
+                <button class="btn btn-success inputbox"  ng-hide="archive">идея</button>
+            </a>
+            <a href="/storage/archive">
+                <button class="btn btn-danger inputbox"  ng-hide="archive">архив</button>
+            </a>
+            <a href="/storage/list">
+                <button class="btn btn-info inputbox"  ng-show="archive">к списку</button>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <table ng-table="tableParams" class="table-new">
+        <tbody>
+            <tr ng-repeat-start="idea in $data" ng-click="open(idea)" ng-class="{'active': idea.$show}">
+                <td>
+                    <span>{{idea.title}}</span>
+                </td>
+                <td>
+                    <span>Заголовки</span>
+                </td>
+                <td>
+                    <span>Формат</span>
+                </td>
+                <td>
+                    <span>Рубрика</span>
+                </td>
+                <td>
+                    <span>Приоритетность</span>
+                </td>
+                <td>
+                    <a href="/storage/add/{{idea._id}}">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </a>
+
+                    <a ng-if="!archive" href="javascript:void(0)" title="в архив" ng-click="toArchive(idea)">
+                        <span class="glyphicon glyphicon-trash text-danger" aria-hidden="true"></span>
+                    </a>
+
+                    <a ng-if="!archive" href="javascript:void(0)" title="удалить" ng-click="removeIdea(idea._id)">
+                        <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr ng-repeat-end ng-show="idea.$show" loading-container="idea.$loading">
+                <td >
+                    <textarea ng-disabled="archive" ng-class="{'has-error':errors['description']}" chengable="ideaUpdate(idea)" class="inputbox idea-desc">{{idea.description}}</textarea>
+                    <div class="error-mess" ng-if="errors['description']">
+                        <p ng-repeat="error in errors['description']">{{error}}</p>
+                    </div>
+                </td>
+                <td class="idea-pretitles">
+                    <span ng-repeat="pretitle in idea.pretitles" ng-show="archive != undefined && pretitle.workType != undefined || archive == undefined && pretitle.workType == undefined">
+                        <input ng-disabled="archive" ng-class="{'has-error':pretitle.$errors['title']}" chengable="ideaUpdate(idea)" type="text" ng-model="pretitle.title"/>
+                       <div class="error-mess">
+                           <p ng-repeat="error in pretitle.$errors['title']">{{error}}</p>
+                       </div>
+                    </span>
+                </td>
+                <td class="idea-pretitles">
+                    <span ng-repeat="pretitle in idea.pretitles" ng-show="archive != undefined && pretitle.workType != undefined || archive == undefined && pretitle.workType == undefined">
+                        <select ng-disabled="archive" chengable="ideaUpdate(idea)" class="form-control inputbox" ng-options="format.name for format in formats track by format.id" ng-init="pretitle.formatType = pretitle.formatType || formats[0]" ng-model="pretitle.formatType"></select></span>
+                </td>
+                <td class="idea-pretitles">
+                    <span ng-repeat="pretitle in idea.pretitles" ng-show="archive != undefined && pretitle.workType != undefined || archive == undefined && pretitle.workType == undefined">
+                        <select ng-disabled="archive" chengable="ideaUpdate(idea)" class="form-control inputbox" ng-options="rubric.name for rubric in rubricsList(idea.rubrics) track by rubric.id" ng-init="pretitle.rubric = pretitle.rubric || rubricsList(idea.rubrics)[0]" ng-model="pretitle.rubric"></select></span>
+                </td>
+                <td class="idea-pretitles">
+                    <span ng-repeat="pretitle in idea.pretitles" ng-show="archive != undefined && pretitle.workType != undefined || archive == undefined && pretitle.workType == undefined">
+                        <select ng-disabled="archive" chengable="ideaUpdate(idea)" class="form-control inputbox" ng-options="priority.name for priority in priorities track by priority.id" ng-init="pretitle.priority = pretitle.priority || priorities[0]" ng-model="pretitle.priority"></select></span>
+                </td>
+                <td class="idea-pretitles">
+                    <span ng-repeat="pretitle in idea.pretitles" ng-if="!pretitle.workType && !archive">
+                        <morph-btn class="morph" update="toWork(pretitle, idea)" name="в работу" btn="в работу" errors="errors" confirm="Сохранить" open="openEv($event)" fields="pretitle.titles" ng-init="pretitle.titles = [{value: pretitle.title, name:'заголовок', doctype:'title'},{value: '', name:'дата публикации', doctype:'datepicker', format:'dd-MMMM-yyyy', opened:false}]"></morph-btn>
+                    </span>
+
+                    <span ng-repeat="pretitle in idea.pretitles" ng-if="pretitle.workType && archive">
+                        <button ng-if="pretitle.workType && archive" ng-disabled="pretitle.workType=='inwork'" class="button form-control inputbox" ng-click="toList(pretitle, idea)">возобновить</button></span>
+                    </span>
+                </td>
+
+
+
+            </tr >
+
+        </tbody>
+    </table>
+
+    
+</div>
+

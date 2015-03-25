@@ -12,6 +12,7 @@ define([
     'modules/auth/config',
     'modules/dashboard/config',
     'modules/post/config',
+    'modules/storage/config',
     'modules/user/config',
 
     'angular-bootstrap-tpl',
@@ -36,6 +37,7 @@ define([
         //'ui.bootstrap.tpl',
         'module.dashboard',
         'module.post',
+        'module.storage',
         'module.user',
 
         'ui.bootstrap',

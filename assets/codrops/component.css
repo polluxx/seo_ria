@@ -112,9 +112,10 @@
 
 
 .morph-button-fixed.morph-button-textarea {
-    width: 30px;
-    height: 30px;
-    margin: 0;
+    width: 120px;
+    height: 60px;
+    margin: 0 !important;
+    padding: 0px 2px 0px 2px;
 }
 
 .morph-button-overlay .morph-content {

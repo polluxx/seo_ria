@@ -4,7 +4,7 @@ requirejs.config({
         'requirejs': '../bower_components/requirejs/require',
 
         // bazalt
-        'bz': '../bower_components/bazalt/build/bz-lite.src',
+        'bz': '../bazalt/bz-lite.src',
         'bz.pages': '../bower_components/bz.pages/build/pages',
         'bz.seo': '../bower_components/bz.seo/build/seo',
 

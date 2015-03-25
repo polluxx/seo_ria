@@ -63,7 +63,7 @@
 
     <div class="form-group has-feedback">
         <div ng-hide="doc.img.src" id="imgPreview" class="grid__item" style="position: relative;">
-            <i class="fa fa-fw fa-file-image-o"></i>
+            <i class="icon icon-camera icon-left-panel"></i>
         </div>
         <div ng-show="doc.img.src" class='img-preload' ng-init="imgSrc"><img class="img-preloaded" width="{{doc.img.width}}" height="{{doc.img.height}}" id='preloaded' src='{{doc.img.src}}'/></div>
 
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <informer></informer>
+    <informer info="post.informer"></informer>
 
     <div class="form-group has-feedback" ng-class="{'has-error':errors['text']}">
         <textarea id="trumbowyg" trumbowyg-editor placeholder="text" ng-model="doc.text" needed name="text" class="form-control inputbox" aria-describedby="inputWarning2Status" rows="8"></textarea>

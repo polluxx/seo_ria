@@ -155,6 +155,12 @@ define([
 
                 $scope.doc = resp.doc;
 
+                $scope.doc.publication.doctype = $scope.doc.publication.doctype || 'deferred';
+                if($scope.doc.doctype == "plan") {
+                    $scope.doc.doctype = "planned";
+                }
+
+                $scope.doc.rubric.id = $scope.doc.rubric.id+"";
                 $scope.doc.publication.time = new Date(resp.doc.publication.datetime);
                 $scope.doc.publication.date = new Date(resp.doc.publication.date);
             })
@@ -163,6 +169,7 @@ define([
         $scope.docSave = function() {
             $scope.$loading = true;
             PostFactory.send($scope.doc, function(resp) {
+                $scope.$loading = false;
                 if(resp.code != 200) {
                     $scope.errors = resp.errors;
                     alertify.error(resp.message);
@@ -174,7 +181,7 @@ define([
                     alertify.error("Ошибка добавления");
                     return;
                 }
-                $scope.$loading = false;
+
                 alertify.success(resp.message);
 
 

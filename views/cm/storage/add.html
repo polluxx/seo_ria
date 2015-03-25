@@ -1,0 +1,55 @@
+<div loading-container="$loading">
+    <form class="content" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group has-feedback">
+            <div class="inline">
+                <select width="200px" ng-model="idea.author" name="author" class="form-control inputbox" ng-options="author.name for author in authors track by author.id"></select>
+            </div>
+        </div>
+
+        <div class="form-group has-feedback" ng-class="{'has-error':errors['title']}">
+            <textarea rows="3" placeholder="есть идея" ng-model="idea.title" name="title" class="form-control inputbox" aria-describedby="inputWarning2Status">
+
+            </textarea>
+            <div class="error-mess">
+                <p ng-repeat="error in errors['title']">{{error}}</p>
+            </div>
+        </div>
+
+        <div class="form-group has-feedback" ng-class="{'has-error':errors['description']}">
+            <textarea rows="8" placeholder="суть" ng-model="idea.description" name="title" class="form-control inputbox" aria-describedby="inputWarning2Status">
+
+            </textarea>
+
+            <div class="error-mess">
+                <p ng-repeat="error in errors['description']">{{error}}</p>
+            </div>
+        </div>
+
+        <div class="form-group has-feedback" ng-class="{'has-error':errors['rubrics']}">
+            <div ng-repeat="rubric in rubrics" class="rubric">
+                <label for="label" class="label rubric-name">{{rubric.name}}</label>
+                <input type="checkbox" ng-model="idea.rubrics[rubric.id]" class=""/>
+            </div>
+            <div class="error-mess">
+                <p ng-repeat="error in errors['rubrics']">{{error}}</p>
+            </div>
+        </div>
+
+        <div class="form-group rewrites">
+            <div>
+                <input placeholder="заголовок" class="form-control inputbox add-pretitle" type="text" ng-init="tagItem" ng-model="tagItem"/><div class="glyphicon glyphicon-plus-sign add-project-btn-sm text-success" ng-show="tagItem.length > 0" ng-click="addPretitle(tagItem)"></div>
+            </div>
+
+            <div class="pre-title" ng-repeat="pretitle in idea.pretitles">{{pretitle.title}}<span class="glyphicon glyphicon-trash" ng-click="removePretitle(pretitle)"></span></div>
+            <div class="error-mess">
+                <p ng-repeat="error in errors['pretitles']">{{error}}</p>
+            </div>
+        </div>
+
+        <div class="form-group has-feedback">
+            <button class="btn btn-success inputbox" ng-click="saveIdea()">Добавить</button>
+        </div>
+
+    </form>
+</div>

@@ -57,8 +57,6 @@ define(['base/home/module'], function (module) {
                     if(text == undefined) return;
 
                     items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
-
-
                     if(items == undefined) return;
 
                     element[0].disabled = true;
@@ -93,11 +91,6 @@ define(['base/home/module'], function (module) {
                     for(itemResp in response) {
                         text = text.replace(itemResp, response[itemResp], "g");
                     }
-                    //element[0].value = text;
-                    //element[0].text = text;
-                    //element[0].innerHTML = text;
-                    //element.text(text);
-
                     element[0].disabled = false;
                     scope.info = text;
                     scope.$apply();

@@ -55,17 +55,25 @@ define([
         $scope.info.filters.riaBanner_width = 120;
 
         $scope.info.filters.tizers_axis = $scope.axises[0];
+
+        $scope.tmp = {};
         // END
 
+        function getArrayIndex(element, index, needle) {
+            if(+element.id === +needle.id) {
+                console.log(index);
+                return index;
+            }
+        }
 
         var link = bzConfig.api()+"/cm/filtertypes",
-            postInfoLink = bzConfig.api()+"/cm/informer";
-        var params = {"json":true, "forDeep":true};
+            postInfoLink = bzConfig.api()+"/cm/informer",
+            infoLink = bzConfig.api()+"/cm/informer";
+        var params = {"json":true, "forDeep":true},
+        subcategoryIndex = 0;
 
 
         $scope.$watch("info.option", function() {
-            console.log();
-
 
             $scope.sendDataReq($scope.returnOptionsLink());
         });
@@ -93,7 +101,10 @@ define([
                 $scope.params.subcategories = results.map(function (item) {
                     return {id:item.subcategory, name:item.name};
                 });
-                $scope.info.subcategory = $scope.params.subcategories[0];
+                if($scope.tmp.subcategory != undefined) {
+                    subcategoryIndex = $scope.params.subcategories.findElm(getArrayIndex, {id: $scope.tmp.subcategory});
+                }
+                $scope.info.subcategory = $scope.params.subcategories[subcategoryIndex] || $scope.params.subcategories[0];
 
                 $scope.sendDataReq();
             });
@@ -109,6 +120,11 @@ define([
                 post: {
                     method: "POST",
                     url: postInfoLink,
+                    isArray: false
+                },
+                informer: {
+                    method: "GET",
+                    url: infoLink,
                     isArray: false
                 }
             }
@@ -195,12 +211,7 @@ define([
             $scope.isAllowedLogoAxis = false;
             // FOR newbuilds and new auto
             if (projectsWithReversedLogo.indexOf(+$scope.info.project.id) != -1) {
-                //if ($scope.project == 1 && $scope.category == 1 || $scope.project != 1){
-
                 $scope.isAllowedLogoAxis = true;
-                //var axis = $scope.info.filters.tizers_axis.id;
-                //$scope.logoAxis = axis[0].options[axis[0].selectedIndex].value;
-
                 $scope.relocateLogo();
                 // }
             }
@@ -328,8 +339,44 @@ define([
                 //$scope.margr = document.getElementById("riaTizer_marginRight").value;
 
             }
-        }
+        };
 
+
+
+        $scope.findInformerData = function() {
+            if($scope.doc.informer != undefined) {
+                api.informer({id: $scope.doc.informer}, function(resp) {
+                    console.log(resp);
+                    if(resp.code != 200) {
+                        alertify.error(resp.message);
+                        return;
+                    }
+
+                    $scope.info = angular.copy(resp.info);
+
+                    var projectIndex = $scope.projects.findElm(getArrayIndex, {id:resp.info.projectId}),
+                    subcategoryIndex = 0;
+                    //console.log(categoryIndex);
+                    $scope.tmp.subcategory = resp.info.subcategory;
+
+                    $rootScope.currentProject = $scope.info.project= $scope.projects[projectIndex];
+                    var categoryIndex = $rootScope.rubrics.findElm(getArrayIndex, {id:resp.info.category});
+                    $scope.info.category = $rootScope.rubrics[categoryIndex] || $rootScope.rubrics[0];
+
+                    //$scope.info.category.id = cat;
+                    //$scope.info.subcategory = $scope.params.subcategories[subcategoryIndex];
+                    //$scope.info.category = $scope.params.categories[0];
+                    $scope.info.option = {id:0};
+
+
+                });
+            }
+        };
+        $scope.$watch("doc", function() {
+            if($scope.doc._id == undefined) return;
+
+            $scope.findInformerData();
+        });
 
         $scope.returnOptionsLink = function() {
             var linkToReturn = "";

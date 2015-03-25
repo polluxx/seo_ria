@@ -6,13 +6,29 @@
                 <span class="icon icon-close">Закрыть</span>
                 <h2>{{dialog.name}}</h2>
                 <form>
-                    <p ng-repeat="field in fields" ng-if="field.select == undefined">
+                    <p ng-repeat="field in fields" ng-if="field.select == undefined && field.doctype != 'datepicker'">
                         <label>{{field.name}}</label>
                         <input ng-model="field.value" type="text"/>
                         <i ng-repeat="err in errors[field.doctype]">{{err}}</i>
                     </p>
 
-                    <p ng-repeat="field in fields" ng-if="field.select != undefined"><label>{{field.name}}</label><select ng-model="field.select.value" ng-options="option.name for option in field.select.options track by option.id"></select></p>
+                    <p ng-repeat="field in fields" ng-if="field.select != undefined">
+                        <label>{{field.name}}</label>
+                        <select ng-model="field.select.value" ng-options="option.name for option in field.select.options track by option.id"></select>
+                    </p>
+
+                    <p ng-repeat="field in fields" ng-if="field.doctype == 'datepicker'" class="date-item datepick datepicker-field">
+                        <label>{{field.name}}</label>
+
+                        <span class="input-group-btn datepicker-group">
+                            <button type="button" class="btn-default inputbox datebtn" ng-click="openDial($event, field)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            <input type="text" class="form-control inputbox inputbtn" datepicker-popup="{{field.format}}" show-weeks="true" class="well well-sm" ng-model="field.value" is-open="field.opened" ng-required="true" close-text="Close" />
+                        </span>
+
+
+                        <i ng-repeat="err in errors[field.doctype]">{{err}}</i>
+                    </p>
+
                     <p><button ng-click="confirm()">{{dialog.confirm}}</button></p>
                 </form>
             </div>

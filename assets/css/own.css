@@ -1175,6 +1175,11 @@ h1 {
     cursor: pointer;
     background-color: rgba(145, 153, 141, 0.10);
 }
+
+.table-new .plan {
+    background-color: rgba(19, 137, 153, 0.22);
+}
+
 .table-new tr.draft:hover {
     cursor: pointer;
     background-color: rgba(145, 153, 141, 0.10);
@@ -1419,4 +1424,104 @@ sign-in .error-message {
     right: 30px;
     font-size: 25px;
     cursor: pointer;
+}
+
+.rubric {
+    display: inline-block;
+    padding: 10px;
+}
+.rubric-name {
+    color: rgba(21, 134, 151, 0.71) !important;
+}
+.add-pretitle {
+    width: 70% !important;
+    display: inline-block !important;
+}
+.pre-title {
+    padding: 10px;
+    width: 70%;
+    background: #e75854;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.pre-title span {
+    float: right;
+    display: none;
+}
+.pre-title:hover span {
+    display: inline-block;
+}
+
+.top-block .search-box{
+    margin: 30px auto;
+    float: left;
+    width: 80%;
+}
+
+.top-block .form-group {
+    float: right;
+    margin: 30px auto;
+}
+
+.top-block {
+    display: block;
+
+}
+
+.idea-block {
+    display: block;
+    margin-top: 20px;
+}
+
+.idea-pretitles span{
+    display: block;
+    padding: 10px 0;
+}
+.idea-desc {
+    height: 100%;
+    width: 100%;
+}
+
+.table-new .active {
+    background-color: #e85657;
+    color: #f9f6e5;
+}
+.table-new .active a, .table-new .active span{
+    color: #f9f6e5 !important;
+}
+
+.datepicker-field button.btn-default {
+    padding: 0px 2px !important;
+    margin: 0 !important;
+}
+
+.datepicker-field ul.dropdown-menu {
+    left: 0 !important;
+    top: -200px !important;
+    z-index: 999999;
+    height: 284px;
+    overflow: hidden;
+}
+.datepicker-group .datebtn {
+    display: inline-block !important;
+    margin-top: 0 !important;
+    width: 40px !important;
+}
+.datepicker-group .inputbtn {
+    display: inline-block !important;
+    margin-top: -16px !important;
+    width: auto !important;;
+}
+.datepicker-group {
+    width: 280px !important;
+}
+
+.datepicker-group em, .datepicker-group small {
+    color: #e85657;
+}
+
+.table-new .active span.icon-close {
+    color: #e85657 !important;
 }
