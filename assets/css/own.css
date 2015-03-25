@@ -1420,8 +1420,8 @@ sign-in .error-message {
 
 .change-board {
     position: absolute !important;
-    top: 30px !important;
-    right: 30px;
+    top: 10px !important;
+    right: 35px;
     font-size: 25px;
     cursor: pointer;
 }
