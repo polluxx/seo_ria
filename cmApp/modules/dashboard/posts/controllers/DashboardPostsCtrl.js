@@ -10,6 +10,8 @@ define([
         $scope.$loading = false;
 
         $scope.getLastPosts = function(num) {
+            if($rootScope.currentProject == undefined) return;
+
             $scope.$loading = true;
             params.limit = num;
             params.project = $rootScope.currentProject.id;
