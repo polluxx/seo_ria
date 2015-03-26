@@ -1053,7 +1053,7 @@ define(['base/home/module'], function (module) {
         }
     });
 
-    module.directive('symbols-check', function() {
+    module.directive('symbolsCheck', function($compile) {
         return {
             restrict: "A",
             scope: {
@@ -1063,7 +1063,7 @@ define(['base/home/module'], function (module) {
                 scope.$watch("model", function() {
                     scope.checkVariables(scope.model);
                     scope.setupSymbols();
-                })
+                });
 
                 var item = angular.element("<div></div>");
                 scope.checkSymbols = function() {
