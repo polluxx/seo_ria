@@ -1097,6 +1097,7 @@ define(['base/home/module'], function (module) {
                         element.parent().removeClass("has-error");
                     }
 
+                    console.log(left);
                     //if(left < 0) left = 0;
                     scope.itemText = left;
                 }
