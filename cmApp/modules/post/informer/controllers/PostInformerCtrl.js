@@ -244,8 +244,8 @@ define([
                 $scope.styles[".riaBanner"]["width"] = withMarginWidth+"px";
                 $scope.styles[".riaTizer"]["width"] = $scope.minWidth+"px";
 
-                $scope.info.filters.riaBanner_width = $scope.styles[".riaBanner"]["width"];
-                $scope.info.filters.riaTizer_width = $scope.styles[".riaTizer"]["width"];
+                $scope.info.filters.riaBanner_width = +withMarginWidth;
+                $scope.info.filters.riaTizer_width = +$scope.minWidth;
             }
 
             if (+hor>1) {
