@@ -24,6 +24,8 @@ define([
                 }
                 //$rootScope.errors = [];
                 $rootScope.signInBlock.toggle();
+                $rootScope.$apply();
+                console.log(bzUser);
                 $location.path('/dashboard');
 
             });
