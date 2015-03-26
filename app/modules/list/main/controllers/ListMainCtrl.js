@@ -13,22 +13,20 @@ define([
         $scope.radioModel = '10';
         $rootScope.listData = [];
 
+        $scope.searchparams = {};
+        $scope.searchparams.limit = +$scope.radioModel;
+        $scope.searchparams.project = $routeParams.id;
+        $scope.searchparams.id = $routeParams.id;
+        $scope.searchparams.page = $scope.bigCurrentPage;
+
+
+
+        $routeParams = $scope.searchparams;
+
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
             //$routeParams.page = 1;
-            $routeParams.limit = +$scope.radioModel;
-            if (params != undefined && params.page != undefined) {
-                $routeParams.page = params.page;
-            }
-
-            $routeParams.project = $routeParams.id;
-
-
-            if (params != undefined && params.q != undefined) {
-                $routeParams.q = params.q;
-            }
-
-            //$location.search($routeParams);
+            $location.search($routeParams);
 
             ListFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
@@ -37,7 +35,9 @@ define([
                 }
                 $scope.$loading = false;
                 if (response.code != 200) {
-                    console.info(response.message);
+
+                    console.log(response);
+                    return;
                     //alertify.error(data.message || "Помилка доступу до сервіса. Спробуйте пізніше");
                 }
                 $scope.bigTotalItems = response.data.pages;
@@ -49,21 +49,30 @@ define([
 
         };
 
+        $scope.$watch('searchparams', function() {
+            //if($scope.searchparams != undefined) return;
+            console.log($scope.searchparams);
+            $routeParams = $scope.searchparams;
+            $scope.refresh();
+        }, true);
+
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;
 
-            $routeParams.q = $rootScope.searchval;
-            //console.log($location.path);
-            $scope.refresh({q:$rootScope.searchval}, true)
-        })
+            $scope.searchparams.q = $rootScope.searchval;
+            //$scope.refresh({q:$rootScope.searchval}, true)
+        });
 
-        $scope.$watch("bigCurrentPage", function() {
+        /*$scope.$watch("bigCurrentPage", function() {
+
+            //$scope.refresh({page:$scope.bigCurrentPage})
             $scope.refresh({page:$scope.bigCurrentPage})
         });
 
         $scope.$watch("radioModel", function() {
-            $scope.refresh()
-        });
+            //$scope.refresh();
+            $scope.refresh();
+        });*/
 
 
     }]);
