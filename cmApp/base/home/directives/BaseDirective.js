@@ -1082,12 +1082,12 @@ define(['base/home/module'], function (module) {
                         return;
                     }
 
-                    var left = scope.itemText = +attrs.symbolsLeft;
+                    var left = scope.itemText = +attrs.symbolsCheck;
                     var res = "";
 
                     res = scope.info.replace(/\s/gi, "");
 
-                    left = +attrs.symbolsLeft - res.length;
+                    left = +attrs.symbolsCheck - res.length;
 
                     if (left <= 0) {
                         item.addClass("red");
