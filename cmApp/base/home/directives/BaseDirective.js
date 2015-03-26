@@ -1078,14 +1078,16 @@ define(['base/home/module'], function (module) {
                 }
 
                 scope.setupSymbols = function() {
-                    if(scope.info == undefined) {
+                    if(scope.model == undefined) {
                         return;
                     }
+
+                    var text = angular.copy(scope.model);
 
                     var left = scope.itemText = +attrs.symbolsCheck;
                     var res = "";
 
-                    res = scope.info.replace(/\s/gi, "");
+                    res = text.replace(/\s/gi, "");
 
                     left = +attrs.symbolsCheck - res.length;
 
@@ -1097,7 +1099,6 @@ define(['base/home/module'], function (module) {
                         element.parent().removeClass("has-error");
                     }
 
-                    console.log(left);
                     //if(left < 0) left = 0;
                     scope.itemText = left;
                 }
