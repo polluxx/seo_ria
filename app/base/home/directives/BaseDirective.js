@@ -21,7 +21,7 @@ define(['base/home/module'], function (module) {
                 });
 
                 scope.makeSearch = function(search) {
-
+                    $rootScope.issearch = false;
                     interval = setTimeout(function() {
                         console.log(search);
                         console.log($rootScope.searchval);

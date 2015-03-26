@@ -19,6 +19,10 @@ define([
         $scope.searchparams.id = $routeParams.id;
         $scope.searchparams.page = $scope.bigCurrentPage;
 
+        var search;
+        if($routeParams.q != undefined) {
+            $rootScope.searchval = $scope.searchparams.q =  $routeParams.q;
+        }
 
 
         $routeParams = $scope.searchparams;
@@ -49,9 +53,8 @@ define([
 
         };
 
-        $scope.$watch('searchparams', function() {
-            //if($scope.searchparams != undefined) return;
-            console.log($scope.searchparams);
+        $scope.$watch("searchparams", function(newVal, oldVal) {
+            //if($scope.searchparams == undefined) return;
             $routeParams = $scope.searchparams;
             $scope.refresh();
         }, true);
@@ -60,19 +63,15 @@ define([
             if (!$rootScope.issearch) return;
 
             $scope.searchparams.q = $rootScope.searchval;
-            //$scope.refresh({q:$rootScope.searchval}, true)
         });
 
-        /*$scope.$watch("bigCurrentPage", function() {
-
-            //$scope.refresh({page:$scope.bigCurrentPage})
-            $scope.refresh({page:$scope.bigCurrentPage})
+        $scope.$watch("bigCurrentPage", function() {
+            $scope.searchparams.page = $scope.bigCurrentPage;
         });
 
         $scope.$watch("radioModel", function() {
-            //$scope.refresh();
-            $scope.refresh();
-        });*/
+            $scope.searchparams.limit = +$scope.radioModel;
+        });
 
 
     }]);
