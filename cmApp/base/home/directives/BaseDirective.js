@@ -157,7 +157,7 @@ define(['base/home/module'], function (module) {
 
                 var morphPanel = document.querySelector(".container");
 
-                angular.element(morphPanel).on("mouseleave", function() {
+                angular.element(morphPanel).on("mouseenter", function() {
                     if(panel.expanded) {
                         panel.toggle();
                     }
