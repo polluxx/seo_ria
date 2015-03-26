@@ -164,7 +164,7 @@ define([
                 $scope.doc.publication.time = new Date(resp.doc.publication.datetime);
                 $scope.doc.publication.date = new Date(resp.doc.publication.date);
 
-                $scope.doc.author.id = $scope.doc.author.id+"";
+                $scope.doc.author.id = $scope.doc.author.id+"" || $scope.authors[0];
 
             })
         }
