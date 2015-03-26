@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/signIn.html" afterPath="$PROJECT_DIR$/views/cm/signIn.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -56,8 +51,8 @@
       <file leaf-file-name="signIn.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025466893" vertical-offset="0" max-vertical-offset="589">
-              <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.2801358" vertical-offset="0" max-vertical-offset="589">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -1025,8 +1020,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025466893" vertical-offset="0" max-vertical-offset="589">
-          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.2801358" vertical-offset="0" max-vertical-offset="589">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
           <folding />
         </state>
       </provider>
