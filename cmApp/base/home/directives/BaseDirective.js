@@ -682,7 +682,7 @@ define(['base/home/module'], function (module) {
                             if(typeof substyles[substyle] === "function") continue;
 
 
-                            string += "infoblock "+ substyle+":"+substyles[substyle]+";\n";
+                            string += " .infoblock "+ substyle+":"+substyles[substyle]+";\n";
                         }
                         string += "} \n";
 
