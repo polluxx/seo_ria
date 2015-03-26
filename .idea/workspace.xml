@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.406199" vertical-offset="9996" max-vertical-offset="16860">
-              <caret line="683" column="28" selection-start-line="683" selection-start-column="28" selection-end-line="683" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7866" max-vertical-offset="16845">
+              <caret line="682" column="0" selection-start-line="682" selection-start-column="0" selection-end-line="682" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="6360">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.58401304" vertical-offset="2057" max-vertical-offset="6375">
+              <caret line="161" column="27" selection-start-line="161" selection-start-column="27" selection-end-line="161" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -194,8 +195,8 @@
         <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
         <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/views/cm/storage/add.html" />
-        <option value="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
+        <option value="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
       </list>
     </option>
   </component>
@@ -929,18 +930,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
+    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="6360">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7866" max-vertical-offset="16845">
+          <caret line="682" column="0" selection-start-line="682" selection-start-column="0" selection-end-line="682" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+    <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.406199" vertical-offset="9996" max-vertical-offset="16860">
-          <caret line="683" column="28" selection-start-line="683" selection-start-column="28" selection-end-line="683" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.58401304" vertical-offset="2057" max-vertical-offset="6375">
+          <caret line="161" column="27" selection-start-line="161" selection-start-column="27" selection-end-line="161" selection-end-column="27" />
           <folding />
         </state>
       </provider>

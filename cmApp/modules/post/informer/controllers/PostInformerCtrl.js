@@ -158,7 +158,8 @@ define([
 
                 var informer = angular.element(
                     "<div id=\"riainfo_"+resp.key+"\"></div>" +
-                    "<script type=\"text/javascript\" src=\"http://cobrand.ria.com/js/ria_informer.js?riacode="+resp.key+"\" ></script>"
+                    "<script type=\"text/javascript\" src=\"http://cobrand.ria.com/js/ria_informer.js?riacode="+resp.key+"\" ></script>" +
+                    "</br>"
                 );
 
                 //informer = angular.copy(document.getElementsByTagName("infoblock"));
