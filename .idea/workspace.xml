@@ -2,9 +2,201 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/attachement.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/attachement.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/attachement.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/attachement.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-black/backcolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-black-2x/backcolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-white/backcolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-white-2x/backcolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/barre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/barre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/barre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/barre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/center-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/center-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/center-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/center-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-black/forecolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-black-2x/forecolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-white/forecolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/images/icons-white-2x/forecolor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/formatting.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/formatting.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/formatting.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/formatting.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/fullscreen-exit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/fullscreen-exit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/fullscreen-exit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/fullscreen-exit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/fullscreen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/gras.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/gras.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/gras.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/gras.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/horizontal-rule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/horizontal-rule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/horizontal-rule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/horizontal-rule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons-black-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/images/icons-black-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/images/icons-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons-white-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/images/icons-white-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/images/icons-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/images/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/justify-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/justify-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/justify-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/justify-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/left-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/left-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/left-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/left-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/ordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/ordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/ordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/ordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/removeformat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/removeformat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/removeformat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/removeformat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/right-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/right-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/right-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/right-align.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/souligne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/souligne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/souligne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/souligne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/strikethrough.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/strikethrough.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/strikethrough.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/strikethrough.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/underline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/underline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/underline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/underline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/unordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/unordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/unordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/unordered-list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/video.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/video.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/video.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/video.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black/view-html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-black-2x/view-html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white/view-html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/images/icons-white-2x/view-html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/Gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/sass/mixins/_sprite-pos.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/examples/plugins/base64.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/examples/plugins/colors.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/es_ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/es_ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/examples/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/ko.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/examples/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/rs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/rs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/rs_latin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/rs_latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/base64/trumbowyg.base64.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/base64/trumbowyg.base64.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/base64/trumbowyg.base64.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/trumbowyg.colors.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/trumbowyg.colors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/trumbowyg.colors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/ui/trumbowyg.colors.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/colors/trumbowyg.colors.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/colors/ui/sass/trumbowyg.colors.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/trumbowyg.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/trumbowyg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/trumbowyg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/ui/trumbowyg.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/trumbowyg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/ui/sass/trumbowyg.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/upload/trumbowyg.upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/upload/trumbowyg.upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/plugins/upload/trumbowyg.upload.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/plugins/upload/trumbowyg.upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/trumbowyg2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/examples/plugins/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/src/langs/zh_cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useful/trumbowyg2/dist/langs/zh_cn.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/post/add.html" afterPath="$PROJECT_DIR$/views/cm/post/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indexCm.html" afterPath="$PROJECT_DIR$/indexCm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/requireConfig.js" afterPath="$PROJECT_DIR$/cmApp/requireConfig.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -30,26 +222,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13832" max-vertical-offset="16890">
-              <caret line="897" column="44" selection-start-line="897" selection-start-column="44" selection-end-line="897" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthLoginCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="720">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="signIn.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,32 +242,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leftPanel.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cm/leftPanel.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25" vertical-offset="165" max-vertical-offset="780">
-              <caret line="13" column="59" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indexCm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="735" max-vertical-offset="1350">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state vertical-scroll-proportion="-0.19694397" vertical-offset="761" max-vertical-offset="1350">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostAddCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthLoginCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="720">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requireConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmApp/requireConfig.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1995">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trumbowyg.upload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/plugins/upload/trumbowyg.upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2370">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trumbowyg2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/src/trumbowyg2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="1" column="14857" selection-start-line="1" selection-start-column="14857" selection-end-line="1" selection-end-column="14857" />
+              <folding>
+                <element signature="e#15011#15050#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostAddCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7340946" vertical-offset="2070" max-vertical-offset="3210">
-              <caret line="168" column="66" selection-start-line="168" selection-start-column="66" selection-end-line="168" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3255">
+              <caret line="170" column="43" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cm/post/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.7916665" vertical-offset="1316" max-vertical-offset="2085">
+              <caret line="97" column="95" selection-start-line="97" selection-start-column="89" selection-end-line="97" selection-end-column="95" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#8;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,26 +323,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="690">
               <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="informer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cm/post/informer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="6150">
-              <caret line="12" column="103" selection-start-line="12" selection-start-column="103" selection-end-line="12" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3362" max-vertical-offset="6375">
-              <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -143,7 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cmApp/base/home/filters/filter.js" />
         <option value="$PROJECT_DIR$/views/cm/informerFontBlock.html" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/views/view.html" />
@@ -160,7 +357,6 @@
         <option value="$PROJECT_DIR$/views/cm/dashboard/comments.html" />
         <option value="$PROJECT_DIR$/bower_components/bazalt/build/bz-lite.src.js" />
         <option value="$PROJECT_DIR$/views/cm/leftPanel.html" />
-        <option value="$PROJECT_DIR$/cmApp/requireConfig.js" />
         <option value="$PROJECT_DIR$/cmApp/base/home/controllers/BaseHomeCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/storage/config.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/storage/add/module.js" />
@@ -180,20 +376,22 @@
         <option value="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageListCtrl.js" />
         <option value="$PROJECT_DIR$/assets/codrops/component.css" />
         <option value="$PROJECT_DIR$/views/cm/post/list.html" />
-        <option value="$PROJECT_DIR$/views/cm/post/add.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
-        <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/views/cm/storage/add.html" />
         <option value="$PROJECT_DIR$/views/cm/post/informer.html" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
         <option value="$PROJECT_DIR$/indexCm.html" />
-        <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/views/cm/signIn.html" />
         <option value="$PROJECT_DIR$/cmApp/modules/dashboard/posts/controllers/DashboardPostsCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
+        <option value="$PROJECT_DIR$/useful/trumbowyg2/src/trumbowig2.js" />
+        <option value="$PROJECT_DIR$/views/cm/post/add.html" />
+        <option value="$PROJECT_DIR$/cmApp/requireConfig.js" />
+        <option value="$PROJECT_DIR$/bazalt.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
       </list>
     </option>
   </component>
@@ -309,7 +507,95 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="post" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="useful" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trumbowyg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="useful" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trumbowyg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="useful" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trumbowyg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="useful" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trumbowyg2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,7 +649,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,11 +671,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="posts" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,15 +697,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="posts" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,11 +755,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/useful/trumbowyg2" />
       <recent name="$PROJECT_DIR$/views/cm/storage" />
       <recent name="$PROJECT_DIR$/cmApp/modules/storage/list/controllers" />
       <recent name="$PROJECT_DIR$/cmApp/modules/storage/list" />
       <recent name="$PROJECT_DIR$/cmApp/modules/storage/add/factories" />
-      <recent name="$PROJECT_DIR$/cmApp/modules/storage/add/controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/views/cm/dashboard" />
@@ -572,34 +890,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/dashboard/main/factories/DashboardFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/dashboard/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="360">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/dashboard/statistic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="0" column="61" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/dashboard/comments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/cm/dashboard/posts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195">
@@ -611,13 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.335987" vertical-offset="5702" max-vertical-offset="6510">
-          <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -782,14 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/post/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1091" max-vertical-offset="2085">
-          <caret line="94" column="18" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageListCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0032626428" vertical-offset="2522" max-vertical-offset="3135">
@@ -823,14 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21077" max-vertical-offset="22980">
           <caret line="1423" column="13" selection-start-line="1423" selection-start-column="13" selection-end-line="1423" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bazalt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -877,30 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/requireConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14681892" vertical-offset="0" max-vertical-offset="1950">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indexCm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="735" max-vertical-offset="1350">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="720">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="13832" max-vertical-offset="16890">
@@ -941,10 +1184,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/src/trumbowyg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17445">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/dist/trumbowyg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.82708" vertical-offset="4185" max-vertical-offset="17610">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/src/trumbowyg2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="1" column="14857" selection-start-line="1" selection-start-column="14857" selection-end-line="1" selection-end-column="14857" />
+          <folding>
+            <element signature="e#15011#15050#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7340946" vertical-offset="2070" max-vertical-offset="3210">
-          <caret line="168" column="66" selection-start-line="168" selection-start-column="66" selection-end-line="168" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3255">
+          <caret line="170" column="43" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cm/post/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7916665" vertical-offset="1316" max-vertical-offset="2085">
+          <caret line="97" column="95" selection-start-line="97" selection-start-column="89" selection-end-line="97" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#8;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useful/trumbowyg2/plugins/upload/trumbowyg.upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2370">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3290735" vertical-offset="4309" max-vertical-offset="6510">
+          <caret line="301" column="24" selection-start-line="301" selection-start-column="24" selection-end-line="301" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/requireConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1995">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bazalt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="720">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indexCm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.19694397" vertical-offset="761" max-vertical-offset="1350">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding />
         </state>
       </provider>

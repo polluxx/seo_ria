@@ -27,7 +27,7 @@ define([
                 //$rootScope.errors = [];
                 $rootScope.signInBlock.toggle();
                 $rootScope.$apply();
-                console.log(bzUser);
+                console.log($scope.$user);
                 $location.path('/dashboard');
 
             });

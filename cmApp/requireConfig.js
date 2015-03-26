@@ -52,7 +52,10 @@ requirejs.config({
         'ckeditor': '../assets/ckeditor/ckeditor',
         'select2': '../bower_components/select2/select2',
 
-        'trumbowyg': '../bower_components/trumbowyg/dist/trumbowyg',
+        //'trumbowyg': '../bower_components/trumbowyg/dist/trumbowyg',
+        'trumbowyg': '../useful/trumbowyg2/src/trumbowyg2',
+        //'trumbowyg': '../useful/trumbowyg2/dist/trumbowyg',
+        //'trumbowygUpload': '../useful/trumbowyg2/plugins/upload/trumbowyg.upload',
         'trumbowygUpload': 'other/trumbowygUpload',
         'alertify': 'alertify',
         'polyfills': 'polyfills',
