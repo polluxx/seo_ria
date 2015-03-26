@@ -1061,7 +1061,6 @@ define(['base/home/module'], function (module) {
             },
             link: function(scope, element, attrs) {
                 scope.$watch("model", function() {
-                    scope.checkVariables(scope.model);
                     scope.setupSymbols();
                 });
 
