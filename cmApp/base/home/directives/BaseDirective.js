@@ -679,7 +679,8 @@ define(['base/home/module'], function (module) {
                         var substyles = styles[style];
 
                         for(var substyle in substyles) {
-                            console.log(typeof substyles[substyle]);
+                            if(typeof substyles[substyle] === "function") continue;
+
                             console.log(substyles[substyle]);
                             string += "informer "+ substyle+":"+substyles[substyle]+";\n";
                         }
