@@ -6,10 +6,10 @@
     <div class="morph-content">
 
         <div>
-            <div class="content-style-form content-style-form-1">
+            <div class="content-style-form content-style-form-1" loading-container="$loading">
                 <span class="icon icon-close">Закрыть</span>
                 <h2>Авторизация</h2>
-                <form loading-container="$loading">
+                <form >
                     <p><label>Логин</label><input ng-model="user.email" type="text" autocomplete="true"/></p>
                     <i class="error-message" ng-repeat="error in errors['email']">{{error}}</i>
                     <p><label>Пароль</label><input ng-model="user.password" type="password"/></p>

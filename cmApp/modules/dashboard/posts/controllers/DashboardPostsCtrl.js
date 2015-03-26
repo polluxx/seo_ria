@@ -15,6 +15,8 @@ define([
             $scope.$loading = true;
             params.limit = num;
             params.project = $rootScope.currentProject.id;
+            params['doctype[0]']="planned";
+            params['doctype[1]']="plan";
             params['sorting[updated]'] = 'desc';
 
             DashboardFactory.list(params, function(response) {
