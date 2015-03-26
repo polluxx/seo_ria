@@ -40,7 +40,7 @@ define([
 
 
         $rootScope.$watch("authors", function () {
-            $scope.$loading = true;
+            //$scope.$loading = true;
             $scope.authors = $rootScope.authors;
             if($scope.authors == undefined || bzUser.userdata == undefined) return;
 

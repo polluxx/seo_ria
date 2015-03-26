@@ -16,7 +16,9 @@ define([
 
 
         $scope.login = function(user) {
+            $rootScope.$loading = true;
             bzUser.$login(user, function(resp) {
+                $rootScope.$loading = false;
                 if(resp.code != 200) {
                     console.log(resp);
                     $scope.setErrors(resp.errors);

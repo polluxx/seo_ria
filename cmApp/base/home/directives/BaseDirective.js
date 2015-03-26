@@ -6,6 +6,7 @@ define(['base/home/module'], function (module) {
             templateUrl: "views/cm/leftPanel.html",
             link: function(scope, element, attrs) {
 
+
                 $rootScope.roles = [
                     {id:1, "name":"админ"},
                     {id:2, "name":"автор"}
@@ -894,7 +895,7 @@ define(['base/home/module'], function (module) {
             restrict: "E",
             templateUrl: "views/cm/signIn.html",
             link: function(scope, element, attrs) {
-
+                $rootScope.$loading = false;
                 $rootScope.errors = [];
 
                 var docElem = window.document.documentElement, didScroll, scrollPosition,
