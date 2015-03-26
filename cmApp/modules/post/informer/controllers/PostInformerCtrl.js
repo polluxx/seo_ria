@@ -143,6 +143,7 @@ define([
 
         var insertParams = [], item, items = [];
         $scope.infoSave = function() {
+            console.log($scope.info);
             api.post($scope.info, function(resp) {
                 if(resp.code != 200) {
                     alertify.error("Ошибка генерирования информера");
@@ -242,6 +243,8 @@ define([
                 $scope.styles[".riaBanner"]["width"] = withMarginWidth+"px";
                 $scope.styles[".riaTizer"]["width"] = $scope.minWidth+"px";
 
+                $scope.info.filters.riaBanner_width = $scope.styles[".riaBanner"]["width"];
+                $scope.info.filters.riaTizer_width = $scope.styles[".riaTizer"]["width"];
             }
 
             if (+hor>1) {
@@ -294,7 +297,7 @@ define([
             $scope.reload = true;
             $scope.toDisplay = hor*vert;
 
-        }
+        };
 
 
         $scope.sendDataReq = function(updateLink) {
@@ -372,11 +375,11 @@ define([
                 });
             }
         };
-        $scope.$watch("doc", function() {
+        /*$scope.$watch("doc", function() {
             if($scope.doc._id == undefined) return;
 
             $scope.findInformerData();
-        });
+        });*/
 
         $scope.returnOptionsLink = function() {
             var linkToReturn = "";

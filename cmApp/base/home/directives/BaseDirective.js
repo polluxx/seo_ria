@@ -1075,7 +1075,7 @@ define(['base/home/module'], function (module) {
                     //})
                     element.after(item);
                     $compile(item)(scope);
-                }
+                };
 
                 scope.setupSymbols = function() {
                     if(scope.model == undefined) {
@@ -1101,7 +1101,7 @@ define(['base/home/module'], function (module) {
 
                     //if(left < 0) left = 0;
                     scope.itemText = left;
-                }
+                };
 
 
                 if(attrs.symbolsCheck != undefined) {
