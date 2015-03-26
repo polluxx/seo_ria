@@ -1102,7 +1102,7 @@ define(['base/home/module'], function (module) {
                 }
 
 
-                if(attrs.symbolsLeft != undefined) {
+                if(attrs.symbolsCheck != undefined) {
                     scope.checkSymbols();
                 }
             }
