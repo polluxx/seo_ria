@@ -155,12 +155,13 @@ define(['base/home/module'], function (module) {
                     }
                 } );
 
-                var morphPanel = element.find(".morph-content");
-                /*morphPanel.on("mouseleave", function() {
+                var morphPanel = document.querySelector(".container");
+
+                morphPanel.on("mouseleave", function() {
                     if(panel.expanded) {
                         panel.toggle();
                     }
-                });*/
+                });
 
                 // add MORPHING MODAL
                 [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
