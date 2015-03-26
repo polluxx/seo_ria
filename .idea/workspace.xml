@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -33,8 +34,28 @@
       <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9366" max-vertical-offset="16860">
-              <caret line="677" column="51" selection-start-line="677" selection-start-column="51" selection-end-line="677" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="13802" max-vertical-offset="16860">
+              <caret line="934" column="38" selection-start-line="934" selection-start-column="27" selection-end-line="934" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthLoginCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5686901" vertical-offset="19" max-vertical-offset="660">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signIn.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="420">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,21 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostInformerCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55954325" vertical-offset="3362" max-vertical-offset="6375">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3362" max-vertical-offset="6375">
               <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indexCm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1350">
-              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -112,16 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/own.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="21077" max-vertical-offset="22980">
-              <caret line="1423" column="13" selection-start-line="1423" selection-start-column="13" selection-end-line="1423" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DashboardPostsCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/dashboard/posts/controllers/DashboardPostsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -150,7 +151,6 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/views/view.html" />
         <option value="$PROJECT_DIR$/app/modules/view/main/controllers/ViewMainCtrl.js" />
-        <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
         <option value="$PROJECT_DIR$/indexCm.html" />
         <option value="$PROJECT_DIR$/views/cm/signIn.html" />
@@ -194,8 +194,9 @@
         <option value="$PROJECT_DIR$/bazalt.js" />
         <option value="$PROJECT_DIR$/views/cm/storage/add.html" />
         <option value="$PROJECT_DIR$/views/cm/post/informer.html" />
-        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
+        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
+        <option value="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
       </list>
     </option>
   </component>
@@ -365,7 +366,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,11 +388,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="informer" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,11 +414,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="informer" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -574,13 +575,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/calendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2282" max-vertical-offset="2895">
-          <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/dashboard/main/factories/DashboardFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
@@ -658,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/requireConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14634146" vertical-offset="0" max-vertical-offset="1950">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/bazalt/build/bz-lite.src.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4277" max-vertical-offset="11145">
@@ -676,13 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09756097" vertical-offset="0" max-vertical-offset="615">
           <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5609756" vertical-offset="30" max-vertical-offset="645">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -929,18 +909,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+    <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9366" max-vertical-offset="16860">
-          <caret line="677" column="51" selection-start-line="677" selection-start-column="51" selection-end-line="677" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3362" max-vertical-offset="6375">
+          <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js">
+    <entry file="file://$PROJECT_DIR$/cmApp/requireConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55954325" vertical-offset="3362" max-vertical-offset="6375">
-          <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.14681892" vertical-offset="0" max-vertical-offset="1950">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cm/signIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13802" max-vertical-offset="16860">
+          <caret line="934" column="38" selection-start-line="934" selection-start-column="27" selection-end-line="934" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5686901" vertical-offset="19" max-vertical-offset="660">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding />
         </state>
       </provider>

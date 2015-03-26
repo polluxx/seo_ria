@@ -932,7 +932,7 @@ define(['base/home/module'], function (module) {
 
                 scrollFn();
 
-                var morphB = new UIMorphingButton( element.children()[0], {
+                $rootScope.signInBlock = new UIMorphingButton( element.children()[0], {
                     closeEl : '.icon-close',
                     onBeforeOpen : function() {
                         // don't allow to scroll

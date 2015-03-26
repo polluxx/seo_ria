@@ -23,6 +23,7 @@ define([
                     return;
                 }
                 //$rootScope.errors = [];
+                $rootScope.signInBlock.toggle();
                 $location.path('/dashboard');
 
             });
