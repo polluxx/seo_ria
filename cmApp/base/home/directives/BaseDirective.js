@@ -675,14 +675,14 @@ define(['base/home/module'], function (module) {
                     var allStylesStr = "";
 
                     for(var style in styles) {
-                        var string = style+" {";
+                        var string = ".infoblock "+style+" {";
                         var substyles = styles[style];
 
                         for(var substyle in substyles) {
                             if(typeof substyles[substyle] === "function") continue;
 
 
-                            string += " .infoblock "+ substyle+":"+substyles[substyle]+";\n";
+                            string += substyle+":"+substyles[substyle]+";\n";
                         }
                         string += "} \n";
 
