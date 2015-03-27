@@ -14,6 +14,7 @@ define([
         $rootScope.listData = [];
 
         $scope.searchparams = {};
+
         $scope.searchparams.limit = +$scope.radioModel;
         $scope.searchparams.project = $routeParams.id;
         $scope.searchparams.id = $routeParams.id;

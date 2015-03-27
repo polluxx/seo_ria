@@ -9,27 +9,25 @@ define([
     module.controller('HistoryMainCtrl', ['$scope', '$rootScope', '$routeParams', 'HistoryFactory', '$location', function($scope, $rootScope, $routeParams, HistoryFactory, $location) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
-        $scope.bigCurrentPage = 1;
         //$scope.limit = 10;
         $rootScope.listData = [];
-        $scope.radioModel = '10';
+        $scope.bigCurrentPage = $routeParams.page || "1";
+        $scope.radioModel = $routeParams.limit || "10";
+
+        $scope.searchparams = {};
+        $scope.searchparams.limit = +$scope.radioModel;
+        $scope.searchparams.project = $routeParams.id;
+        $scope.searchparams.page = +$scope.bigCurrentPage;
+
+        if($routeParams.q != undefined || $rootScope.searchval != undefined) {
+            $routeParams.q = $rootScope.searchval = $scope.searchparams.q =  "";
+        }
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
 
-            $routeParams.limit = $scope.bigTotalItems;
 
-            if (params.page != undefined) {
-                $routeParams.page = params.page;
-            }
-
-            $routeParams.project = $routeParams.id;
-
-            if (params.q != undefined) {
-                $routeParams.q = params.q;
-            }
-
-            //$location.search($routeParams);
+            $location.search($routeParams);
 
             HistoryFactory.get($routeParams, function(response) {
                 if (isSearch == true) {
@@ -47,16 +45,23 @@ define([
 
         };
 
+        $scope.$watch("searchparams", function(newVal, oldVal) {
+            $routeParams = $scope.searchparams;
+            $scope.refresh();
+        }, true);
+
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;
-            $scope.refresh({q:$rootScope.searchval}, true)
-        })
+
+            $scope.searchparams.q = $rootScope.searchval;
+        });
 
         $scope.$watch("bigCurrentPage", function() {
-            $scope.refresh({page:$scope.bigCurrentPage})
+            $scope.searchparams.page = +$scope.bigCurrentPage;
         });
+
         $scope.$watch("radioModel", function() {
-            $scope.refresh();
+            $scope.searchparams.limit = +$scope.radioModel;
         });
 
 
