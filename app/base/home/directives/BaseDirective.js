@@ -35,7 +35,7 @@ define(['base/home/module'], function (module) {
                         }
 
                         clearTimeout(interval);
-                    }, 300);
+                    }, 600);
                 };
 
 
