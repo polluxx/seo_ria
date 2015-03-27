@@ -1,3 +1,7 @@
+html, body, .container {
+    height: 100%;
+}
+
 .trumbowyg-box, .trumbowyg-editor {
     width: 100% !important;
 }

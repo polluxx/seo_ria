@@ -42,17 +42,17 @@ define([
         $rootScope.$watch("authors", function () {
             //$scope.$loading = true;
             $scope.authors = $rootScope.authors;
-            if($scope.authors == undefined || bzUser.userdata == undefined) return;
+            if($rootScope.authors == undefined || bzUser.userdata == undefined) return;
 
             function getUserIndex(element, index) {
-                if(element.id == bzUser.userdata.id) {
-                    return index;
+                if(element.id === bzUser.userdata.id) {
+                    return true; // IMPORTANT we must return NOT index, but TRUE if match found
                 }
-                //return -1;
             }
 
-            userIndex = $scope.authors.findIndex(getUserIndex);
-            $scope.doc.author = $scope.authors[userIndex];
+            userIndex = $rootScope.authors.findIndex(getUserIndex);
+
+            $scope.doc.author = $rootScope.authors[userIndex];
             $scope.$loading = false;
         });
 
