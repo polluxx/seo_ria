@@ -8,16 +8,16 @@ define([
     module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', '$location', function($scope, $rootScope, $routeParams, ListFactory, $location) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
-        $scope.bigCurrentPage = 1;
+        $scope.bigCurrentPage = $routeParams.page || "1";
         $scope.total = 1;
-        $scope.radioModel = '10';
+        $scope.radioModel = $routeParams.limit || "10";
         $rootScope.listData = [];
 
         $scope.searchparams = {};
         $scope.searchparams.limit = +$scope.radioModel;
         $scope.searchparams.project = $routeParams.id;
         $scope.searchparams.id = $routeParams.id;
-        $scope.searchparams.page = $scope.bigCurrentPage;
+        $scope.searchparams.page = +$scope.bigCurrentPage;
 
         var search;
         if($routeParams.q != undefined) {
@@ -66,7 +66,7 @@ define([
         });
 
         $scope.$watch("bigCurrentPage", function() {
-            $scope.searchparams.page = $scope.bigCurrentPage;
+            $scope.searchparams.page = +$scope.bigCurrentPage;
         });
 
         $scope.$watch("radioModel", function() {
