@@ -74,6 +74,8 @@ requirejs.config({
 
         'froala-sanitize': '../bower_components/angular-froala/src/froala-sanitize',
         'angular-froala': '../bower_components/angular-froala/src/angular-froala',
+
+        'wysiwyg': '../useful/wysiwyg/dist/wysiwyg-editor.min',
         // end
 
         'jquery-sticky': '../bower_components/jquery.sticky/jquery.sticky',
@@ -123,6 +125,9 @@ requirejs.config({
         'froala-fullscreen': { deps: ['froala'] },
         'froala-inlineStyles': { deps: ['froala'] },
         'froala-blockStyles': { deps: ['froala'] },
+
+
+        'wysiwyg': { deps: ['jquery'] },
 
 
         'angular-froala': { deps: ['froala', 'froala-sanitize'] },

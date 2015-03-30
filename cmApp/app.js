@@ -30,6 +30,8 @@ define([
     'froala-inlineStyles',
     'froala-blockStyles',
 
+    'wysiwyg',
+
 
     'alertify',
     'polyfills'

@@ -103,8 +103,10 @@
 
     <wysiwyg textarea-id="question" textarea-class="form-control"  textarea-height="400px" textarea-name="textareaQuestion" textarea-required ng-model="doc.text"></wysiwyg>
 
+    <!--div id="edit" class="custom-theme"></div-->
     <div id="edit" class="custom-theme"></div>
 
+    <!--textarea class="form-control inputbox" id="tiny"></textarea-->
 
     <div class="form-group rewrites">
 
@@ -139,10 +141,67 @@
     $(function() {
         $('div#edit').editable({
             inlineMode: false,
+            toolbarFixed: false,
             crossDomain: true,
+            paragraphy: false,
+            useClasses: false,
+            //plainPaste: true,
             imageUploadURL: "http://avp.ria.com:8071/cm/upload",
             buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "inlineStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
         });
         document.querySelector("#edit > div:last-child").remove();
     });
+    /*
+    // create editor:
+    $(document.getElementById("tiny")).wysiwyg({
+                classes: 'some-more-classes',
+                toolbar: 'selection'|'top'|'top-selection'|'bottom'|'bottom-selection',
+                buttons: {
+                    buttonname: {
+                        title: 'tooltip text',
+                        // How should the button look like?
+                        image: '\u1234' | '<img src="path/to/image.jpg">',
+                        html: '<raw html>',
+                        // What should the button do?
+                        popup: function( $popup, $button ) { ... },
+                        click: function( $button ) { ... },
+                        // Where should the button be placed?
+                        showstatic: true, // on the static toolbar
+                        showselection: true // on selection toolbar
+                    },
+                    // build-in:
+                    insertimage: { ... },
+                    insertvideo: { ... },
+                    insertlink: { ... },
+                    bold: { ... },
+                    italic: { ... },
+                    underline: { ... },
+                    strikethrough: { ... },
+                    forecolor: { ... },
+                    highlight: { ... },
+                    alignleft: { ... },
+                    aligncenter: { ... },
+                    alignright: { ... },
+                    alignjustify: { ... },
+                    subscript: { ... },
+                    superscript: { ... },
+                    indent: { ... },
+                    outdent: { ... },
+                    orderedList: { ... },
+                    unorderedList: { ... },
+                    removeformat: { ... }
+                    },
+                    submit: { ... },
+                    selectImage: 'Click or drop image',
+                            placeholderUrl: 'www.example.com',
+                            placeholderEmbed: '<embed/>',
+                            maxImageSize: [600,200],
+                            onImageUpload: function( insert_image ) { ... },
+                    forceImageUpload: false,
+                            videoFromUrl: function( url ) { ... },
+    onKeyPress: function( code, character, shiftKey, altKey, ctrlKey, metaKey ) { ... }
+    });
+
+    // surrounding div:
+    $(element).wysiwyg('container');*/
 </script>

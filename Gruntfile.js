@@ -127,6 +127,8 @@ module.exports = function (grunt) {
                         'assets/css/font-awesome.min.css',
                         'assets/codrops/component.css',
                         'assets/codrops/content.css',
+                        'assets/css/wysiwyg-editor.css',
+
                         'bower_components/trumbowyg/dist/ui/trumbowyg.min.css',
                         'bower_components/ng-table/dist/ng-table.min.css',
 
