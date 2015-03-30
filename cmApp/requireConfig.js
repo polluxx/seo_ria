@@ -71,6 +71,7 @@ requirejs.config({
         'froala-fullscreen': '../bower_components/froala/js/plugins/fullscreen.min',
         'froala-inlineStyles': '../bower_components/froala/js/plugins/inline_styles.min',
         'froala-blockStyles': '../bower_components/froala/js/plugins/block_styles.min',
+        'froala-charCounter': '../bower_components/froala/js/plugins/char_counter.min',
 
         'froala-sanitize': '../bower_components/angular-froala/src/froala-sanitize',
         'angular-froala': '../bower_components/angular-froala/src/angular-froala',
@@ -125,6 +126,7 @@ requirejs.config({
         'froala-fullscreen': { deps: ['froala'] },
         'froala-inlineStyles': { deps: ['froala'] },
         'froala-blockStyles': { deps: ['froala'] },
+        'froala-charCounter': { deps: ['froala'] },
 
 
         'wysiwyg': { deps: ['jquery'] },

@@ -19,8 +19,10 @@ define([
     'ng-table',
     //'angular-bootstrap-tpl',
 
-    'trumbowyg',
-    'trumbowygUpload',
+    //'trumbowyg',
+    //'trumbowygUpload',
+
+    'froala',
 
     'froala-colors',
     'froala-upload',
@@ -29,8 +31,7 @@ define([
     'froala-fullscreen',
     'froala-inlineStyles',
     'froala-blockStyles',
-
-    'wysiwyg',
+    'froala-charCounter',
 
 
     'alertify',
