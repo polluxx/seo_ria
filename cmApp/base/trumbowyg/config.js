@@ -82,6 +82,7 @@ define(['base/trumbowyg/module'], function (module) {
                     btns.push('|');
                     btns.push('horizontalRule');
                     btns.push('viewHTML');
+                    btns.push('foreColor');
 
                     btns.push('fullscreen');
                     //console.log(jQuery.trumbowyg)

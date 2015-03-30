@@ -103,6 +103,8 @@
 
     <wysiwyg textarea-id="question" textarea-class="form-control"  textarea-height="400px" textarea-name="textareaQuestion" textarea-required ng-model="doc.text"></wysiwyg>
 
+    <div id="edit" class="custom-theme"></div>
+
 
     <div class="form-group rewrites">
 
@@ -132,3 +134,15 @@
 
 </form>
 </div>
+
+<script>
+    $(function() {
+        $('div#edit').editable({
+            inlineMode: false,
+            crossDomain: true,
+            imageUploadURL: "http://avp.ria.com:8071/cm/upload",
+            buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "inlineStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
+        });
+        document.querySelector("#edit > div:last-child").remove();
+    });
+</script>

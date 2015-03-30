@@ -16,6 +16,7 @@ define([
         $scope.doc.publication.doctype = 'deferred';
         $scope.fileLoading = false;
 
+
         //$scope.doc.project = $rootScope.currentProject.id;
         //$scope.rubrics = $rootScope.rubrics[$rootScope.currentProject.id];
         //$scope.authors = $rootScope.authors;

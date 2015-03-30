@@ -120,6 +120,7 @@ module.exports = function (grunt) {
                     '<%= build_dir %>/assets/css/theme.css': [
                         'assets/css/init.css',
                         'assets/css/own.css',
+                        'assets/css/froala-custom-theme.css',
                         'assets/css/calendar.css',
                         'assets/css/custom_1.css',
                         'assets/css/colorpicker.css',
@@ -128,6 +129,12 @@ module.exports = function (grunt) {
                         'assets/codrops/content.css',
                         'bower_components/trumbowyg/dist/ui/trumbowyg.min.css',
                         'bower_components/ng-table/dist/ng-table.min.css',
+
+                        'bower_components/froala/css/froala_style.min.css',
+                        'bower_components/froala/css/froala_editor.min.css',
+                        'bower_components/froala/css/froala_content.min.css',
+                        'bower_components/froala/css/font-awesome.min.css',
+
                         'assets/codrops/normalize.css',
                         'assets/css/alertify/alertify.core.css',
                         'assets/css/alertify/alertify.default.css',

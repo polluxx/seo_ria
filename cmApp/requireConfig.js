@@ -41,7 +41,7 @@ requirejs.config({
 
         // angular modules
         'angular-ui-select2': '../bower_components/angular-ui-select2/src/select2',
-        'ng-ckeditor': '../bower_components/ng-ckeditor/ng-ckeditor.src',
+        'ng-ckeditor': '../bower_components/ng-ckeditor/ng-ckeditor',
         'ng-editable-tree': '../bower_components/ng-editable-tree/ng-editable-tree',
         'ng-table': '../bower_components/ng-table/dist/ng-table.min',
         'ngFinder': '../bower_components/ng-finder/ng-finder.src',
@@ -49,7 +49,7 @@ requirejs.config({
         'bz-nested-model': '../bower_components/bz-nested-model/bz-nested-model',
 
         // etc
-        'ckeditor': '../assets/ckeditor/ckeditor',
+        'ckeditor': '../bower_components/ckeditor/ckeditor',
         'select2': '../bower_components/select2/select2',
 
         //'trumbowyg': '../bower_components/trumbowyg/dist/trumbowyg',
@@ -57,8 +57,24 @@ requirejs.config({
         //'trumbowyg': '../useful/trumbowyg2/dist/trumbowyg',
         //'trumbowygUpload': '../useful/trumbowyg2/plugins/upload/trumbowyg.upload',
         'trumbowygUpload': 'other/trumbowygUpload',
+        'trumbowyg-colors': '../useful/trumbowyg2/dist/plugins/colors/trumbowyg.colors',
+        'trumbowyg-base64': '../useful/trumbowyg2/dist/plugins/base64/trumbowyg.base64',
         'alertify': 'alertify',
         'polyfills': 'polyfills',
+
+        // froala
+        'froala': '../bower_components/froala/js/froala_editor.min',
+        'froala-colors': '../bower_components/froala/js/plugins/colors.min',
+        'froala-upload': '../bower_components/froala/js/plugins/file_upload.min',
+        'froala-fontFamily': '../bower_components/froala/js/plugins/font_family.min',
+        'froala-fontSize': '../bower_components/froala/js/plugins/font_size.min',
+        'froala-fullscreen': '../bower_components/froala/js/plugins/fullscreen.min',
+        'froala-inlineStyles': '../bower_components/froala/js/plugins/inline_styles.min',
+        'froala-blockStyles': '../bower_components/froala/js/plugins/block_styles.min',
+
+        'froala-sanitize': '../bower_components/angular-froala/src/froala-sanitize',
+        'angular-froala': '../bower_components/angular-froala/src/angular-froala',
+        // end
 
         'jquery-sticky': '../bower_components/jquery.sticky/jquery.sticky',
 
@@ -73,6 +89,8 @@ requirejs.config({
         'angular': { exports: 'angular', deps: ['jquery'] },
         'trumbowyg': { exports: 'trumbowyg', deps: ['jquery'] },
         'trumbowygUpload': { exports: 'trumbowygUpload', deps: ['trumbowyg'] },
+        'trumbowyg-colors': { exports: 'trumbowyg-colors', deps: ['trumbowyg'] },
+        'trumbowyg-base64': { exports: 'trumbowyg-base64', deps: ['trumbowyg'] },
         'alertify': { exports: 'alertify', deps: ['trumbowygUpload'] },
         'angular-analytics': { deps: ['angular'] },
         'angular-bootstrap-tpl': { deps: ['angular'] },
@@ -94,6 +112,23 @@ requirejs.config({
 
         'caretjs': { deps: ['jquery'] },
         'ckeditor': { deps: ['jquery'] },
+
+        'froala': { deps: ['jquery'] },
+
+        'froala-sanitize': { deps: ['froala'] },
+        'froala-colors': { deps: ['froala'] },
+        'froala-upload': { deps: ['froala'] },
+        'froala-fontFamily': { deps: ['froala'] },
+        'froala-fontSize': { deps: ['froala'] },
+        'froala-fullscreen': { deps: ['froala'] },
+        'froala-inlineStyles': { deps: ['froala'] },
+        'froala-blockStyles': { deps: ['froala'] },
+
+
+        'angular-froala': { deps: ['froala', 'froala-sanitize'] },
+
+
+
         'jquery.atwho': { deps: ['caretjs'] },
 
         'ng-ckeditor': { deps: ['ckeditor'] },

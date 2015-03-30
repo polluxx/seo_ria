@@ -21,6 +21,16 @@ define([
 
     'trumbowyg',
     'trumbowygUpload',
+
+    'froala-colors',
+    'froala-upload',
+    'froala-fontFamily',
+    'froala-fontSize',
+    'froala-fullscreen',
+    'froala-inlineStyles',
+    'froala-blockStyles',
+
+
     'alertify',
     'polyfills'
 ], function (angular) {

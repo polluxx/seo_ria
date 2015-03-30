@@ -1,3 +1,7 @@
+html, body, .container {
+    height: 100%;
+}
+
 .trumbowyg-box, .trumbowyg-editor {
     width: 100% !important;
 }
@@ -551,6 +555,7 @@ input.middle {
 
     max-width: 400px;
     font-family: "Open Sans";
+    font-size: 16px;
 }
 
 .data-block .list-date{
