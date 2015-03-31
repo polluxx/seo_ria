@@ -1530,3 +1530,7 @@ sign-in .error-message {
 .table-new .active span.icon-close {
     color: #e85657 !important;
 }
+
+.froala-box {
+    padding: 10px 0;
+}

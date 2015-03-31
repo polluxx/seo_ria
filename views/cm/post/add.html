@@ -104,8 +104,8 @@
     <wysiwyg textarea-id="question" textarea-class="form-control"  textarea-height="400px" textarea-name="textareaQuestion" textarea-required ng-model="doc.text"></wysiwyg-->
 
     <!--div id="edit" class="custom-theme"></div-->
-    <textarea id="edit" class="custom-theme" name="content"></textarea>
-    <input type="hidden" id="previewer" ng-model="doc.text"/>
+    <textarea id="edit" editable class="custom-theme" ng-model="doc.text" name="content"></textarea>
+
     <!--textarea class="form-control inputbox" id="tiny"></textarea-->
 
     <div class="form-group rewrites">
@@ -139,7 +139,7 @@
 
 
 
-<script>
+<!--script>
     $(function() {
         $('textarea#edit')
             .on('editable.contentChanged editable.initialized', function (e, editor) {
@@ -158,6 +158,6 @@
         document.querySelector(".froala-box > div:last-child").remove();
 
     });
-</script>
+</script-->
 
 

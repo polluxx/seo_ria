@@ -1,4 +1,4 @@
-define(['base/home/module'], function (module) {
+define(['base/home/module', "jquery"], function (module, $) {
 
     module.directive("leftPanel", function($rootScope, $resource, bzConfig, localStorageService) {
         return {
@@ -1112,6 +1112,41 @@ define(['base/home/module'], function (module) {
                 if(attrs.symbolsCheck != undefined) {
                     scope.checkSymbols();
                 }
+            }
+        }
+    })
+
+    module.directive("editable", function() {
+        return {
+            restrict: "A",
+            scope: {
+                model: "=ngModel"
+            },
+            link: function(scope, element, attrs) {
+                $('textarea#edit')
+                    .on('editable.contentChanged editable.initialized', function (e, editor) {
+
+                        scope.$watch("model", function() {
+                            if(scope.model.lenght === 0) return;
+
+                            editor.setHTML(scope.model);
+                        });
+                        //
+                        scope.model = editor.cleanTags(editor.getHTML());
+                    })
+                    .editable({
+                        inlineMode: false,
+                        minHeight:200,
+                        toolbarFixed: false,
+                        crossDomain: true,
+                        allowScript: true,
+                        allowStyle: true,
+                        paragraphy: false,
+                        useClasses: false,
+                        imageUploadURL: "http://avp.ria.com:8071/cm/upload",
+                        buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
+                    });
+                document.querySelector(".froala-box > div:last-child").remove();
             }
         }
     })
