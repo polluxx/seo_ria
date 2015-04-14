@@ -56,7 +56,7 @@ define(['base/home/module', "jquery"], function (module, $) {
 
                 // DASHBOARD
                 var boardType = localStorageService.get('boardType');
-                $rootScope.boardType = boardType || 0;
+                $rootScope.boardType = (boardType != undefined) ? boardType : 1;
                 // DASH END
 
                 $rootScope.rubrics = [];

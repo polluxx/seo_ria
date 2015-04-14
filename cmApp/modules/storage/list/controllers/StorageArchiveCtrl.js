@@ -42,6 +42,8 @@ define([
                     params.total(data.ideas.total);
                     // set new data
                     $scope.ideas = data.ideas.data;
+                    $scope.ideas[0].$show = true;
+
                     $defer.resolve(data.ideas.data);
                 });
             }

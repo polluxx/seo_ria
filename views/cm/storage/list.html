@@ -21,7 +21,7 @@
 
     <table ng-table="tableParams" class="table-new">
         <tbody>
-            <tr ng-repeat-start="idea in $data" ng-click="open(idea)" ng-class="{'active': idea.$show}">
+            <tr ng-repeat-start="idea in $data" class="top-head-idea" ng-click="open(idea)" ng-class="{'active': idea.$show}">
                 <td>
                     <span>{{idea.title}}</span>
                 </td>

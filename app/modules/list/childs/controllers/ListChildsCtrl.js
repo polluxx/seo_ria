@@ -23,6 +23,7 @@ define([
         $scope.searchparams.limit = +$scope.radioModel;
         $scope.searchparams.project = $routeParams.project;
         $scope.searchparams.page = +$scope.bigCurrentPage;
+        $scope.searchparams.search = "title";
 
 
         if($routeParams.q != undefined || $rootScope.searchval != undefined) {
