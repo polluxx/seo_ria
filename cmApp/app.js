@@ -32,6 +32,7 @@ define([
     'froala-inlineStyles',
     'froala-blockStyles',
     'froala-charCounter',
+    'froala-lists',
 
 
     'alertify',
