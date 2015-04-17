@@ -73,7 +73,7 @@ define([
                 }
                 $scope.filesLength++;
                 var formddata = new FormData();
-                formddata.append('fileToUpload', file);
+                formddata.append('file', file);
                 $scope.fileLoading = true;
                 $scope.send(formddata);
             });
