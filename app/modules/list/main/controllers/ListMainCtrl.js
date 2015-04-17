@@ -8,29 +8,37 @@ define([
     module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', '$location', function($scope, $rootScope, $routeParams, ListFactory, $location) {
         $scope.maxSize = 5;
         $scope.bigTotalItems = 10;
-        $scope.bigCurrentPage = $routeParams.page || "1";
+
+        $scope.bigCurrentPage = +$routeParams.page || "1";
         $scope.total = 1;
         $scope.radioModel = $routeParams.limit || "10";
-        $rootScope.listData = [];
+        $scope.listData = {};
+        $scope.searchparams = {
+            limit: +$scope.radioModel,
+            project: $routeParams.id,
+            id: $routeParams.id,
+            page: +$scope.bigCurrentPage
+        };
 
-        $scope.searchparams = {};
-
-        $scope.searchparams.limit = +$scope.radioModel;
-        $scope.searchparams.project = $routeParams.id;
-        $scope.searchparams.id = $routeParams.id;
-        $scope.searchparams.page = +$scope.bigCurrentPage;
+        $scope.listData.total = ($scope.searchparams.limit * $scope.searchparams.page) + 1;
 
         var search;
+        var paramsForCheck = ["filter", "filterType", "sorting", "sortingType"];
+        paramsForCheck.forEach(function(param) {
+            if($routeParams[param] != undefined) {
+                $scope.searchparams[param] = $routeParams[param];
+            }
+        });
         if($routeParams.q != undefined) {
             $rootScope.searchval = $scope.searchparams.q =  $routeParams.q;
         }
-
 
         $routeParams = $scope.searchparams;
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
             //$routeParams.page = 1;
+
             $location.search($routeParams);
 
             ListFactory.get($routeParams, function(response) {
@@ -48,7 +56,7 @@ define([
                 $scope.bigTotalItems = response.data.pages;
                 $scope.total = response.data.total;
 
-                $rootScope.listData = response.data;
+                $scope.listData = response.data;
                 //$rootScope.$apply();
             });
 

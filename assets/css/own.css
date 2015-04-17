@@ -517,7 +517,8 @@ path.link {
     cursor: pointer;
     margin: 0 auto;
     text-align: left;
-    height: 65px;
+    /*height: 65px;*/
+    height: 100%;
     overflow: hidden;
     position: relative;
     transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out;
@@ -530,16 +531,32 @@ path.link {
 }
 
 .data-block {
-    bottom: 19px;
+    margin: 15px 10px 10px 0px;
     left: 24px;
 
     overflow-wrap: break-word;
-    position: absolute;
+    position: relative;
     right: 24px;
-    top: 12px;
+
     word-wrap: break-word;
     display: table;
     width: 100%;
+}
+
+.child-info {
+    margin: 10px 5px 10px 25px;
+    font-family: 'Open-Sans';
+    font-size: 13px;
+    color: #337ab7;
+    text-transform: capitalize;
+}
+.child-info div {
+    display: inline-block;
+    padding-right: 25px;
+}
+.child-info span.available {
+    font-size: 13px;
+    padding: 2px 0 0 3px;
 }
 
 input.middle {
@@ -818,11 +835,17 @@ svg:not(:root) {
     display: block;
     font-size: 13px;
     color: dodgerblue;
-    padding-right: 4px;
+    padding-right: 10px !important;
 }
 
-.view-link {
-
+.all-childs-count {
+    font-size: 14px;
+    color: rgba(45, 135, 19, 0.84);
+    font-weight: bold;
+}
+.childs-count{
+    /*color: rgb(255, 107, 0);*/
+    font-weight: bold;
 }
 
 
@@ -1033,9 +1056,10 @@ h1 {
 }
 
 .updated-link {
-    position: absolute;
-    bottom: -26px;
-    left: 4px;
+    text-align: right;
+    float: right;
+    clear: right;
+    padding-right: 0px !important;
 }
 
 .list-box.largebox {
@@ -1538,3 +1562,10 @@ sign-in .error-message {
 tr.top-head-idea {
     background: cornsilk;
 }
+
+
+/* FILTER for search list*/
+.search-filter-btn {
+
+}
+/* END */

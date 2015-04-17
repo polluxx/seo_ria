@@ -1,0 +1,8 @@
+<div><span>{{name}}</span>
+    <!-- CHILDREN -->
+    <span ng-if="data.priority == 2" class="available glyphicon " ng-class="{'glyphicon-ok success':model, 'glyphicon-remove delete':!model}"></span>
+
+    <!-- PARENT -->
+    <span ng-if="data.priority == 1" class="available"><span class="childs-count">{{model}}</span>/<span class="all-childs-count">{{all || 0}}</span></span>
+
+</div>

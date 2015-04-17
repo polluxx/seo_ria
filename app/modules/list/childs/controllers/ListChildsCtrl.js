@@ -13,23 +13,29 @@ define([
         $scope.radioModel = $routeParams.limit || "10";
         $routeParams.priority = 2; // set children priority
 
-        $rootScope.listData = [];
+        $rootScope.listData = {};
         //$scope.radioModel = '10';
+        $scope.searchparams = {
+            limit: +$scope.radioModel,
+            project: $routeParams.project,
+            page: +$scope.bigCurrentPage,
+            priority: $routeParams.priority,
+            parent: $routeParams.parent,
+            search: "title"
+        };
 
 
-        $scope.searchparams = {};
-        $scope.searchparams.priority = $routeParams.priority;
-        $scope.searchparams.parent = $routeParams.parent;
-        $scope.searchparams.limit = +$scope.radioModel;
-        $scope.searchparams.project = $routeParams.project;
-        $scope.searchparams.page = +$scope.bigCurrentPage;
-        $scope.searchparams.search = "title";
+        $scope.listData.total = ($scope.searchparams.limit * $scope.searchparams.page) + 1;
 
-
+        var paramsForCheck = ["filter", "filterType", "sorting", "sortingType"];
+        paramsForCheck.forEach(function(param) {
+            if($routeParams[param] != undefined) {
+                $scope.searchparams[param] = $routeParams[param];
+            }
+        });
         if($routeParams.q != undefined || $rootScope.searchval != undefined) {
             $routeParams.q = $rootScope.searchval = $scope.searchparams.q =  "";
         }
-
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
 

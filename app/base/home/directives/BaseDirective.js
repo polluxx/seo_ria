@@ -297,4 +297,136 @@ define(['base/home/module'], function (module) {
         };
     });
 
+    module.directive('counterList', function() {
+        return {
+            restrict: "E",
+            scope: {
+                data: "=ngModel",
+                all: " ="
+            },
+            templateUrl: "views/counterList.html",
+            link: function(scope, element, attrs) {
+                scope.name = attrs.name;
+                switch(scope.data.priority) {
+                    case 2:
+                        scope.model = (scope.data['blocks'] != undefined && scope.data['blocks']['ru'][scope.name]) ? scope.data['blocks']['ru'][scope.name] : "";
+                        break;
+                    case 1:
+                        scope.model = (scope.data['fill'] != undefined && scope.data['fill'][scope.name]) ? scope.data['fill'][scope.name] : 0;
+                        break;
+                    default:
+                        scope.model = null;
+                        break;
+                }
+            }
+        }
+    });
+
+    module.directive('filterBlock', function() {
+       return {
+           restrict: "E",
+           templateUrl: "views/filter.html",
+           link: function(scope, element, attrs) {
+               var bodyEl = document.body,
+                   content = document.querySelector( '.main-list-wrap' ),
+                   openbtn = document.getElementById( 'open-button' ),
+                   closebtn = document.getElementById( 'close-button' ),
+                   isOpen = false;
+               scope.isDeep = false;
+
+               function initEvents() {
+                   openbtn.addEventListener( 'click', toggleMenu );
+                   if( closebtn ) {
+                       closebtn.addEventListener( 'click', toggleMenu );
+                   }
+
+                   // close the menu element if the target it´s not the menu element or one of its descendants..
+                   content.addEventListener( 'click', function(ev) {
+                       var target = ev.target;
+                       if( isOpen && target !== openbtn ) {
+                           toggleMenu();
+                       }
+                   } );
+               }
+
+               function toggleMenu() {
+                   if( isOpen ) {
+                       classie.remove( bodyEl, 'show-menu' );
+                   }
+                   else {
+                       classie.add( bodyEl, 'show-menu' );
+                   }
+                   isOpen = !isOpen;
+               }
+
+               initEvents();
+
+               scope.blockdata = {
+                   filters : {
+                       name: "Filters",
+                       type: "filter",
+                       fields: [
+                           {id:"title", name:"Title"},
+                           {id:"description", name:"Description"},
+                           {id:"h1", name:"H1"},
+                           {id:"seotext", name:"Seo text"},
+                           {id:"indexed", name:"Indexed"}
+                       ],
+                       types: [
+                           {id:"exists", name:"Заполнено"},
+                           {id:"missing", name:"Пусто"}
+                       ],
+                       $open: true
+                   },
+                   sorting : {
+                       name: "Sorting",
+                       type: "sorting",
+                       fields: [
+                           {id:"title", name:"Title"},
+                           {id:"description", name:"Description"},
+                           {id:"h1", name:"H1"},
+                           {id:"seotext", name:"Seo text"},
+                           {id:"indexed", name:"Indexed"}
+                       ],
+                       types: [
+                           {id:"desc", name:"По убыванию"},
+                           {id:"asc", name:"По возрастанию"}
+                       ]
+                   }
+                };
+
+               scope.switch = function(obj) {
+                   for(var i in scope.blockdata) {
+                       scope.blockdata[i].$open = false;
+                   }
+                   obj.$open = true;
+                   scope.isDeep = false;
+               };
+
+               scope.setData = function(item, type, parent) {
+                   switch(type) {
+                       case 'index':
+                           scope.searchparams[parent.type] = item.id;
+
+                           if(scope.searchparams[parent.type+"Type"] == undefined) {
+                               scope.searchparams[parent.type+"Type"] = parent.types[0].id;
+                           }
+                           scope.isDeep = true;
+                           break;
+                       case 'type':
+                           scope.searchparams[parent.type+"Type"] = item.id;
+                           break;
+                   }
+               };
+
+               scope.clear = function() {
+                   var toremove = ["filter", "filterType", "sorting", "sortingType"];
+                   toremove.forEach(function(remove) {
+                       delete scope.searchparams[remove];
+                   });
+               }
+           }
+       }
+    });
+
 });

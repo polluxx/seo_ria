@@ -1,0 +1,23 @@
+<div class="filter-menu-wrap">
+    <nav class="filter-menu">
+        <div class="filters" ng-repeat="block in blockdata" ng-show="block.$open">
+            <div class="profile"><h2>{{block.name}}</h2></div>
+
+            <div class="filter-link-list filter-parent-list" ng-show="!isDeep">
+                <a href="javascript:void(0)" ng-class="{'active':searchparams[block.type] != undefined && searchparams[block.type]==field.id}" ng-repeat="field in block.fields" ng-click="setData(field, 'index', block)"><span>{{field.name}}</span></a>
+            </div>
+            <div class="filter-link-list filter-child-list" ng-show="isDeep">
+                <a href="javascript:void(0)" ng-class="{'active':searchparams[block.type+'Type'] != undefined && searchparams[block.type+'Type']==type.id}" ng-repeat="type in block.types" ng-click="setData(type, 'type', block)"><span>{{type.name}}</span></a>
+            </div>
+
+        </div>
+        <div class="filter-icon-list">
+            <a href="javascript:void(0)" ng-class="{'active':blockdata.filters.$open}" ng-click="switch(blockdata.filters)" title="filters"><i class="fa fa-fw fa-filter"></i></a>
+            <a href="javascript:void(0)" ng-class="{'active':blockdata.sorting.$open}" title="sort" ng-click="switch(blockdata.sorting)"><i class="fa fa-fw fa-sort-amount-asc"></i></a>
+
+            <a href="javascript:void(0)" title="back" ng-click="isDeep=false;"><i class="fa fa-fw fa-mail-reply-all"></i></a>
+            <a href="javascript:void(0)" ng-click="clear()" title="clear"><i class="fa fa-fw fa-random"></i></a>
+        </div>
+    </nav>
+</div>
+<button class="menu-button" id="open-button"><i class="fa fa-fw fa-cog"></i><span>Open Menu</span></button>

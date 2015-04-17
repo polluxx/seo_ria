@@ -125,6 +125,8 @@ module.exports = function (grunt) {
                         'assets/css/custom_1.css',
                         'assets/css/colorpicker.css',
                         'assets/css/font-awesome.min.css',
+                        'assets/codrops/normalize.css',
+                        'assets/codrops/menu_cornermorph.css',
                         'assets/codrops/component.css',
                         'assets/codrops/content.css',
                         'assets/css/wysiwyg-editor.css',

@@ -1,3 +1,5 @@
+<filter-block></filter-block>
+
 <div class="main-list-wrap">
 
 
@@ -26,23 +28,38 @@
     </div>
 
     <div ng-if="listData.data" ng-class="{'largebox':link.updated}" class="list-box" ng-repeat="link in listData.data">
+        <!--    FOR CHILDREN ONLY    -->
+        <div class="child-info" >
+            <counter-list ng-model="link" name="title" all="link.childsCount"></counter-list>
 
-        <div class="data-block" id="{{link._id}}">
+            <counter-list ng-model="link" name="description" all="link.childsCount"></counter-list>
+
+            <counter-list ng-model="link" name="h1" all="link.childsCount"></counter-list>
+
+            <counter-list ng-model="link" name="seotext" all="link.childsCount"></counter-list>
+
+            <div class="indexed" ng-if="!link.hasChilds"><span>indexed</span><span class="available glyphicon" ng-class="{'glyphicon-ok success':link.indexed==true, 'glyphicon-remove delete':link.indexed==0, 'glyphicon-time':link.indexed==undefined}"></span></div>
 
             <div class="updated-link" ng-if="link.updated">
                 <div class="glyphicon glyphicon-time list-time" style="padding-right: 5px !important;"></div>
                 <div class="list-time">{{link.updated}}</div>
             </div>
+        </div>
+
+
+        <div class="data-block" id="{{link._id}}">
 
             <div class="list-name input-group-btn">
-
-            <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}"></div>
+                <input savable class="form-control inputbox middle" type="text" ng-model="link.name" value="{{link.name}}">
+            </div>
             <div class="list-link text">{{link.link}}</div>
 
             <div class="list-op text" ng-if="link.hasChilds"><a href="/childs/{{link.project}}?parent={{link._id}}" title="childs"><div class="op-icon glyphicon glyphicon-folder-open"></div></a></div>
             <div class="list-op text"><a href="/view?q={{link._id}}" title="view"><div class="op-icon glyphicon glyphicon-zoom-in"></div></a></div>
 
+
         </div>
+
     </div>
     <div ng-show="listData.data" class="paging">
         <nav>
