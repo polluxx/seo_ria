@@ -1,5 +1,7 @@
 <div class="filter-menu-wrap" style="z-index:100000;" loading-container="$loadingSend">
     <nav class="filter-menu">
+        <a href="javascript:void(0)" class="close-filter" title="close"><i class="fa fa-fw fa-crosshairs"></i></a>
+
         <div class="filters" ng-repeat="block in blockdata" ng-show="block.$open && !blockdata.$grab">
             <div class="profile"><h2>{{block.name}}</h2></div>
 
@@ -13,9 +15,7 @@
         </div>
 
         <div class="filters grab-data-block" ng-show="blockdata.$grab">
-
             <div class="profile">
-                <a href="javascript:void(0)" class="close-filter" title="close"><i class="fa fa-fw fa-crosshairs"></i></a>
                 <h2>Export</h2>
             </div>
 
