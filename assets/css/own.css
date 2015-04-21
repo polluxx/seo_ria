@@ -1582,10 +1582,11 @@ tr.top-head-idea {
     padding-right: 50px;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 20px;
     font-size: 16px;
     opacity: 0.6;
     cursor: pointer;
+    color: #64697d;
 }
 .close-filter:hover {
     opacity: 1;
