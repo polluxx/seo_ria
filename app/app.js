@@ -10,7 +10,8 @@ define([
     'modules/list/config',
     'modules/view/config',
 
-    'views'
+    'views',
+    'polyfills'
 ], function (angular) {
     'use strict';
 

@@ -1568,4 +1568,14 @@ tr.top-head-idea {
 .search-filter-btn {
 
 }
+
+.grab-btn-icon {
+    padding-right: 105px;
+}
+.grab-data-block {
+    padding-top: 10px;
+}
+.grab-data-credents {
+    padding: 20px 10px;
+}
 /* END */

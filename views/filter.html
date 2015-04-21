@@ -1,6 +1,6 @@
-<div class="filter-menu-wrap">
+<div class="filter-menu-wrap" style="z-index:100000;" loading-container="$loadingSend">
     <nav class="filter-menu">
-        <div class="filters" ng-repeat="block in blockdata" ng-show="block.$open">
+        <div class="filters" ng-repeat="block in blockdata" ng-show="block.$open && !blockdata.$grab">
             <div class="profile"><h2>{{block.name}}</h2></div>
 
             <div class="filter-link-list filter-parent-list" ng-show="!isDeep">
@@ -11,13 +11,28 @@
             </div>
 
         </div>
+
+        <div class="filters grab-data-block" ng-show="blockdata.$grab">
+            <div class="profile"><h2>Export</h2></div>
+
+            <div class="grab-data-credents">
+                <input type="email" class="form-control inputbox" id="grab-data-email"/>
+                <button class="inputbox btn btn-success" ng-click="exportData()"><i class="fa fa-fw fa-envelope"></i></button>
+            </div>
+
+        </div>
+
         <div class="filter-icon-list">
+            <a href="javascript:void(0)" class="grab-btn-icon" ng-class="{'active':blockdata.$grab}" ng-click="grabSwitch()" title="export"><i class="fa fa-fw fa-upload"></i></a>
+
             <a href="javascript:void(0)" ng-class="{'active':blockdata.filters.$open}" ng-click="switch(blockdata.filters)" title="filters"><i class="fa fa-fw fa-filter"></i></a>
             <a href="javascript:void(0)" ng-class="{'active':blockdata.sorting.$open}" title="sort" ng-click="switch(blockdata.sorting)"><i class="fa fa-fw fa-sort-amount-asc"></i></a>
 
-            <a href="javascript:void(0)" title="back" ng-click="isDeep=false;"><i class="fa fa-fw fa-mail-reply-all"></i></a>
+            <!--a href="javascript:void(0)" title="back" ng-click="isDeep=false;"><i class="fa fa-fw fa-mail-reply-all"></i></a-->
             <a href="javascript:void(0)" ng-click="clear()" title="clear"><i class="fa fa-fw fa-random"></i></a>
         </div>
+
+
     </nav>
 </div>
 <button class="menu-button" id="open-button"><i class="fa fa-fw fa-cog"></i><span>Open Menu</span></button>

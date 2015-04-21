@@ -29,6 +29,10 @@ define([
                 params: {
                     id:"@id"
                 }
+            },
+            export: {
+                method:"POST",
+                url:bzConfig.api()+'/seo/export'
             }
         });
     }]);

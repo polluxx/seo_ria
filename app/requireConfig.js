@@ -57,7 +57,10 @@ requirejs.config({
         'bootstrap-datepicker-locale': '../bower_components/bootstrap-datepicker/js/locales',
 
         'angular-bootstrap': '../bower_components/angular-bootstrap/ui-bootstrap.min',
-        'angular-bootstrap-tpl': '../bower_components/angular-bootstrap/ui-bootstrap-tpls.min'
+        'angular-bootstrap-tpl': '../bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
+
+
+        'polyfills': '../cmApp/polyfills'
     },
     shim: {
         'jquery': { exports: 'jQuery' },

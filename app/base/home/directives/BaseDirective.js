@@ -1,4 +1,4 @@
-define(['base/home/module'], function (module) {
+define(['base/home/module', 'alertify'], function (module, alertify) {
 
     module.directive('rootItem', function($rootScope, localStorageService) {
         return {
@@ -322,7 +322,7 @@ define(['base/home/module'], function (module) {
         }
     });
 
-    module.directive('filterBlock', function() {
+    module.directive('filterBlock', function(ListFactory) {
        return {
            restrict: "E",
            templateUrl: "views/filter.html",
@@ -401,6 +401,7 @@ define(['base/home/module'], function (module) {
                    }
                    obj.$open = true;
                    scope.isDeep = false;
+                   scope.blockdata.$grab = false;
                };
 
                scope.setData = function(item, type, parent) {
@@ -424,7 +425,40 @@ define(['base/home/module'], function (module) {
                    toremove.forEach(function(remove) {
                        delete scope.searchparams[remove];
                    });
-               }
+               };
+
+               scope.grabSwitch = function() {
+                   for(var i in scope.blockdata) {
+                       scope.blockdata[i].$open = false;
+                   }
+                   scope.blockdata.$grab = true;
+               };
+
+
+               // EXPORTS search data
+               scope.exportData = function() {
+                   var email = document.getElementById("grab-data-email").value;
+                   if(!email.length) return;
+
+                   var emailCheck = new RegExp("[a-z0-9&_.]+@(?:[a-z0-9])+\.[a-z0-9]+");
+                   if(!emailCheck.test(email)) {
+                       alertify.error("Не валидный email");
+                       return;
+                   }
+
+                   var params = {};
+                   Object.assign(params, scope.searchparams);
+                   params.email = email;
+                   scope.$loadingSend = true;
+                   ListFactory.export(params, function(response) {
+                       scope.$loadingSend = false;
+                       if(!response || response.code != 200) {
+                           alertify.error(response.message || "Ошибка отправки письма");
+                           return;
+                       }
+                       alertify.success(response.message);
+                   })
+               };
            }
        }
     });
