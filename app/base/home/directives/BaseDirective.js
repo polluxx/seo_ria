@@ -330,8 +330,9 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                var bodyEl = document.body,
                    content = document.querySelector( '.main-list-wrap' ),
                    openbtn = document.getElementById( 'open-button' ),
-                   closebtn = document.getElementById( 'close-button' ),
+                   closebtn = document.querySelector('.close-filter'),
                    isOpen = false;
+
                scope.isDeep = false;
 
                function initEvents() {
