@@ -73,6 +73,8 @@ define([
                 }
                 $scope.filesLength++;
                 var formddata = new FormData();
+
+                formddata.append('project', $rootScope.currentProject.id);
                 formddata.append('file', file);
                 $scope.fileLoading = true;
                 $scope.send(formddata);
@@ -80,6 +82,7 @@ define([
         });
 
         $scope.send = function(form) {
+
             $http.post(bzConfig.api()+"/cm/upload", form, {
                 headers:{"Content-Type":undefined},
                 transformRequest:angular.identity
