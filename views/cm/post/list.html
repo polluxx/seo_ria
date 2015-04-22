@@ -1,32 +1,45 @@
 
 <div loading-container="tableParams.settings().$loading">
+
+    <div class="top-block">
+        <div class="search-box">
+            <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" searchable="search()"/>
+        </div>
+        <div class="form-group has-feedback">
+            <a href="/post/add">
+                <button class="btn btn-success inputbox" >статья</button>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
     <table ng-table="tableParams" class="table-new">
         <tbody>
         <tr ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
-            <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="post.added">
+            <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="'couchbaseDocument.doc.added'">
                 <span>{{post.added | date:'yyyy-MM-dd' }}</span>
                 <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.added" is-open="opened[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close"/-->
             </td>
 
-            <td data-title="'Дата публикации'" ng-click="openPublication($event)" sortable="post.publication.date">
+            <td data-title="'Дата публикации'" ng-click="openPublication($event)" sortable="'couchbaseDocument.doc.publication.date'">
                 <span>{{post.publication.date | date:'yyyy-MM-dd' }}</span>
 
                 <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.publication.date" is-open="openedPublication[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close" /-->
             </td>
 
-            <td data-title="'Автор'" sortable="post.author.name">
+            <td data-title="'Автор'" sortable="'couchbaseDocument.doc.author.name'">
                 <a href="/user/{{post.author.id}}"><span>{{post.author.name}}</span></a>
             </td>
-            <td data-title="'Заголовок'" sortable="post.title">
+            <td data-title="'Заголовок'" sortable="'couchbaseDocument.doc.title'">
                 <a href="{{post.link}}"><span>{{post.title}}</span></a>
                 <!--input type="text" ng-if="post.$editableTitle" ng-blur="post.$editableTitle = false" ng-model="post.title"/-->
             </td>
-            <td data-title="'Описание'" sortable="post.description">
+            <td data-title="'Описание'" sortable="'couchbaseDocument.doc.description'">
                 <span>{{post.description}}</span>
                 <!--input type="text" ng-if="post.$editableDescription" ng-blur="post.$editableDescription = false" ng-model="post.description"/-->
             </td>
 
-            <td data-title="'Рубрика'" sortable="post.rubric.name">
+            <td data-title="'Рубрика'" sortable="'couchbaseDocument.doc.rubric.name'">
                 <span ng-if="!post.$editableRubric" ng-click="post.$editableRubric = !this.$editableRubric" >{{post.rubric.name}}</span>
                 <select chengable="docUpdate(post)"  width="200px" ng-if="post.$editableRubric" ng-blur="post.$editableRubric = false" ng-model="post.rubric" name="rubrics" class="form-control inputbox" ng-options="rubric.name for rubric in rubrics track by rubric.id"></select>
             </td>

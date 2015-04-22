@@ -17,7 +17,7 @@
                         <span class="icon icon-close">Close the dialog</span>
 
                         <div class="drag-wrap">
-                            <p class="drag-post" drag-post draggable="true" ng-repeat="post in item.value"><i class="fa fa-fw fa-code"></i><span>{{post.title}}</span></p>
+                            <p class="drag-post" drag-post draggable="true" ng-repeat="post in item.value"><i class="fa fa-fw fa-code"></i><span><a href="/post/add/{{post._id}}">{{post.title}}</a></span></p>
                         </div>
                     </div>
                 </div>

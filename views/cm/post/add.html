@@ -130,34 +130,16 @@
         </label>
     </div>
 
+    <div class="new-label">Email рассылка</div>
+    <div id="emailsToSend" class="emails-to-send-block">
+        <div ng-repeat="email in doc.sendTo" ng-click="removeEmail(email)">{{email}}</div>
+        <input type="email" placeholder="добавить" id="add-email"/>
+    </div>
+
     <div class="form-group has-feedback">
         <button class="btn btn-success inputbox" ng-click="docSave()">Сохранить</button>
     </div>
 
 </form>
 </div>
-
-
-
-<!--script>
-    $(function() {
-        $('textarea#edit')
-            .on('editable.contentChanged editable.initialized', function (e, editor) {
-                $('input#previewer').value = editor.cleanTags(editor.getHTML());
-            })
-            .editable({
-            inlineMode: false,
-            minHeight:200,
-            toolbarFixed: false,
-            crossDomain: true,
-            paragraphy: false,
-            useClasses: false,
-            imageUploadURL: "http://avp.ria.com:8071/cm/upload",
-            buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
-        });
-        document.querySelector(".froala-box > div:last-child").remove();
-
-    });
-</script-->
-
 

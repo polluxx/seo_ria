@@ -202,8 +202,49 @@ define([
                 $location.path("/post/"+linkTo);
             });
             //console.log($scope.doc);
-        }
+        };
 
+
+        $scope.$watch("doc.doctype", function() {
+           if($rootScope.currentProject.id != 1 || $scope.doc.doctype !== "planned") return;
+
+            /*$scope.doc.sendTo = [
+                "yura.kosakvisky@gmail.com",
+                "yuriy.kosakivsky@ria.com"
+            ];*/
+        });
+        $scope.removeEmail = function(email) {
+            if($scope.doc.sendTo == undefined) return;
+
+            alertify.confirm("Удалить email?", function(e) {
+                if(!e) return;
+
+                var index = $scope.doc.sendTo.indexOf(email);
+                $scope.doc.sendTo.splice(index, 1);
+                $scope.doc.sendTo = [].slice.call($scope.doc.sendTo);
+                $scope.$apply();
+            });
+        };
+
+        var emailInput = angular.element(document.getElementById("add-email"));
+        emailInput.on("keydown", function(e) {
+            // enter button code check
+            if(e.keyCode != 13) return;
+            e.preventDefault();
+
+            var email = emailInput[0].value;
+            // empty array emails check
+            if($scope.doc.sendTo == undefined) $scope.doc.sendTo = [];
+            // empty email check
+            if(!email.length) return;
+            // duplicate check
+            if($scope.doc.sendTo.indexOf(email) != -1) return;
+
+            $scope.doc.sendTo.push(emailInput[0].value);
+
+            emailInput[0].value = "";
+            $scope.$apply();
+        });
 
         if($routeParams.id != undefined) {
             $scope.getDoc();

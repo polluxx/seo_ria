@@ -39,13 +39,15 @@ define([
             if($scope.authors == undefined || bzUser.userdata == undefined) return;
 
             function getUserIndex(element, index) {
-                if(element.id == bzUser.userdata.id) {
+                if(+element.id == +bzUser.userdata.id) {
                     return index;
                 }
+                return -1;
             }
 
             userIndex = $scope.authors.findIndex(getUserIndex);
-            $scope.idea.author = $scope.idea.author || $scope.authors[userIndex];
+            $scope.idea.author = $scope.idea.author != undefined ? $scope.idea.author : $scope.authors[userIndex];
+            $scope.idea.executor = $scope.idea.executor != undefined ? $scope.idea.executor : $scope.authors[userIndex];
             $scope.$loading = false;
         });
 
@@ -76,7 +78,6 @@ define([
         });
 
         $scope.saveIdea = function() {
-            //console.log($scope.idea);
             rubrics = [];
             $scope.idea.rubrics.forEach(function(item, index) {
                 if(item === null || item === false) return;

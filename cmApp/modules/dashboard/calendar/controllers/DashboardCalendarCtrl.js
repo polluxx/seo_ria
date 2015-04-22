@@ -58,12 +58,14 @@ define([
                         posts[postTime].push(postItem);
                     }
 
-                    var items = $scope.daysList;
+                    var items = $scope.daysList, currentTime = returnFormattedDate(new Date());
 
                     items.forEach(function(item) {
                         if(item.time == 'nulled') return;
 
                         timeFor = returnFormattedDate(new Date(item.time));
+                        if(timeFor===currentTime) item.today = true;
+
                         item.value = posts[timeFor] != undefined ? posts[timeFor] : [];
                     });
                 }

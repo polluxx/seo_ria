@@ -27,7 +27,7 @@
 
                     <div ng-repeat="day in daysList" class="fc-row" ng-if="isRow($index)">
 
-                        <div drag-target ng-repeat="dayItem in listSlice($index)" ng-class="{'fc-content':dayItem.value.length}">
+                        <div drag-target ng-repeat="dayItem in listSlice($index)" ng-class="{'fc-content':dayItem.value.length, 'fc-today':dayItem.today}">
                             <span ng-if="dayItem.time != 'nulled' && !dayItem.value.length" class="fc-date">{{dayItem.time | date : "d"}}</span>
                             <span ng-if="dayItem.time != 'nulled && !dayItem.value.length'" class="fc-weekday">{{returnWeekDay($index)}}</span>
                             <post-block ng-if="dayItem.value.length" class="post-wrap" index="$index" item="dayItem"></post-block>
