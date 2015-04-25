@@ -1193,7 +1193,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                     if(scope.permissions == undefined || scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
                     var i;
-                    for(i in scope.permissions) {
+                    for(i in scope.formSelections(scope.permissions)) {
                         scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
                     console.log(scope.selectedUser);
