@@ -16,7 +16,7 @@
                             </div>
 
                             <div class="permission-block" ng-repeat="permission in permissions">
-                                <input type="checkbox" ng-checked="selectedUser.selectedAll" ng-model="selectedUser.permissions[permission.name]" class="permission-input"/>
+                                <input type="checkbox" ng-model="selectedUser.permissions[permission.name]" class="permission-input"/>
                                 <span>{{permission.description}}</span>
                             </div>
                         </div>
