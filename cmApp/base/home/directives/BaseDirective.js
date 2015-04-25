@@ -1193,10 +1193,9 @@ define(['base/home/module', "jquery"], function (module, $) {
                     if(scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
                     var i;
-                    for(i in scope.selectedUser.permissions) {
+                    for(i in scope.permissions) {
                         scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
-                    scope.$apply();
                 });
 
                 var selector = angular.element(document.querySelector(".permission-wrap-close")),
