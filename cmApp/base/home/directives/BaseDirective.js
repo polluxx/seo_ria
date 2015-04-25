@@ -1196,6 +1196,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                     for(i in scope.formSelections(scope.permissions)) {
                         scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
+                    console.log(scope.permissions);
                     console.log(scope.selectedUser);
                 });
 
