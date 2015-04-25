@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cm/permissions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/auth/login/controllers/AuthLoginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/controllers/BaseHomeCtrl.js" afterPath="$PROJECT_DIR$/cmApp/base/home/controllers/BaseHomeCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/controllers/PostInformerCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageArchiveCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageArchiveCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageListCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageListCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/user/list/factories/UserFactory.js" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/factories/UserFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/user/list/controllers/UserListCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/controllers/UserListCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/post/add.html" afterPath="$PROJECT_DIR$/views/cm/post/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/dashboard/calendar.html" afterPath="$PROJECT_DIR$/views/cm/dashboard/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/codrops/component.css" afterPath="$PROJECT_DIR$/build/assets/codrops/component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/dashboard/calendar/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/calendar/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/dashboard/comments/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/comments/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/dashboard/main/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/main/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/dashboard/posts/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/posts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/dashboard/statistic/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/dashboard/statistic/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/drafts/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/drafts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/informer/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/informer/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/list/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/statistic/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/statistic/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/storage/add/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/storage/add/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/storage/list/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/storage/list/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/user/list/config.js" afterPath="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/custom_1.css" afterPath="$PROJECT_DIR$/build/assets/css/custom_1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locale/en_GB.json" afterPath="$PROJECT_DIR$/locale/en_GB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/home.html" afterPath="$PROJECT_DIR$/views/cm/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indexCm.html" afterPath="$PROJECT_DIR$/indexCm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/user/list.html" afterPath="$PROJECT_DIR$/views/cm/user/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/dashboard/main.html" afterPath="$PROJECT_DIR$/views/cm/dashboard/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -74,18 +40,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/modules/user/list/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-              <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-              <folding>
-                <marker date="1429963344160" expanded="true" signature="159:839" placeholder="{...}" />
-                <marker date="1429963344160" expanded="true" signature="198:815" placeholder="[...]" />
-                <marker date="1429963344160" expanded="true" signature="336:814" placeholder="{...}" />
-                <marker date="1429963344160" expanded="true" signature="457:806" placeholder="{&quot;controller&quot;: 'UserListCtrl'...}" />
-                <marker date="1429963344160" expanded="true" signature="570:671" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.35942492" vertical-offset="0" max-vertical-offset="626">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bazalt.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bazalt.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bazalt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21565495" vertical-offset="0" max-vertical-offset="626">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
@@ -231,9 +191,9 @@
         <option value="$PROJECT_DIR$/cmApp/base/home/controllers/BaseHomeCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/views/cm/home.html" />
-        <option value="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bazalt.js" />
+        <option value="$PROJECT_DIR$/cmApp/modules/user/list/config.js" />
       </list>
     </option>
   </component>
@@ -762,6 +722,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -777,7 +738,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -805,7 +765,8 @@
     <MESSAGE value="add CM fix" />
     <MESSAGE value="add filters" />
     <MESSAGE value="fix file upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix file upload" />
+    <MESSAGE value="fix files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -957,6 +918,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4313099" vertical-offset="0" max-vertical-offset="626">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,6 +926,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4313099" vertical-offset="0" max-vertical-offset="626">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,20 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/modules/user/list/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <marker date="1429963344160" expanded="true" signature="159:839" placeholder="{...}" />
-            <marker date="1429963344160" expanded="true" signature="198:815" placeholder="[...]" />
-            <marker date="1429963344160" expanded="true" signature="336:814" placeholder="{...}" />
-            <marker date="1429963344160" expanded="true" signature="457:806" placeholder="{&quot;controller&quot;: 'UserListCtrl'...}" />
-            <marker date="1429963344160" expanded="true" signature="570:671" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/indexCm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.791667" vertical-offset="116" max-vertical-offset="705">
@@ -1198,8 +1147,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bazalt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21565495" vertical-offset="0" max-vertical-offset="626">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/modules/user/list/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35942492" vertical-offset="0" max-vertical-offset="626">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
           <folding />
         </state>
       </provider>
