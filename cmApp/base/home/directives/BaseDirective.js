@@ -75,14 +75,6 @@ define(['base/home/module', "jquery"], function (module, $) {
 
                 });
 
-                scope.$watch("selectedUser.selectedAll", function() {
-                    if(scope.selectedUser.selectedAll == undefined) return;
-
-                    var i;
-                    for(i in scope.selectedUser.permissions) {
-                        scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll
-                    }
-                });
 
                 $rootScope.$watch("allRubrics", function() {
                     if($rootScope.allRubrics == undefined) return;
@@ -1197,7 +1189,14 @@ define(['base/home/module', "jquery"], function (module, $) {
                     return result;
                 };
 
+                scope.$watch("selectedUser.selectedAll", function() {
+                    if(scope.selectedUser.selectedAll == undefined) return;
 
+                    var i;
+                    for(i in scope.selectedUser.permissions) {
+                        scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll
+                    }
+                });
 
                 var selector = angular.element(document.querySelector(".permission-wrap-close")),
                     index, permission;

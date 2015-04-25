@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/permissions.html" afterPath="$PROJECT_DIR$/views/cm/permissions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -74,8 +73,8 @@
       <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5872757" vertical-offset="885" max-vertical-offset="18375">
-              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.8287113" vertical-offset="17462" max-vertical-offset="18360">
+              <caret line="1198" column="19" selection-start-line="1198" selection-start-column="19" selection-end-line="1198" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -1156,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5872757" vertical-offset="885" max-vertical-offset="18375">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.8287113" vertical-offset="17462" max-vertical-offset="18360">
+          <caret line="1198" column="19" selection-start-line="1198" selection-start-column="19" selection-end-line="1198" selection-end-column="19" />
           <folding />
         </state>
       </provider>
