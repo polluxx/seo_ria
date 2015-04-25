@@ -1190,12 +1190,13 @@ define(['base/home/module', "jquery"], function (module, $) {
                 };
 
                 scope.$watch("selectedUser.selectedAll", function() {
-                    if(scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
+                    if(scope.permissions == undefined || scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
                     var i;
                     for(i in scope.permissions) {
                         scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
+                    console.log(scope.selectedUser);
                 });
 
                 var selector = angular.element(document.querySelector(".permission-wrap-close")),
