@@ -12,7 +12,7 @@ define([
                 .segment('calendar', {
                     templateUrl: bzConfigProvider.templateUrl('/dashboard/calendar.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['author'])
+                        permissions: bzUserProvider.access(['calendar'])
                     },
                     controller: 'DashboardCalendarCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

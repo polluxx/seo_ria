@@ -186,6 +186,9 @@
 .morph-button-modal-1 .morph-content {
 	background-color: #553445;
 }
+.fc-today .morph-button-modal-1 > button {
+    background-color: transparent;
+}
 
 .morph-button-modal-2 > button,
 .morph-button-modal-2 .morph-content,

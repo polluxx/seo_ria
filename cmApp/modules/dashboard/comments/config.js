@@ -7,7 +7,7 @@ define([
 
     module.config(['$routeSegmentProvider', 'bzConfigProvider', 'bzUserProvider',
         function($routeSegmentProvider, bzConfigProvider, bzUserProvider) {
-            $routeSegmentProvider
+            /*$routeSegmentProvider
                 .when('/dashboard', 'dashboard')
                 .segment('dashboard', {
                     templateUrl: bzConfigProvider.templateUrl('/dashboard/main.html'),
@@ -16,7 +16,7 @@ define([
                     },
                     controller: 'DashboardCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()
-                });
+                });*/
     }]);
     return module;
 

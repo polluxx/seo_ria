@@ -14,7 +14,7 @@ define([
                 .segment('addIdea', {
                     templateUrl: bzConfigProvider.templateUrl('/storage/add.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['admin'])
+                        permissions: bzUserProvider.access(['storage_add'])
                     },
                     controller: 'StorageAddCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

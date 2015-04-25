@@ -10,13 +10,29 @@
                 errors="errors"
                 ng-init="user = [{name:'email юзера', doctype:'email'},
                 {name:'имя юзера', doctype:'name'},
-                {name:'пароль', doctype:'password'},
-                {name:'роль', doctype:'select', select:selects[0]}]"
+                {name:'пароль', doctype:'password'}]"
         ></morph-btn>
     </div>
 
-    <div ng-repeat="useritem in users">
-        <div>{{user.name}}</div>
-        <div>{{user.email}}</div>
+    <div loading-container="$loading">
+        <table class="table-new">
+            <tbody>
+            <tr ng-repeat="user in users">
+
+                <td >
+                    <span class="icon icon-user"></span> <span>{{user.name}}</span>
+                </td>
+                <td >
+                    <span>{{user.email}}</span>
+                </td>
+                <td >
+                    <span class="permission" ng-repeat="permission in user.permissions">{{permission.description}}</span>
+                    <span class="glyphicon glyphicon-pencil permission-add" ng-click="addPermission(user)" title="добавить разрешение"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+    <permissions-list user="selectedUser" userfunc="update"></permissions-list>
+
 </div>

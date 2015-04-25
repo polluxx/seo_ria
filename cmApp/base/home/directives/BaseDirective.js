@@ -68,6 +68,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                     $rootScope.links = resp.items.links;
                     $rootScope.authors = resp.items.authors;
                     $rootScope.roles = resp.items.roles;
+                    $rootScope.permissions = resp.items.all_permissions;
                     $rootScope.allRubrics = resp.items.rubrics;
 
                     //$rootScope.$apply();
@@ -128,7 +129,7 @@ define(['base/home/module', "jquery"], function (module, $) {
 
                 var el = document.querySelector( '.morph-button' );
 
-                var panel = new UIMorphingButton( el, {
+                var panel = $rootScope.panel = new UIMorphingButton( el, {
                     closeEl : '.icon-close',
                     onBeforeOpen : function() {
                         // don't allow to scroll
@@ -259,7 +260,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                if(scope.errors == undefined) {
                    scope.errors = [];
                }
-               var errorskeys;
+               //var errorskeys;
 
 
                scope.openDial = function($event, field) {
@@ -1114,9 +1115,9 @@ define(['base/home/module', "jquery"], function (module, $) {
                 }
             }
         }
-    })
+    });
 
-    module.directive("editable", function() {
+    module.directive("editable", function(bzConfig, $rootScope) {
         return {
             restrict: "A",
             scope: {
@@ -1143,13 +1144,67 @@ define(['base/home/module', "jquery"], function (module, $) {
                         allowStyle: true,
                         paragraphy: false,
                         useClasses: false,
-                        imageUploadURL: "http://avp.ria.com:8071/cm/upload",
+                        imageUploadURL: bzConfig.api()+"/cm/upload",
+                        imageUploadParams: {project: $rootScope.currentProject.id},
                         buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
                     });
                 document.querySelector(".froala-box > div:last-child").remove();
             }
         }
-    })
+    });
+
+    module.directive("permissionsList", function($rootScope) {
+        return {
+            restrict: "E",
+            templateUrl: "views/cm/permissions.html",
+            link: function(scope, element, attrs) {
+                $rootScope.$watch("permissions", function() {
+                    if($rootScope.permissions == undefined) return;
+
+                    scope.permissions = angular.copy($rootScope.permissions);
+                });
+
+                scope.$watch("selectedUser", function() {
+                    if(scope.selectedUser == undefined) return;
+
+                    scope.selectedUser.permissions = scope.formSelections(scope.selectedUser.permissions);
+                });
+
+                scope.formSelections = function(selections) {
+                    if(selections == undefined) return {};
+
+                    // if already processed
+                    if(selections[0] == undefined) return selections;
+
+                    selections = angular.copy(selections);
+                    var result = {}, index, selection;
+                    for(index in selections) {
+                        selection = selections[index];
+
+                        if(!selections.hasOwnProperty(index)) continue;
+
+                        result[selection] = true;
+                    }
+                    return result;
+                };
+
+
+
+                var selector = angular.element(document.querySelector(".permission-wrap-close")),
+                    index, permission;
+                selector.on("click", function() {
+                    angular.element(element.children()[0]).removeClass("active open");
+                });
+
+                function findGruntItem(item, index) {
+                    if(item.name == "grantEverything") {
+                        return true;
+                    }
+                }
+
+            }
+        }
+    });
 
     /* !!! END !!! */
 

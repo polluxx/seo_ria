@@ -210,7 +210,10 @@
 
 .fc-calendar .fc-row > div.fc-today {
 	background: transparent;
-	box-shadow: inset 0 0 100px rgba(255,255,255,0.1);
+	box-shadow: inset 5px 10px 90px rgba(259,255,255,.5);
+}
+.fc-calendar .fc-row>div.fc-today.fc-content {
+    background: #553445;
 }
 
 .fc-calendar .fc-row > div.fc-today:after { 

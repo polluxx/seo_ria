@@ -13,7 +13,7 @@ define([
                 .segment('dashboard', {
                     templateUrl: bzConfigProvider.templateUrl('/dashboard/main.html'),
                     resolve: {
-                        permissions: bzUserProvider.access()
+                        permissions: bzUserProvider.access(['dashboard'])
                     },
                     controller: 'DashboardCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

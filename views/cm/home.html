@@ -1,3 +1,4 @@
 <span class="glyphicon glyphicon-lock homepage-lock" aria-hidden="true">
-    <p>авторизируйтесь, пожалуйста</p>
+    <p ng-if="bzUser.is_guest">авторизируйтесь, пожалуйста</p>
+    <p ng-if="!bzUser.is_guest">cm.RIA.com</p>
 </span>

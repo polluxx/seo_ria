@@ -12,7 +12,7 @@ define([
                 .segment('postStatistic', {
                     templateUrl: bzConfigProvider.templateUrl('/post/statistic.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['admin'])
+                        permissions: bzUserProvider.access(['statistic'])
                     },
                     controller: 'PostStatisticCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

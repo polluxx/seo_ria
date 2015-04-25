@@ -168,15 +168,7 @@ define([
                 $scope.doc.publication.time = new Date(resp.doc.publication.datetime);
                 $scope.doc.publication.date = new Date(resp.doc.publication.date);
 
-
-                if($scope.doc.author!=undefined) {
-                    $scope.doc.author.id = $scope.doc.author.id+"";
-                }else{
-                    $scope.doc.author = {};
-                    $scope.doc.author.id = $scope.authors[0];
-                }
-
-
+                $scope.doc.author.id = +$scope.doc.author.id;
             })
         }
 
@@ -211,10 +203,10 @@ define([
         $scope.$watch("doc.doctype", function() {
            if($rootScope.currentProject.id != 1 || $scope.doc.doctype !== "planned") return;
 
-            /*$scope.doc.sendTo = [
+            $scope.doc.sendTo = [
                 "yura.kosakvisky@gmail.com",
                 "yuriy.kosakivsky@ria.com"
-            ];*/
+            ];
         });
         $scope.removeEmail = function(email) {
             if($scope.doc.sendTo == undefined) return;

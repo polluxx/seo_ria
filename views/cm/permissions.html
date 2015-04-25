@@ -1,0 +1,29 @@
+<div class="permission-list-wrap morph-button morph-button-modal morph-button-modal-2 morph-button-fixed ">
+    <!--button type="button"></button-->
+
+    <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+
+        <div class="morph-content">
+            <div>
+                <div class="content-style-form content-style-form-1">
+                    <span class="icon icon-close permission-wrap-close">Закрыть</span>
+                    <h2>Разрешения</h2>
+                    <form>
+                        <div class="permission-form">
+                            <div class="permission-block">
+                                <input type="checkbox" ng-model="selectedAll" class="permission-input"/>
+                                <span>Выбрать все</span>
+                            </div>
+
+                            <div class="permission-block" ng-repeat="permission in permissions">
+                                <input type="checkbox" ng-checked="selectedAll" ng-model="selectedUser.permissions[permission.name]" class="permission-input"/>
+                                <span>{{permission.description}}</span>
+                            </div>
+                        </div>
+                        <p><button ng-click="confirm()">Добавить</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

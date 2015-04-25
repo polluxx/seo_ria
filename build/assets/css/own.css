@@ -1347,7 +1347,7 @@ sign-in .error-message {
 
 .post-block .post-title {
     display: inline-block;
-    font-size: 13px;
+    font-size: 9px;
     color: rgba(255, 255, 255, 0.79);
     line-height: 22px;
     font-weight: bold;
@@ -1356,6 +1356,7 @@ sign-in .error-message {
 
 .post-block {
     line-height: 22px;
+    text-align: left;
 }
 
 .morph-block {
@@ -1580,5 +1581,50 @@ tr.top-head-idea {
 }
 .close-filter {
     padding-right: 50px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 16px;
+    opacity: 0.6;
+    cursor: pointer;
+    color: #64697d;
+}
+.close-filter:hover {
+    opacity: 1;
 }
 /* END */
+
+
+.new-label {
+    color: #746F67;
+    font-size: 16px;
+    font-family: 'Open-Sans';
+    font-weight: 400;
+}
+
+.emails-to-send-block {
+    border: 1px solid #746F67;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.emails-to-send-block div {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    background: #5bc0de;
+    background-color: #5bc0de;
+    font-size: 11px;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.emails-to-send-block input {
+    width: auto;
+    border: none;
+    font-size: 14px;
+}

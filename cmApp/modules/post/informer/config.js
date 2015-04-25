@@ -15,7 +15,7 @@ define([
                 .segment('viewInformer', {
                     templateUrl: bzConfigProvider.templateUrl('/post/informer.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['author'])
+                        permissions: bzUserProvider.access(['post_add'])
                     },
                     controller: 'PostInformerCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

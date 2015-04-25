@@ -1,9 +1,7 @@
 
-<span class="change-board"
-      ng-class="{'glyphicon glyphicon-calendar':!boardType ,'glyphicon glyphicon-list-alt':boardType}"
-      ng-click="changeBoard()"></span>
+<a href="/calendar"><span class="change-board glyphicon glyphicon-calendar"></span></a>
 
-<section ng-if="!boardType">
+<section >
     <div class="col col-lg-12">
         <statistic-board ng-controller="DashboardStatisticCtrl"></statistic-board>
     </div>
@@ -13,7 +11,4 @@
     <div class="col col-lg-6">
         <comments-board ng-controller="DashboardCommentsCtrl"></comments-board>
     </div>
-</section>
-<section ng-if="boardType">
-    <calendar ng-controller="DashboardCalendarCtrl"></calendar>
 </section>

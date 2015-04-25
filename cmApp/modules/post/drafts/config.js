@@ -12,7 +12,7 @@ define([
                 .segment('postDrafts', {
                     templateUrl: bzConfigProvider.templateUrl('/post/list.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['author'])
+                        permissions: bzUserProvider.access(['post_drafts'])
                     },
                     controller: 'PostDraftsCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

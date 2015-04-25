@@ -14,7 +14,7 @@ define([
                 .segment('listIdea', {
                     templateUrl: bzConfigProvider.templateUrl('/storage/list.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['admin'])
+                        permissions: bzUserProvider.access(['storage_list'])
                     },
                     controller: 'StorageListCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()
@@ -22,7 +22,7 @@ define([
                 .segment('archiveIdea', {
                     templateUrl: bzConfigProvider.templateUrl('/storage/list.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['admin'])
+                        permissions: bzUserProvider.access(['storage_list'])
                     },
                     controller: 'StorageArchiveCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

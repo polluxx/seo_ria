@@ -85,6 +85,9 @@ define([
                 option:+$scope.info.subcategory.id,
                 subcategory:+$scope.info.category.id
             }, function(results) {
+                console.log(results);
+                if(results == undefined) return;
+
                 $scope.params.options = results;
                 $scope.info.option = $scope.params.options[0];
 
@@ -98,6 +101,9 @@ define([
                 projectId:$scope.info.project.id,
                 subcategory:+$scope.info.category.id
             }, function(results) {
+
+                if(results == undefined) return;
+
                 $scope.params.subcategories = results.map(function (item) {
                     return {id:item.subcategory, name:item.name};
                 });

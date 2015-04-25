@@ -13,7 +13,7 @@ define([
                 .segment('addPost', {
                     templateUrl: bzConfigProvider.templateUrl('/post/add.html'),
                     resolve: {
-                        permissions: bzUserProvider.access(['author'])
+                        permissions: bzUserProvider.access(['post_add'])
                     },
                     controller: 'PostAddCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()

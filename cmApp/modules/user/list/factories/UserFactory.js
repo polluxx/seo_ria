@@ -15,6 +15,11 @@ define([
                 method:"GET",
                 url:bzConfig.api()+'/cm/users',
                 isArray:false
+            },
+            permission: {
+                method:"POST",
+                url:bzConfig.api()+'/auth/permission',
+                isArray:false
             }
         });
 
