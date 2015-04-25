@@ -73,8 +73,8 @@
       <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8287113" vertical-offset="17462" max-vertical-offset="18360">
-              <caret line="1198" column="19" selection-start-line="1198" selection-start-column="19" selection-end-line="1198" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.68189234" vertical-offset="17462" max-vertical-offset="18360">
+              <caret line="1192" column="41" selection-start-line="1192" selection-start-column="41" selection-end-line="1192" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -1155,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8287113" vertical-offset="17462" max-vertical-offset="18360">
-          <caret line="1198" column="19" selection-start-line="1198" selection-start-column="19" selection-end-line="1198" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.68189234" vertical-offset="17462" max-vertical-offset="18360">
+          <caret line="1192" column="41" selection-start-line="1192" selection-start-column="41" selection-end-line="1192" selection-end-column="41" />
           <folding />
         </state>
       </provider>

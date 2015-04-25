@@ -1190,7 +1190,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                 };
 
                 scope.$watch("selectedUser.selectedAll", function() {
-                    if(scope.selectedUser.selectedAll == undefined) return;
+                    if(scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
                     var i;
                     for(i in scope.selectedUser.permissions) {
