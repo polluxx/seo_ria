@@ -1192,11 +1192,11 @@ define(['base/home/module', "jquery"], function (module, $) {
                 scope.$watch("selectedUser.selectedAll", function() {
                     if(scope.permissions == undefined || scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
-                    var i;
-                    for(i in scope.formSelections(scope.permissions)) {
+                    var i, selections = angular.copy(scope.permissions).map(mapNames);
+                    for(i in selections) {
                         scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
-                    console.log(scope.permissions);
+                    console.log(selections);
                     console.log(scope.selectedUser);
                 });
 
@@ -1206,10 +1206,8 @@ define(['base/home/module', "jquery"], function (module, $) {
                     angular.element(element.children()[0]).removeClass("active open");
                 });
 
-                function findGruntItem(item, index) {
-                    if(item.name == "grantEverything") {
-                        return true;
-                    }
+                function mapNames(item) {
+                    return item.name;
                 }
 
             }
