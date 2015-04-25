@@ -1192,9 +1192,12 @@ define(['base/home/module', "jquery"], function (module, $) {
                 scope.$watch("selectedUser.selectedAll", function() {
                     if(scope.permissions == undefined || scope.selectedUser == undefined || scope.selectedUser.selectedAll == undefined) return;
 
-                    var i, selections = angular.copy(scope.permissions).map(mapNames);
+                    var i, selections = angular.copy(scope.permissions).map(mapNames), selection;
                     for(i in selections) {
-                        scope.selectedUser.permissions[selections[i]] = scope.selectedUser.selectedAll;
+                        selection = selections[i];
+                        if(!selections.hasOwnProperty(i)) continue;
+
+                        scope.selectedUser.permissions[selection] = scope.selectedUser.selectedAll;
                     }
                 });
 
