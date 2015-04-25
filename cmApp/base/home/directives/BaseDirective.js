@@ -1194,8 +1194,9 @@ define(['base/home/module', "jquery"], function (module, $) {
 
                     var i;
                     for(i in scope.selectedUser.permissions) {
-                        scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll
+                        scope.selectedUser.permissions[i] = scope.selectedUser.selectedAll;
                     }
+                    scope.$apply();
                 });
 
                 var selector = angular.element(document.querySelector(".permission-wrap-close")),
