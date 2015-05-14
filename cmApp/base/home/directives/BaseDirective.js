@@ -1118,13 +1118,22 @@ define(['base/home/module', "jquery"], function (module, $) {
         }
     });
 
-    module.directive("editable", function(bzConfig, $rootScope) {
+    module.directive("editable", function(bzConfig, $rootScope, $modal) {
         return {
             restrict: "A",
             scope: {
                 model: "=ngModel"
             },
             link: function(scope, element, attrs) {
+                scope.project = 1;
+                $rootScope.$watch("currentProject", function() {
+                    scope.project = $rootScope.currentProject.id;
+                });
+                //scope.project = $rootScope.currentProject.id;
+                var modalInstance, textarea, selection = {}, range;
+                scope.link = "http://ria.com";
+                scope.wroted = "";
+
                 $('textarea#edit')
                     .on('editable.contentChanged editable.initialized', function (e, editor) {
 
@@ -1146,13 +1155,83 @@ define(['base/home/module', "jquery"], function (module, $) {
                         paragraphy: false,
                         useClasses: false,
                         imageUploadURL: bzConfig.api()+"/cm/upload",
-                        imageUploadParams: {project: $rootScope.currentProject.id},
-                        buttons:["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"]
+                        imageUploadParams: {project: scope.project},
+                        buttons:["bold", "italic", "underline", "twitter", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
+                        customButtons: {
+                            twitter: {
+                                title: "твитануть",
+                                icon: {
+                                    type: "font",
+                                    value: "fa fa-twitter"
+                                },
+                                callback: function() {
+                                    textarea = this;
+
+                                    textarea.saveSelection();
+                                    range = this.getRange();
+                                    selection.startOffset = range.startOffset;
+                                    selection.startNode = range.startContainer;
+                                    selection.endOffset = range.endOffset;
+                                    selection.endNode = range.endContainer;
+
+                                    scope.open();
+                                },
+                                refresh: function () {
+
+                                }
+                            }
+                        }
                     });
                 document.querySelector(".froala-box > div:last-child").remove();
+
+                scope.open = function (select) {
+
+                    modalInstance = $modal.open({
+                        animation: true,
+                        templateUrl: '/views/cm/modalDialog.html',
+                        controller: "modalContentCtrl",
+                        resolve: {
+                            link: function () {
+                                return scope.link;
+                            }
+                        }
+                    });
+
+                    modalInstance.result.then(function (text) {
+                        textarea.setSelection(selection.startNode, selection.startOffset, selection.endNode, selection.endOffset);
+                        selection = {};
+                        textarea.insertHTML(
+                            '<p><div class="aside-tweet">' +
+                                '<img src="http://cm.ria.com/assets/img/twitter.svg" width="64" height="64"/>' +
+                                '<h3>Процитировать в Твиттере</h3>' +
+                                '<p>' +
+                                    '<a href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
+                                '</p>' +
+                            '</div></p>' +
+                            '<p><br/></p>'
+                        );
+
+
+                        // Save HTML in undo stack.
+                        textarea.saveUndoStep();
+
+                        //textarea = undefined;
+                    }, function () {
+                        //$log.info('Modal dismissed at: ' + new Date());
+                    });
+                };
             }
         }
-    });
+    }).
+    controller("modalContentCtrl", function($scope, $modalInstance) {
+            $scope.ok = function () {
+                $modalInstance.close($scope.wroted);
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+        });
 
     module.directive("permissionsList", function($rootScope) {
         return {
@@ -1160,9 +1239,9 @@ define(['base/home/module', "jquery"], function (module, $) {
             templateUrl: "views/cm/permissions.html",
             link: function(scope, element, attrs) {
                 $rootScope.$watch("permissions", function() {
-                    if($rootScope.permissions == undefined) return;
+                    if($rootScope.all_permissions == undefined) return;
 
-                    scope.permissions = angular.copy($rootScope.permissions);
+                    scope.permissions = angular.copy($rootScope.all_permissions);
                 });
 
                 scope.$watch("selectedUser", function() {

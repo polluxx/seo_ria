@@ -1451,9 +1451,10 @@ sign-in .error-message {
 .change-board {
     position: absolute !important;
     top: 10px !important;
-    right: 35px;
+    left: 20px;
     font-size: 25px;
     cursor: pointer;
+    z-index: 10000;
 }
 
 .rubric {
@@ -1627,4 +1628,84 @@ tr.top-head-idea {
     width: auto;
     border: none;
     font-size: 14px;
+}
+
+div.disabled {
+    content: " ";
+    background-color: white;
+    opacity: 0.5;
+}
+
+.sended {
+    display: inline-block;
+    font-size: 13px;
+}
+
+.permission-block {
+    background: #e75854;
+    color: #f9f6e5;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.permission-block:first-child {
+    margin-bottom: 15px;
+}
+.permission-input {
+    margin: 0 ;
+}
+.permission-form {
+    height: 300px;
+    overflow-y: auto;
+}
+
+
+/* TWITTER */
+@media (min-width: 640px) {
+    .aside-tweet {
+        font-size: 1.5rem;
+        margin: 30px auto;
+    }
+
+    .aside-tweet {
+        background: rgba(0, 102, 204, .1);
+        margin: 10px auto;
+        max-width: inherit;
+        padding: 10px 10px 10px 60px;
+        position: relative;
+    }
+}
+.aside-tweet svg {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+}
+svg {
+    display: block;
+    overflow: hidden;
+    -moz-transform: translate(0) !important;
+}
+.aside-tweet h3 {
+    font-size: 12px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: left;
+    padding: 0;
+    margin-top: 0 !important;
+}
+.aside-tweet p {
+    margin: 0;
+    font-size: 21px;
+    line-height: 26px;
+}
+.aside-tweet a{
+    color: rgb(0, 102, 204);
+    font-family: "pt-serif-caption";
+    text-decoration: none;
+}
+
+.modal-body textarea, .modal-body input {
+    width: 100%;
+    padding: 5px;
 }
