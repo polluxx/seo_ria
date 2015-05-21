@@ -142,6 +142,7 @@ module.exports = function (grunt) {
                         'assets/codrops/normalize.css',
                         'assets/css/alertify/alertify.core.css',
                         'assets/css/alertify/alertify.default.css',
+                        'assets/css/opensans.css',
                         'assets/css/theme.css'
                     ]
                 }

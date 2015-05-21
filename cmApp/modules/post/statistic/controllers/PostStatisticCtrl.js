@@ -14,7 +14,8 @@ define([
             sorting: {
                 added: 'desc'     // initial sorting
             },
-            doctype: "planned",
+            "doctype[0]": "planned",
+            "doctype[1]": "was_planned",
             project: $rootScope.currentProject.id
         }, {
             total: 0,           // length of data

@@ -1659,6 +1659,8 @@ div.disabled {
 }
 
 
+/***  TEXTAREA IMPORT  ***/
+
 /* TWITTER */
 @media (min-width: 640px) {
     .aside-tweet {
@@ -1670,7 +1672,7 @@ div.disabled {
         background: rgba(0, 102, 204, .1);
         margin: 10px auto;
         max-width: inherit;
-        padding: 10px 10px 10px 60px;
+        padding: 10px 10px 10px 70px;
         position: relative;
     }
 }
@@ -1703,6 +1705,14 @@ svg {
     color: rgb(0, 102, 204);
     font-family: "pt-serif-caption";
     text-decoration: none;
+}
+.aside-tweet img {
+    position: absolute !important;
+    left: 10px;
+    top: 10px;
+    width: 48px;
+    height: 48px;
+    padding: 0 !important;
 }
 
 .modal-body textarea, .modal-body input {

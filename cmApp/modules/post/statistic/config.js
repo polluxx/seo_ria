@@ -8,12 +8,13 @@ define([
     module.config(['$routeSegmentProvider', 'bzConfigProvider', 'bzUserProvider',
         function($routeSegmentProvider, bzConfigProvider, bzUserProvider) {
             $routeSegmentProvider
-                .when('/post/statistic', 'postStatistic')
+                .when('/statistic', 'postStatistic')
                 .segment('postStatistic', {
                     templateUrl: bzConfigProvider.templateUrl('/post/statistic.html'),
                     resolve: {
                         permissions: bzUserProvider.access(['statistic'])
                     },
+                    
                     controller: 'PostStatisticCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()
                 });

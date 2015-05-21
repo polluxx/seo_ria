@@ -16,8 +16,8 @@
     <table ng-table="tableParams" class="table-new">
         <tbody>
         <tr ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
-            <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="'couchbaseDocument.doc.added'">
-                <span>{{post.added | date:'yyyy-MM-dd' }}</span>
+            <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="'couchbaseDocument.doc.updated'">
+                <span>{{post.updated | date:'yyyy-MM-dd' }}</span>
                 <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.added" is-open="opened[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close"/-->
             </td>
 

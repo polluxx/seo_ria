@@ -6,16 +6,16 @@
         <tbody>
         <tr ng-repeat="post in $data">
 
-            <td data-title="'Заголовок'" sortable="title">
+            <td data-title="'Заголовок'" sortable="'couchbaseDocument.doc.title'">
                 <a href="{{post.link}}"><span>{{post.title}}</span></a>
             </td>
-            <td data-title="'Показы'" sortable="statistic.shows">
+            <td data-title="'Показы'" sortable="'couchbaseDocument.doc.statistic.shows'">
                 <span>{{post.statistic.shows || 0}}</span>
             </td>
-            <td data-title="'Комментарии'" sortable="statistic.comments">
+            <td data-title="'Комментарии'" sortable="'couchbaseDocument.doc.statistic.comments'">
                 <span>{{post.statistic.comments || 0}}</span>
             </td>
-            <td data-title="'Переходов информера'" sortable="statistic.informerShows">
+            <td data-title="'Переходов информера'" sortable="'couchbaseDocument.doc.statistic.informerShows'">
                 <span>{{post.statistic.informerShows || 0}}</span>
             </td>
         </tr>

@@ -74,7 +74,7 @@
         <div ng-show="doc.img.src" class='img-preload' ng-init="imgSrc"><img class="img-preloaded" width="{{doc.img.width}}" height="{{doc.img.height}}" id='preloaded' src='{{doc.img.src}}'/></div>
 
 
-        <div class="addImageBlock">
+        <div class="addImageBlock" loading-container="fileLoading">
             <div class="form-group has-feedback " ng-class="{'has-error':errors['img']}">
                 <input placeholder="img src" ng-disabled="fileLoading" type="text" id="preloadedImg" needed ng-model="doc.img.src" name="imgSrc" class="img-loader-input form-control inputbox" aria-describedby="inputWarning2Status"/>
                 <input file-input="files" type="file" name="files[]" id="filedata" preloader-img="preloadedImg" class="form-control inputbox img-loader-input" aria-describedby="inputWarning2Status"/>

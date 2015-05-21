@@ -20,7 +20,7 @@ define([
         //$scope.doc.project = $rootScope.currentProject.id;
         //$scope.rubrics = $rootScope.rubrics[$rootScope.currentProject.id];
         //$scope.authors = $rootScope.authors;
-        var linkTo, linksTo = {draft:"drafts", planned:"list"}, userIndex;
+        var linkTo, linksTo = {draft:"drafts", planned:"list"}, userIndex, userData=["id", "name", "email"];
 
         $rootScope.$watch("currentProject", function() {
             if($rootScope.currentProject == undefined) return;
@@ -37,8 +37,6 @@ define([
             $scope.doc.rubric = $rootScope.rubric = $scope.rubrics[0];
             $scope.$loading = false;
         });
-
-
 
         $rootScope.$watch("authors", function () {
             //$scope.$loading = true;
@@ -61,8 +59,6 @@ define([
             $rootScope.rubric = $scope.doc.rubric;
         });
 
-
-
         $scope.$watch("files", function() {
             if($scope.files == undefined) return;
 
@@ -80,7 +76,10 @@ define([
                 $scope.send(formddata);
             });
         });
+        // END
 
+
+        // UPLOAD PHOTO
         $scope.send = function(form) {
 
             $http.post(bzConfig.api()+"/cm/upload", form, {
@@ -104,7 +103,7 @@ define([
                 alertify.error(resp.message != undefined ? resp.message : "ошибка загрузки");
                 $scope.$apply();
             });
-        }
+        };
 
         $scope.addTag = function (tag) {
             if($scope.doc.tags == undefined) {
@@ -114,7 +113,7 @@ define([
             if($scope.doc.tags.indexOf(tag) != -1) return;
             $scope.doc.tags.push(tag);
             $scope.tagItem = "";
-        }
+        };
         $scope.removeTag = function(tag) {
             alertify.confirm("Удалить тег?", function(e) {
                 if(!e) return;
@@ -123,13 +122,19 @@ define([
                 $scope.doc.tags.splice(index,1);
                 $scope.$apply();
             })
-        }
+        };
 
         // DATE TIME
         $scope.today = function() {
             $scope.doc.publication.date = new Date();
         };
         $scope.today();
+        function mapUserData(user) {
+            for(var userindex in user) {
+                if(!~userData.indexOf(userindex)) delete user[userindex];
+            }
+            return user;
+        }
 
         $scope.open = function($event) {
             $event.preventDefault();
@@ -170,10 +175,12 @@ define([
 
                 $scope.doc.author.id = +$scope.doc.author.id;
             })
-        }
+        };
 
         $scope.docSave = function() {
             $scope.$loading = true;
+
+            $scope.doc.author = mapUserData($scope.doc.author);
             PostFactory.send($scope.doc, function(resp) {
                 $scope.$loading = false;
                 if(resp.code != 200) {
@@ -204,8 +211,8 @@ define([
            if($rootScope.currentProject.id != 1 || $scope.doc.doctype !== "planned") return;
 
             $scope.doc.sendTo = [
-                "yura.kosakvisky@gmail.com",
-                "yuriy.kosakivsky@ria.com"
+                "anna.samoylenko@ria.com",
+                "vitaliy.poberezkiy@ria.com"
             ];
         });
         $scope.removeEmail = function(email) {
