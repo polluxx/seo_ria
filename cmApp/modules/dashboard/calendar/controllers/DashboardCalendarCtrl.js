@@ -31,7 +31,8 @@ define([
                         'from': returnFormattedDate(fromDate),
                         'to': returnFormattedDate(toDate)
                     }
-                }
+                },
+                'limit' : 100
             };
 
 

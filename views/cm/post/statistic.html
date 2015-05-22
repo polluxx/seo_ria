@@ -7,7 +7,8 @@
         <tr ng-repeat="post in $data">
 
             <td data-title="'Заголовок'" sortable="'couchbaseDocument.doc.title'">
-                <a href="{{post.link}}"><span>{{post.title}}</span></a>
+                <a href="/post/add/{{post._id}}" class="glyphicon glyphicon-pencil permission-add" title="редактировать"></a>
+                <a href="{{post.url}}" target="_blank"><span>{{post.title}}</span></a>
             </td>
             <td data-title="'Показы'" sortable="'couchbaseDocument.doc.statistic.shows'">
                 <span>{{post.statistic.shows || 0}}</span>
