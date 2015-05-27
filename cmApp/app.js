@@ -14,6 +14,7 @@ define([
     'modules/post/config',
     'modules/storage/config',
     'modules/user/config',
+    'modules/comments/config',
 
     'angular-bootstrap-tpl',
     'ng-table',
@@ -53,6 +54,8 @@ define([
         'module.post',
         'module.storage',
         'module.user',
+        'module.comments',
+
 
         'ui.bootstrap',
         'ngTable'

@@ -1,0 +1,45 @@
+
+<div loading-container="tableParams.settings().$loading">
+
+    <div class="top-block">
+        <div class="search-box">
+            <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" searchable="search()"/>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <table ng-table="tableParams" class="table-new">
+        <tbody>
+        <tr ng-repeat="comment in $data" ng-class="{'newBlock': comment.doctype == 'waiting', 'approvedBlock': comment.doctype == 'approved'}">
+
+            <td data-title="'Додан'" sortable="'couchbaseDocument.doc.added'">
+                <span ng-if="comment.doctype == 'waiting'" class="newCommentPin">new</span>
+                <span>{{comment.added}}</span>
+            </td>
+
+            <td data-title="'Автор'" sortable="'couchbaseDocument.doc.username'">
+                <span>{{comment.username}}</span>
+            </td>
+            <td data-title="'Email'" sortable="'couchbaseDocument.doc.email'">
+                <span>{{comment.email}}</span>
+            </td>
+
+            <td data-title="'Сообщение'">
+                <span ng-show="!comment.$editableTitle" ng-click="comment.$editableTitle = true">{{comment.message}}</span>
+                <input style="width: 100%" type="text" ng-change="comment.$changed=true" ng-show="comment.$editableTitle" ng-blur="comment.$editableTitle = false" ng-model="comment.message"/>
+
+                <span ng-show="!comment.$editableTitle" ng-click="response(comment._id)" title="ответить" class="glyphicon glyphicon-comment text-primary icon-operate" aria-hidden="true"></span>
+            </td>
+
+            <td data-title="'Операции'" style="text-align: center">
+                <span ng-if="comment.doctype != 'approved'" ng-click="approve(comment)" title="апрувнуть" class="glyphicon glyphicon-ok text-success icon-operate" aria-hidden="true"></span>
+                <span ng-if="comment.$changed" ng-click="save(comment)" title="сохранить" class="glyphicon glyphicon-save text-success icon-operate" aria-hidden="true"></span>
+
+                <span ng-click="remove(comment._id)" class="glyphicon glyphicon-trash text-danger icon-operate" aria-hidden="true"></span>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
