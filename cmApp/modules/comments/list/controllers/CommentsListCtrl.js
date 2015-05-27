@@ -24,8 +24,8 @@ define([
                 added: 'desc'     // initial sorting
             },
             'doctype[0]': "waiting",
-            'doctype[1]': "approved"
-            //project: $rootScope.currentProject.id
+            'doctype[1]': "approved",
+            project: $rootScope.currentProject.id
         }, {
             total: 0,           // length of data
             getData: function($defer, params) {
@@ -86,8 +86,8 @@ define([
         $rootScope.$watch("currentProject", function() {
             if($rootScope.currentProject == undefined) return;
 
-            //$scope.tableParams.parameters({project:$rootScope.currentProject.id});
-            //$scope.tableParams.reload();
+            $scope.tableParams.parameters({project:$rootScope.currentProject.id});
+            $scope.tableParams.reload();
         });
     }]);
 

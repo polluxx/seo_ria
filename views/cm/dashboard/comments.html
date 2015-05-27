@@ -1,3 +1,10 @@
 <div class="dashboard-comments" loading-container="$loading">
-    <div class="grey-text">Комментарии</div>
+    <div class="grey-text head-dash">Последние комментарии <a href="/comments/list"><span ng-if="waitingCount" class="countWaiting">{{waitingCount}}</span></a> </div>
+    <div class="comment" ng-repeat="comment in comments">
+        <a href="">
+            <span class="post-modified">{{comment.added}}</span>
+            <span>{{comment.message}}</span>
+        </a>
+    </div>
 </div>
+
