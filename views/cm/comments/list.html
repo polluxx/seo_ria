@@ -24,6 +24,10 @@
                 <span>{{comment.email}}</span>
             </td>
 
+            <td data-title="'Статья'" sortable="'couchbaseDocument.doc.article'">
+                <span>{{comment.articleName}}</span>
+            </td>
+
             <td data-title="'Сообщение'">
                 <span ng-show="!comment.$editableTitle" ng-click="comment.$editableTitle = true">{{comment.message}}</span>
                 <input style="width: 100%" type="text" ng-change="comment.$changed=true" ng-show="comment.$editableTitle" ng-blur="comment.$editableTitle = false" ng-model="comment.message"/>

@@ -25,6 +25,7 @@ define([
             },
             'doctype[0]': "waiting",
             'doctype[1]': "approved",
+            //withArticle : true,
             project: $rootScope.currentProject.id
         }, {
             total: 0,           // length of data

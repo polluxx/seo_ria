@@ -1155,7 +1155,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                         paragraphy: false,
                         useClasses: false,
                         imageUploadURL: bzConfig.api()+"/cm/upload",
-                        imageUploadParams: {project: scope.project},
+                        imageUploadParams: {project: scope.project, fromEditor: true},
                         buttons:["bold", "italic", "underline", "twitter", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
                         customButtons: {
                             twitter: {

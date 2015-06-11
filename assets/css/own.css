@@ -820,6 +820,10 @@ svg:not(:root) {
     height: 500px;
     overflow-y: scroll;
 }
+.view-variables button {
+    padding: 5px;
+    text-align: left;
+}
 .variables-block {
     z-index: 10;
     position: absolute;
