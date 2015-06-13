@@ -9,6 +9,8 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                 $rootScope.searchval = "";
                 $rootScope.issearch = false;
                 $rootScope.listData = {};
+                //$rootScope.searchParams = {};
+
                 var searchStr, interval, searchlength;
 
                 scope.$watch("searchval", function() {
@@ -23,11 +25,10 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                 scope.makeSearch = function(search) {
                     $rootScope.issearch = false;
                     interval = setTimeout(function() {
-                        console.log(search);
-                        console.log($rootScope.searchval);
                         if(search.length == $rootScope.searchval.length) {
 
                             $rootScope.issearch = true;
+                            //$rootScope.searchParams.q = $rootScope.searchval;
                             $rootScope.$apply();
                             clearTimeout(interval);
                         } else {

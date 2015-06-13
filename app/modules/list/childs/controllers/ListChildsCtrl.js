@@ -54,6 +54,7 @@ define([
 
 
         $scope.$watch("searchparams", function(newVal, oldVal) {
+
             $routeParams = $scope.searchparams;
             $scope.refresh();
         }, true);

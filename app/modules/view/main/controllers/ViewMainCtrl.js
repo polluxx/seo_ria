@@ -4,7 +4,7 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('ViewMainCtrl', ['$scope', '$routeParams', 'ViewFactory', '$resource', function($scope, $routeParams, ViewFactory, $resource) {
+    module.controller('ViewMainCtrl', ['$scope', '$routeParams', 'ViewFactory', '$resource', '$rootScope', '$location', function($scope, $routeParams, ViewFactory, $resource, $rootScope, $location) {
         var variablesBlock,
             width;
         $scope.doc = {};
@@ -24,6 +24,10 @@ define([
 
                 $scope.variables = $scope.doc.vars;
 
+                if($scope.doc.priority == 2) {
+                    $scope.searchparams.parent = $scope.doc.parent;
+                    $scope.searchparams.priority = $scope.doc.priority;
+                }
 
             })
         };
@@ -41,6 +45,10 @@ define([
         $scope.errors = [];
         $scope.varsRewrites = {};
         $scope.varsLoading = false;
+        $scope.searchparams = {
+            limit: 10,
+            project: $rootScope.currentProject || $rootScope.searchParams.project
+        };
 
         $scope.langSelect = function(langID) {
             $scope.selectedLang = langID;
@@ -113,9 +121,6 @@ define([
             }
 
         };
-
-
-
 
 
         // REWRITE
@@ -221,6 +226,25 @@ define([
             });
 
         }
+
+        // WATCHER SEARCH
+        $rootScope.$watch("issearch", function() {
+            if (!$rootScope.issearch || !$rootScope.searchval.length) return;
+
+            var queryArray = [], index, root = $scope.searchparams.parent ? "childs" : "list", queryString = root+"/"+$scope.searchparams.project;
+            $scope.searchparams.q = $rootScope.searchval;
+            for(index in $scope.searchparams) {
+                queryArray.push(index+"="+$scope.searchparams[index]);
+            }
+
+            $scope.searchparams.view = true;
+            //queryString += queryArray.join("&");
+            $location.path(queryString);
+            $location.search($scope.searchparams);
+
+            $scope.searchparams = {};
+            $location.replace();
+        });
 
 
     }]);

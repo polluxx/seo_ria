@@ -817,8 +817,12 @@ svg:not(:root) {
     left: 0;
     width: 100%;
     overflow-x: hidden;
-    height: 500px;
+    max-height: 500px;
     overflow-y: scroll;
+}
+.view-variables button {
+    padding: 5px;
+    text-align: left;
 }
 .variables-block {
     z-index: 10;
