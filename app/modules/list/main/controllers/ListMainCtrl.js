@@ -33,15 +33,15 @@ define([
             $rootScope.searchval = $scope.searchparams.q =  $routeParams.q;
         }
 
-        $routeParams = $scope.searchparams;
+        //$routeParams = $scope.searchparams;
 
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
             //$routeParams.page = 1;
 
-            $location.search($routeParams);
+            $location.search($scope.searchparams);
 
-            ListFactory.get($routeParams, function(response) {
+            ListFactory.get($scope.searchparams, function(response) {
                 if (isSearch == true) {
                     $rootScope.issearch = false;
                     //$rootScope.$apply();
@@ -64,7 +64,7 @@ define([
 
         $scope.$watch("searchparams", function(newVal, oldVal) {
             //if($scope.searchparams == undefined) return;
-            $routeParams = $scope.searchparams;
+            //$routeParams = $scope.searchparams;
             $scope.refresh();
         }, true);
 

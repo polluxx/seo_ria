@@ -39,9 +39,9 @@ define([
         $scope.refresh = function(params, isSearch) {
             $scope.$loading = true;
 
-            $location.search($routeParams);
+            $location.search($scope.searchparams);
 
-            ListFactory.childs($routeParams, function (resp) {
+            ListFactory.childs($scope.searchparams, function (resp) {
                 if (isSearch == true) {
                     $rootScope.issearch = false;
                 }
@@ -55,7 +55,7 @@ define([
 
         $scope.$watch("searchparams", function(newVal, oldVal) {
 
-            $routeParams = $scope.searchparams;
+            //$routeParams = $scope.searchparams;
             $scope.refresh();
         }, true);
 
