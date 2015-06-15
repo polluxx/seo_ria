@@ -16,6 +16,10 @@
     <table ng-table="tableParams" class="table-new">
         <tbody>
         <tr ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
+
+            <td data-title="'Прод'">
+                <span ng-if="post.doctype == 'was_planned' || post.doctype == 'planned' && Date(post.publication.date).getTime() < Date.now()" class="glyphicon glyphicon-eye-open production"></span>
+            </td>
             <td data-title="'Дата сдачи'" ng-click="open($event)" sortable="'couchbaseDocument.doc.updated'">
                 <span>{{post.updated | date:'yyyy-MM-dd' }}</span>
                 <!--input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="post.added" is-open="opened[post._id]" datepicker-options="dateOptions" ng-required="true" close-text="Close"/-->
@@ -31,7 +35,7 @@
                 <a href="/user/{{post.author.id}}"><span>{{post.author.name}}</span></a>
             </td>
             <td data-title="'Заголовок'" sortable="'couchbaseDocument.doc.title'">
-                <a href="{{post.link}}"><span>{{post.title}}</span></a>
+                <a href="{{post.url}}" target="_blank"><span>{{post.title}}</span></a>
                 <!--input type="text" ng-if="post.$editableTitle" ng-blur="post.$editableTitle = false" ng-model="post.title"/-->
             </td>
             <td data-title="'Описание'" sortable="'couchbaseDocument.doc.description'">
@@ -43,13 +47,13 @@
                 <span ng-if="!post.$editableRubric" ng-click="post.$editableRubric = !this.$editableRubric" >{{post.rubric.name}}</span>
                 <select chengable="docUpdate(post)"  width="200px" ng-if="post.$editableRubric" ng-blur="post.$editableRubric = false" ng-model="post.rubric" name="rubrics" class="form-control inputbox" ng-options="rubric.name for rubric in rubrics track by rubric.id"></select>
             </td>
-            <td data-title="'smm'" ng-if="['planned', 'plan'].indexOf(post.doctype) != -1">
+            <td data-title="'smm'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1">
                 <morph-btn ng-if="post.doctype == 'planned'" class="morph" update="docUpdate(post)" errors="errors" name="Smm" btn="Smm" confirm="Сохранить" fields="post.smm" ng-init="post.smm = post.smm != undefined ? post.smm : [{name:'email SMM', doctype:'email'},{name:'email руководителя проекта', doctype:'emailLeader'}]"></morph-btn>
             </td>
-            <td data-title="'email'" ng-if="['planned', 'plan'].indexOf(post.doctype) != -1" >
+            <td data-title="'email'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" >
                 <morph-btn ng-if="post.doctype == 'planned'" class="morph" update="docUpdate(post)" errors="errors" name="Email" btn="Email" confirm="Сохранить" fields="post.email" ng-init="post.email = post.email != undefined ? post.email : [{name:'email маркетинг', doctype:'spec'}]"></morph-btn>
             </td>
-            <td ng-if="['planned', 'plan'].indexOf(post.doctype) != -1" data-title="'Операции'">
+            <td ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" data-title="'Операции'">
                 <a href="/post/add/{{post._id}}">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </a>

@@ -1809,3 +1809,7 @@ svg {
     border-radius: 1px;
 }
 
+.production {
+    color: #4cae4c;
+    font-size: 16px;
+}

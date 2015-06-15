@@ -13,7 +13,7 @@ define([
         $scope.radioModel = $routeParams.limit || "10";
         $routeParams.priority = 2; // set children priority
 
-        $rootScope.listData = {};
+        $scope.listData = {};
         //$scope.radioModel = '10';
         $scope.searchparams = {
             limit: +$scope.radioModel,
@@ -48,7 +48,7 @@ define([
                 $scope.$loading = false;
 
                 $scope.bigTotalItems = resp.data.pages;
-                $rootScope.listData = resp.data;
+                $scope.listData = resp.data;
             })
         };
 

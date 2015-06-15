@@ -5,7 +5,7 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('PostListCtrl', ['$scope', 'bzUser', 'bzConfig', 'PostFactory', 'ngTableParams', '$resource', '$location', '$rootScope', function($scope, bzUser, bzConfig, PostFactory, ngTableParams, $resource, $location, $rootScope) {
+    module.controller('PostListCtrl', ['$scope', 'bzUser', 'bzConfig', 'PostFactory', 'ngTableParams', '$resource', '$location', '$rootScope', '$routeParams', function($scope, bzUser, bzConfig, PostFactory, ngTableParams, $resource, $location, $rootScope, $routeParams) {
 
         $scope.dateOptions = {
             formatYear: 'yy',
@@ -18,35 +18,44 @@ define([
             if($rootScope.rubrics == undefined) return;
 
             $scope.rubrics = $rootScope.rubrics;
-        })
-        
-        var Api = $resource(bzConfig.api() + "/cm/postlist");
-
-        $scope.tableParams = new ngTableParams({
-            search: "title",
-            page: 1,            // show first page
-            count: 10,          // count per page
-            sorting: {
-                added: 'desc'     // initial sorting
-            },
-            'doctype[0]': "planned",
-            'doctype[1]': "plan",
-            project: $rootScope.currentProject.id
-        }, {
-            total: 0,           // length of data
-            getData: function($defer, params) {
-                // ajax request to api
-                Api.get(params.url(), function(data) {
-                    console.log(data)
-                    //$timeout(function() {
-                    // update table params
-                    params.total(data.items.total);
-                    // set new data
-                    $defer.resolve(data.items.data);
-                    //}, 500);
-                });
-            }
         });
+        $rootScope.$watch("currentProject", function () {
+            if($rootScope.currentProject == undefined) return;
+
+            $scope.getData();
+        });
+
+        $scope.getData = function() {
+            var Api = $resource(bzConfig.api() + "/cm/postlist");
+
+            $scope.tableParams = new ngTableParams({
+                search: "title",
+                page: 1,            // show first page
+                count: 10,          // count per page
+                sorting: {
+                    added: 'desc'     // initial sorting
+                },
+                'doctype[0]': "planned",
+                'doctype[1]': "plan",
+                'doctype[2]': "was_planned",
+                project: $rootScope.currentProject.id
+            }, {
+                total: 0,           // length of data
+                getData: function($defer, params) {
+                    // ajax request to api
+                    Api.get(params.url(), function(data) {
+                        console.log(data)
+                        //$timeout(function() {
+                        // update table params
+                        params.total(data.items.total);
+                        // set new data
+                        $defer.resolve(data.items.data);
+                        //}, 500);
+                    });
+                }
+            });
+        }
+
 
         $scope.remove = function(id) {
             alertify.confirm("Удалить пост?", function(e) {
