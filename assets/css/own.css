@@ -1109,7 +1109,7 @@ h1 {
 
 .addImageBlock {
     display: inline-block;
-    width: 50%;
+    width: 80%;
     vertical-align: top;
     padding: 6px;
 }
@@ -1157,12 +1157,16 @@ h1 {
 
 .img-loader-input {
     display: inline-block !important;
-    width: 49%  !important;
+    width: 200px  !important;
 
 }
 .img-loader-input:nth-child(1) {
    padding-right: 10px  !important;
-    width: 50%  !important;
+    width: 300px  !important;
+    padding-top: 2px;
+}
+.upload-loc {
+    padding-top: 2px !important;
 }
 
 .publication-date {

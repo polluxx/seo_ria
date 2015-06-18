@@ -77,7 +77,12 @@
         <div class="addImageBlock" loading-container="fileLoading">
             <div class="form-group has-feedback " ng-class="{'has-error':errors['img']}">
                 <input placeholder="img src" ng-disabled="fileLoading" type="text" id="preloadedImg" needed ng-model="doc.img.src" name="imgSrc" class="img-loader-input form-control inputbox" aria-describedby="inputWarning2Status"/>
-                <input file-input="files" type="file" name="files[]" id="filedata" preloader-img="preloadedImg" class="form-control inputbox img-loader-input" aria-describedby="inputWarning2Status"/>
+                <input file-input="files" type="file" name="files[]" id="filedata" preloader-img="preloadedImg" class="form-control inputbox img-loader-input upload-loc" aria-describedby="inputWarning2Status"/>
+
+                <input placeholder="width" class="form-control inputbox add-img-params" type="number" ng-model="doc.img.width"/>
+                <input placeholder="height" class="form-control inputbox add-img-params" type="number" ng-model="doc.img.height"/>
+
+                <button class="btn btn-success inputbox" ng-click="imageUpload()"><i class="glyphicon glyphicon-open"></i></button>
             </div>
 
             <div class="form-group has-feedback ">
@@ -87,10 +92,6 @@
                 <input placeholder="img alt" type="text" ng-model="doc.img.alt" name="imgAlt" class="form-control inputbox" aria-describedby="inputWarning2Status"/>
             </div>
 
-            <div class="form-group has-feedback ">
-                <input placeholder="width" class="form-control inputbox add-img-params" type="number" ng-model="doc.img.width"/>
-                <input placeholder="height" class="form-control inputbox add-img-params" type="number" ng-model="doc.img.height"/>
-            </div>
         </div>
 
         <div class="error-mess">

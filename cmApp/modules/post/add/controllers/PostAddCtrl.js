@@ -68,14 +68,22 @@ define([
                     return false;
                 }
                 $scope.filesLength++;
-                var formddata = new FormData();
+                $scope.formddata = new FormData();
 
-                formddata.append('project', $rootScope.currentProject.id);
-                formddata.append('file', file);
-                $scope.fileLoading = true;
-                $scope.send(formddata);
+                $scope.formddata.append('project', $rootScope.currentProject.id);
+                $scope.formddata.append('file', file);
             });
         });
+
+        $scope.imageUpload = function() {
+            $scope.fileLoading = true;
+            if($scope.doc.img == undefined) {
+                $scope.doc.img = {};
+            }
+            if($scope.doc.img.width) $scope.formddata.append('width', $scope.doc.img.width);
+            if($scope.doc.img.height) $scope.formddata.append('height', $scope.doc.img.height);
+            $scope.send($scope.formddata);
+        }
         // END
 
 
@@ -93,10 +101,9 @@ define([
                     return;
                 }
 
-                if($scope.doc.img == undefined) {
-                    $scope.doc.img = {};
-                }
                 $scope.doc.img.src = resp.file;
+                $scope.files = null;
+                document.getElementById("filedata").value = null;
             })
             .error(function(resp) {
                 $scope.fileLoading = false;
