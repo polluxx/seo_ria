@@ -34,7 +34,7 @@ define([
 
         $scope.getDoc();
 
-
+        console.log($rootScope);
         $scope.langs = [{"id":1, "name":"ru"}, {"id":2, "name":"uk"}];
         $scope.selectedLang = $scope.langs[0];
         $scope.variables = [{"id":1, "name":"Категорії"}, {"id":2, "name":"Типи"}, {"id":3, "name":"Регіон"}];
@@ -49,6 +49,9 @@ define([
             limit: 10,
             project: $rootScope.currentProject || $rootScope.searchParams.project
         };
+
+        // clear search value
+        $rootScope.searchval = "";
 
         $scope.langSelect = function(langID) {
             $scope.selectedLang = langID;
@@ -229,8 +232,9 @@ define([
 
         // WATCHER SEARCH
         $rootScope.$watch("issearch", function() {
-            if (!$rootScope.issearch || !$rootScope.searchval.length) return;
 
+            if ($rootScope.issearch === false || !$rootScope.searchval.length) return;
+            console.log($rootScope.issearch);
             var queryArray = [], index, root = $scope.searchparams.parent ? "childs" : "list", queryString = root+"/"+$scope.searchparams.project;
             $scope.searchparams.q = $rootScope.searchval;
             for(index in $scope.searchparams) {

@@ -13,6 +13,7 @@ define([
         $scope.radioModel = $routeParams.limit || "10";
         $routeParams.priority = 2; // set children priority
 
+        $routeParams.project = $routeParams.project || $rootScope.currentProject;
         $scope.listData = {};
         //$scope.radioModel = '10';
         $scope.searchparams = {
@@ -42,9 +43,8 @@ define([
             $location.search($scope.searchparams);
 
             ListFactory.childs($scope.searchparams, function (resp) {
-                if (isSearch == true) {
-                    $rootScope.issearch = false;
-                }
+                if ($rootScope.issearch == true) $rootScope.issearch = false;
+
                 $scope.$loading = false;
 
                 $scope.bigTotalItems = resp.data.pages;
@@ -62,6 +62,7 @@ define([
         $rootScope.$watch("issearch", function() {
             if (!$rootScope.issearch) return;
 
+            delete $routeParams.view;
             $scope.searchparams.q = $rootScope.searchval;
         });
 

@@ -13,6 +13,9 @@ define([
         $scope.total = 1;
         $scope.radioModel = $routeParams.limit || "10";
         $scope.listData = {};
+
+        $routeParams.id = $routeParams.id || $rootScope.currentProject;
+
         $scope.searchparams = {
             limit: +$scope.radioModel,
             project: $routeParams.id,
@@ -42,10 +45,8 @@ define([
             $location.search($scope.searchparams);
 
             ListFactory.get($scope.searchparams, function(response) {
-                if (isSearch == true) {
-                    $rootScope.issearch = false;
-                    //$rootScope.$apply();
-                }
+                if ($rootScope.issearch == true) $rootScope.issearch = false;
+
                 $scope.$loading = false;
                 if (response.code != 200) {
 
