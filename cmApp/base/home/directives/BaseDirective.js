@@ -1145,6 +1145,13 @@ define(['base/home/module', "jquery"], function (module, $) {
                         //
                         scope.model = editor.cleanTags(editor.getHTML());
                     })
+                    .on('editable.imageInserted', function (e, editor, img) {
+                        // Custom error message returned from the server.
+                        if(!img) return;
+                        img[0].width = 620;
+                        img[0].parentNode.childNodes[0].classList.remove("fr-fin");
+                        img[0].parentNode.childNodes[0].classList.add("fr-fil");
+                    })
                     .editable({
                         inlineMode: false,
                         minHeight:200,
@@ -1155,7 +1162,12 @@ define(['base/home/module', "jquery"], function (module, $) {
                         paragraphy: false,
                         useClasses: false,
                         imageUploadURL: bzConfig.api()+"/cm/upload",
-                        imageUploadParams: {project: scope.project, fromEditor: true},
+                        imageUploadParams: {
+                            project: scope.project,
+                            fromEditor: true,
+                            width: 620,
+                            height: 360
+                        },
                         buttons:["bold", "italic", "underline", "twitter", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
                         customButtons: {
                             twitter: {
