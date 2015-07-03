@@ -1135,7 +1135,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                 scope.wroted = "";
 
                 $('textarea#edit')
-                    .on('editable.contentChanged editable.initialized', function (e, editor) {
+                    .on('editable.contentChanged editable.initialized editable.imageInserted', function (e, editor, img) {
 
                         scope.$watch("model", function() {
                             if(scope.model.lenght === 0) return;
@@ -1144,13 +1144,13 @@ define(['base/home/module', "jquery"], function (module, $) {
                         });
                         //
                         scope.model = editor.cleanTags(editor.getHTML());
-                    })
-                    .on('editable.imageInserted', function (e, editor, img) {
-                        // Custom error message returned from the server.
-                        if(!img) return;
-                        img[0].width = 620;
-                        img[0].parentNode.childNodes[0].classList.remove("fr-fin");
-                        img[0].parentNode.childNodes[0].classList.add("fr-fil");
+
+                        if(img) {
+                            img[0].width = 620;
+                            img[0].classList.remove("fr-fin");
+                            img[0].classList.add("fr-fil");
+                        }
+
                     })
                     .editable({
                         inlineMode: false,
