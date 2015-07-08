@@ -3,7 +3,8 @@ define([
 
     'base/config/config',
     'base/home/config',
-    'base/colorpicker/config'
+    'base/colorpicker/config',
+
 ], function (angular) {
     'use strict';
 

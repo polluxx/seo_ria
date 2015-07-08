@@ -62,6 +62,10 @@ requirejs.config({
         'alertify': 'alertify',
         'polyfills': 'polyfills',
 
+        'modernizr': '../cmApp/other/codrops/modernizr.custom',
+        'classie': '../cmApp/other/codrops/classie',
+        'morphingButton': '../cmApp/other/codrops/uiMorphingButton_fixed',
+
         // froala
         'froala': '../bower_components/froala/js/froala_editor.min',
         'froala-colors': '../bower_components/froala/js/plugins/colors.min',

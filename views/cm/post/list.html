@@ -3,11 +3,11 @@
 
     <div class="top-block">
         <div class="search-box">
-            <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" searchable="search()"/>
+            <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" timeout="700" searchable="search()"/>
         </div>
         <div class="form-group has-feedback">
             <a href="/post/add">
-                <button class="btn btn-success inputbox" >статья</button>
+                <button class="btn btn-success inputbox add-item-btn">+</button>
             </a>
         </div>
         <div class="clear"></div>
@@ -15,7 +15,7 @@
 
     <table ng-table="tableParams" class="table-new">
         <tbody>
-        <tr ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
+        <tr id="list-item-{{post._id}}" ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
 
             <td data-title="'Прод'">
                 <span ng-if="post.doctype == 'was_planned' || post.doctype == 'planned' && Date(post.publication.date).getTime() < Date.now()" class="glyphicon glyphicon-eye-open production"></span>

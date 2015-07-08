@@ -1,4 +1,4 @@
-define(['base/home/module', "jquery"], function (module, $) {
+define(['base/home/module', "jquery",'morphingButton'], function (module, $, morphingButton) {
 
     module.directive("leftPanel", function($rootScope, $resource, bzConfig, localStorageService) {
         return {
@@ -204,8 +204,10 @@ define(['base/home/module', "jquery"], function (module, $) {
                 search: "&searchable",
                 q: "=ngModel"
             },
-            link: function(scope) {
+            link: function(scope, elm, attrs) {
                 var interval, searchStr = "";
+
+                scope.timeout = attrs.timeout || 500;
 
                 scope.$watch("q", function() {
                     if(scope.q == undefined) return;
@@ -226,7 +228,7 @@ define(['base/home/module', "jquery"], function (module, $) {
                         }
 
                         clearTimeout(interval);
-                    }, 300);
+                    }, scope.timeout);
                 }
             }
         }
@@ -1130,27 +1132,40 @@ define(['base/home/module', "jquery"], function (module, $) {
                     scope.project = $rootScope.currentProject.id;
                 });
                 //scope.project = $rootScope.currentProject.id;
-                var modalInstance, textarea, selection = {}, range;
+                var modalInstance, textarea, selection = {}, range, checkChanges, watched = false;
                 scope.link = "http://ria.com";
                 scope.wroted = "";
 
+                checkChanges = function(editor) {
+
+                    scope.$watch("model", function() {
+                        console.log(scope.model);
+                        if(watched || !scope.model) return;
+                        //
+                        if(scope.model.lenght === 0) return;
+
+                        editor.setHTML(scope.model);
+                        watched = true;
+                    });
+                }
+
                 $('textarea#edit')
-                    .on('editable.contentChanged editable.initialized editable.imageInserted', function (e, editor, img) {
+                    .on('editable.initialized editable.contentChanged editable.imageInserted', function (e, editor, img) {
 
-                        scope.$watch("model", function() {
-                            if(scope.model.lenght === 0) return;
 
-                            editor.setHTML(scope.model);
-                        });
+
+                        if(!watched) checkChanges(editor);
+
                         //
                         scope.model = editor.cleanTags(editor.getHTML());
+                        scope.$apply();
 
                         if(img) {
+
                             img[0].width = 620;
                             img[0].classList.remove("fr-fin");
                             img[0].classList.add("fr-fil");
                         }
-
                     })
                     .editable({
                         inlineMode: false,
@@ -1215,9 +1230,9 @@ define(['base/home/module', "jquery"], function (module, $) {
                         textarea.insertHTML(
                             '<p><div class="aside-tweet">' +
                                 '<img src="http://cm.ria.com/assets/img/twitter.svg" width="64" height="64"/>' +
-                                '<h3>Процитировать в Твиттере</h3>' +
-                                '<p>' +
-                                    '<a href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
+                                '<h3">Процитировать в Твиттере</h3>' +
+                                '<p style="  font-size: 21px;line-height: 26px;">' +
+                                    '<a style="color: #06c;font-family: pt-serif-caption;text-decoration: none;" href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
                                 '</p>' +
                             '</div></p>' +
                             '<p><br/></p>'

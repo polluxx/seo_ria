@@ -23,18 +23,6 @@ define([
     //'trumbowyg',
     //'trumbowygUpload',
 
-    'froala',
-
-    'froala-colors',
-    'froala-upload',
-    'froala-fontFamily',
-    'froala-fontSize',
-    'froala-fullscreen',
-    'froala-inlineStyles',
-    'froala-blockStyles',
-    'froala-charCounter',
-    'froala-lists',
-
 
     'alertify',
     'polyfills'

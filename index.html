@@ -4,22 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/"/>
+
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link href="/build/assets/css/theme.css" rel="stylesheet" media="all">
-    <link href='http://cobrand.ria.com/css/informer.css' rel='stylesheet' type='text/css'>
 
-
-    <script src="cmApp/other/codrops/modernizr.custom.js" ></script>
-    <script src="cmApp/other/codrops/classie.js" ></script>
-    <script src="cmApp/other/codrops/uiMorphingButton_fixed.js" ></script>
+    <script src="cmApp/other/codrops/classie.js"></script>
 </head>
 <body ng-cloak>
 
 
+<nav root-item class="navbar navbar-default collapse navbar-collapse bs-navbar-collapse nav-seo" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#!/page" title="Головна"><span class="glyphicon glyphicon-th-list top-icon"><span>Main</span></span></a>
+    </div>
 
-<left-panel ng-if="!$user.is_guest"></left-panel>
-<sign-in ng-if="$user.is_guest"></sign-in>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li ng-if="currentProject"><a href="#!/robots/{{currentProject}}"><span class="glyphicon glyphicon-barcode top-icon" title="Robots"><span>Robots</span></span></a></li>
+            <li ng-if="currentProject"><a href="#!/list/{{currentProject}}"><span class="glyphicon glyphicon-list-alt top-icon" title="Список"><span>Links</span></span></a></li>
+            <li ng-if="currentProject"><a href="#!/history/{{currentProject}}"><span class="glyphicon glyphicon-calendar top-icon" title="Історія"><span>History</span></span></a></li>
 
-<div class="container ng-cloak" id="container">
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group search">
+                <input style="height: 40px; padding-right: 38px; width: 400px" type="text" ng-model="searchval" id="mainSearch" class="form-control inputbox middle" placeholder="Search">
+                <span class="search-icon glyphicon glyphicon-search"></span>
+            </div>
+            <!--button type="submit" class="btn btn-default">Submit</button-->
+        </form>
+
+    </div>
+</nav>
+
+
+<div class="container ng-cloak">
 
 
     <div class="row">
@@ -28,13 +48,34 @@
 
         </div>
 
+        <!--div ng-hide="true" class="col col-lg-3 ng-cloak">
+            {{'Test'|translate}}
+            <form ng-if="$user.is_guest" ng-controller="AuthLoginCtrl" ng-submit="login(user)" ng-init="user = { 'email': 'admin', 'password': '1' }">
+                <div class="form-group">
+                    <label for="email">Login / Email:</label>
+                    <input id="email" class="form-control" type="text" ng-model="user.email"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" class="form-control" type="password" ng-model="user.password"/>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Login" />
+                </div>
+            </form>
+            <div ng-if="!$user.is_guest">
+                ID: {{ $user.id }}
+                <a href="" data-ng-click="$user.$logout()">Log out</a>
+            </div>
+
+        </div-->
     </div>
 </div>
 
 <script src="/bazalt.js"></script>
-<!--script src="/bower_components/requirejs/require.js" data-main="cmApp/requireConfig"></script-->
+<!--script src="/bower_components/requirejs/require.js" data-main="app/requireConfig"></script-->
 <!--data-main="app/requireConfig"-->
-<script src="/build/r.js" data-main="build/_cm_bootstrap"></script>
+<script src="/build/r.js" data-main="build/_bootstrap"></script>
 <!--script src="/build/_cm_bootstrap.js"></script-->
 </body>
 </html>

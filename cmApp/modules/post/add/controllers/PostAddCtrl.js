@@ -186,8 +186,11 @@ define([
 
         $scope.docSave = function() {
             $scope.$loading = true;
-            console.log($scope.doc);
+            //console.log($scope.doc);
             $scope.doc.author = mapUserData($scope.doc.author);
+
+
+
             PostFactory.send($scope.doc, function(resp) {
                 $scope.$loading = false;
                 if(resp.code != 200) {

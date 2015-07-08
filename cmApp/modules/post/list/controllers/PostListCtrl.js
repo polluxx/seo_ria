@@ -44,7 +44,7 @@ define([
                 getData: function($defer, params) {
                     // ajax request to api
                     Api.get(params.url(), function(data) {
-                        console.log(data)
+
                         //$timeout(function() {
                         // update table params
                         params.total(data.items.total);
@@ -65,12 +65,14 @@ define([
                 PostFactory.remove({id:id}, function(resp) {
                     if(resp.code != 200) {
                         console.info(resp);
+
                         alertify.error("Ошибка удаления поста");
                     }
 
-                    $location.replace();
+                    document.getElementById("list-item-"+id).remove();
+                    //$location.replace();
                 });
-                console.log(id);
+
             });
         }
 

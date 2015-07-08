@@ -1,7 +1,8 @@
 define([
     'angular',
 
-    'bz'
+    'bz',
+
 ], function (angular) {
     'use strict';
 
