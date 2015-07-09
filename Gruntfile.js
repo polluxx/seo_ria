@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         'copy:assets', 'copy:theme', 'cssmin', 'connect:dev', 'connect:cm', 'watch'
     ]);
     grunt.registerTask('serve-build', [
-        'copy:assets', 'connect:build', 'watch'
+        'copy:assets', 'cssmin', 'connect:build'
     ]);
 
     grunt.registerTask('buildTheme', [
@@ -129,6 +129,7 @@ module.exports = function (grunt) {
                         'assets/codrops/menu_cornermorph.css',
                         'assets/codrops/component.css',
                         'assets/codrops/content.css',
+                        'assets/codrops/blueprint.css',
                         'assets/css/wysiwyg-editor.css',
 
                         'bower_components/trumbowyg/dist/ui/trumbowyg.min.css',

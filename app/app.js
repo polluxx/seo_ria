@@ -9,6 +9,7 @@ define([
     'modules/auth/config',
     'modules/list/config',
     'modules/view/config',
+    'modules/aggregate/config',
 
     'views',
     'polyfills'
@@ -24,6 +25,7 @@ define([
         'module.auth',
         'module.list',
         'module.view',
+        'module.aggregate',
 
         'views'
     ]);

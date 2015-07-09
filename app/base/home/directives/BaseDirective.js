@@ -465,4 +465,11 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
        }
     });
 
+    module.directive('aggHead', function() {
+       return {
+           restrict: "E",
+           templateUrl: "views/aggregate/header.html"
+       }
+    });
+
 });

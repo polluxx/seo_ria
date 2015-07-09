@@ -1837,3 +1837,18 @@ svg {
     width: 56px;
     z-index: 2;
 }
+
+/* AGGREGATE SECTION */
+.aggregate-wrap-header {
+    margin: 10px 20px;
+}
+
+.aggregate-wrap-header input {
+    width: 600px;
+}
+
+.aggregate-wrap-header div {
+    display: inline-block;
+    padding: 10px 20px;
+}
+/* END */
