@@ -1,52 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/bpicons/bpicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/bpicons/bpicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/bpicons/bpicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/bpicons/bpicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/bpicons/bpicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/bpicons/bpicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/controllers/AggregateMainCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/controllers/ConcurrentsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/requests/controllers/RequestsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/spectrals/controllers/SpectralsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/controllers/TopKeysCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/blueprint.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/bpicons/bpicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/bpicons/bpicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/aggregate/concurrents.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/requests/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/spectrals/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/aggregate/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/indexCm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/fonts/bpicons/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/fonts/bpicons/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/requests/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/spectrals/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/aggregate/requests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/aggregate/spectrals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/aggregate/topkeys.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.js" afterPath="$PROJECT_DIR$/build/_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.map" afterPath="$PROJECT_DIR$/build/_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locale/en_GB.json" afterPath="$PROJECT_DIR$/locale/en_GB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/list.html" afterPath="$PROJECT_DIR$/views/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
+    <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="add fix to cm">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/codrops/blueprint.css" afterPath="$PROJECT_DIR$/assets/codrops/blueprint.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -103,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indexCm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.12126246" vertical-offset="73" max-vertical-offset="675">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="675">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -123,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blueprint.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blueprint.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/codrops/blueprint.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="3360">
-              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.6709265" vertical-offset="810" max-vertical-offset="3375">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,7 +136,6 @@
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/config.js" />
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/module.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/assets/codrops/blueprint.css" />
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/config.js" />
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/module.js" />
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/controllers/TopKeysCtrl.js" />
@@ -197,6 +152,7 @@
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/controllers/TopKeysCtrl.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/aggregate/header.html" />
+        <option value="$PROJECT_DIR$/assets/codrops/blueprint.css" />
       </list>
     </option>
   </component>
@@ -624,6 +580,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -639,7 +596,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -808,6 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26357827" vertical-offset="0" max-vertical-offset="626">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,6 +772,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35314092" vertical-offset="707" max-vertical-offset="1320">
           <caret line="61" column="89" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,6 +780,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="27182" max-vertical-offset="27885">
           <caret line="1846" column="12" selection-start-line="1846" selection-start-column="12" selection-end-line="1846" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -843,6 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.023961661" vertical-offset="0" max-vertical-offset="626">
           <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,6 +810,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07188498" vertical-offset="0" max-vertical-offset="626">
           <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,6 +818,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -864,6 +826,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3425775" vertical-offset="0" max-vertical-offset="613">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -871,13 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14376996" vertical-offset="0" max-vertical-offset="626">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/codrops/blueprint.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="3360">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -886,6 +844,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
           <caret line="10" column="60" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,6 +852,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,6 +860,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -914,6 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -921,6 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,6 +891,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07340946" vertical-offset="0" max-vertical-offset="613">
           <caret line="3" column="106" selection-start-line="3" selection-start-column="106" selection-end-line="3" selection-end-column="106" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,6 +899,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
           <caret line="10" column="57" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,6 +907,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
           <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -949,6 +915,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07340946" vertical-offset="0" max-vertical-offset="613">
           <caret line="3" column="105" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -956,6 +923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -963,6 +931,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122349106" vertical-offset="0" max-vertical-offset="613">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,6 +939,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07188498" vertical-offset="0" max-vertical-offset="626">
           <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -977,6 +947,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38338658" vertical-offset="0" max-vertical-offset="626">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -984,6 +955,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7553018" vertical-offset="6587" max-vertical-offset="7200">
           <caret line="470" column="53" selection-start-line="470" selection-start-column="53" selection-end-line="470" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,6 +971,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3670473" vertical-offset="0" max-vertical-offset="613">
           <caret line="15" column="48" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,6 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5511182" vertical-offset="1620" max-vertical-offset="6705">
           <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,8 +1009,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/indexCm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12126246" vertical-offset="73" max-vertical-offset="675">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="675">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/codrops/blueprint.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6709265" vertical-offset="810" max-vertical-offset="3375">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
