@@ -1133,13 +1133,19 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                 });
                 //scope.project = $rootScope.currentProject.id;
                 var modalInstance, textarea, selection = {}, range, checkChanges, watched = false;
-                scope.link = "http://ria.com";
+                scope.link = "http://www.ria.com";
                 scope.wroted = "";
+                scope.links = {
+                    1: "http://auto.ria.com",
+                    2: "http://www.ria.com",
+                    3: "http://dom.ria.com",
+                    5: "http://market.ria.com"
+                };
 
                 checkChanges = function(editor) {
 
                     scope.$watch("model", function() {
-                        console.log(scope.model);
+                        //console.log(scope.model);
                         if(watched || !scope.model) return;
                         //
                         if(scope.model.lenght === 0) return;
@@ -1152,16 +1158,15 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                 $('textarea#edit')
                     .on('editable.initialized editable.contentChanged editable.imageInserted', function (e, editor, img) {
 
-
-
-                        if(!watched) checkChanges(editor);
-
+                        if(!watched) {
+                            checkChanges(editor);
+                        } else {
+                            scope.model = editor.cleanTags(editor.getHTML());
+                            scope.$apply();
+                        }
                         //
-                        scope.model = editor.cleanTags(editor.getHTML());
-                        scope.$apply();
 
                         if(img) {
-
                             img[0].width = 620;
                             img[0].classList.remove("fr-fin");
                             img[0].classList.add("fr-fil");
@@ -1219,7 +1224,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                         controller: "modalContentCtrl",
                         resolve: {
                             link: function () {
-                                return scope.link;
+                                return scope.links[scope.project] || scope.link;
                             }
                         }
                     });

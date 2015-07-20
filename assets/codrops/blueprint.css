@@ -189,7 +189,7 @@ a:hover {
     font-size: 24px;
 }
 
-.bp-header nav a:hover:after {
+.bp-header nav a:hover:after, .bp-header nav a.active:after {
     color: #fff;
 }
 

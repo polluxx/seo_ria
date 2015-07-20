@@ -1,19 +1,18 @@
-<div class="hide">
+
     <div class="aggregate-wrap-header">
         <div>
             <input type="text" class="inputbox" ng-model="target" placeholder="Целевой url"/>
         </div>
         <div>
-            <button class="inputbox btn btn-default" ng-click="start()">Start</button>
+            <button class="inputbox btn btn-default" ng-click="start()">Начать</button>
         </div>
     </div>
 
     <div class="bp-header">
         <nav>
             <a href="/aggregate/topkeys?target={{target}}" class="bp-icon bp-icon-next" ng-class="{'active': path == '/aggregate/topkeys'}" data-info="TOP запросов"><span>TOP запросов</span></a>
-            <a href="/aggregate/concurents?target={{target}}" class="bp-icon bp-icon-next" data-info="TOP конкурентов"><span>TOP конкурентов</span></a>
-            <a href="/aggregate/requests?target={{target}}" class="bp-icon bp-icon-drop" data-info="Запросы конкурентов"><span>Запросы конкурентов</span></a>
-            <a href="/aggregate/spectrals?target={{target}}" class="bp-icon bp-icon-archive" data-info="Спектральные синонимы"><span>Спектральные синонимы</span></a>
+            <a href="/aggregate/concurrents?target={{target}}" class="bp-icon bp-icon-next" ng-class="{'active': path == '/aggregate/concurrents'}" data-info="TOP конкурентов"><span>TOP конкурентов</span></a>
+            <a href="/aggregate/requests?target={{target}}" class="bp-icon bp-icon-drop" ng-class="{'active': path == '/aggregate/requests'}" data-info="Запросы конкурентов"><span>Запросы конкурентов</span></a>
+            <a href="/aggregate/spectrals?target={{target}}" class="bp-icon bp-icon-archive" ng-class="{'active': path == '/aggregate/spectrals'}" data-info="Спектральные синонимы"><span>Спектральные синонимы</span></a>
         </nav>
-</div>
 </div>

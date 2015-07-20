@@ -93,6 +93,7 @@ define([
 
 
         var makeItem = function(result, times) {
+
             if(result != 'nulled') {
                 result = new Date(result);
             }
@@ -102,6 +103,7 @@ define([
                 item = {time:result, value:[]};
                 results.push(item);
             }
+
             $scope.daysList = results;
         };
 
@@ -138,7 +140,9 @@ define([
         //$scope.currentDate.setMonth(from.getMonth()+1);
         $scope.dateSet = function(dateOld, isTimeout) {
             var date = new Date(dateOld.getTime());
+
             date.setDate(1);
+
             var fromday = findDaysSlice(date);
             makeItem("nulled", fromday);
 

@@ -23,7 +23,7 @@ define([
         var linkTo, linksTo = {draft:"drafts", planned:"list"}, userIndex, userData=["id", "name", "email"];
 
         $rootScope.$watch("currentProject", function() {
-            if($rootScope.currentProject == undefined) return;
+            if($rootScope.currentProject === undefined) return;
 
             $scope.doc.project = $rootScope.currentProject.id;
         });
@@ -34,20 +34,38 @@ define([
             $scope.rubrics = $rootScope.rubrics;
             if($scope.rubrics == undefined) return;
 
-            $scope.doc.rubric = $rootScope.rubric = $scope.rubrics[0];
+            var rubricIndex = 0;
+            if($scope.doc !== undefined && $scope.doc.rubric !== undefined) {
+                rubricIndex = $scope.rubrics.findIndex(getRubricIndex);
+                if(!~rubricIndex) rubricIndex = 0;
+            }
+
+            $scope.doc.rubric = $rootScope.rubric = $scope.rubrics[rubricIndex];
             $scope.$loading = false;
         });
+
+        // Helpers
+        function getUserIndex(element, index) {
+            if(element.id === bzUser.userdata.id) {
+                return true; // IMPORTANT we must return NOT index, but TRUE if match found
+            }
+        }
+        function getProjectIndex(elm, index) {
+            if(elm.id === $scope.doc.project) {
+                return true;
+            }
+        }
+        function getRubricIndex(elm, index) {
+            if(elm.id === $scope.doc.rubric.id) {
+                return true;
+            }
+        }
+        //
 
         $rootScope.$watch("authors", function () {
             //$scope.$loading = true;
             $scope.authors = $rootScope.authors;
             if($rootScope.authors == undefined || bzUser.userdata == undefined) return;
-
-            function getUserIndex(element, index) {
-                if(element.id === bzUser.userdata.id) {
-                    return true; // IMPORTANT we must return NOT index, but TRUE if match found
-                }
-            }
 
             userIndex = $rootScope.authors.findIndex(getUserIndex);
 
@@ -181,6 +199,9 @@ define([
                 $scope.doc.publication.date = new Date(resp.doc.publication.date);
 
                 $scope.doc.author.id = +$scope.doc.author.id;
+
+                var projectIndex = $rootScope.projects.findIndex(getProjectIndex);
+                if(~projectIndex) $rootScope.currentProject = $rootScope.projects[projectIndex];
             })
         };
 
@@ -188,7 +209,6 @@ define([
             $scope.$loading = true;
             //console.log($scope.doc);
             $scope.doc.author = mapUserData($scope.doc.author);
-
 
 
             PostFactory.send($scope.doc, function(resp) {
