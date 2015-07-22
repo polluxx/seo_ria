@@ -1837,6 +1837,9 @@ svg {
     width: 56px;
     z-index: 2;
 }
+button:visited, button:active {
+    border: none !important;
+}
 
 /* AGGREGATE SECTION */
 .aggregate-wrap-header {

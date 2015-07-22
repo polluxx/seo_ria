@@ -1129,10 +1129,11 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
             link: function(scope, element, attrs) {
                 scope.project = 1;
                 $rootScope.$watch("currentProject", function() {
+                    if(!$rootScope.currentProject) return;
                     scope.project = $rootScope.currentProject.id;
                 });
                 //scope.project = $rootScope.currentProject.id;
-                var modalInstance, textarea, selection = {}, range, checkChanges, watched = false;
+                var modalInstance, textarea, selection = {}, range, checkChanges, watched = null;
                 scope.link = "http://www.ria.com";
                 scope.wroted = "";
                 scope.links = {
@@ -1145,25 +1146,30 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                 checkChanges = function(editor) {
 
                     scope.$watch("model", function() {
-                        //console.log(scope.model);
-                        if(watched || !scope.model) return;
-                        //
-                        if(scope.model.lenght === 0) return;
 
-                        editor.setHTML(scope.model);
-                        watched = true;
+                        scope.model = scope.model || "";
+                        //if(scope.model !== undefined) {
+                            console.log(scope.model.length);
+                            editor.setHTML(scope.model);
+                        //}
+                        if(scope.model.length > 0) watched = true;
+                        if(scope.model.length == 0) watched = false;
+
                     });
                 }
 
-                $('textarea#edit')
+                var editorObj;
+                 $('textarea#edit')
                     .on('editable.initialized editable.contentChanged editable.imageInserted', function (e, editor, img) {
 
-                        if(!watched) {
-                            checkChanges(editor);
-                        } else {
-                            scope.model = editor.cleanTags(editor.getHTML());
-                            scope.$apply();
-                        }
+
+
+                         if(watched === true || watched === false) {
+                             scope.model = editor.cleanTags(editor.getHTML());
+                             scope.$apply();
+                         } else {
+                             initData(editor);
+                         }
                         //
 
                         if(img) {
@@ -1214,6 +1220,13 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                             }
                         }
                     });
+
+                function initData(editor) {
+                    //editorObj = editor;
+                    checkChanges(editor);
+                }
+                //
+
                 document.querySelector(".froala-box > div:last-child").remove();
 
                 scope.open = function (select) {
