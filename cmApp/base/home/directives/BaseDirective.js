@@ -1160,23 +1160,28 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
 
                 var editorObj;
                  $('textarea#edit')
-                    .on('editable.initialized editable.contentChanged editable.imageInserted', function (e, editor, img) {
+                    .on('editable.initialized editable.imageInserted editable.contentChanged', function (e, editor, img) {
 
 
+                         if(img) {
+                             img[0].width = 620;
+                             img[0].classList.remove("fr-fin");
+                             img[0].classList.add("fr-fil");
+                         }
 
-                         if(watched === true || watched === false) {
-                             scope.model = editor.cleanTags(editor.getHTML());
-                             scope.$apply();
+                         if(watched === true || watched === false || img) {
+
+                             setTimeout(function() {
+                                 scope.model = editor.cleanTags(editor.getHTML());
+                                 scope.$apply();
+                             }), 0;
+
                          } else {
                              initData(editor);
                          }
                         //
 
-                        if(img) {
-                            img[0].width = 620;
-                            img[0].classList.remove("fr-fin");
-                            img[0].classList.add("fr-fil");
-                        }
+
                     })
                     .editable({
                         inlineMode: false,
