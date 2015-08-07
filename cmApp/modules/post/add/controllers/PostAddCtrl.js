@@ -207,9 +207,15 @@ define([
 
         $scope.docSave = function() {
             $scope.$loading = true;
-            //console.log($scope.doc);
-            $scope.doc.author = mapUserData($scope.doc.author);
 
+
+            var updater = new Event('updated', {'detail': {times: 0}});
+            document.dispatchEvent(updater);
+
+
+            //
+            $scope.doc.author = mapUserData($scope.doc.author);
+            console.log($scope.doc);
 
             PostFactory.send($scope.doc, function(resp) {
                 $scope.$loading = false;

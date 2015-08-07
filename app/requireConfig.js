@@ -41,7 +41,7 @@ requirejs.config({
         'angular-ui-select2': '../bower_components/angular-ui-select2/src/select2',
         'ng-ckeditor': '../bower_components/ng-ckeditor/ng-ckeditor.src',
         'ng-editable-tree': '../bower_components/ng-editable-tree/ng-editable-tree',
-        'ng-table': '../bower_components/ng-table/ng-table.src',
+        'ng-table': '../bower_components/ng-table/dist/ng-table.min',
         'ngFinder': '../bower_components/ng-finder/ng-finder.src',
         'bzUploader': '../bower_components/bz-uploader/bz-uploader.src',
         'bz-nested-model': '../bower_components/bz-nested-model/bz-nested-model',

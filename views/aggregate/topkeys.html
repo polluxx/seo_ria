@@ -1,7 +1,35 @@
 <agg-head></agg-head>
 
-<section>
-    <div ng-if="data" ng-repeat="item in data">
+<div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
+
+<!--section class="outer">
+    <div ng-if="data" ng-repeat="item in data" class="list">
         {{item}}
     </div>
-</section>
+</section-->
+
+<div ng-show="searcheble" class="outer" loading-container="tableParams.settings().$loading">
+    <table ng-table="tableParams" class="table-new">
+        <tbody>
+        <tr ng-repeat="post in $data">
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td data-title="'Фраза'" sortable="'src'">
+                <span>{{post.src}}</span>
+            </td>
+            <td data-title="'Позиция'" sortable="'position'">
+                <span>{{post.position || 0}}</span>
+            </td>
+            <td data-title="'Показы'" sortable="'queriesCount'">
+                <span>{{post.queriesCount || 0}}</span>
+            </td>
+            <td>
+                <a href="javascript:void(0)" class="glyphicon glyphicon-trash remove" title="remove"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+

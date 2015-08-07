@@ -5,6 +5,15 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
             restrict:"A",
             link: function(scope, element, attrs) {
                 $rootScope.currentProject = localStorageService.get("currentProject");
+
+                $rootScope.domains = {
+                    1: "http://auto.ria.com",
+                    2: "https://www.ria.com",
+                    3: "http://dom.ria.com",
+                    5: "https://market.ria.com"
+                };
+                $rootScope.domain = $rootScope.domains[$rootScope.currentProject];
+
                 var timeout = null, time = 0, secondTime = 0, currentText;
                 $rootScope.searchval = "";
                 $rootScope.issearch = false;

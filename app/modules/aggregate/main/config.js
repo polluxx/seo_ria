@@ -1,7 +1,9 @@
 /**
  * Created by root on 08.07.15.
  */
-define(['modules/aggregate/main/module','modules/aggregate/main/controllers/AggregateMainCtrl'], function(module) {
+define(['modules/aggregate/main/module',
+    'modules/aggregate/main/controllers/AggregateMainCtrl',
+    'modules/aggregate/main/factories/AggregateFactory'], function(module) {
     'use strict';
 
     module.config(['$routeSegmentProvider', 'bzConfigProvider', 'bzUserProvider',

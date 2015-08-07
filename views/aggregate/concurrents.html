@@ -1,1 +1,9 @@
 <agg-head></agg-head>
+
+<div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
+
+<section class="outer">
+    <div ng-if="data" ng-repeat="item in data" class="list">
+        {{item}}
+    </div>
+</section>

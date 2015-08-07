@@ -47,12 +47,12 @@
                 <span ng-if="!post.$editableRubric" ng-click="post.$editableRubric = !this.$editableRubric" >{{post.rubric.name}}</span>
                 <select chengable="docUpdate(post)"  width="200px" ng-if="post.$editableRubric" ng-blur="post.$editableRubric = false" ng-model="post.rubric" name="rubrics" class="form-control inputbox" ng-options="rubric.name for rubric in rubrics track by rubric.id"></select>
             </td>
-            <td data-title="'smm'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1">
+            <!--td data-title="'smm'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1">
                 <morph-btn ng-if="post.doctype == 'planned'" class="morph" update="docUpdate(post)" errors="errors" name="Smm" btn="Smm" confirm="Сохранить" fields="post.smm" ng-init="post.smm = post.smm != undefined ? post.smm : [{name:'email SMM', doctype:'email'},{name:'email руководителя проекта', doctype:'emailLeader'}]"></morph-btn>
             </td>
             <td data-title="'email'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" >
                 <morph-btn ng-if="post.doctype == 'planned'" class="morph" update="docUpdate(post)" errors="errors" name="Email" btn="Email" confirm="Сохранить" fields="post.email" ng-init="post.email = post.email != undefined ? post.email : [{name:'email маркетинг', doctype:'spec'}]"></morph-btn>
-            </td>
+            </td-->
             <td ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" data-title="'Операции'">
                 <a href="/post/add/{{post._id}}">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>

@@ -12,7 +12,10 @@ define([
     'modules/aggregate/config',
 
     'views',
+    'ng-table',
+
     'polyfills'
+
 ], function (angular) {
     'use strict';
 
@@ -27,6 +30,7 @@ define([
         'module.view',
         'module.aggregate',
 
-        'views'
+        'views',
+        'ngTable'
     ]);
 });

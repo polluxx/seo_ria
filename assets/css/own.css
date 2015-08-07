@@ -1847,11 +1847,27 @@ button:visited, button:active {
 }
 
 .aggregate-wrap-header input {
-    width: 600px;
+    width: 780px;
 }
 
 .aggregate-wrap-header div {
     display: inline-block;
     padding: 10px 20px;
+}
+
+.outer {
+    margin: 0 24px 24px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    position: relative;
+    overflow: none;
+}
+
+thead {
+    background-color: #E6E6E6;
+    font-size: 17px;
+}
+.ng-table th {
+    padding: 5px;
 }
 /* END */

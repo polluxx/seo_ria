@@ -1127,21 +1127,26 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                 model: "=ngModel"
             },
             link: function(scope, element, attrs) {
-                scope.project = 1;
+                // Models
+                angular.extend(scope, {
+                    project: 1,
+                    link: "http://www.ria.com",
+                    wroted: "",
+                    links: {
+                        1: "http://auto.ria.com",
+                        2: "http://www.ria.com",
+                        3: "http://dom.ria.com",
+                        5: "http://market.ria.com"
+                    }
+                });
+
                 $rootScope.$watch("currentProject", function() {
                     if(!$rootScope.currentProject) return;
                     scope.project = $rootScope.currentProject.id;
                 });
                 //scope.project = $rootScope.currentProject.id;
                 var modalInstance, textarea, selection = {}, range, checkChanges, watched = null;
-                scope.link = "http://www.ria.com";
-                scope.wroted = "";
-                scope.links = {
-                    1: "http://auto.ria.com",
-                    2: "http://www.ria.com",
-                    3: "http://dom.ria.com",
-                    5: "http://market.ria.com"
-                };
+
 
                 checkChanges = function(editor) {
 
@@ -1156,7 +1161,63 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                         if(scope.model.length == 0) watched = false;
 
                     });
-                }
+                };
+
+                // Methods
+
+                angular.extend(scope, {
+                    open: function (select) {
+
+                        modalInstance = $modal.open({
+                            animation: true,
+                            templateUrl: '/views/cm/modalDialog.html',
+                            controller: "modalContentCtrl",
+                            resolve: {
+                                link: function () {
+                                    return scope.links[scope.project] || scope.link;
+                                }
+                            }
+                        });
+
+                        modalInstance.result.then(function (text) {
+                            textarea.setSelection(selection.startNode, selection.startOffset, selection.endNode, selection.endOffset);
+                            selection = {};
+                            textarea.insertHTML(
+                                '<p><div class="aside-tweet">' +
+                                '<img src="http://cm.ria.com/assets/img/twitter.svg" width="64" height="64"/>' +
+                                '<h3">Процитировать в Твиттере</h3>' +
+                                '<p style="  font-size: 21px;line-height: 26px;">' +
+                                '<a style="color: #06c;font-family: pt-serif-caption;text-decoration: none;" href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
+                                '</p>' +
+                                '</div></p>' +
+                                '<p><br/></p>'
+                            );
+
+
+                            // Save HTML in undo stack.
+                            textarea.saveUndoStep();
+
+                            //textarea = undefined;
+                        }, function () {
+                            //$log.info('Modal dismissed at: ' + new Date());
+                        });
+                    },
+                    listener: function(editor) {
+                        if(watched !== null) return;
+
+
+
+                        var self = this;
+                        document.addEventListener('updated', function(e) {
+                            console.log(e);
+                            self.model = editor.cleanTags(editor.getHTML());
+                            self.$apply();
+                        });
+
+
+                    }
+                });
+
 
                 var editorObj;
                  $('textarea#edit')
@@ -1171,13 +1232,9 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
 
                          if(watched === true || watched === false || img) {
 
-                             setTimeout(function() {
-                                 scope.model = editor.cleanTags(editor.getHTML());
-                                 scope.$apply();
-                             }), 0;
-
                          } else {
                              initData(editor);
+                             scope.listener(editor);
                          }
                         //
 
@@ -1199,6 +1256,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                             width: 620,
                             height: 360
                         },
+                         imagesLoadParams: {width: 640},
                         buttons:["bold", "italic", "underline", "twitter", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
                         customButtons: {
                             twitter: {
@@ -1231,45 +1289,9 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                     checkChanges(editor);
                 }
                 //
-
                 document.querySelector(".froala-box > div:last-child").remove();
 
-                scope.open = function (select) {
 
-                    modalInstance = $modal.open({
-                        animation: true,
-                        templateUrl: '/views/cm/modalDialog.html',
-                        controller: "modalContentCtrl",
-                        resolve: {
-                            link: function () {
-                                return scope.links[scope.project] || scope.link;
-                            }
-                        }
-                    });
-
-                    modalInstance.result.then(function (text) {
-                        textarea.setSelection(selection.startNode, selection.startOffset, selection.endNode, selection.endOffset);
-                        selection = {};
-                        textarea.insertHTML(
-                            '<p><div class="aside-tweet">' +
-                                '<img src="http://cm.ria.com/assets/img/twitter.svg" width="64" height="64"/>' +
-                                '<h3">Процитировать в Твиттере</h3>' +
-                                '<p style="  font-size: 21px;line-height: 26px;">' +
-                                    '<a style="color: #06c;font-family: pt-serif-caption;text-decoration: none;" href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
-                                '</p>' +
-                            '</div></p>' +
-                            '<p><br/></p>'
-                        );
-
-
-                        // Save HTML in undo stack.
-                        textarea.saveUndoStep();
-
-                        //textarea = undefined;
-                    }, function () {
-                        //$log.info('Modal dismissed at: ' + new Date());
-                    });
-                };
             }
         }
     }).
