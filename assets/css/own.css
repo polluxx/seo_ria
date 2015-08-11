@@ -1870,4 +1870,50 @@ thead {
 .ng-table th {
     padding: 5px;
 }
+
+
+.table-new {
+    font-family: "Open-Sans";
+    font-size: 14px !important;
+}
+
+.table-new .ng-binding {
+    font-size: 16px;
+}
+
+.table-new.seo-table .active {
+    background-color: #ffc;
+    color: #4A4646;
+}
+.table-new.seo-table .active a, .table-new.seo-table .active span {
+    color: #4A4646!important;
+}
+
+
+.view-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: -150px;
+    max-height: 500px;
+    background-color: whitesmoke;
+    width: 150px;
+    height: 140px;
+    z-index: 2;
+}
+.view-buttons div {
+    margin: 10px 20px 0px 10px;
+    float: right;
+    width: 107px;
+}
+.view-buttons span:nth-child(1){
+    margin-right: 6px;
+}
+.view-buttons.active {
+    left: 0px;
+}
+.marked-text {
+    margin: 10px 0 0 0;
+    height: 20px;
+}
+
 /* END */

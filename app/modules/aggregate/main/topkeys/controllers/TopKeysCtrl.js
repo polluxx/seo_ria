@@ -12,16 +12,23 @@ define([
         // MODELS
         angular.extend($scope, {
             target: this.target || $routeParams.target,
+            selected: { 'checked': false, items: {} },
             searcheble: false,
+            containsData: null,
             domain: $rootScope.domain,
             path: $location.path(),
+            update: undefined,
+            marked: [],
+            lastChecked: null,
+            shiftPressed: false,
             params: {
-                target: this.domain + "/" + this.target,
+                target: this.target,
                 page: 1,            // show first page
-                count: 10,          // count per page
+                count: 100,          // count per page
                 sorting: {
-                    position: 'desc'     // initial sorting
-                }
+                    position: 'asc'     // initial sorting
+                },
+                newCheck: this.update
             },
             tableParams: new ngTableParams(this.params, {
                 total: 0,           // length of data
@@ -30,14 +37,24 @@ define([
                     // ajax request to api
                     AggregateFactory.top(params.url(), function(data) {
                         //$scope.tableParams.$loading = false;
-                        params.total(data.data.length);
+                        //console.log(data.data);
+
+                        if(!data.data) {
+                            $scope.containsData = null;
+                            $defer.resolve(data.data);
+                            $scope.errors = [data.error];
+
+                            return;
+                        }
+
+                        params.total(data.data.total);
                         // set new data
-                        $defer.resolve(data.data);
+                        $scope.containsData = data.data.items.length ? true : false;
+                        $defer.resolve($scope.list = data.data.items);
                     });
                 }
             })
         });
-
 
 
         // METHODS
@@ -49,37 +66,105 @@ define([
                 }
 
                 this.target = this.target.trim().replace(/(^\/|\/$)/g, "");
-                if(this.target.match(/(http|https|www|\s)/g)) {
+                /*if(this.target.match(/(http|https|www|\s)/g)) {
                     alertify.error("Недопустимые символы в ссылке");
                     return null;
-                }
+                }*/
 
                 return true;
             },
-            start: function() {
+            start: function(update) {
+                this.errors = [];
+
+                this.containsData = null;
                 this.searcheble = true;
                 if(!this.validate()) return;
                 var self = this;
-                $location.search({target: this.target});
 
-                this.tableParams.parameters({target: this.domain + "/" + this.target});
+                if(update != undefined) {
+                    this.params.newCheck = this.update = update;
+                    alertify.log("Запрос поставлен в очередь на проверку.");
+                }
+                //this.params.target = this.domain + "/" + this.target;
+                this.params.target = this.target;
+
+                $location.search(this.params);
+                console.log(this.params);
+                this.tableParams.parameters(this.params);
                 this.tableParams.reload();
 
+            },
+            checkboxes: function(){
+                var self = this;
 
-                //return;
-                /*AggregateFactory.top(params, function(response){
-                    self.$loading = false;
-                   if(response.errors !== undefined) {
+                $scope.$watch("selected.checked", function(value) {
+                    angular.forEach($scope.list, function(item) {
+                        if (angular.isDefined(item.src)) {
+                            $scope.selected.items[item.src] = value;
+                            $scope.checkBox(item, value);
+                        }
+                    });
+                });
+            }(),
+            checkBox: function(item, type, bulk) {
 
-                       self.errors = response.errors;
-                       self.data = null;
-                       return;
-                   }
+                var index = $scope.marked.indexOf(item.src);
 
-                    self.data = response.data;
-                });*/
+                // check shift
+                if($scope.shiftPressed && bulk === undefined) {
+                    this.setBulk($scope.lastChecked, item);
+                    return;
+                }
+
+                $scope.lastChecked = item;
+
+
+                if(~index && !type) $scope.marked.splice(index, 1);
+                if(!~index && type) $scope.marked.push(item.src);
+                //$scope.$apply();
+            },
+            setBulk: function(from, to) {
+                if(from === null) return;
+
+                var start = null, end = null, value, src;
+                angular.forEach($scope.list, function(item) {
+                    src = item.src;
+                    if(end !== null) return;
+                    if(src === from.src) {
+                        if(start === null) {
+                            start = from.src;
+                        } else {
+                            if(end === null) end = from.src;
+                        }
+                    }
+                    if(src === to.src) {
+                        if(start === null) {
+                            start = to.src;
+                        } else {
+                            if(end === null) end = to.src;
+                        }
+                    }
+                    if(start !== null) {
+                        if(src === start) {
+                            value = $scope.selected.items[src];
+                        }
+                        $scope.selected.items[src] = value;
+                        $scope.checkBox(item, value, true);
+                    }
+
+                });
             }
         });
+
+        document.addEventListener('keydown', function(e) {
+            if(e.shiftKey) $scope.shiftPressed = true;
+        });
+        document.addEventListener('keyup', function(e) {
+            if(e.keyCode === 16) $scope.shiftPressed = false;
+        });
+
+        // init search
+        if($scope.target) $scope.start();
     }]);
 
 

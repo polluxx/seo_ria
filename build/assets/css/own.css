@@ -1847,11 +1847,67 @@ button:visited, button:active {
 }
 
 .aggregate-wrap-header input {
-    width: 600px;
+    width: 780px;
 }
 
 .aggregate-wrap-header div {
     display: inline-block;
     padding: 10px 20px;
 }
+
+.outer {
+    margin: 0 24px 24px;
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    position: relative;
+    overflow: none;
+}
+
+thead {
+    background-color: #E6E6E6;
+    font-size: 17px;
+}
+.ng-table th {
+    padding: 5px;
+}
+
+
+.table-new {
+    font-family: "Open-Sans";
+    font-size: 14px !important;
+}
+
+.table-new .ng-binding {
+    font-size: 16px;
+}
+
+.table-new.seo-table .active {
+    background-color: #ffc;
+    color: #4A4646;
+}
+.table-new.seo-table .active a, .table-new.seo-table .active span {
+    color: #4A4646!important;
+}
+
+
+.view-buttons {
+    position: absolute;
+    top: 26px;
+    left: 0;
+
+    overflow-x: hidden;
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    width: 150px;
+    height: 100px;
+    z-index: 2;
+}
+.view-buttons div {
+    margin: 10px 20px 0px 10px;
+}
+.view-buttons.active {
+    left: -100px;
+}
+
 /* END */

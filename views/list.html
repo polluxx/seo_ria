@@ -59,7 +59,7 @@
             <div class="list-op text" ng-if="link.hasChilds"><a href="/childs/{{link.project}}?parent={{link._id}}" title="дочерние"><div class="op-icon glyphicon glyphicon-folder-open"></div></a></div>
             <div class="list-op text"><a href="/view?itemid={{link._id}}" title="редактирование"><div class="op-icon glyphicon glyphicon-zoom-in"></div></a></div>
 
-            <div class="list-op text" ng-if="!link.hasChilds"><a href="/aggregate/topkeys?target={{link._id}}" title="подобрать СЯ"><div class="op-icon glyphicon glyphicon-transfer"></div></a></div>
+            <div class="list-op text" ng-if="!link.hasChilds"><a href="/aggregate/topkeys?target={{domain}}/{{link._id}}" title="подобрать СЯ"><div class="op-icon glyphicon glyphicon-transfer"></div></a></div>
         </div>
 
     </div>

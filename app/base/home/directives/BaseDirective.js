@@ -481,4 +481,33 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
        }
     });
 
+    module.directive("checkboxer", function() {
+        return {
+            restrict: "A",
+            scope: {
+                model: "=checkboxer"
+            },
+            link: function(scope, element, attrs) {
+                element[0].addEventListener("click", function(e) {
+                    if(e.target.tagName.toLowerCase() === attrs.checkboxer) {
+                        scope.select(e.target);
+                    }
+                });
+
+                scope.select = function(parent) {
+                    var checkbox = parent.querySelector("input[type='checkbox']");
+                    if(!checkbox) return;
+
+                    var scopeEl = angular.element(checkbox).data('$ngModelController').$modelValue;
+                    angular.element(checkbox).data('$ngModelController').$modelValue = !scopeEl;
+
+
+
+                    //angular.element(checkbox).val(!angular.element(checkbox).val());
+                    //scope.$apply();
+                }
+            }
+        };
+    });
+
 });
