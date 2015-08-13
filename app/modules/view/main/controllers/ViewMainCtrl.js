@@ -9,6 +9,7 @@ define([
             width;
         $scope.doc = {};
         $scope.$loading = true;
+        $scope.langs = [{"id":1, "name":"ru"}, {"id":2, "name":"uk"}];
 
         $scope.getDoc = function() {
             $scope.$loading = true;
@@ -35,20 +36,23 @@ define([
         $scope.getDoc();
 
         console.log($rootScope);
-        $scope.langs = [{"id":1, "name":"ru"}, {"id":2, "name":"uk"}];
-        $scope.selectedLang = $scope.langs[0];
-        $scope.variables = [{"id":1, "name":"Категорії"}, {"id":2, "name":"Типи"}, {"id":3, "name":"Регіон"}];
-        $scope.selectedVarType = 0;
-        $scope.dataCanSave = false;
-        $scope.validate = false;
-        $scope.rewriteItem = "";
-        $scope.errors = [];
-        $scope.varsRewrites = {};
-        $scope.varsLoading = false;
-        $scope.searchparams = {
-            limit: 10,
-            project: $rootScope.currentProject || $rootScope.searchParams.project
-        };
+
+        angular.extend($scope, {
+            selectedLang : $scope.langs[0],
+            variables : [{"id":1, "name":"Категорії"}, {"id":2, "name":"Типи"}, {"id":3, "name":"Регіон"}],
+            selectedVarType : 0,
+            dataCanSave : false,
+            validate : false,
+            rewriteItem : "",
+            errors : [],
+            varsRewrites : {},
+            varsLoading : false,
+            searchparams : {
+                limit: 10,
+                project: $rootScope.currentProject || $rootScope.searchParams.project
+            },
+            varsAll: {}
+        });
 
         // clear search value
         $rootScope.searchval = "";
@@ -95,34 +99,32 @@ define([
         }
 
         var interval = {};
-        $scope.checkForRewrites = function (callback) {
+        $scope.checkForRewrites = function (lang, callback) {
 
             if($scope.varsLoading) {
                 interval = setTimeout(function() {
-                    $scope.checkForRewrites(callback);
+                    $scope.checkForRewrites(lang, callback);
                 }, 200);
             } else if(Object.keys($scope.varsRewrites).length > 0) {
                 //clearTimeout(interval);
-                return callback($scope.varsRewrites);
+                return callback($scope.getRewritesForLang(lang));
             } else {
                 $scope.getVarsNames(function () {
-                    callback($scope.varsRewrites);
+                    callback($scope.getRewritesForLang(lang));
                 });
             }
         };
 
+        $scope.getRewritesForLang = function(lang) {
+            return $scope.varsAll[lang];
+        };
 
-        $scope.checkData = function(items, callback) {
-            //console.log(items);
-
+        $scope.checkData = function(items, lang, callback) {
             if(Object.keys($scope.varsRewrites).length > 0) {
-                callback($scope.varsRewrites);
+                callback($scope.getRewritesForLang(lang));
             } else {
-
-                $scope.checkForRewrites(callback);
-
+                $scope.checkForRewrites(lang, callback);
             }
-
         };
 
 
@@ -204,6 +206,7 @@ define([
             }
 
             $scope.varsLoading = true;
+
             $routeParams.vars = JSON.stringify($scope.doc.vars);
             /*
             var link = "http://market.rest.ria.ua/seo/seo_example_for_param/"+vars;
@@ -223,8 +226,9 @@ define([
                    alertify.error('помилка отримання змімнних з проекту');
                    return;
                }
-
-                $scope.varsRewrites = JSON.parse(response.vars);
+                var rewriteArray = JSON.parse(response.vars);
+                $scope.varsRewrites = rewriteArray;
+                $scope.varsAll = {ru: rewriteArray, uk: response.varsUk !== undefined ? JSON.parse(response.varsUk) : rewriteArray};
                 callback();
             });
 

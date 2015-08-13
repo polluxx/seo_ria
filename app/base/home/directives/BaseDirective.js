@@ -8,7 +8,7 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
 
                 $rootScope.domains = {
                     1: "http://auto.ria.com",
-                    2: "https://www.ria.com",
+                    2: "http://www.ria.com",
                     3: "http://dom.ria.com",
                     5: "https://market.ria.com"
                 };
@@ -66,14 +66,16 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                 scope.checkVariables = function(text) {
                     if(text == undefined) return;
 
-                    items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\})/gi);
+                    items = text.match(/(\[[_0-9a-zA-Zа-яА-Я]+\]|\{[a-zA-Zа-яА-Я]+\}|\&[_0-9a-zA-Zа-яА-Я]+\&)/gi);
                     if(items == undefined) return;
 
                     element[0].disabled = true;
 
+
+                    var lang = attrs.lang !== undefined ? attrs.lang : "ru";
                     var rewrites = Object.getOwnPropertyNames(scope.rewrites);
                     if(rewrites.length == 0) {
-                        scope.changeble({items:items, callback:function(response) {
+                        scope.changeble({items:items, lang: lang, callback:function(response) {
                             scope.rewrites = response;
                             scope.setVariables(text, response);
                         }});
@@ -84,7 +86,9 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                         rewrites.forEach(function(val) {
                             if(items.indexOf(val) != -1) {
                                 varsIn = true;
+
                             }
+
                         });
 
                         if(!varsIn) {

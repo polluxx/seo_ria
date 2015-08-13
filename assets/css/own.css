@@ -868,6 +868,10 @@ svg:not(:root) {
 
 .variables {
     position: relative;
+
+}
+.variables.col-lg-3 {
+    padding-right: 0;
 }
 
 .saveBtn {
@@ -903,9 +907,9 @@ svg:not(:root) {
 }
 .variable-names {
     display: table;
-    font-size: 18px;
-    margin: 10px;
-    padding: 2px 4px;
+    font-size: 13px;
+    margin: 5px 0px;
+    padding: 2px 2px;
     color: #1F6264;
     background-color: #F2F8F9;
     white-space: nowrap;
@@ -1365,6 +1369,12 @@ sign-in .error-message {
 .post-block {
     line-height: 22px;
     text-align: left;
+}
+.post-block span.draft-word {
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    font-size: 11px;
 }
 
 .morph-block {

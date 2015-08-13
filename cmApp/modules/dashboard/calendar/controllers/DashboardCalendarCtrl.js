@@ -32,7 +32,7 @@ define([
                         'to': returnFormattedDate(toDate)
                     }
                 },
-                'limit' : 100
+                'limit' : 200
             };
 
 

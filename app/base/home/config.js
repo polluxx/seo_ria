@@ -2,7 +2,8 @@ define([
     'base/home/module',
 
     'base/home/controllers/BaseHomeCtrl',
-    'base/home/directives/BaseDirective'
+    'base/home/directives/BaseDirective',
+    'base/home/filters/BaseFilters'
 ], function (module) {
     'use strict';
 

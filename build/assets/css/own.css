@@ -868,6 +868,10 @@ svg:not(:root) {
 
 .variables {
     position: relative;
+
+}
+.variables.col-lg-3 {
+    padding-right: 0;
 }
 
 .saveBtn {
@@ -903,9 +907,9 @@ svg:not(:root) {
 }
 .variable-names {
     display: table;
-    font-size: 18px;
-    margin: 10px;
-    padding: 2px 4px;
+    font-size: 13px;
+    margin: 5px 0px;
+    padding: 2px 2px;
     color: #1F6264;
     background-color: #F2F8F9;
     white-space: nowrap;
@@ -1891,23 +1895,29 @@ thead {
 
 
 .view-buttons {
-    position: absolute;
-    top: 26px;
-    left: 0;
-
-    overflow-x: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: -150px;
     max-height: 500px;
-    overflow-y: scroll;
     background-color: whitesmoke;
     width: 150px;
-    height: 100px;
+    height: 140px;
     z-index: 2;
 }
 .view-buttons div {
     margin: 10px 20px 0px 10px;
+    float: right;
+    width: 107px;
+}
+.view-buttons span:nth-child(1){
+    margin-right: 6px;
 }
 .view-buttons.active {
-    left: -100px;
+    left: 0px;
+}
+.marked-text {
+    margin: 10px 0 0 0;
+    height: 20px;
 }
 
 /* END */
