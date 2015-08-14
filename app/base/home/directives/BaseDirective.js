@@ -1,10 +1,11 @@
 define(['base/home/module', 'alertify'], function (module, alertify) {
 
-    module.directive('rootItem', function($rootScope, localStorageService) {
+    module.directive('rootItem', function($rootScope, localStorageService, AggregateFactory) {
         return {
             restrict:"A",
             link: function(scope, element, attrs) {
                 $rootScope.currentProject = localStorageService.get("currentProject");
+                $rootScope.prodvigatorRequests = null;
 
                 $rootScope.domains = {
                     1: "http://auto.ria.com",
@@ -13,11 +14,12 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                     5: "https://market.ria.com"
                 };
                 $rootScope.domain = $rootScope.domains[$rootScope.currentProject];
-
-                var timeout = null, time = 0, secondTime = 0, currentText;
                 $rootScope.searchval = "";
                 $rootScope.issearch = false;
                 $rootScope.listData = {};
+
+                var timeout = null, time = 0, secondTime = 0, currentText;
+
                 //$rootScope.searchParams = {};
 
                 var searchStr, interval, searchlength;
@@ -47,6 +49,14 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                         clearTimeout(interval);
                     }, 600);
                 };
+
+                scope.checkProCount = function() {
+                    AggregateFactory.count({}, function(resp) {
+                        if(resp.data !== undefined) {
+                            $rootScope.prodvigatorRequests = resp.data.left;
+                        }
+                    });
+                }();
 
 
             }

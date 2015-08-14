@@ -10,6 +10,7 @@ define([
         // MODELS
         angular.extend($scope, {
             target: this.target || $routeParams.target,
+            updated: this.updated || $routeParams.updated,
             path: $location.path()
         });
 

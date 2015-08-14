@@ -25,17 +25,17 @@
                 <span>{{post.queriesCount || 0}}</span>
             </td>
             <td>
-                <a href="javascript:void(0)" class="glyphicon glyphicon-trash remove" title="remove"></a>
+                <a href="javascript:void(0)" class="glyphicon glyphicon-trash remove" title="remove" ng-click="remove([post.src])"></a>
             </td>
 
         </tr>
         </tbody>
     </table>
-    {{marked}}
+
     <div class="view-buttons passive " id="op_buttons" ng-class="{'active': marked.length}">
         <div class="inputbox marked-text">Выбрано: {{marked.length}}</div>
         <div class="btn btn-success inputbox outer"><span class="glyphicon glyphicon-play-circle"></span><span>В работу</span></div>
-        <div class="btn btn-danger inputbox outer"><span class="glyphicon glyphicon-trash remove"></span><span>Удалить</span></div>
+        <div class="btn btn-danger inputbox outer" ng-click="remove(marked)"><span class="glyphicon glyphicon-trash remove"></span><span>Удалить</span></div>
     </div>
 </div>
 

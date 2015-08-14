@@ -2,6 +2,13 @@
 
 <div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
 
+<div class="progress aggregator" ng-if="updated">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+        <span class="sr-only">40% Complete (success)</span>
+    </div>
+</div>
+
+
 <section class="outer">
     <div ng-if="data" ng-repeat="item in data" class="list">
         {{item}}

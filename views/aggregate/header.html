@@ -4,7 +4,8 @@
             <input type="text" class="inputbox" ng-model="target" placeholder="Целевой url"/>
         </div>
         <div>
-            <button class="inputbox btn btn-success" ng-click="start(true)">{{containsData ? 'В работу' : 'Начать'}}</button>
+            <button class="inputbox btn btn-default" ng-click="start(true)">Собрать</button>
+            <button class="inputbox btn btn-success" ng-click="next(target, true)" ng-if="containsData">В работу</button>
         </div>
     </div>
 

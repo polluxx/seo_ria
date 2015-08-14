@@ -1370,6 +1370,12 @@ sign-in .error-message {
     line-height: 22px;
     text-align: left;
 }
+.post-block span.draft-word {
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    font-size: 11px;
+}
 
 .morph-block {
     width: 100% !important;

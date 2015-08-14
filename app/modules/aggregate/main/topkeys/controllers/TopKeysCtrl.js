@@ -37,7 +37,7 @@ define([
                     // ajax request to api
                     AggregateFactory.top(params.url(), function(data) {
                         //$scope.tableParams.$loading = false;
-                        //console.log(data.data);
+
 
                         if(!data.data) {
                             $scope.containsData = null;
@@ -47,10 +47,25 @@ define([
                             return;
                         }
 
+                        if(data.data.items === undefined) {
+
+                            $scope.containsData = null;
+                            //$defer.resolve($scope.list = []);
+                            return;
+                        }
+
                         params.total(data.data.total);
                         // set new data
-                        $scope.containsData = data.data.items.length ? true : false;
+                        $scope.containsData = (data.data.items !== undefined && data.data.items.length) ? true : false;
                         $defer.resolve($scope.list = data.data.items);
+                    },
+                    function(err) {
+                        if(err.status !== 200) {
+                            $scope.errors = [err.data.error] || ["Проблема с апи, проверьте позже"];
+                            $scope.containsData = null;
+                            $defer.resolve($scope.list = []);
+                        }
+                        console.log(err);
                     });
                 }
             })
@@ -91,8 +106,24 @@ define([
                 $location.search(this.params);
                 console.log(this.params);
                 this.tableParams.parameters(this.params);
-                this.tableParams.reload();
+                //this.tableParams.reload();
 
+            },
+            next: function(target, isUrl) {
+                var params = {
+                    newCheck: true
+                };
+                if(isUrl) {
+                    params.target = target;
+                } else {
+                    params.keywords = target;
+                }
+                AggregateFactory.concurrents(params, function(resp) {
+                    console.log(resp);
+                });
+
+                alertify.log("Запрос успешно поставлен в очередь");
+                $location.url('/aggregate/concurrents?updated=true&target='+$routeParams.target);
             },
             checkboxes: function(){
                 var self = this;
@@ -116,8 +147,7 @@ define([
                     return;
                 }
 
-                $scope.lastChecked = item;
-
+                if(item.position !== undefined) $scope.lastChecked = item;
 
                 if(~index && !type) $scope.marked.splice(index, 1);
                 if(!~index && type) $scope.marked.push(item.src);
@@ -153,6 +183,41 @@ define([
                     }
 
                 });
+            },
+            remove: function(keyword) {
+                if(keyword === undefined || !keyword instanceof Array) return;
+                var params = {}, map = [], index, item;
+                alertify.confirm("Вы уверены?", function(e) {
+                    if(!e) return;
+
+                    map = keyword;
+                    keyword = keyword.map(function(item) {
+                        return "'"+item+"'";
+                    });
+                    params.query = "MATCH (a:Link),(k:Keyword) OPTIONAL MATCH (a)-[rel]-(k) WHERE k.src IN ["+keyword.join(",")+"] DELETE rel";
+
+                    AggregateFactory.query(params, function(response) {
+                            if(response.results === undefined || !response.results.length) {
+                                alertify.error("Ошибка удаления. Поробуйте позже");
+                                return;
+                            }
+
+                            console.log(map);
+                            for(index in map) {
+                                if(!map.hasOwnProperty(index)) continue;
+
+                                $scope.marked.splice($scope.marked.indexOf(map[index]));
+                            }
+                            $scope.tableParams.reload();
+
+                        },
+                        function(err) {
+                            if(err.status !== 200) {
+                                alertify.error(err.data.error);
+                            }
+                        });
+                });
+
             }
         });
 

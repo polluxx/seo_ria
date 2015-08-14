@@ -1857,12 +1857,17 @@ button:visited, button:active {
 }
 
 .aggregate-wrap-header input {
-    width: 780px;
+    width: 700px;
 }
 
 .aggregate-wrap-header div {
     display: inline-block;
     padding: 10px 20px;
+}
+
+.aggregator.progress {
+    height: 6px;
+    border-radius: 1px;
 }
 
 .outer {
@@ -1927,3 +1932,11 @@ thead {
 }
 
 /* END */
+
+.prodvigator-icon {
+    font-weight: bolder;
+    font-size: 22px;
+    background-color: rgba(216, 20, 41, 0.80);
+    padding: 2px 5px 0px 7px;
+    color: #fff0ff;
+}
