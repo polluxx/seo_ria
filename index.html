@@ -88,7 +88,7 @@
                                 <span class="pull-left">{{progress.message || progress.target}}</span>
                                 <small class="pull-right text-muted">{{progress.percentile}}%</small>
                             </div>
-                            <div class="progress progress-striped active">
+                            <div class="progress progress-striped" ng-class="{'active':progress.percentile<100}">
                                 <div class="progress-bar progress-bar-success " ng-style="{width:progress.percentile+'%'}"></div>
                             </div>
                         </a>

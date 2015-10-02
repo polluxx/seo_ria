@@ -79,7 +79,7 @@ define([
 
         // check elements on sites
         $scope.startCheck = function(target, isParent) {
-            ListFactory.check({path: target, target: $rootScope.domain, parent: isParent ? target : null}, function(resp) {
+            ListFactory.check({targetPath: target, target: $rootScope.domain, parent: (!isParent) ? null : target, checkSolo: true}, function(resp) {
 
                 if(resp.error !== undefined) {
                     alertify.error(resp.error);

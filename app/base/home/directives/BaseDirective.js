@@ -72,16 +72,14 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                     var socket = io('http://localhost:8002/');
                     socket.on('connect', function () {
                         socket.send('hi');
-
+                        var progressKeys, progressLast;
                         socket.on('message', function (msg) {
 
                             // my msg
                             if(msg.log !== undefined) {
                                 msg.log.time = new Date();
 
-                                if(!~$rootScope.notifications.indexOf(msg.log)) {
-                                    $rootScope.notifications.unshift(msg.log);
-                                }
+                                staсk(msg.log, $rootScope.notifications, 10);
                                 //alerts(msg.log.level)(msg.log.message);
 
                                 if(msg.log.data.queriesLeft !== undefined) {
@@ -100,6 +98,16 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                                 msg.progress.percentile = Math.round((msg.progress.data.process / msg.progress.data.total)*100);
 
                                 $rootScope.progresses[msg.progress.target] = msg.progress;
+
+                                progressKeys = Object.keys($rootScope.progresses);
+
+
+                                if(progressKeys.length > 10) {
+                                    progressLast = progressKeys.unshift();
+                                    delete $rootScope.progresses[progressKeys[progressLast]];
+                                    //$rootScope.progressesCount--;
+                                }
+
                                 $rootScope.$apply();
                             }
                             console.log(msg);
@@ -107,7 +115,13 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                     });
                 }();
 
+                function staсk(input, data, count) {
+                    if(~data.indexOf(input)) return;
 
+                    data.unshift(input);
+                    if(data.length > count) data.pop();
+                    //return data;
+                }
 
                 function alerts(type) {
                     switch(type) {

@@ -2,44 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/parser/rank/controllers/ParserRankCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/parser/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/parser/rank/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/parser/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/parser/rank/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/codrops/perf.app.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/parser/rank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/factories/AggregateFactory.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/factories/AggregateFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/home/filters/BaseFilters.js" afterPath="$PROJECT_DIR$/app/base/home/filters/BaseFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/controllers/ConcurrentsCtrl.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/concurrents/controllers/ConcurrentsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" afterPath="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/main/factories/ListFactory.js" afterPath="$PROJECT_DIR$/app/modules/list/main/factories/ListFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" afterPath="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/list/page/controllers/ListPageCtrl.js" afterPath="$PROJECT_DIR$/app/modules/list/page/controllers/ListPageCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/requests/controllers/RequestsCtrl.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/requests/controllers/RequestsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/spectrals/controllers/SpectralsCtrl.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/spectrals/controllers/SpectralsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/controllers/TopKeysCtrl.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/controllers/TopKeysCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.js" afterPath="$PROJECT_DIR$/build/_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_bootstrap.map" afterPath="$PROJECT_DIR$/build/_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aggregate/concurrents.html" afterPath="$PROJECT_DIR$/views/aggregate/concurrents.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/aggregate/main/requests/config.js" afterPath="$PROJECT_DIR$/app/modules/aggregate/main/requests/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aggregate/header.html" afterPath="$PROJECT_DIR$/views/aggregate/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/list.html" afterPath="$PROJECT_DIR$/views/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aggregate/requests.html" afterPath="$PROJECT_DIR$/views/aggregate/requests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/requireConfig.js" afterPath="$PROJECT_DIR$/app/requireConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aggregate/spectrals.html" afterPath="$PROJECT_DIR$/views/aggregate/spectrals.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aggregate/topkeys.html" afterPath="$PROJECT_DIR$/views/aggregate/topkeys.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -75,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46859083" vertical-offset="114" max-vertical-offset="2460">
-              <caret line="26" column="153" selection-start-line="26" selection-start-column="153" selection-end-line="26" selection-end-column="153" />
+            <state vertical-scroll-proportion="-12.125" vertical-offset="1059" max-vertical-offset="2460">
+              <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -105,31 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/aggregate/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1050">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1365">
+            <state vertical-scroll-proportion="-15.0" vertical-offset="525" max-vertical-offset="1365">
               <caret line="59" column="134" selection-start-line="59" selection-start-column="134" selection-end-line="59" selection-end-column="134" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="9225">
-              <caret line="99" column="68" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.80750406" vertical-offset="1110" max-vertical-offset="9435">
+              <caret line="107" column="38" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -138,8 +95,8 @@
       <file leaf-file-name="ListChildsCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="1500">
-              <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="887" max-vertical-offset="1500">
+              <caret line="81" column="130" selection-start-line="81" selection-start-column="130" selection-end-line="81" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -149,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1605">
-              <caret line="88" column="41" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="41" />
+              <caret line="88" column="113" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -222,13 +179,13 @@
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/topkeys/controllers/TopKeysCtrl.js" />
         <option value="$PROJECT_DIR$/views/aggregate/header.html" />
         <option value="$PROJECT_DIR$/app/modules/list/page/controllers/ListPageCtrl.js" />
-        <option value="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
-        <option value="$PROJECT_DIR$/views/list.html" />
-        <option value="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/app/modules/aggregate/main/factories/AggregateFactory.js" />
         <option value="$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/list/main/factories/ListFactory.js" />
+        <option value="$PROJECT_DIR$/views/list.html" />
+        <option value="$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/base/home/directives/BaseDirective.js" />
       </list>
     </option>
   </component>
@@ -1079,6 +1036,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1094,7 +1052,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1127,7 +1084,8 @@
     <MESSAGE value="add comments block" />
     <MESSAGE value="fix" />
     <MESSAGE value="add fix to cm" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fix to cm" />
+    <MESSAGE value="add fix to seo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fix to seo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1243,13 +1201,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70962477" vertical-offset="1455" max-vertical-offset="3975">
           <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33226836" vertical-offset="1022" max-vertical-offset="14070">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1411,6 +1362,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="27572" max-vertical-offset="29925">
           <caret line="1859" column="14" selection-start-line="1859" selection-start-column="14" selection-end-line="1859" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1429,26 +1381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1365">
-          <caret line="59" column="134" selection-start-line="59" selection-start-column="134" selection-end-line="59" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/aggregate/main/concurrents/controllers/ConcurrentsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2580" max-vertical-offset="3735">
           <caret line="216" column="29" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="9225">
-          <caret line="99" column="68" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -1461,26 +1397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1500">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/aggregate/main/factories/AggregateFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1605">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1493,10 +1413,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/list/main/controllers/ListMainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1605">
+          <caret line="88" column="113" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="525" max-vertical-offset="1365">
+          <caret line="59" column="134" selection-start-line="59" selection-start-column="134" selection-end-line="59" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/list/childs/controllers/ListChildsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="887" max-vertical-offset="1500">
+          <caret line="81" column="130" selection-start-line="81" selection-start-column="130" selection-end-line="81" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46859083" vertical-offset="114" max-vertical-offset="2460">
-          <caret line="26" column="153" selection-start-line="26" selection-start-column="153" selection-end-line="26" selection-end-column="153" />
+        <state vertical-scroll-proportion="-12.125" vertical-offset="1059" max-vertical-offset="2460">
+          <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33226836" vertical-offset="2147" max-vertical-offset="14070">
+          <caret line="157" column="16" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/home/directives/BaseDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80750406" vertical-offset="1110" max-vertical-offset="9435">
+          <caret line="107" column="38" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
           <folding />
         </state>
       </provider>
