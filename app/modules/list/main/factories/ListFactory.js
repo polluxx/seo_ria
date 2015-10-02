@@ -33,6 +33,15 @@ define([
             export: {
                 method:"POST",
                 url:bzConfig.api()+'/seo/export'
+            },
+            check: {
+                method:"PUT",
+                params: {
+                    target: "@target",
+                    parent: "@parent",
+                    targetPath:    "@targetPath"
+                },
+                url: 'http://localhost:3000/parser/parse/checker'
             }
         });
     }]);

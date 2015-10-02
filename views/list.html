@@ -40,6 +40,8 @@
 
             <div class="indexed" ng-if="!link.hasChilds"><span>indexed</span><span class="available glyphicon" ng-class="{'glyphicon-ok success':link.indexed==true, 'glyphicon-remove delete':link.indexed==0, 'glyphicon-time':link.indexed==undefined}"></span></div>
 
+            <div class="indexed" ng-if="!link.hasChilds"><span class="available glyphicon glyphicon-cog"></span></div>
+
             <div class="updated-link" ng-if="link.updated">
                 <div class="glyphicon glyphicon-time list-time" style="padding-right: 5px !important;"></div>
                 <div class="list-time">{{link.updated}}</div>
@@ -55,6 +57,7 @@
             <div class="list-link text">{{link.link}}</div>
 
 
+            <div class="list-op text"><a href="javascript:void(0)" title="перепроверить" ng-click="startCheck(link._id, link.hasChilds)" ><div class="op-icon glyphicon glyphicon-refresh"></div></a></div>
 
             <div class="list-op text" ng-if="link.hasChilds"><a href="/childs/{{link.project}}?parent={{link._id}}" title="дочерние"><div class="op-icon glyphicon glyphicon-folder-open"></div></a></div>
             <div class="list-op text"><a href="/view?itemid={{link._id}}" title="редактирование"><div class="op-icon glyphicon glyphicon-zoom-in"></div></a></div>

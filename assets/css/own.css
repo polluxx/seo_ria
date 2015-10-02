@@ -782,12 +782,12 @@ svg:not(:root) {
 .search-icon {
     position:absolute  !important;
     right:1px;
-    top:1px;
-    padding:11px;
-    overflow:hidden;
+    top: 2px !important;
+    padding: 11px;
+    overflow: hidden;
     background: #fff;
-    width: 38px !important;
-    height: 38px;
+    width: 38px!important;
+    height: 37px;
 }
 
 
@@ -929,7 +929,7 @@ h1 {
 }
 
 .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    background-color: #93C795 !important;
+    /*background-color: rgba(55, 193, 74, 0.15) !important;*/
     color: #000011;
 }
 
@@ -1857,7 +1857,7 @@ button:visited, button:active {
 }
 
 .aggregate-wrap-header input {
-    width: 700px;
+    width: 650px;
 }
 
 .aggregate-wrap-header div {
@@ -1904,6 +1904,20 @@ thead {
     color: #4A4646!important;
 }
 
+.table-new td {
+    position: relative;
+    max-width: 400px;
+}
+.table-new .updated-link {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.table-new .updated-link div {
+    display: inline-block;
+    font-size: 10px;
+}
+
 
 .view-buttons {
     position: fixed;
@@ -1912,8 +1926,9 @@ thead {
     max-height: 500px;
     background-color: whitesmoke;
     width: 150px;
-    height: 140px;
+
     z-index: 2;
+    padding-bottom: 10px;
 }
 .view-buttons div {
     margin: 10px 20px 0px 10px;
@@ -1939,4 +1954,37 @@ thead {
     background-color: rgba(216, 20, 41, 0.80);
     padding: 2px 5px 0px 7px;
     color: #fff0ff;
+}
+.yandex-icon {
+    font-weight: 100;
+    font-size: 20px;
+    background-color: #d00;
+    padding: 2px 5px 0 5px;
+    color: #fff0ff;
+}
+
+#top-nav .nav-notification>li.open .dropdown-menu {
+    width: auto;
+}
+
+.seo-table input[type=checkbox] {
+    position: relative;
+    opacity: 1;
+}
+.m-left-xs {
+    margin-right: 60px;
+}
+
+.wizard-steps li.active a {
+    font-size: 12px;
+}
+
+.concurrent-link {
+    max-width: 640px;
+    word-break: break-all;
+}
+
+.export-input {
+    width: 200px;
+    position: absolute;
 }

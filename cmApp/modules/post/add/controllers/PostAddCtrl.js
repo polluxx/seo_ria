@@ -95,9 +95,18 @@ define([
 
         $scope.imageUpload = function() {
             $scope.fileLoading = true;
+
+
             if($scope.doc.img == undefined) {
                 $scope.doc.img = {};
             }
+
+            if($scope.doc.img.src) {
+                if($scope.formddata === undefined) $scope.formddata = new FormData();
+                $scope.formddata.append('src', $scope.doc.img.src);
+                $scope.formddata.append('project', $rootScope.currentProject.id);
+            }
+
             if($scope.doc.img.width) $scope.formddata.append('width', $scope.doc.img.width);
             if($scope.doc.img.height) $scope.formddata.append('height', $scope.doc.img.height);
             $scope.send($scope.formddata);

@@ -1,8 +1,9 @@
 define([
     'modules/list/main/module',
-    'angular-bootstrap-tpl',
+    'alertify',
+    'angular-bootstrap-tpl'
 
-], function (module) {
+], function (module, alertify) {
     'use strict';
 
     module.controller('ListMainCtrl', ['$scope', '$rootScope', '$routeParams', 'ListFactory', '$location', function($scope, $rootScope, $routeParams, ListFactory, $location) {
@@ -82,6 +83,18 @@ define([
         $scope.$watch("radioModel", function() {
             $scope.searchparams.limit = +$scope.radioModel;
         });
+
+        // check elements on sites
+        $scope.startCheck = function(target, isParent) {
+            ListFactory.check({targetPath: target, target: $rootScope.domain, parent: (!isParent) ? null : target}, function(resp) {
+
+                if(resp.error !== undefined) {
+                    alertify.error(resp.error);
+                    return;
+                }
+                alertify.log("успешно поставлен в очередь на проверку");
+            });
+        }
 
 
     }]);

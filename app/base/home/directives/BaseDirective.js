@@ -1,4 +1,4 @@
-define(['base/home/module', 'alertify'], function (module, alertify) {
+define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
 
     module.directive('rootItem', function($rootScope, localStorageService, AggregateFactory) {
         return {
@@ -8,15 +8,19 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                 $rootScope.prodvigatorRequests = null;
 
                 $rootScope.domains = {
-                    1: "http://auto.ria.com",
-                    2: "http://www.ria.com",
-                    3: "http://dom.ria.com",
+                    1: "https://auto.ria.com",
+                    2: "https://www.ria.com",
+                    3: "https://dom.ria.com",
                     5: "https://market.ria.com"
                 };
                 $rootScope.domain = $rootScope.domains[$rootScope.currentProject];
                 $rootScope.searchval = "";
                 $rootScope.issearch = false;
                 $rootScope.listData = {};
+                $rootScope.notifications = [];
+                $rootScope.yandexLimits = [];
+                $rootScope.progressesCount = 0;
+                $rootScope.progresses = {};
 
                 var timeout = null, time = 0, secondTime = 0, currentText;
 
@@ -56,9 +60,78 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                             $rootScope.prodvigatorRequests = resp.data.left;
                         }
                     });
+                    AggregateFactory.yaxmlcount({}, function(resp) {
+                        if(resp.data !== undefined) {
+                            $rootScope.yandexLimits = resp.data;
+                        }
+                    });
                 }();
 
 
+                scope.subcribeWebsock = function() {
+                    var socket = io('http://localhost:8002/');
+                    socket.on('connect', function () {
+                        socket.send('hi');
+
+                        socket.on('message', function (msg) {
+
+                            // my msg
+                            if(msg.log !== undefined) {
+                                msg.log.time = new Date();
+
+                                if(!~$rootScope.notifications.indexOf(msg.log)) {
+                                    $rootScope.notifications.unshift(msg.log);
+                                }
+                                //alerts(msg.log.level)(msg.log.message);
+
+                                if(msg.log.data.queriesLeft !== undefined) {
+                                    $rootScope.prodvigatorRequests = msg.log.data.queriesLeft;
+                                }
+
+                                $rootScope.$apply();
+                            }
+
+                            // progress
+                            if(msg.progress !== undefined) {
+                                if(!msg.progress.target) return;
+
+                                if(!$rootScope.progresses[msg.progress.target]) $rootScope.progressesCount++;
+
+                                msg.progress.percentile = Math.round((msg.progress.data.process / msg.progress.data.total)*100);
+
+                                $rootScope.progresses[msg.progress.target] = msg.progress;
+                                $rootScope.$apply();
+                            }
+                            console.log(msg);
+                        });
+                    });
+                }();
+
+
+
+                function alerts(type) {
+                    switch(type) {
+                        case 1:
+                            return alertify.log;
+                            break;
+                        case 5:
+                            return alertify.success;
+                            break;
+                        case 2:
+                        case 3:
+                        case 4:
+                            return alertify.error;
+                            break;
+                    }
+                }
+
+                /*socketIo.on('connection', function(socket){
+                    console.log('someone connected');
+                    socket.on('message', function (res) {
+                        //socket.emit('woot');
+                        console.info(res);
+                    });
+                });*/
             }
         }
     });
@@ -495,7 +568,7 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
        }
     });
 
-    module.directive("checkboxer", function() {
+    module.directive("checkboxer", function($compile) {
         return {
             restrict: "A",
             scope: {
@@ -509,11 +582,21 @@ define(['base/home/module', 'alertify'], function (module, alertify) {
                 });
 
                 scope.select = function(parent) {
+
+
                     var checkbox = parent.querySelector("input[type='checkbox']");
                     if(!checkbox) return;
 
-                    var scopeEl = angular.element(checkbox).data('$ngModelController').$modelValue;
-                    angular.element(checkbox).data('$ngModelController').$modelValue = !scopeEl;
+
+
+                    var chk = angular.element(checkbox);
+
+                    var comp = $compile(chk.contents())(scope);
+
+                    //checkbox.checked = !checkbox.checked;
+                    //scope.$apply();
+                    //var scopeEl = angular.element(checkbox).data('$ngModelController').$modelValue;
+                    //angular.element(checkbox).data('$ngModelController').$modelValue = !scopeEl;
 
 
 

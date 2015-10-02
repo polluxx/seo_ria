@@ -58,7 +58,7 @@ requirejs.config({
 
         'angular-bootstrap': '../bower_components/angular-bootstrap/ui-bootstrap.min',
         'angular-bootstrap-tpl': '../bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
-
+        'io': '../node_modules/socket.io/node_modules/socket.io-client/socket.io',
 
         'polyfills': '../cmApp/polyfills'
     },

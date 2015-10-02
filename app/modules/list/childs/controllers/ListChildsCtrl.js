@@ -1,6 +1,7 @@
 define([
-    'modules/list/childs/module'
-], function (module) {
+    'modules/list/childs/module',
+    'alertify'
+], function (module, alertify) {
     'use strict';
 
     module.controller('ListChildsCtrl', ['$scope', 'bzUser', '$routeParams', 'ListFactory', '$rootScope', '$location', function($scope, bzUser, $routeParams, ListFactory, $rootScope, $location) {
@@ -73,6 +74,20 @@ define([
         $scope.$watch("radioModel", function() {
             $scope.searchparams.limit = +$scope.radioModel;
         });
+
+
+
+        // check elements on sites
+        $scope.startCheck = function(target, isParent) {
+            ListFactory.check({path: target, target: $rootScope.domain, parent: isParent ? target : null}, function(resp) {
+
+                if(resp.error !== undefined) {
+                    alertify.error(resp.error);
+                    return;
+                }
+                alertify.log("успешно поставлен в очередь на проверку");
+            });
+        }
 
 
     }]);

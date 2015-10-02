@@ -28,6 +28,10 @@ define([
             $location.path(normalized+id);
             $location.replace();
         }
+
+
+
+
     }]);
 
 });

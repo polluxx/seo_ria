@@ -17,10 +17,12 @@ define([
             containsData: null,
             domain: $rootScope.domain,
             path: $location.path(),
-            update: undefined,
+            update: this.update || $routeParams.updated,
             marked: [],
+            list: [],
             lastChecked: null,
             shiftPressed: false,
+            currentAction: $location.path().split("/").pop(),
             params: {
                 target: this.target,
                 page: 1,            // show first page
@@ -28,14 +30,18 @@ define([
                 sorting: {
                     position: 'asc'     // initial sorting
                 },
-                newCheck: this.update
+                newCheck: this.update || $routeParams.updated
             },
             tableParams: new ngTableParams(this.params, {
                 total: 0,           // length of data
                 getData: function($defer, params) {
                     //$scope.tableParams.$loading = true;
                     // ajax request to api
-                    AggregateFactory.top(params.url(), function(data) {
+
+                    var api = AggregateFactory.top;
+                    if($scope.currentAction === 'requests') api = AggregateFactory.requests;
+
+                    api(params.url(), function(data) {
                         //$scope.tableParams.$loading = false;
 
 
@@ -70,10 +76,20 @@ define([
                 }
             })
         });
-
+        console.log($scope.currentAction);
 
         // METHODS
         angular.extend($scope, {
+            returnSort: function() {
+
+                return ($scope.currentAction === 'requests')
+                ? {
+                    queriesCount: 'desc'
+                }
+                    : {
+                    position: 'asc'     // initial sorting
+                }
+            },
             validate: function(){
                 if(this.target === undefined || this.target.length < 2) {
                     alertify.error("Количество символов ссылки меньше 2");
@@ -95,13 +111,15 @@ define([
                 this.searcheble = true;
                 if(!this.validate()) return;
                 var self = this;
-
+                this.params.newCheck = this.update || $routeParams.updated;
                 if(update != undefined) {
                     this.params.newCheck = this.update = update;
-                    alertify.log("Запрос поставлен в очередь на проверку.");
+                    if(update !== null) alertify.log("Запрос поставлен в очередь на проверку.");
                 }
                 //this.params.target = this.domain + "/" + this.target;
                 this.params.target = this.target;
+
+                this.params.sorting = this.returnSort();
 
                 $location.search(this.params);
                 console.log(this.params);
@@ -112,18 +130,25 @@ define([
             next: function(target, isUrl) {
                 var params = {
                     newCheck: true
-                };
+                }, keywords = "", kArray = [];
+
                 if(isUrl) {
                     params.target = target;
                 } else {
-                    params.keywords = target;
+                    target.map(function(item) {
+                        kArray.push("keywords[]="+encodeURI(item));
+                    });
+                    keywords = '&'+kArray.join("&");
                 }
-                AggregateFactory.concurrents(params, function(resp) {
-                    console.log(resp);
-                });
+                var urlpart = 'concurrents';
+                if(this.currentAction === 'requests') urlpart = 'spectrals';
+                var url = '/aggregate/'+urlpart+'?updated=true&target='+$routeParams.target+keywords;
 
+
+
+                console.log(url);
                 alertify.log("Запрос успешно поставлен в очередь");
-                $location.url('/aggregate/concurrents?updated=true&target='+$routeParams.target);
+                $location.url(url);
             },
             checkboxes: function(){
                 var self = this;
@@ -194,15 +219,19 @@ define([
                     keyword = keyword.map(function(item) {
                         return "'"+item+"'";
                     });
-                    params.query = "MATCH (a:Link),(k:Keyword) OPTIONAL MATCH (a)-[rel]-(k) WHERE k.src IN ["+keyword.join(",")+"] DELETE rel";
+                    params.query = "MATCH (a:Link)-[rel]-(k:Keyword) WHERE k.src IN ["+keyword.join(",")+"] DELETE rel";
+                    if($scope.currentAction === 'requests') {
+                        params.query += ", k";
+                    }
 
-                    AggregateFactory.query(params, function(response) {
+
+                        AggregateFactory.query(params, function(response) {
                             if(response.results === undefined || !response.results.length) {
                                 alertify.error("Ошибка удаления. Поробуйте позже");
                                 return;
                             }
 
-                            console.log(map);
+
                             for(index in map) {
                                 if(!map.hasOwnProperty(index)) continue;
 
@@ -218,7 +247,27 @@ define([
                         });
                 });
 
-            }
+            },
+            processed: function() {
+                if($scope.currentAction !== 'requests') return;
+
+                var params = {},
+                    query = "MATCH (n:Link)-[:CONTAINS]->()-[:TOP10]-(concurrent)-[:CONTAINS]-() WHERE n.src = '"+$scope.target+"' OPTIONAL MATCH (n:Link)-[:CONTAINS]->()-[:TOP10]-(con) WHERE n.src = '"+$scope.target+"' RETURN  count(distinct concurrent) as c , count(distinct con) as t";
+                params.query = query;
+                AggregateFactory.query(params, function(resp) {
+                    if(resp.errors && resp.errors.length) {
+                        alertify.error("Ошибка получения счетчика обработаных");
+                        console.error(resp.errors);
+                        return;
+                    }
+
+                    var data = resp.results[0].data[0].row;
+                    $scope.doneCount = data[0];
+                    $scope.allCount = data[1];
+
+                    $scope.percentile = Math.ceil(($scope.doneCount/$scope.allCount)*100);
+                });
+            }()
         });
 
         document.addEventListener('keydown', function(e) {
@@ -230,6 +279,7 @@ define([
 
         // init search
         if($scope.target) $scope.start();
+
     }]);
 
 

@@ -1,7 +1,27 @@
 <agg-head></agg-head>
 
-<section>
-    <div ng-if="data" ng-repeat="item in data">
-        {{item}}
+<div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
+
+<div class="progress aggregator">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percentile}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': percentile+'%'}">
+        <span class="sr-only">40% Complete (success)</span>
     </div>
-</section>
+</div>
+
+
+
+<div ng-show="!errors.length" class="outer" loading-container="tableParams.settings().$loading">
+    <table ng-table="tableParams" class="seo-table table-new ac-custom ac-checkbox ac-checkmark" >
+        <tbody>
+        <tr ng-repeat="synonim in $data" ng-class="{'active': selected.items[synonim]}">
+            <td data-title="'Ключ'" sortable="'keyword.src'">
+                <span>{{synonim.keyword}}</span>
+            </td>
+            <td data-title="'Синоним'" sortable="'synonim.src'">
+                <span>{{synonim.synonim}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -4,22 +4,26 @@ define([
     'use strict';
 
     module.factory("AggregateFactory", ["$resource", "bzConfig", function($resource, bzConfig) {
-
+        var api = "http://localhost:3000/api";
         return $resource("http://localhost:10101/act", {}, {
             top: {
                 method:"GET",
                 params: {
                     target: "@target"
                 },
-                url: 'http://localhost:3000/api/top100'
+                url: api+'/check/top100'
             },
             count: {
                 method:"GET",
-                url: 'http://localhost:3000/api/count'
+                url: api+'/check/count'
+            },
+            yaxmlcount: {
+                method:"GET",
+                url: api+'/check/yaxmlcount'
             },
             query: {
                 method:"PUT",
-                url: 'http://localhost:3000/api/query'
+                url: api+'/check/query'
             },
             concurrents: {
                 method:"GET",
@@ -27,7 +31,22 @@ define([
                     target: "@target",
                     keywords: "@keywords"
                 },
-                url: 'http://localhost:3000/api/concurrents'
+                url: api+'/check/concurrents'
+            },
+            requests: {
+                method:"GET",
+                params: {
+                    target: "@target"
+                },
+                url: api+'/check/concurrent-keys'
+            },
+            synonims: {
+                method:"GET",
+                params: {
+                    target: "@target",
+                    keywords: "@keywords"
+                },
+                url: api+'/check/syno'
             }
         });
     }]);

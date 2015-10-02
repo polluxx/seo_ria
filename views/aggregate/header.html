@@ -4,18 +4,51 @@
             <input type="text" class="inputbox" ng-model="target" placeholder="Целевой url"/>
         </div>
         <div>
+
+            <button ng-click="start(undefined);tableParams.reload();" name="filter-checkbox" class="btn btn-default inputbox "><span class="glyphicon glyphicon-refresh"></span></button>
+
             <button class="inputbox btn btn-default" ng-click="start(true)">Собрать</button>
-            <button class="inputbox btn btn-success" ng-click="next(target, true)" ng-if="containsData">В работу</button>
+
+
+            <button class="inputbox btn btn-warning" data-toggle="dropdown" ng-click="export(target)" ng-if="lastPage">Export</button>
+
+
+            <input type="email" class=" hide inputbox export-input" />
+
+
+
+            <button class="inputbox btn btn-success" ng-click="next(target, true)" ng-if="containsData && !lastPage">В работу</button>
         </div>
     </div>
 
     <div class="bp-header">
-        <nav>
+        <nav  class="hide">
             <a href="/aggregate/topkeys?target={{target}}" class="bp-icon bp-icon-next" ng-class="{'active': path == '/aggregate/topkeys'}" data-info="TOP запросов"><span>TOP запросов</span></a>
             <a href="/aggregate/concurrents?target={{target}}" class="bp-icon bp-icon-next" ng-class="{'active': path == '/aggregate/concurrents'}" data-info="TOP конкурентов"><span>TOP конкурентов</span></a>
             <a href="/aggregate/requests?target={{target}}" class="bp-icon bp-icon-drop" ng-class="{'active': path == '/aggregate/requests'}" data-info="Запросы конкурентов"><span>Запросы конкурентов</span></a>
             <a href="/aggregate/spectrals?target={{target}}" class="bp-icon bp-icon-archive" ng-class="{'active': path == '/aggregate/spectrals'}" data-info="Спектральные синонимы"><span>Спектральные синонимы</span></a>
+
         </nav>
+
+
+        <div class="panel-tab">
+            <ul class="wizard-steps" id="wizardTab">
+                <li ng-class="{'active': path == '/aggregate/topkeys'}">
+                    <a href="/aggregate/topkeys?target={{target}}" data-toggle="tab">TOP запросов</a>
+                </li>
+                <li ng-class="{'active': path == '/aggregate/concurrents'}">
+                    <a href="/aggregate/concurrents?target={{target}}" data-toggle="tab">TOP конкурентов</a>
+                </li>
+                <li ng-class="{'active': path == '/aggregate/requests'}">
+                    <a href="/aggregate/requests?target={{target}}" data-toggle="tab">Запросы конкурентов</a>
+                </li>
+                <li ng-class="{'active': path == '/aggregate/spectrals'}">
+                    <a href="/aggregate/spectrals?target={{target}}" data-toggle="tab">Спектральные синонимы</a>
+                </li>
+            </ul>
+
+        </div>
+
     </div>
 
     <div class="error" ng-repeat="error in errors">

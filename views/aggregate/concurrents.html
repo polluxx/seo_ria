@@ -2,15 +2,42 @@
 
 <div class="overlay-box1" style="z-index:100000;" loading-container="$loading"></div>
 
-<div class="progress aggregator" ng-if="updated">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+<div class="progress aggregator">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percentile}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': percentile+'%'}">
         <span class="sr-only">40% Complete (success)</span>
     </div>
 </div>
 
 
-<section class="outer">
-    <div ng-if="data" ng-repeat="item in data" class="list">
-        {{item}}
+
+<div ng-show="!errors.length" class="outer" loading-container="tableParams.settings().$loading">
+    <table ng-table="tableParams" class="seo-table table-new ac-custom ac-checkbox ac-checkmark" checkboxer="td">
+        <tbody>
+        <tr ng-repeat="concurrent in $data" ng-class="{'active': selected.items[concurrent.src]}">
+            <td style="text-align: center" width="50" header="'ng-table/headers/checkbox.html'">
+                <label class="label-checkbox "><input class="chk-row" type="checkbox" ng-model="selected.items[concurrent.src]" ng-change="checkBox(concurrent, selected.items[concurrent.src])"/></label>
+            </td>
+            <td data-title="'Конкурент'">
+                <span><a class="concurrent-link" href="{{concurrent.src}}" target="_blank">{{concurrent.src | decode}}</a></span>
+            </td>
+            <td data-title="'Пересечение'" sortable="'c'">
+                <span>{{concurrent.intersection}}</span>
+            </td>
+            <td>
+                <a href="javascript:void(0)" class="glyphicon glyphicon-trash remove" title="remove" ng-click="remove([concurrent.src])"></a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="view-buttons passive " id="op_buttons" ng-class="{'active': marked.length}">
+        <div class="inputbox marked-text">Выбрано: {{marked.length}}</div>
+        <div class="btn btn-success inputbox outer" ng-click="next(marked)"><span class="glyphicon glyphicon-play-circle"></span><span>В работу</span></div>
+        <div class="btn btn-danger inputbox outer" ng-click="remove(marked)"><span class="glyphicon glyphicon-trash remove"></span><span>Удалить</span></div>
     </div>
-</section>
+</div>
+
+<script type="text/ng-template" id="ng-table/headers/checkbox.html">
+    <input type="checkbox" ng-model="selected.checked" id="select_all" name="filter-checkbox" value="" />
+</script>

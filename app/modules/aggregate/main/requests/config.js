@@ -13,7 +13,7 @@ define(['modules/aggregate/main/requests/module','modules/aggregate/main/request
                     resolve: {
                         permissions: bzUserProvider.access()
                     },
-                    controller: 'RequestsCtrl',
+                    controller: 'TopKeysCtrl',
                     //inherits: 'AggregateMainCtrl',
                     resolveFailed: bzConfigProvider.errorResolver()
                 });

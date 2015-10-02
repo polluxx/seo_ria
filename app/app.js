@@ -10,7 +10,7 @@ define([
     'modules/list/config',
     'modules/view/config',
     'modules/aggregate/config',
-
+    'modules/parser/config',
     'views',
     'ng-table',
 
@@ -29,6 +29,7 @@ define([
         'module.list',
         'module.view',
         'module.aggregate',
+        'module.parser',
 
         'views',
         'ngTable'
