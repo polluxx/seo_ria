@@ -5,7 +5,7 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('PostAddCtrl', ['$scope', 'bzUser', 'bzConfig', '$http', 'PostFactory', '$location', '$routeParams', '$rootScope', '$resource', function($scope, bzUser, bzConfig, $http, PostFactory, $location, $routeParams, $rootScope, $resource) {
+    module.controller('PostAddCtrl', ['$scope', 'bzUser', 'bzConfig', '$http', 'PostFactory', '$location', '$routeParams', '$rootScope', '$resource', '$templateCache', function($scope, bzUser, bzConfig, $http, PostFactory, $location, $routeParams, $rootScope, $resource, $templateCache) {
         $scope.files;
         $scope.$loading = false;
         $scope.$updating = false;
@@ -20,6 +20,12 @@ define([
         $scope.doc.publication.doctype = 'deferred';
         $scope.fileLoading = false;
         $scope.sourceItem = "";
+
+        if($routeParams.clearcache !== undefined) {
+            $rootScope.$on('$viewContentLoaded', function () {
+                $templateCache.removeAll();
+            });
+        }
 
 
         // DEEP OPTIONS
