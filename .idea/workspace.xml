@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/comments/list.html" afterPath="$PROJECT_DIR$/views/cm/comments/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -51,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indexCm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indexCm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7198642" vertical-offset="116" max-vertical-offset="705">
+            <state vertical-scroll-proportion="-17.666666" vertical-offset="116" max-vertical-offset="705">
               <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cm/comments/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="825">
+              <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -71,25 +80,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="19862" max-vertical-offset="22785">
-              <caret line="1341" column="82" selection-start-line="1341" selection-start-column="82" selection-end-line="1341" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.5561097" vertical-offset="19832" max-vertical-offset="22755">
+              <caret line="1337" column="17" selection-start-line="1337" selection-start-column="17" selection-end-line="1337" selection-end-column="17" />
               <folding>
-                <marker date="1444907381143" expanded="true" signature="42090:42415" placeholder="..." />
-                <marker date="1444907381143" expanded="true" signature="42653:42697" placeholder="..." />
+                <marker date="1444908147530" expanded="true" signature="42090:42415" placeholder="..." />
+                <marker date="1444908147530" expanded="true" signature="42653:42697" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostStatisticCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmApp/modules/post/statistic/controllers/PostStatisticCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="795">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -186,7 +185,6 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/assets/js/scrolldepth.js" />
         <option value="$PROJECT_DIR$/assets/js/loader.js" />
-        <option value="$PROJECT_DIR$/views/cm/comments/list.html" />
         <option value="$PROJECT_DIR$/cmApp/modules/comments/list/controllers/CommentsListCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/statistic/controllers/PostStatisticCtrl.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/storage/list/controllers/StorageArchiveCtrl.js" />
@@ -199,8 +197,9 @@
         <option value="$PROJECT_DIR$/views/cm/post/add.html" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/views/cm/comments/list.html" />
+        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
       </list>
     </option>
   </component>
@@ -744,21 +743,21 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32465544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27879268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1040,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/comments/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="855">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/comments/list/controllers/CommentsListCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1545">
@@ -1108,14 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cm/post/statistic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
@@ -1159,22 +1143,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+    <entry file="file://$PROJECT_DIR$/views/cm/post/statistic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19862" max-vertical-offset="22785">
-          <caret line="1341" column="82" selection-start-line="1341" selection-start-column="82" selection-end-line="1341" selection-end-column="82" />
-          <folding>
-            <marker date="1444907381143" expanded="true" signature="42090:42415" placeholder="..." />
-            <marker date="1444907381143" expanded="true" signature="42653:42697" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indexCm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7198642" vertical-offset="116" max-vertical-offset="705">
+        <state vertical-scroll-proportion="-17.666666" vertical-offset="116" max-vertical-offset="705">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cm/comments/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="825">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5561097" vertical-offset="19832" max-vertical-offset="22755">
+          <caret line="1337" column="17" selection-start-line="1337" selection-start-column="17" selection-end-line="1337" selection-end-column="17" />
+          <folding>
+            <marker date="1444908147530" expanded="true" signature="42090:42415" placeholder="..." />
+            <marker date="1444908147530" expanded="true" signature="42653:42697" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
