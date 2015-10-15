@@ -12,7 +12,7 @@ define([
                 .when('/storage/add', 'addIdea')
                 .when('/storage/add/:id', 'addIdea')
                 .segment('addIdea', {
-                    templateUrl: bzConfigProvider.templateUrl('/storage/add.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/storage/add.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['storage_add'])
                     },

@@ -118,14 +118,14 @@ define([
         var insertParams = [], item, items = [];
         $scope.infoSave = function() {
             //console.log($scope.info);
-            //api.post($scope.info, function(resp) {
-            //    if(resp.code != 200) {
-            //        alertify.error("Ошибка генерирования информера");
-            //        return;
-            //    }
+            api.post($scope.info, function(resp) {
+                if(resp.code != 200) {
+                    alertify.error("Ошибка генерирования информера");
+                    return;
+                }
 
-                //$scope.doc.informer = resp.key;
-                $scope.doc.informer = '3178dc2e680172fd9f833d4b8f75ba52';
+                $scope.doc.informer = resp.key;
+                //$scope.doc.informer = '3178dc2e680172fd9f833d4b8f75ba52';
 
                 //localStorageService.set("currentInformer_"+$scope.info.project.id, resp.key);
                 //console.log(resp);
@@ -143,7 +143,7 @@ define([
                 //informer = angular.copy(document.getElementsByTagName("infoblock"));
                 //$compile(informer);
                 angular.element(".froala-view").append(informer);
-            //})
+            });
         };
 
         $scope.checkInfo = function() {

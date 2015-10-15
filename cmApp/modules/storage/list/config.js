@@ -12,7 +12,7 @@ define([
                 .when('/storage/list', 'listIdea')
                 .when('/storage/archive', 'archiveIdea')
                 .segment('listIdea', {
-                    templateUrl: bzConfigProvider.templateUrl('/storage/list.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/storage/list.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['storage_list'])
                     },
@@ -20,7 +20,7 @@ define([
                     resolveFailed: bzConfigProvider.errorResolver()
                 })
                 .segment('archiveIdea', {
-                    templateUrl: bzConfigProvider.templateUrl('/storage/list.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/storage/list.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['storage_list'])
                     },

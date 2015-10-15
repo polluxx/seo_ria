@@ -11,7 +11,7 @@ define([
                 .when('/post/add', 'addPost')
                 .when('/post/add/:id', 'addPost')
                 .segment('addPost', {
-                    templateUrl: bzConfigProvider.templateUrl('/post/add.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/post/add.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['post_add'])
                     },

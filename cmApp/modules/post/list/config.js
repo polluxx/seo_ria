@@ -11,7 +11,7 @@ define([
             $routeSegmentProvider
                 .when('/post/list', 'postList')
                 .segment('postList', {
-                    templateUrl: bzConfigProvider.templateUrl('/post/list.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/post/list.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['post_list'])
                     },

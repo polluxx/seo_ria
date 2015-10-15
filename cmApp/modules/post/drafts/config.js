@@ -10,7 +10,7 @@ define([
             $routeSegmentProvider
                 .when('/post/drafts', 'postDrafts')
                 .segment('postDrafts', {
-                    templateUrl: bzConfigProvider.templateUrl('/post/list.html'),
+                    templateUrl: bzConfigProvider.templateUrl('/post/list.html?time=1'),
                     resolve: {
                         permissions: bzUserProvider.access(['post_drafts'])
                     },
