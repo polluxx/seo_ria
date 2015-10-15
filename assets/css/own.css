@@ -2039,3 +2039,23 @@ input[type=checkbox], input[type=radio] {
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
+
+.right-add-block.inactive {
+    position: absolute;
+    right: -3000px;
+}
+
+.add-resizer.glyphicon {
+    position: absolute;
+    right: 1px;
+    top: -25px;
+    color: rgba(145, 153, 141, 0.55);
+    cursor: pointer;
+    font-size: 18px;
+}
+.add-resizer.glyphicon:hover {
+    color: #696262;
+}
+.add-resizer.glyphicon.slided {
+    right: 0;
+}

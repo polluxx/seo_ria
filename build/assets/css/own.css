@@ -2027,3 +2027,15 @@ input[type=checkbox], input[type=radio] {
 .source-item {
     word-break: break-all;
 }
+
+.print-page {
+    position: relative;
+    display: block;
+
+    padding: 40px 50px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}

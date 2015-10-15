@@ -21,6 +21,14 @@ define([
         $scope.fileLoading = false;
         $scope.sourceItem = "";
 
+        // widthes
+        $scope.projectsArticleWidthes = {
+            1: 940,
+            2: 700,
+            3: 640,
+            5: 720
+        };
+
 
         // DEEP OPTIONS
         $scope.tmp = {};
@@ -476,6 +484,29 @@ define([
                 $scope.$apply();
             });
         };
+
+        // SLIDER
+        $scope.slide = function() {
+            var defaultWidth = 640,
+                articleWidth = $scope.projectsArticleWidthes[$scope.doc.project] || defaultWidth,
+                slideBtn = angular.element(".add-resizer");
+
+
+            if(slideBtn.hasClass('glyphicon-resize-full')) {
+                slideBtn.removeClass('glyphicon-resize-full');
+                slideBtn.addClass('glyphicon-resize-small');
+                slideBtn.addClass('slided');
+                angular.element('.right-add-block').addClass('inactive');
+                angular.element('.left-add-block').css("width", articleWidth+"px");
+            } else {
+                slideBtn.removeClass('glyphicon-resize-small');
+                slideBtn.addClass('glyphicon-resize-full');
+                slideBtn.removeClass('slided');
+                angular.element('.right-add-block').removeClass('inactive');
+                angular.element('.left-add-block').css("width", defaultWidth+"px");
+            }
+        };
+
 
         // AUTOUPDATE
         $scope.autoupdate = function() {
