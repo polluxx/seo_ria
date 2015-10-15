@@ -1051,7 +1051,7 @@ h1 {
 }
 
 .rewrite {
-    padding: 5px;
+    padding: 5px !important;
     display: inline-block;
     margin: 5px;
     background-color: #009998;

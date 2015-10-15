@@ -25,6 +25,11 @@ define([
                 method:"GET",
                 url:bzConfig.api()+'/cm/postlist',
                 isArray:false
+            },
+            tags: {
+                method:"GET",
+                url:bzConfig.api()+'/cm/auto-tags',
+                isArray:false
             }
         });
 

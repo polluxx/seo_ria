@@ -25,6 +25,7 @@ define([
         // DEEP OPTIONS
         $scope.tmp = {};
         $scope.params = {};
+        $scope.autoTags = [];
         $scope.params.subcategories = [{id:'0', name:"Выберите категорию"}];
         $scope.params.defaultOptions = $scope.params.options = [{id:'0', name:"Выберите подкатегорию"}];
         $scope.doc.parameters.subcategory.id = $scope.params.subcategories[0];
@@ -149,6 +150,7 @@ define([
             if($rootScope.currentProject === undefined) return;
 
             $scope.doc.project = $rootScope.currentProject.id;
+            $scope.getAutoTags($scope.doc.project);
         });
 
         //
@@ -297,7 +299,22 @@ define([
             });
         };
 
+        $scope.getAutoTags = function(project) {
+            if(project != 1 || $scope.autoTags.length) return;
+
+            PostFactory.tags(function(resp) {
+                if(resp.code != 200) {
+                    alertify.error("Ошибка получения тегов");
+                    return;
+                }
+
+                $scope.autoTags = resp.items;
+                $scope.tagName = $scope.autoTags[0];
+            });
+        };
+
         $scope.addTag = function (tag) {
+            if(!tag || !tag.length || tag == 'Все') return;
             if($scope.doc.tags == undefined) {
                 $scope.doc.tags = [];
             }
@@ -305,14 +322,16 @@ define([
             if($scope.doc.tags.indexOf(tag) != -1) return;
             $scope.doc.tags.push(tag);
             $scope.tagItem = "";
+            $scope.$apply();
         };
         $scope.removeTag = function(tag) {
             alertify.confirm("Удалить тег?", function(e) {
                 if(!e) return;
 
                 var index = $scope.doc.tags.indexOf(tag);
+
                 $scope.doc.tags.splice(index,1);
-                $scope.$apply();
+                $scope.$digest();
             })
         };
 
@@ -471,7 +490,7 @@ define([
         // WATCHERS
 
         var emailInput = angular.element(document.getElementById("add-email"));
-        emailInput.on("keydown", function(e) {
+        emailInput.on("keypress", function(e) {
             // enter button code check
             if(e.keyCode != 13) return;
             e.preventDefault();

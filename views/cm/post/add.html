@@ -164,7 +164,12 @@
             <div style="padding-bottom: 20px">
                 <div class="rewrite" ng-repeat="tag in doc.tags" ng-click="removeTag(tag)">{{tag}}</div>
             </div>
-            <div>
+
+            <div ng-if="doc.project==1">
+                <select class="form-control inputbox" ng-model="tagName" ng-selected="addTag(tagName)" ng-options="tag for tag in autoTags"></select>
+            </div>
+
+            <div ng-if="doc.project != 1">
                 <input placeholder="tag" class="form-control inputbox add-rewrite" type="text" ng-init="tagItem" ng-model="tagItem"/><div class="glyphicon glyphicon-plus-sign add-project-btn-sm text-success" ng-show="tagItem.length > 0" ng-click="addTag(tagItem)"></div>
             </div>
         </div>
