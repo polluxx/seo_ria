@@ -396,7 +396,8 @@ define([
             data = data.replace(/<script id="loader".+><\/script>/g, "");
 
             // tweeter img replace auto styles
-            //data = data.replace(/(<img.*)(style=".+")(.*>)/g, "$1style=\"position: absolute !important; padding: 0 !important;left: 10px;top: 10px;\"$3");
+            data = data.replace(/(<img.*twitter.*)(style=".+")(.*>)/g, "$1style=\"position: absolute !important; padding: 0 !important;left: 10px;top: 10px;\"$3");
+
 
             // informer replacer
             data = data.replace(/(<div id="riainfo_[a-z0-9]+")((\n|.)+)(<script.+>)/g, "$1></div>$4");
