@@ -1,6 +1,6 @@
 define(['base/home/module'], function (module) {
 
-    module.controller('BaseHomeCtrl', ['$scope', '$location', 'bzUser', '$rootScope', function ($scope, $location, bzUser, $rootScope) {
+    module.controller('BaseHomeCtrl', ['$scope', '$location', 'bzUser', '$rootScope', '$templateCache', function ($scope, $location, bzUser, $rootScope, $templateCache) {
         if(!bzUser.is_guest) {
             $rootScope.$watch("links", function() {
                 if ($rootScope.links == undefined) return;
@@ -9,6 +9,15 @@ define(['base/home/module'], function (module) {
                 $location.path("/" + redirect);
             });
         }
+
+        $rootScope.$on('$routeChangeStart', function(event, next, current) {
+            if (typeof(current) !== 'undefined'){
+                $templateCache.remove(current.templateUrl);
+            }
+        });
+
+
+
     }]);
 
 });

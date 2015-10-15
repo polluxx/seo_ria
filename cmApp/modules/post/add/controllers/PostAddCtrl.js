@@ -21,12 +21,6 @@ define([
         $scope.fileLoading = false;
         $scope.sourceItem = "";
 
-        if($routeParams.clearcache !== undefined) {
-            $rootScope.$on('$viewContentLoaded', function () {
-                $templateCache.removeAll();
-            });
-        }
-
 
         // DEEP OPTIONS
         $scope.tmp = {};
