@@ -1336,6 +1336,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                     //editorObj = editor;
                     checkChanges(editor);
                 }
+
                 //document.querySelector(".froala-box > div:last-child").remove();
                 document.querySelector(".froala-box > div:nth-child(2)").remove();
 

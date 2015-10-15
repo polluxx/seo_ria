@@ -4,7 +4,8 @@
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/comments/list.html" afterPath="$PROJECT_DIR$/views/cm/comments/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -80,14 +81,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5561097" vertical-offset="19832" max-vertical-offset="22755">
-              <caret line="1337" column="17" selection-start-line="1337" selection-start-column="17" selection-end-line="1337" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="19832" max-vertical-offset="22770">
+              <caret line="1338" column="0" selection-start-line="1338" selection-start-column="0" selection-end-line="1338" selection-end-column="0" />
               <folding>
-                <marker date="1444908147530" expanded="true" signature="42090:42415" placeholder="..." />
-                <marker date="1444908147530" expanded="true" signature="42653:42697" placeholder="..." />
+                <marker date="1444908476539" expanded="true" signature="42090:42415" placeholder="..." />
+                <marker date="1444908476539" expanded="true" signature="42653:42697" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -126,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="own.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="own.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/own.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="15557" max-vertical-offset="30495">
-              <caret line="1053" column="28" selection-start-line="1053" selection-start-column="28" selection-end-line="1053" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.8553616" vertical-offset="15557" max-vertical-offset="30510">
+              <caret line="1060" column="0" selection-start-line="1060" selection-start-column="0" selection-end-line="1060" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,11 +196,11 @@
         <option value="$PROJECT_DIR$/views/cm/post/statistic.html" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js" />
         <option value="$PROJECT_DIR$/views/cm/post/add.html" />
-        <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/cm/comments/list.html" />
         <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
+        <option value="$PROJECT_DIR$/assets/css/own.css" />
       </list>
     </option>
   </component>
@@ -1127,14 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15557" max-vertical-offset="30495">
-          <caret line="1053" column="28" selection-start-line="1053" selection-start-column="28" selection-end-line="1053" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7112" max-vertical-offset="8265">
@@ -1169,12 +1162,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5561097" vertical-offset="19832" max-vertical-offset="22755">
-          <caret line="1337" column="17" selection-start-line="1337" selection-start-column="17" selection-end-line="1337" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="19832" max-vertical-offset="22770">
+          <caret line="1338" column="0" selection-start-line="1338" selection-start-column="0" selection-end-line="1338" selection-end-column="0" />
           <folding>
-            <marker date="1444908147530" expanded="true" signature="42090:42415" placeholder="..." />
-            <marker date="1444908147530" expanded="true" signature="42653:42697" placeholder="..." />
+            <marker date="1444908476539" expanded="true" signature="42090:42415" placeholder="..." />
+            <marker date="1444908476539" expanded="true" signature="42653:42697" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/own.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8553616" vertical-offset="15557" max-vertical-offset="30510">
+          <caret line="1060" column="0" selection-start-line="1060" selection-start-column="0" selection-end-line="1060" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
