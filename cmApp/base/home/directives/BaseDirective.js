@@ -1335,18 +1335,19 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                 function initData(editor) {
                     //editorObj = editor;
                     checkChanges(editor);
-                    $('textarea#edit').on('rightclick', function(e) {
-                        e.preventDefault();
-                        $('textarea#edit').editable('show', null);
-
-                    });
                 }
-
 
                 //
                 //document.querySelector(".froala-box > div:last-child").remove();
                 document.querySelector(".froala-box > div:nth-child(2)").remove();
 
+                document.addEventListener("contextmenu", function(e) {
+
+                    if(!angular.element(e.target).hasClass('froala-element')) return;
+
+                    e.preventDefault();
+                    $('textarea#edit').editable('show', null);
+                })
 
             }
         }

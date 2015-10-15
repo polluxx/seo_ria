@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="83e999ce-c8b4-40ca-ba84-824ff53ab2e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" afterPath="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js" afterPath="$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.js" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/_cm_bootstrap.map" afterPath="$PROJECT_DIR$/build/_cm_bootstrap.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cm/post/add.html" afterPath="$PROJECT_DIR$/views/cm/post/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/own.css" afterPath="$PROJECT_DIR$/assets/css/own.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/theme.css" afterPath="$PROJECT_DIR$/build/assets/css/theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/css/own.css" afterPath="$PROJECT_DIR$/build/assets/css/own.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seo.iws" />
@@ -78,11 +74,11 @@
       <file leaf-file-name="BaseDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="19830" max-vertical-offset="22770">
-              <caret line="1340" column="0" selection-start-line="1340" selection-start-column="0" selection-end-line="1340" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="19862" max-vertical-offset="22785">
+              <caret line="1341" column="82" selection-start-line="1341" selection-start-column="82" selection-end-line="1341" selection-end-column="82" />
               <folding>
-                <marker date="1444903622537" expanded="true" signature="42090:42415" placeholder="..." />
-                <marker date="1444903622537" expanded="true" signature="42653:42697" placeholder="..." />
+                <marker date="1444907381143" expanded="true" signature="42090:42415" placeholder="..." />
+                <marker date="1444907381143" expanded="true" signature="42653:42697" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -199,11 +195,11 @@
         <option value="$PROJECT_DIR$/cmApp/modules/storage/add/controllers/StorageAddCtrl.js" />
         <option value="$PROJECT_DIR$/views/cm/storage/add.html" />
         <option value="$PROJECT_DIR$/views/cm/post/statistic.html" />
-        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js" />
         <option value="$PROJECT_DIR$/views/cm/post/add.html" />
         <option value="$PROJECT_DIR$/assets/css/own.css" />
         <option value="$PROJECT_DIR$/cmApp/modules/post/add/controllers/PostAddCtrl.js" />
+        <option value="$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -1120,17 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19830" max-vertical-offset="22770">
-          <caret line="1340" column="0" selection-start-line="1340" selection-start-column="0" selection-end-line="1340" selection-end-column="0" />
-          <folding>
-            <marker date="1444903622537" expanded="true" signature="42090:42415" placeholder="..." />
-            <marker date="1444903622537" expanded="true" signature="42653:42697" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmApp/modules/post/list/factories/PostFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
@@ -1171,6 +1156,17 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="7112" max-vertical-offset="8265">
           <caret line="492" column="31" selection-start-line="492" selection-start-column="31" selection-end-line="492" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmApp/base/home/directives/BaseDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19862" max-vertical-offset="22785">
+          <caret line="1341" column="82" selection-start-line="1341" selection-start-column="82" selection-end-line="1341" selection-end-column="82" />
+          <folding>
+            <marker date="1444907381143" expanded="true" signature="42090:42415" placeholder="..." />
+            <marker date="1444907381143" expanded="true" signature="42653:42697" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

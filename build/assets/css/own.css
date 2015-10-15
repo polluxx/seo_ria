@@ -1051,7 +1051,7 @@ h1 {
 }
 
 .rewrite {
-    padding: 5px;
+    padding: 5px !important;
     display: inline-block;
     margin: 5px;
     background-color: #009998;
@@ -2018,4 +2018,11 @@ input[type=checkbox], input[type=radio] {
     margin-left: 10px;
     border-left: 1px solid rgba(128, 128, 128, 0.15);
     padding-left: 10px;
+}
+
+.source-item.pre-title {
+    padding: 6px;
+}
+.source-item {
+    word-break: break-all;
 }
