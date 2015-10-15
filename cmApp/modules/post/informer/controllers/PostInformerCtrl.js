@@ -42,7 +42,7 @@ define([
 
         // SETUP DEFAULT FILTERS
         $scope.info.filters = {};
-        $scope.info.filters.tizers_horisontal = $scope.tizersNum[0];
+        $scope.info.filters.tizers_horisontal = $scope.tizersNum[3];
         $scope.info.filters.tizers_vertical = $scope.tizersNum[0];
 
         $scope.info.filters.riaBanner_borderStyle = $rootScope.linesTypes[0];
@@ -52,7 +52,7 @@ define([
         $scope.info.filters.riaTizer_marginRight = 5;
         $scope.info.filters.riaTizer_marginBottom = 5;
 
-        $scope.info.filters.riaBanner_width = 120;
+        $scope.info.filters.riaBanner_width = 640;
 
         $scope.info.filters.tizers_axis = $scope.axises[0];
 
@@ -70,52 +70,13 @@ define([
             postInfoLink = bzConfig.api()+"/cm/informer",
             infoLink = bzConfig.api()+"/cm/informer";
         var params = {"json":true, "forDeep":true},
+        reqParams = {
+            projectId:$scope.doc.project,
+            option:+$scope.doc.parameters.subcategory.id,
+            subcategory:+$scope.doc.rubric.id
+        },
         subcategoryIndex = 0;
 
-
-        $scope.$watch("info.option", function() {
-
-            $scope.sendDataReq($scope.returnOptionsLink());
-        });
-        $scope.$watch("info.subcategory", function() {
-            if($scope.info.subcategory == undefined || !$scope.info.subcategory.id) return;
-
-            $scope.getParams({
-                projectId:$scope.info.project.id,
-                option:+$scope.info.subcategory.id,
-                subcategory:+$scope.info.category.id
-            }, function(results) {
-                console.log(results);
-                if(results == undefined) return;
-
-                $scope.params.options = results;
-                $scope.info.option = $scope.params.options[0];
-
-                $scope.sendDataReq($scope.returnOptionsLink());
-            });
-        });
-        $scope.$watch("info.category", function() {
-            if($scope.info.category == undefined || !$scope.info.category.id) return;
-
-            $scope.getParams({
-                projectId:$scope.info.project.id,
-                subcategory:+$scope.info.category.id
-            }, function(results) {
-
-                if(results == undefined) return;
-
-                $scope.params.subcategories = results.map(function (item) {
-                    return {id:item.subcategory, name:item.name};
-                });
-                if($scope.tmp.subcategory != undefined) {
-                    subcategoryIndex = $scope.params.subcategories.findElm(getArrayIndex, {id: $scope.tmp.subcategory});
-                }
-                $scope.info.subcategory = $scope.params.subcategories[subcategoryIndex] || $scope.params.subcategories[0];
-
-                $scope.sendDataReq();
-            });
-
-        });
 
         var api = $resource(link, {}, {
                 get: {
@@ -145,34 +106,45 @@ define([
             })
         };
 
+        console.log(reqParams);
+        $scope.getParams(reqParams, function(results) {
+
+            if(results == undefined) return;
+
+            $scope.sendDataReq($scope.returnOptionsLink());
+        });
 
 
         var insertParams = [], item, items = [];
         $scope.infoSave = function() {
-            console.log($scope.info);
-            api.post($scope.info, function(resp) {
-                if(resp.code != 200) {
-                    alertify.error("Ошибка генерирования информера");
-                    return;
-                }
+            //console.log($scope.info);
+            //api.post($scope.info, function(resp) {
+            //    if(resp.code != 200) {
+            //        alertify.error("Ошибка генерирования информера");
+            //        return;
+            //    }
 
-                $scope.doc.informer = resp.key;
+                //$scope.doc.informer = resp.key;
+                $scope.doc.informer = '3178dc2e680172fd9f833d4b8f75ba52';
 
                 //localStorageService.set("currentInformer_"+$scope.info.project.id, resp.key);
-                console.log(resp);
-                $scope.informerBlock.toggle();
+                //console.log(resp);
+                //$scope.informerBlock.toggle();
 
                 var informer = angular.element(
-                    "<div id=\"riainfo_"+resp.key+"\"></div>" +
-                    "<script type=\"text/javascript\" src=\"http://cobrand.ria.com/js/ria_informer.js?riacode="+resp.key+"\" ></script>" +
-                    "</br>"
+                    "<info>" +
+                    "<div id=\"riainfo_"+$scope.doc.informer+"\"></div>" +
+                    "<script type=\"text/javascript\" src=\"http://cobrand.ria.com/js/ria_informer.js?riacode="+$scope.doc.informer+"\" ></script>" +
+                    "</info>" +
+                    "<p></br></p>"
                 );
 
+                //console.log(informer);
                 //informer = angular.copy(document.getElementsByTagName("infoblock"));
                 //$compile(informer);
-                angular.element(".trumbowyg-editor").append(informer);
-            })
-        }
+                angular.element(".froala-view").append(informer);
+            //})
+        };
 
         $scope.checkInfo = function() {
 
@@ -185,7 +157,7 @@ define([
 
             //var margin = angular.element(document.getElementById("tizer_marginRight"));
             var margin = $scope.info.filters.riaTizer_marginRight;
-            document.getElementById("riaTizer_marginRight").value = margin;
+            //document.getElementById("riaTizer_marginRight").value = margin;
             var calcMargin = (+hor-1)*(+margin);
 
             if (isNaN(calcMargin)) calcMargin = 0;
@@ -218,11 +190,6 @@ define([
 
             $scope.isAllowedLogoAxis = false;
             // FOR newbuilds and new auto
-            if (projectsWithReversedLogo.indexOf(+$scope.info.project.id) != -1) {
-                $scope.isAllowedLogoAxis = true;
-                $scope.relocateLogo();
-                // }
-            }
 
             var projectsWaitoutAddBtn = [5,6];
             var categoriesWaitoutAddBtn = [1,777];
@@ -234,7 +201,7 @@ define([
 
             // END
 
-
+            if(!$scope.styles[".riaTizer"]) $scope.styles[".riaTizer"] = [];
             $scope.styles[".riaTizer"]["width"] = calcWidth+"px";
             //document.getElementById("riaTizer_width").value = calcWidth;
             document.getElementById("tizerWidthId").value = calcWidth;
@@ -390,30 +357,29 @@ define([
 
         $scope.returnOptionsLink = function() {
             var linkToReturn = "";
-            if($scope.info.subcategory.id) {
-                linkToReturn += "&subcategory="+$scope.info.subcategory.id;
+            if($scope.doc.parameters.subcategory.id) {
+                linkToReturn += "&subcategory="+$scope.doc.parameters.subcategory.id;
             }
-            switch($scope.info.project.id) {
+            switch($scope.doc.project) {
                 case 1:
                     break;
                 case 2:
                     //if($scope.info.option.value != undefined) {
-                    if($scope.info.option.id) {
-                        linkToReturn += "&options[0][" + $scope.info.option.value + "]=" + $scope.info.option.id;
+                    if($scope.doc.parameters.option.id) {
+                        linkToReturn += "&options[0][" + $scope.doc.parameters.option.id + "]=" + $scope.doc.parameters.option.name;
                     }
                     //}
                     break;
                 case 3:
-                    if($scope.info.option.id) {
-                        linkToReturn += "&options[]="+$scope.info.option.id;
+                    if($scope.doc.parameters.option.id) {
+                        linkToReturn += "&options[]="+$scope.doc.parameters.option.id;
                     }
                     break;
                 case 5:
                     linkToReturn = "";
 
-                    console.log($scope.info.option);
-                    if($scope.info.option.id) {
-                        linkToReturn += "&option[" + $scope.info.subcategory.id + "]="+$scope.info.option.id;
+                    if($scope.doc.parameters.option.id) {
+                        linkToReturn += "&option[" + $scope.doc.parameters.subcategory.id + "]="+$scope.doc.parameters.option.id;
                     }
                     break;
             }

@@ -1124,14 +1124,17 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
         return {
             restrict: "A",
             scope: {
-                model: "=ngModel"
+                model: "=ngModel",
+                doc: "=doc"
             },
             link: function(scope, element, attrs) {
+
                 // Models
                 angular.extend(scope, {
                     project: 1,
                     link: "http://www.ria.com",
                     wroted: "",
+                    fromEventChk: null,
                     links: {
                         1: "http://auto.ria.com",
                         2: "http://www.ria.com",
@@ -1145,16 +1148,20 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                     scope.project = $rootScope.currentProject.id;
                 });
                 //scope.project = $rootScope.currentProject.id;
-                var modalInstance, textarea, selection = {}, range, checkChanges, watched = null;
+                var modalInstance, textarea, selection = {}, range, checkChanges, watched = null, setData=0;
 
 
                 checkChanges = function(editor) {
 
                     scope.$watch("model", function() {
 
+                        if(watched === true) return;
+
+
+
                         scope.model = scope.model || "";
                         //if(scope.model !== undefined) {
-                            console.log(scope.model.length);
+                            //console.log(scope.model.length);
                             editor.setHTML(scope.model);
                         //}
                         if(scope.model.length > 0) watched = true;
@@ -1183,14 +1190,20 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                             textarea.setSelection(selection.startNode, selection.startOffset, selection.endNode, selection.endOffset);
                             selection = {};
                             textarea.insertHTML(
-                                '<p><div class="aside-tweet">' +
-                                '<img src="http://cm.ria.com/assets/img/twitter.svg" width="64" height="64"/>' +
+                                '<p>' +
+                                '<div class="aside-tweet" style="background: rgba(0,102,204,.1);\
+                                    margin: 10px auto;\
+                                    max-width: inherit;\
+                                    padding: 10px 10px 10px 70px;\
+                                    font-size: 1.5rem; \
+                                    position: relative;">' +
+                                '<img src="http://cm.ria.com/assets/img/twitter.svg" width="48" height="48"></img>' +
                                 '<h3">Процитировать в Твиттере</h3>' +
-                                '<p style="  font-size: 21px;line-height: 26px;">' +
+                                '<p style="margin: 0;font-size: 21px;line-height: 26px;">' +
                                 '<a style="color: #06c;font-family: pt-serif-caption;text-decoration: none;" href="//twitter.com/intent/tweet?text='+text+'&amp;url='+scope.link+'" target="_blank">'+text+'</a>' +
                                 '</p>' +
-                                '</div></p>' +
-                                '<p><br/></p>'
+                                '</div>' +
+                                '</p>'
                             );
 
 
@@ -1202,16 +1215,38 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                             //$log.info('Modal dismissed at: ' + new Date());
                         });
                     },
+                    informerBox: function() {
+                        modalInstance = $modal.open({
+                            animation: true,
+                            size: 'lg',
+                            templateUrl: '/views/cm/post/informerBoxLight.html',
+                            controller: "PostInformerCtrl",
+                            scope: scope,
+                            resolve: {
+                                doc: function () {
+                                    return scope.doc;
+                                }
+                            }
+                        });
+                    },
+
                     listener: function(editor) {
                         if(watched !== null) return;
 
+                        var self = this,
+                            listener = function(e) {
+                                console.info('text check event: ' + new Date());
+                                //self.fromEventChk = true;
+                                //self.model = editor.cleanTags(editor.getHTML());
+                                self.model = editor.cleanTags(editor.getHTML());
+                                self.$apply();
+                            };
+                        document.addEventListener('updated', listener, true);
 
-
-                        var self = this;
-                        document.addEventListener('updated', function(e) {
-                            console.log(e);
-                            self.model = editor.cleanTags(editor.getHTML());
-                            self.$apply();
+                        // clear current event listener
+                        $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+                            if("addPost" != current.$$route.segment) return;
+                            document.removeEventListener('updated', listener, true);
                         });
 
 
@@ -1231,7 +1266,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                          }
 
                          if(watched === true || watched === false || img) {
-
+                            //log
                          } else {
                              initData(editor);
                              scope.listener(editor);
@@ -1241,7 +1276,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
 
                     })
                     .editable({
-                        inlineMode: false,
+                        inlineMode: true,
                         minHeight:200,
                         toolbarFixed: false,
                         crossDomain: true,
@@ -1249,6 +1284,9 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                         allowStyle: true,
                         paragraphy: false,
                         useClasses: false,
+                        fullPage: true,
+
+
                         imageUploadURL: bzConfig.api()+"/cm/upload",
                         imageUploadParams: {
                             project: scope.project,
@@ -1257,7 +1295,7 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                             height: 360
                         },
                          imagesLoadParams: {width: 640},
-                        buttons:["bold", "italic", "underline", "twitter", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
+                        buttons:["bold", "italic", "underline", "twitter", "informer", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", "align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "createLink", "insertImage", "insertVideo", "table", "undo", "redo", "html", "insertHorizontalRule", "removeFormat", "fullscreen"],
                         customButtons: {
                             twitter: {
                                 title: "твитануть",
@@ -1280,6 +1318,16 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                                 refresh: function () {
 
                                 }
+                            },
+                            informer: {
+                                title: "информер",
+                                icon: {
+                                    type: "font",
+                                    value: "fa fa-cloud"
+                                },
+                                callback: function() {
+                                    scope.informerBox();
+                                }
                             }
                         }
                     });
@@ -1289,7 +1337,8 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                     checkChanges(editor);
                 }
                 //
-                document.querySelector(".froala-box > div:last-child").remove();
+                //document.querySelector(".froala-box > div:last-child").remove();
+                document.querySelector(".froala-box > div:nth-child(2)").remove();
 
 
             }
@@ -1362,6 +1411,91 @@ define(['base/home/module', "jquery",'morphingButton'], function (module, $, mor
                     return item.name;
                 }
 
+            }
+        }
+    });
+
+    module.directive("autoupdater", function($routeParams, $rootScope) {
+        return {
+            restrict: "A",
+            scope: {
+                upd: '&autoupdater',
+                doc: '=doc'
+            },
+            link: function(scope, element) {
+
+                var oldDoc = Object.assign({}, scope.doc), newDoc = oldDoc, updFirstDiff = false,
+                timers = [],
+                textUpdater = new Event('updated', {'detail': {times: 0}}),
+
+                updTimeout = function() {
+                    return setInterval(function() {
+                        document.dispatchEvent(textUpdater);
+
+                        // setTimeout because of text model sync
+                        setTimeout(function() {
+                            if(newDoc == oldDoc) return;
+
+                            // need to check for first update diff
+                            if($routeParams.id !== undefined && !updFirstDiff) {
+                                updFirstDiff = true;
+                                oldDoc = newDoc;
+
+                                return;
+                            }
+
+                            oldDoc = newDoc;
+                            scope.upd();
+
+                            console.info('UPDATE DOC');
+                        }, 200);
+                    }, 10000);
+                },
+                timeOutIn;
+
+                scope.$watch("doc", function(){
+                    if($routeParams.id !== undefined && !scope.doc.title) {
+                        return;
+                    }
+                    newDoc = Object.assign({} ,scope.doc);
+                    clearTimers(timers);
+                    timeOutIn = updTimeout();
+                    timers.push(timeOutIn);
+                }, true);
+
+                $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+                    if("addPost" != current.$$route.segment) return;
+                    clearTimers(timers);
+                });
+
+                function clearTimers(timers) {
+                    timers.forEach(function(timer) {
+                        clearInterval(timer);
+                    });
+                    timers = [];
+                }
+                //document.dispatchEvent(textUpdater);
+            }
+        }
+    });
+
+    module.directive("keypressed", function() {
+        return {
+            restrict: "A",
+            scope: {
+                updater: "&keypressed",
+                parent: "=parentitem"
+            },
+            link: function(scope, element) {
+                element.on("keypress", function(e) {
+                    var code = e.which || e.keyCode;
+
+                    if(code != 13) return;
+                    e.preventDefault();
+
+                    scope.updater({item: element[0].value, parent: scope.parent});
+                    element[0].value = "";
+                });
             }
         }
     });

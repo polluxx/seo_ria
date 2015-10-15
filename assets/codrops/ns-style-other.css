@@ -1,0 +1,239 @@
+.notification-shape {
+	position: fixed;
+	z-index: 1000;
+}
+
+.notification-shape svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+[class^="ns-effect-"].ns-other.ns-hide,
+[class*=" ns-effect-"].ns-other.ns-hide {
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+/* Individual Effects */
+
+/* Expand SVG corner */
+.ns-effect-cornerexpand {
+	width: 200px;
+	min-height: 200px;
+	background: #5a7d98;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+}
+
+.shape-box {
+	top: 0;
+	right: 0;
+	width: 200px;
+	min-height: 200px;
+}
+
+.shape-box path {
+	fill: #3b5163;
+}
+
+.ns-effect-cornerexpand .icon {
+	color: #5a7d98;
+	background: #fff;
+	display: block;
+	width: 4em;
+	height: 4em;
+	line-height: 5.3;
+	margin: 0.5em auto 1.25em;
+	border-radius: 50%;
+}
+
+.ns-effect-cornerexpand .ns-close {
+	top: 15px;
+	right: 15px;
+}
+
+.ns-effect-cornerexpand .ns-close::before,
+.ns-effect-cornerexpand .ns-close::after {
+    background: #3b5163;
+}
+
+.ns-effect-cornerexpand .ns-close:hover::before,
+.ns-effect-cornerexpand .ns-close:hover::after {
+    background: #fff;
+}
+
+.ns-effect-cornerexpand a {
+	color: #3b5163;
+	opacity: 1;
+}
+
+.ns-effect-cornerexpand a:hover,
+.ns-effect-cornerexpand a:focus {
+	color: #fff;
+}
+
+.ns-effect-cornerexpand.ns-show,
+.ns-effect-cornerexpand.ns-hide {
+	-webkit-animation-name: animScale;
+	animation-name: animScale;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+}
+
+.ns-effect-cornerexpand.ns-show {
+	opacity: 0;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+@-webkit-keyframes animScale {
+	0% { opacity: 0; -webkit-transform: scale3d(0.4,0.4,1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1,1,1); }
+}
+
+@keyframes animScale {
+	0% { opacity: 0; -webkit-transform: scale3d(0.4,0.4,1); transform: scale3d(0.4,0.4,1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+}
+
+/* SVG Windshield Wiper */
+.ns-effect-loadingcircle {
+	width: 210px;
+	height: 40px;
+	border: 2px solid #72BF7B;
+	border-radius: 40px;
+	background: #fff;
+	font-weight: 700;
+	padding: 0.75em 1.5em 0;
+	position: relative;
+	z-index: 100;
+}
+
+.ns-effect-loadingcircle .ns-close {
+	border: 2px solid #72BF7B;
+	border-radius: 50%;
+	top: 50%;
+	right: 15px;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+.ns-effect-loadingcircle .ns-close::before,
+.ns-effect-loadingcircle .ns-close::after {
+	background: #72BF7B;
+}
+
+.ns-effect-loadingcircle .ns-close:hover::before,
+.ns-effect-loadingcircle .ns-close:hover::after {
+	background: #72BF7B;
+}
+
+.ns-effect-loadingcircle .ns-box-inner {
+	color: #72BF7B;
+}
+
+.shape-progress {
+	bottom: 40px;
+	left: 40px;
+}
+
+.shape-progress svg {
+	width: 70px;
+	height: 70px;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.shape-progress path {
+	fill: none;
+	stroke: #72BF7B;
+	stroke-width: 5;
+	stroke-dasharray: 204; 
+	stroke-dashoffset: 204;
+	opacity: 0;
+}
+
+.ns-effect-loadingcircle.ns-show + svg path {
+	-webkit-animation: animDash 3s;
+	animation: animDash 3s;
+}
+
+@-webkit-keyframes animDash {
+	0% { opacity: 1; stroke-dashoffset: 204; }
+	33% { stroke-dashoffset: 160; }
+	50% { stroke-dashoffset: 150; }
+	85% { stroke-dashoffset: 30; }
+	100% { opacity: 1; stroke-dashoffset: 0; }
+}
+
+@keyframes animDash {
+	0% { opacity: 1; stroke-dashoffset: 204; }
+	33% { stroke-dashoffset: 160; }
+	50% { stroke-dashoffset: 150; }
+	85% { stroke-dashoffset: 30; }
+	100% { opacity: 1; stroke-dashoffset: 0; }
+}
+
+.ns-effect-loadingcircle.ns-show {
+	opacity: 0;
+	-webkit-animation-name: animResize;
+	animation-name: animResize;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
+	-webkit-animation-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1.6);
+	animation-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1.6);
+}
+
+@-webkit-keyframes animResize {
+	0% { opacity: 1; width: 70px; background: transparent; }
+	100% { opacity: 1; width: 210px; background: #fff; }
+}
+
+@keyframes animResize {
+	0% { opacity: 1; width: 70px; background: transparent; }
+	100% { opacity: 1; width: 210px; background: #fff; }
+}
+
+.ns-effect-loadingcircle.ns-show .ns-box-inner,
+.ns-effect-loadingcircle.ns-show .ns-close,
+.ns-effect-loadingcircle.ns-hide {
+	-webkit-animation-name: animFade;
+	animation-name: animFade;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+}
+
+.ns-effect-loadingcircle.ns-show .ns-box-inner,
+.ns-effect-loadingcircle.ns-show .ns-close {
+	opacity: 0;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 3.3s;
+	animation-delay: 3.3s;
+}
+
+.ns-effect-loadingcircle.ns-hide {
+	opacity: 1;
+}
+
+@-webkit-keyframes animFade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes animFade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+

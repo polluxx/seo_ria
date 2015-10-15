@@ -1,3 +1,8 @@
 .container {
     width: auto !important;
 }
+
+input[type=checkbox], input[type=radio] {
+    opacity: 1;
+    position: relative;
+}

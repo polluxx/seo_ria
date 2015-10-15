@@ -1113,7 +1113,7 @@ h1 {
 
 .addImageBlock {
     display: inline-block;
-    width: 80%;
+
     vertical-align: top;
     padding: 6px;
 }
@@ -1143,11 +1143,11 @@ h1 {
 
 .img-preload {
     display: inline-block;
-    max-width: 600px;
+    max-width: 320px;
 }
 
 .img-preloaded {
-    max-width: 1000px  !important;
+    max-width: 340px  !important;
     max-height: 1000px  !important;
     padding: 4px;
     line-height: 1.42857143;
@@ -1158,24 +1158,17 @@ h1 {
     display: inline-block;
     border-radius: 1px;
 }
-
-.img-loader-input {
-    display: inline-block !important;
-    width: 200px  !important;
-
+.addImageBlock input, .addImageBlock input[type=text] {
+    margin-bottom: 10px;
 }
-.img-loader-input:nth-child(1) {
-   padding-right: 10px  !important;
-    width: 300px  !important;
-    padding-top: 2px;
-}
+
 .upload-loc {
     padding-top: 2px !important;
 }
 
 .publication-date {
     display: inline-block;
-    width: 49%;
+
 }
 
 .publication-date.datepick {
@@ -1971,9 +1964,30 @@ thead {
     position: relative;
     opacity: 1;
 }
+input[type=checkbox], input[type=radio] {
+    opacity: 1 !important;
+    position: relative !important;
+}
+.form-group input[type=radio] {
+    margin: 0;
+}
+.form-group .inline {
+    display: inline-block !important;
+}
 .m-left-xs {
     margin-right: 60px;
 }
+
+.froala-box {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.modal-dialog .content-style-overlay {
+    padding: 20px;
+}
+
 
 .wizard-steps li.active a {
     font-size: 12px;
@@ -1987,4 +2001,28 @@ thead {
 .export-input {
     width: 200px;
     position: absolute;
+}
+
+
+/* ADD */
+.left-add-block {
+    display: inline-block;
+    width: 640px;
+    float: left;
+}
+
+.right-add-block {
+    display: inline-block;
+    max-width: 340px;
+
+    margin-left: 10px;
+    border-left: 1px solid rgba(128, 128, 128, 0.15);
+    padding-left: 10px;
+}
+
+.source-item.pre-title {
+    padding: 6px;
+}
+.source-item {
+    word-break: break-all;
 }

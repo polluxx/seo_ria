@@ -5,17 +5,140 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('PostAddCtrl', ['$scope', 'bzUser', 'bzConfig', '$http', 'PostFactory', '$location', '$routeParams', '$rootScope', function($scope, bzUser, bzConfig, $http, PostFactory, $location, $routeParams, $rootScope) {
+    module.controller('PostAddCtrl', ['$scope', 'bzUser', 'bzConfig', '$http', 'PostFactory', '$location', '$routeParams', '$rootScope', '$resource', function($scope, bzUser, bzConfig, $http, PostFactory, $location, $routeParams, $rootScope, $resource) {
         $scope.files;
         $scope.$loading = false;
+        $scope.$updating = false;
 
         $scope.doc = {};
         $scope.doc.doctype = 'draft';
         $scope.doc.isNew = true;
         $scope.doc.publication = {};
+        $scope.doc.parameters = {};
+        $scope.doc.sources = [];
+        $scope.doc.parameters.subcategory = {};
         $scope.doc.publication.doctype = 'deferred';
         $scope.fileLoading = false;
+        $scope.sourceItem = "";
 
+
+        // DEEP OPTIONS
+        $scope.tmp = {};
+        $scope.params = {};
+        $scope.params.subcategories = [{id:'0', name:"Выберите категорию"}];
+        $scope.params.defaultOptions = $scope.params.options = [{id:'0', name:"Выберите подкатегорию"}];
+        $scope.doc.parameters.subcategory.id = $scope.params.subcategories[0];
+        $scope.doc.parameters.option = $scope.params.options[0];
+
+
+        var link = bzConfig.api()+"/cm/filtertypes",
+            postInfoLink = bzConfig.api()+"/cm/informer",
+            infoLink = bzConfig.api()+"/cm/informer";
+        var params = {"json":true, "forDeep":true},
+            subcategoryIndex = 0;
+
+
+
+        //
+        var svgshape = document.getElementById( 'notification-shape' );
+
+        document.addEventListener( 'updating', function(e) {
+
+            // create the notification
+            var notification = new NotificationFx({
+                wrapper : svgshape,
+                message : '<p>Изменения сохранены</p>',
+                layout : 'other',
+                effect : 'loadingcircle',
+                ttl : 7000,
+                type : 'notice', // notice, warning or error
+                onClose : function() {
+                    //bttn.disabled = false;
+                    return false;
+                }
+            });
+
+            // show the notification
+            notification.show();
+
+            // disable the button (for demo purposes only)
+            this.disabled = true;
+        } );
+        //
+
+
+
+        $scope.$watch("doc.parameters.subcategory", function() {
+
+            if(!$scope.doc.rubric ||
+                !$scope.doc.parameters ||
+                !$scope.doc.parameters.subcategory) return;
+
+            if($scope.doc.parameters.subcategory.id === undefined) {
+                //if($scope.doc.parameters.subcategory !== undefined) {
+                //
+                //    subcategoryIndex = $scope.params.subcategories.findElm(getArrayIndex, {id: +$scope.doc.articleInfo.subcategory});
+                //    $scope.doc.parameters.subcategory = $scope.params.subcategories[subcategoryIndex] || $scope.params.subcategories[0];
+                //}
+                return;
+            } else if($scope.doc.parameters.subcategory.id == 0) {
+                $scope.params.options = $scope.params.defaultOptions;
+                $scope.doc.parameters.option = $scope.params.options[0];
+                return;
+            }
+
+            $scope.getParams({
+                projectId:$scope.doc.project,
+                option:+$scope.doc.parameters.subcategory.id,
+                subcategory:+$scope.doc.rubric.id
+            }, function(results) {
+                //console.log(results);
+                if(results == undefined) return;
+
+                $scope.params.options = results;
+                $scope.doc.parameters.option = !$scope.doc.parameters.option ? $scope.params.options[0] : getOption($scope.doc.parameters.option.id, $scope.params.options);
+
+                //$scope.sendDataReq($scope.returnOptionsLink());
+            });
+        });
+        function getOption(id, heap) {
+            var index = heap.findElm(getArrayIndex, {id: +id});
+
+            return ~index ? heap[index] : heap[0];
+        }
+
+        $scope.$watch("doc.rubric", function() {
+            if(!$scope.doc.rubric || !$scope.doc.rubric.id) return;
+
+            $rootScope.rubric = $scope.doc.rubric;
+
+            // for subcat
+            $scope.getParams({
+                projectId:$scope.doc.project,
+                subcategory:+$scope.doc.rubric.id
+            }, function(results) {
+
+                if(results == undefined) return;
+
+                $scope.params.subcategories = results.map(function (item) {
+                    return {id:item.subcategory, name:item.name};
+                });
+
+                if($scope.doc.parameters !== undefined && $scope.doc.parameters.subcategory != undefined) {
+                    var indexid = $scope.doc.parameters.subcategory.id;
+                    if(!$scope.doc.parameters.subcategory.id) indexid = $scope.doc.parameters.subcategory;
+                    subcategoryIndex = $scope.params.subcategories.findElm(getArrayIndex, {id: indexid});
+                }
+                //if(!$scope.doc.articleInfo) $scope.doc.articleInfo = {};
+                $scope.doc.parameters.subcategory = $scope.params.subcategories[subcategoryIndex] || $scope.params.subcategories[0];
+
+                //$scope.sendDataReq();
+
+            });
+            // end subcat
+        });
+
+        //END
 
         //$scope.doc.project = $rootScope.currentProject.id;
         //$scope.rubrics = $rootScope.rubrics[$rootScope.currentProject.id];
@@ -41,6 +164,7 @@ define([
             }
 
             $scope.doc.rubric = $rootScope.rubric = $scope.rubrics[rubricIndex];
+
             $scope.$loading = false;
         });
 
@@ -60,6 +184,44 @@ define([
                 return true;
             }
         }
+        function getArrayIndex(element, index, needle) {
+            if(+element.id === +needle.id) {
+                //console.log(index);
+                return index;
+            }
+        }
+        //
+
+        //
+
+        var api = $resource(link, {}, {
+                get: {
+                    method: "GET",
+                    url: link,
+                    isArray: false
+                },
+                post: {
+                    method: "POST",
+                    url: postInfoLink,
+                    isArray: false
+                },
+                informer: {
+                    method: "GET",
+                    url: infoLink,
+                    isArray: false
+                }
+            }
+        );
+        $scope.getParams = function(inputParams, callback) {
+            for(var param in params) {
+                inputParams[param] = params[param];
+            }
+
+            api.get(inputParams, function(resp) {
+                callback(resp.results);
+            })
+        };
+
         //
 
         $rootScope.$watch("authors", function () {
@@ -71,10 +233,6 @@ define([
 
             $scope.doc.author = $rootScope.authors[userIndex];
             $scope.$loading = false;
-        });
-
-        $scope.$watch("doc.rubric", function() {
-            $rootScope.rubric = $scope.doc.rubric;
         });
 
         $scope.$watch("files", function() {
@@ -110,7 +268,7 @@ define([
             if($scope.doc.img.width) $scope.formddata.append('width', $scope.doc.img.width);
             if($scope.doc.img.height) $scope.formddata.append('height', $scope.doc.img.height);
             $scope.send($scope.formddata);
-        }
+        };
         // END
 
 
@@ -202,32 +360,66 @@ define([
                 if($scope.doc.doctype == "plan") {
                     $scope.doc.doctype = "planned";
                 }
-
                 //$scope.doc.rubric.id = $scope.doc.rubric.id+"";
                 $scope.doc.publication.time = new Date(resp.doc.publication.datetime);
                 $scope.doc.publication.date = new Date(resp.doc.publication.date);
 
                 $scope.doc.author.id = +$scope.doc.author.id;
 
+
                 var projectIndex = $rootScope.projects.findIndex(getProjectIndex);
                 if(~projectIndex) $rootScope.currentProject = $rootScope.projects[projectIndex];
             })
         };
 
-        $scope.docSave = function() {
-            $scope.$loading = true;
+        function cleanAdditionalData(data) {
+            //console.log(data);
+            data = data.replace(/<script id="loader".+><\/script>/g, "");
+
+            // tweeter img replace auto styles
+            data = data.replace(/(<img.*)(style=".+")(.*>)/g, "$1style=\"position: absolute !important; padding: 0 !important;left: 10px;top: 10px;\"$3");
+
+            // informer replacer
+            data = data.replace(/(<div id="riainfo_[a-z0-9]+")((\n|.)+)(<script.+>)/g, "$1></div>$4");
+
+            data += "<script id=\"loader\" src=\"https://cobrand.ria.com/js/partners/loader.js\"></script>";
+
+            return data
+        }
+
+        $scope.docSave = function(auto) {
+
+            if(!auto) {
+                $scope.$loading = true;
+                var updater = new Event('updated', {'detail': {times: 0}});
+                document.dispatchEvent(updater);
+            } else {
+                $scope.doc.autoupdate = true;
+                $scope.$updating = true;
+                document.dispatchEvent(new Event('updating'));
+            }
+
+            //if($scope.doc.articleInfo !== undefined) {
+            //    delete $scope.doc.articleInfo.option;
+            //    delete $scope.doc.articleInfo.subcategory;
+            //}
 
 
-            var updater = new Event('updated', {'detail': {times: 0}});
-            document.dispatchEvent(updater);
+
+            // REGEXS
+            var objToSend = Object.assign({}, $scope.doc);
+            objToSend.text = cleanAdditionalData(objToSend.text);
+
 
 
             //
-            $scope.doc.author = mapUserData($scope.doc.author);
-            console.log($scope.doc);
+            objToSend.author = mapUserData($scope.doc.author);
+            console.log(objToSend);
 
-            PostFactory.send($scope.doc, function(resp) {
+
+            PostFactory.send(objToSend, function(resp) {
                 $scope.$loading = false;
+                $scope.$updating = false;
                 if(resp.code != 200) {
                     $scope.errors = resp.errors;
                     alertify.error(resp.message);
@@ -240,26 +432,18 @@ define([
                     return;
                 }
 
-                alertify.success(resp.message);
 
+                linkTo = linksTo[objToSend.doctype];
 
-                linkTo = linksTo[$scope.doc.doctype];
-                $scope.doc = {};
+                if(!auto) {
+                    alertify.success(resp.message);
+                    $scope.doc = {};
+                    $location.path("/post/"+linkTo);
+                }
 
-                $location.path("/post/"+linkTo);
             });
             //console.log($scope.doc);
         };
-
-
-        $scope.$watch("doc.doctype", function() {
-           if($rootScope.currentProject.id != 1 || $scope.doc.doctype !== "planned") return;
-
-            $scope.doc.sendTo = [
-                "anna.samoylenko@ria.com",
-                "vitaliy.poberezkiy@ria.com"
-            ];
-        });
         $scope.removeEmail = function(email) {
             if($scope.doc.sendTo == undefined) return;
 
@@ -272,6 +456,19 @@ define([
                 $scope.$apply();
             });
         };
+
+        // AUTOUPDATE
+        $scope.autoupdate = function() {
+            if(!$scope.doc.title || $scope.doc.title.length < 5) return;
+
+
+            $scope.docSave(true);
+
+            console.log('doc updating!');
+        };
+
+
+        // WATCHERS
 
         var emailInput = angular.element(document.getElementById("add-email"));
         emailInput.on("keydown", function(e) {
@@ -292,6 +489,35 @@ define([
             emailInput[0].value = "";
             $scope.$apply();
         });
+
+        // source
+        $scope.addSource = function(source) {
+            source = source.replace(/(^\s+|\s+$)/gi, "");
+
+            if($scope.doc.sources.indexOf(source) != -1 || !source.length) return;
+
+            $scope.doc.sources.push(source);
+        };
+        $scope.removeSource = function(source) {
+            var index = $scope.doc.sources.indexOf(source);
+            $scope.doc.sources.splice(index, 1);
+            $scope.doc.sources = [].slice.call($scope.doc.sources);
+            //$scope.$apply();
+        };
+
+        angular.element(".add-source").on("keypress", function(e) {
+            var code = e.which || e.keyCode;
+
+            if(code != 13) return;
+            e.preventDefault();
+            $scope.addSource(document.querySelector(".add-source").value);
+            $scope.$apply();
+            document.querySelector(".add-source").value = "";
+        });
+
+        //
+
+
 
         if($routeParams.id != undefined) {
             $scope.getDoc();

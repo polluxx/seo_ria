@@ -43,7 +43,7 @@ define([
                     params.total(data.ideas.total);
                     // set new data
                     $scope.ideas = data.ideas.data;
-                    if($scope.ideas.length) $scope.ideas[0].$show = true;
+                    //if($scope.ideas.length) $scope.ideas[0].$show = true;
                     $defer.resolve(data.ideas.data);
                     //}, 500);
                 });
@@ -124,7 +124,7 @@ define([
 
 
         // doc UPDATE
-        $scope.ideaUpdate = function(idea) {
+        $scope.ideaUpdate = function(idea, withoutUpd) {
             idea.$loading = true;
             //$scope.$apply();
 
@@ -137,7 +137,7 @@ define([
                     $scope.errors = resp.errors || [];
                     return;
                 }
-                $scope.list();
+                if(!withoutUpd) $scope.list();
                 alertify.success("Изменена идея");
 
             })
@@ -199,6 +199,29 @@ define([
 
             //console.log(idea);
         };
+
+        // FOR IDEAS SAVE
+
+        function getPretitleIndex(element, index, needle) {
+            if(element.title == needle.title) {
+                return index;
+            }
+        }
+        $scope.addPretitle = function(item, parent) {
+
+            var pretitle = item.replace(/(^\s+|\s+$)/gi, ""),
+            pretitleItem = {title:pretitle};
+
+            //$scope.idea.pretitles.findElm(getPretitleIndex, pretitleItem);
+            if(parent.pretitles.findElm(getPretitleIndex, pretitleItem) != -1 || !pretitle.length) return;
+
+
+            parent.pretitles.push(pretitleItem);
+            $scope.$apply();
+            $scope.ideaUpdate(parent, true);
+        };
+
+
         //
     }]);
 

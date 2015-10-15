@@ -13,10 +13,11 @@ define([
         };
         $scope.format = 'yyyy-MM-dd';
         $scope.items = [];
-        
+
         var Api = $resource(bzConfig.api() + "/cm/comment");
 
         $scope.tableParams = new ngTableParams({
+            withArticle:true,
             search: "message",
             page: 0,            // show first page
             count: 10,          // count per page

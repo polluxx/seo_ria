@@ -10,14 +10,50 @@
                 <a href="/post/add/{{post._id}}" class="glyphicon glyphicon-pencil permission-add" title="редактировать"></a>
                 <a href="{{post.url}}" target="_blank"><span>{{post.title}}</span></a>
             </td>
-            <td data-title="'Показы'" sortable="'couchbaseDocument.doc.statistic.shows'">
-                <span>{{post.statistic.shows || 0}}</span>
+            <td data-title="'Просмотры'" sortable="'couchbaseDocument.doc.stats.pageviews'">
+                <span>{{post.stats.pageviews || 0}}</span>
             </td>
-            <td data-title="'Комментарии'" sortable="'couchbaseDocument.doc.statistic.comments'">
-                <span>{{post.statistic.comments || 0}}</span>
+            <td data-title="'Комментарии'" sortable="'couchbaseDocument.doc.comments.count'">
+                <span>{{post.comments.count || 0}}</span>
             </td>
-            <td data-title="'Переходов информера'" sortable="'couchbaseDocument.doc.statistic.informerShows'">
-                <span>{{post.statistic.informerShows || 0}}</span>
+            <td data-title="'Переходов информера'" sortable="'couchbaseDocument.doc.stats.informerClicks'">
+                <span>{{post.stats.informerClicks || 0}}</span>
+            </td>
+            <td data-title="'Scroll Death'">
+
+                <table class="table table-bordered table-condensed table-hover table-vertical-center">
+                    <thead>
+                    <tr>
+
+                        <th class="text-center">Baseline</th>
+                        <th class="text-center">25%</th>
+                        <th class="text-center">50%</th>
+                        <th class="text-center">75%</th>
+                        <th class="text-center">100%</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">
+                            {{post.stats.events.Baseline.count || 0}}
+                        </td>
+                        <td class="text-center">
+                            {{post.stats.events['25%'].count || 0}}
+                        </td>
+                        <td class="text-center">
+                            {{post.stats.events['50%'].count || 0}}
+                        </td>
+                        <td class="text-center">
+                            {{post.stats.events['75%'].count || 0}}
+                        </td>
+                        <td class="text-center">
+                            {{post.stats.events['100%'].count || 0}}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
             </td>
         </tr>
         </tbody>

@@ -15,7 +15,7 @@
 
     <table ng-table="tableParams" class="table-new">
         <tbody>
-        <tr id="list-item-{{post._id}}" ng-repeat="post in $data" ng-click="linker(post)" ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
+        <tr id="list-item-{{post._id}}" ng-repeat="post in $data"  ng-class="{'draft': post.doctype == 'draft', 'plan': post.doctype == 'plan'}">
 
             <td data-title="'Прод'">
                 <span ng-if="post.doctype == 'was_planned' || post.doctype == 'planned' && Date(post.publication.date).getTime() < Date.now()" class="glyphicon glyphicon-eye-open production"></span>
@@ -35,7 +35,7 @@
                 <a href="/user/{{post.author.id}}"><span>{{post.author.name}}</span></a>
             </td>
             <td data-title="'Заголовок'" sortable="'couchbaseDocument.doc.title'">
-                <a href="{{post.url}}" target="_blank"><span>{{post.title}}</span></a>
+                <a href="/post/add/{{post._id}}" ><span>{{post.title}}</span></a>
                 <!--input type="text" ng-if="post.$editableTitle" ng-blur="post.$editableTitle = false" ng-model="post.title"/-->
             </td>
             <td data-title="'Описание'" sortable="'couchbaseDocument.doc.description'">
@@ -53,12 +53,12 @@
             <td data-title="'email'" ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" >
                 <morph-btn ng-if="post.doctype == 'planned'" class="morph" update="docUpdate(post)" errors="errors" name="Email" btn="Email" confirm="Сохранить" fields="post.email" ng-init="post.email = post.email != undefined ? post.email : [{name:'email маркетинг', doctype:'spec'}]"></morph-btn>
             </td-->
-            <td ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" data-title="'Операции'">
-                <a href="/post/add/{{post._id}}">
+            <td data-title="'Операции'">
+                <a href="{{post.url}}" target="_blank">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </a>
 
-                <a href="/post/report/{{post._id}}">
+                <a ng-if="['planned', 'plan', 'was_planned'].indexOf(post.doctype) != -1" href="/post/report/{{post._id}}">
                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                 </a>
 
@@ -66,6 +66,8 @@
                     <span class="glyphicon glyphicon-trash text-danger" aria-hidden="true"></span>
                 </a>
             </td>
+
+
 
         </tr>
         </tbody>

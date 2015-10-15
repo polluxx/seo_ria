@@ -1,0 +1,92 @@
+<div class="content-style-overlay">
+    <span class="icon icon-close" ng-click="cancel()">Close the overlay</span>
+
+
+<div loading-container="$loading" ng-controller="PostInformerCtrl" class="infoblock">
+    <form class="" method="POST" name="InformerForm" enctype="multipart/form-data">
+
+
+        <div class="row">
+            <div class="span6">
+                <h4 class="title">Количество тизеров</h4>
+
+                <div class="row">
+                    <div class="span3">
+                        <label class="label">По горизонтали</label>
+                        <div class="input">
+                            <select class='span3 inputbox'
+                                    id="tizers_horisontal"
+                                    constructor='true'
+                                    ng-model="info.filters.tizers_horisontal"
+                                    ng-options="num.name for num in tizersNum track by num.id"
+                                    styles="styles"
+                                    reload="reload"
+                                    ng-change="checkInfo()"></select>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <label class="label">По вертикали</label>
+                        <div class="input">
+                            <select
+                                    class='span3 inputbox'
+                                    id="tizers_vertical"
+                                    ng-model="info.filters.tizers_vertical"
+                                    ng-options="num.name for num in tizersNum track by num.id"
+                                    constructor='true'
+                                    styles="styles"
+                                    reload="reload"
+                                    ng-change="checkInfo()"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span5">
+                <!--   ШИРИНА     -->
+                <h4 class="title">Ширина информера</h4>
+                <div class="row">
+                    <div class="span3">
+                        <label class="label">Ширина</label>
+                        <div class="input">
+                            <input
+                                    class='span3 inputbox'
+                                    id="riaBanner_width"
+                                    constructor="true"
+                                    ng-model="info.filters.riaBanner_width"
+                                    styles="styles"
+                                    reload="reload"
+                                    ng-blur="checkInfo()"
+                                    checkInfo="checkInfo()"/>
+                        </div>
+                    </div>
+
+
+
+                    <div id="widthError" class="span4 hide" style="margin-top: 25px">
+                        <span class="description-field" style="color: #AFAFAF;
+                        font-size: 12px;
+                        padding-left: 10px;margin-top: 20px">
+                            <span class="red">Минимальный размер тизера - 120px</span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <style id="styles"></style>
+
+        <div class="preview-search-form preview">
+            <infoblock></infoblock>
+        </div>
+        <br/>
+        <input id="tizerWidthId" name="InformerForm[filters][riaTizer_width]" ng-model="info.filters.riaTizer_width" type="hidden"/>
+
+        <div class="form-group has-feedback">
+            <button class="btn btn-success inputbox" ng-click="infoSave()">Сохранить</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+
+    </form>
+</div>
+</div>

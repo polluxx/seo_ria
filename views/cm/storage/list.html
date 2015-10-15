@@ -65,6 +65,9 @@
                            <p ng-repeat="error in pretitle.$errors['title']">{{error}}</p>
                        </div>
                     </span>
+                    <span>
+                        <input placeholder="новая идея" type="text" class="add-pretitle" keypressed="addPretitle(item, parent)" parentItem="idea" />
+                    </span>
                 </td>
                 <td class="idea-pretitles">
                     <span ng-repeat="pretitle in idea.pretitles" ng-show="archive != undefined && pretitle.workType != undefined || archive == undefined && pretitle.workType == undefined">

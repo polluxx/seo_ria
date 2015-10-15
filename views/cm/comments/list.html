@@ -1,6 +1,8 @@
 
 <div loading-container="tableParams.settings().$loading">
 
+    <script src="http://cobrand.ria.com/js/partners/loader.js"></script>
+
     <div class="top-block">
         <div class="search-box">
             <input type="text" placeholder="поиск" ng-model="tableParams.q" class="searchbox head-page" searchable="search()"/>
@@ -25,7 +27,7 @@
             </td>
 
             <td data-title="'Статья'" sortable="'couchbaseDocument.doc.article'">
-                <span>{{comment.articleName}}</span>
+                <a href="{{comment.articleInfo.url}}" target="_blank"><span>{{comment.articleInfo.title}}</span></a>
             </td>
 
             <td data-title="'Сообщение'">

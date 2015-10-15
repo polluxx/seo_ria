@@ -15,6 +15,7 @@ define([
         $scope.idea.isNew = true;
         $scope.$loading = false;
         $scope.idea.pretitles = [];
+        $scope.tagItem = "";
 
         var userIndex, rubrics=[], pretitleItem;
         $rootScope.$watch("currentProject", function() {
@@ -40,9 +41,9 @@ define([
 
             function getUserIndex(element, index) {
                 if(+element.id == +bzUser.userdata.id) {
-                    return index;
+                    return true;
                 }
-                return -1;
+
             }
 
             userIndex = $scope.authors.findIndex(getUserIndex);
@@ -64,20 +65,20 @@ define([
             //$scope.idea.pretitles.findElm(getPretitleIndex, pretitleItem);
             if($scope.idea.pretitles.findElm(getPretitleIndex, pretitleItem) != -1 || !pretitle.length) return;
 
-
             $scope.idea.pretitles.push(pretitleItem);
         };
 
-        document.querySelector(".add-pretitle").addEventListener("keypress", function(e) {
+        angular.element(".add-pretitle").on("keypress", function(e) {
             var code = e.which || e.keyCode;
 
             if(code != 13) return;
             e.preventDefault();
             $scope.addPretitle(document.querySelector(".add-pretitle").value);
-
+            $scope.$apply();
+            document.querySelector(".add-pretitle").value = "";
         });
 
-        $scope.saveIdea = function() {
+        $scope.saveIdea = function(withoutRedirect) {
             rubrics = [];
             $scope.idea.rubrics.forEach(function(item, index) {
                 if(item === null || item === false) return;
@@ -94,8 +95,10 @@ define([
                     return;
                 }
 
-                alertify.success("Добавлена идея");
-                $location.path("/storage/list");
+                if(!withoutRedirect) {
+                    alertify.success("Добавлена идея");
+                    $location.path("/storage/list");
+                }
             })
         };
 
@@ -112,6 +115,7 @@ define([
                 var indexPretitle = $scope.idea.pretitles.findElm(getPretitleIndex, pretitle);
                 $scope.idea.pretitles.splice(indexPretitle, 1);
                 $scope.$apply();
+                $scope.saveIdea(true);
             });
         };
 
