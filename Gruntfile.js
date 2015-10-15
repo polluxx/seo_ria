@@ -227,7 +227,8 @@ module.exports = function (grunt) {
                 files: ['views/**/*.html'],
                 tasks: ['i18nextract'],
                 options: {
-                    livereload: true
+                    livereload: true,
+                    timestamp: true
                 }
             },
             js: {

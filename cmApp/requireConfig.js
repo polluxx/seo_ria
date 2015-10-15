@@ -170,7 +170,7 @@ requirejs.config({
     priority: [
         'jquery', 'angular'
     ],
-    urlArgs: 'v=1.3'
+    urlArgs: 'v=1.5'
 });
 
 require(['_cm_bootstrap']);
