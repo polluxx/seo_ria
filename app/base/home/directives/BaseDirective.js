@@ -95,7 +95,12 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
 
                                 if(!$rootScope.progresses[msg.progress.target]) $rootScope.progressesCount++;
 
-                                msg.progress.percentile = Math.round((msg.progress.data.process / msg.progress.data.total)*100);
+                                //msg.progress.percentile = Math.round((msg.progress.data.process / msg.progress.data.total)*100);
+                                //if(msg.progress.data.processError !== undefined) {
+                                //    msg.progress.percentileError = Math.round((msg.progress.data.processError / msg.progress.data.total) * 100);
+                                //}
+                                //msg.progress.totalProgress = (msg.progress.percentile || 0)+(msg.progress.percentileError || 0)
+
 
                                 $rootScope.progresses[msg.progress.target] = msg.progress;
 

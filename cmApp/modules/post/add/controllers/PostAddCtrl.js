@@ -498,12 +498,14 @@ define([
                 slideBtn.addClass('slided');
                 angular.element('.right-add-block').addClass('inactive');
                 angular.element('.left-add-block').css("width", articleWidth+"px");
+                angular.element('.left-add-block').addClass("expanded");
             } else {
                 slideBtn.removeClass('glyphicon-resize-small');
                 slideBtn.addClass('glyphicon-resize-full');
                 slideBtn.removeClass('slided');
                 angular.element('.right-add-block').removeClass('inactive');
                 angular.element('.left-add-block').css("width", defaultWidth+"px");
+                angular.element('.left-add-block').removeClass("expanded");
             }
         };
 

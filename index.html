@@ -86,10 +86,11 @@
                         <a href="#">
                             <div class="clearfix">
                                 <span class="pull-left">{{progress.message || progress.target}}</span>
-                                <small class="pull-right text-muted">{{progress.percentile}}%</small>
+                                <small class="pull-right text-muted">{{progress.totalProgress}}%</small>
                             </div>
                             <div class="progress progress-striped" ng-class="{'active':progress.percentile<100}">
                                 <div class="progress-bar progress-bar-success " ng-style="{width:progress.percentile+'%'}"></div>
+                                <div ng-show="progress.percentileError" class="progress-bar progress-bar-danger" ng-style="{width:progress.percentileError+'%'}"></div>
                             </div>
                         </a>
                     </li>

@@ -2059,3 +2059,8 @@ input[type=checkbox], input[type=radio] {
 .add-resizer.glyphicon.slided {
     right: 0;
 }
+.left-add-block.expanded {
+    margin: 0 auto;
+    float: inherit;
+    display: block;
+}
