@@ -494,15 +494,15 @@ define([
 
             if(slideBtn.hasClass('glyphicon-resize-full')) {
                 slideBtn.removeClass('glyphicon-resize-full');
-                slideBtn.addClass('glyphicon-resize-small');
-                slideBtn.addClass('slided');
+                slideBtn.addClass('glyphicon-resize-small', 'slided');
+
                 angular.element('.right-add-block').addClass('inactive');
                 angular.element('.left-add-block').css("width", articleWidth+"px");
                 angular.element('.left-add-block').addClass("expanded");
             } else {
-                slideBtn.removeClass('glyphicon-resize-small');
+                slideBtn.removeClass('glyphicon-resize-small', 'slided');
                 slideBtn.addClass('glyphicon-resize-full');
-                slideBtn.removeClass('slided');
+
                 angular.element('.right-add-block').removeClass('inactive');
                 angular.element('.left-add-block').css("width", defaultWidth+"px");
                 angular.element('.left-add-block').removeClass("expanded");
