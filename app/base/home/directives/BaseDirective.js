@@ -69,9 +69,10 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
 
 
                 scope.subcribeWebsock = function() {
-                    var socket = io('http://localhost:8002/');
+                    var socket = io('http://cm.ria.com:8002/');
                     socket.on('connect', function () {
-                        socket.send('hi');
+
+
                         var progressKeys, progressLast;
                         socket.on('message', function (msg) {
 
