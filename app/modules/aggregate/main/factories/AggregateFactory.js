@@ -4,7 +4,10 @@ define([
     'use strict';
 
     module.factory("AggregateFactory", ["$resource", "bzConfig", function($resource, bzConfig) {
-        var api = "http://localhost:3000/api";
+
+
+        var api = "http://cm.ria.com:3138/api";
+        //var api = "http://localhost:3000/api";
         return $resource("http://localhost:10101/act", {}, {
             top: {
                 method:"GET",
