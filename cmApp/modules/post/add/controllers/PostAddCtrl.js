@@ -36,7 +36,7 @@ define([
         $scope.autoTags = [];
         $scope.params.subcategories = [{id:'0', name:"Выберите категорию"}];
         $scope.params.defaultOptions = $scope.params.options = [{id:'0', name:"Выберите подкатегорию"}];
-        $scope.doc.parameters.subcategory.id = $scope.params.subcategories[0];
+        $scope.doc.parameters.subcategory = $scope.params.subcategories[0];
         $scope.doc.parameters.option = $scope.params.options[0];
 
 
@@ -45,8 +45,6 @@ define([
             infoLink = bzConfig.api()+"/cm/informer";
         var params = {"json":true, "forDeep":true},
             subcategoryIndex = 0;
-
-
 
         //
         var svgshape = document.getElementById( 'notification-shape' );
