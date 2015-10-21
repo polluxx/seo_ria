@@ -41,7 +41,8 @@ define([
                     parent: "@parent",
                     targetPath:    "@targetPath"
                 },
-                url: 'http://localhost:3000/parser/parse/checker'
+                //url: 'http://localhost:3000/parser/parse/checker'
+                url: 'http://cm.ria.com:3138/parser/parse/checker'
             }
         });
     }]);
