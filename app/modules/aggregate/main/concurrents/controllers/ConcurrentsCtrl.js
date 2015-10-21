@@ -97,7 +97,7 @@ define([
 
 
                 this.tableParams.parameters(this.params);
-                if(this.params.newCheck === true) this.tableParams.reload();
+
             },
             processed: function() {
 
