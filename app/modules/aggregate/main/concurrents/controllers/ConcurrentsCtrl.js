@@ -88,12 +88,13 @@ define([
 
         // METHODS
         angular.extend($scope, {
-            start: function() {
+            start: function(isReload) {
                 this.params.target = $routeParams.target;
                 if(this.keywords !== undefined) this.params.keywords = getKeywords(this.keywords);
-                this.params.newCheck = $scope.updated;
+                this.params.newCheck = isReload || $scope.updated;
                 $location.search(this.params);
                 console.log(this.params);
+
 
                 this.tableParams.parameters(this.params);
                 if(this.params.newCheck === true) this.tableParams.reload();
