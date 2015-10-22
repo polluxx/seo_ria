@@ -83,7 +83,8 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                                 staсk(msg.log, $rootScope.notifications, 10);
                                 //alerts(msg.log.level)(msg.log.message);
                                 if(msg.log.data.update !== undefined) {
-                                    scope.start();
+                                    var updater = new Event('updated');
+                                    document.dispatchEvent(updater);
                                 }
 
                                 if(msg.log.data.queriesLeft !== undefined) {

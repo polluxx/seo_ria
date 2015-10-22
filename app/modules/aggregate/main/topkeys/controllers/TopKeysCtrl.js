@@ -277,6 +277,19 @@ define([
             if(e.keyCode === 16) $scope.shiftPressed = false;
         });
 
+        // updater
+        var listener = function(e) {
+            console.info('update event: ' + new Date());
+            $scope.update = null;
+            $scope.start();
+        };
+
+        document.addEventListener('updated', listener, true);
+        $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+            if("aggregateTopkeys" != current.$$route.segment) return;
+            document.removeEventListener('updated', listener, true);
+        });
+
         // init search
         if($scope.target) $scope.start();
 
