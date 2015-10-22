@@ -4,7 +4,7 @@ define([
 ], function (module, alertify) {
     'use strict';
 
-    module.controller('ConcurrentsCtrl', ['$scope', '$injector', 'bzUser', '$routeParams', '$location', 'AggregateFactory', 'ngTableParams', function($scope, $injector, bzUser, $routeParams, $location, AggregateFactory, ngTableParams) {
+    module.controller('ConcurrentsCtrl', ['$scope', '$injector', 'bzUser', '$routeParams', '$location', 'AggregateFactory', 'ngTableParams', '$rootScope', function($scope, $injector, bzUser, $routeParams, $location, AggregateFactory, ngTableParams, $rootScope) {
         //$injector.invoke(AggregateMainCtrl, this, {
         //    $scope: $scope
         //});
