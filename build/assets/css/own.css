@@ -519,7 +519,7 @@ path.link {
     text-align: left;
     /*height: 65px;*/
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out;
     border-bottom: 1px solid #E0DFDF;
@@ -2062,5 +2062,21 @@ input[type=checkbox], input[type=radio] {
 .left-add-block.expanded {
     margin: 0 auto;
     float: inherit;
+    display: block;
+}
+
+.child-statistic {
+    position: absolute;
+    height: auto;
+    background: white;
+    top: 80px;
+    z-index: 9999;
+    padding: 10px;
+    display: none;
+}
+.child-statistic .section {
+    padding-bottom: 10px;
+}
+.list-box:hover .child-statistic {
     display: block;
 }

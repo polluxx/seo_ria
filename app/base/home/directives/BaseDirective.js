@@ -484,11 +484,13 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                        name: "Filters",
                        type: "filter",
                        fields: [
-                           {id:"title", name:"Title"},
-                           {id:"description", name:"Description"},
-                           {id:"h1", name:"H1"},
-                           {id:"seotext", name:"Seo text"},
-                           {id:"indexed", name:"Indexed"}
+                           {id:"fill.title", name:"Title"},
+                           {id:"fill.description", name:"Description"},
+                           {id:"fill.h1", name:"H1"},
+                           {id:"fill.seotext", name:"Seo text"},
+                           {id:"fill.indexed", name:"Indexed"},
+                           {id:"semantic", name:"есть СЯ"}
+
                        ],
                        types: [
                            {id:"exists", name:"Заполнено"},
@@ -500,11 +502,11 @@ define(['base/home/module', 'alertify', 'io'], function (module, alertify, io) {
                        name: "Sorting",
                        type: "sorting",
                        fields: [
-                           {id:"title", name:"Title"},
-                           {id:"description", name:"Description"},
-                           {id:"h1", name:"H1"},
-                           {id:"seotext", name:"Seo text"},
-                           {id:"indexed", name:"Indexed"}
+                           {id:"fill.title", name:"Title"},
+                           {id:"fill.description", name:"Description"},
+                           {id:"fill.h1", name:"H1"},
+                           {id:"fill.seotext", name:"Seo text"},
+                           {id:"fill.indexed", name:"Indexed"}
                        ],
                        types: [
                            {id:"desc", name:"По убыванию"},

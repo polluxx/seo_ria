@@ -40,11 +40,32 @@
 
             <div class="indexed" ng-if="!link.hasChilds"><span>indexed</span><span class="available glyphicon" ng-class="{'glyphicon-ok success':link.indexed==true, 'glyphicon-remove delete':link.indexed==0, 'glyphicon-time':link.indexed==undefined}"></span></div>
 
-            <div class="indexed" ng-if="!link.hasChilds"><span class="available glyphicon glyphicon-cog"></span></div>
+            <div class="indexed" ng-if="link.statistic.ru"><span class="available glyphicon glyphicon-cog"></span></div>
+
+            <div class="indexed" ng-if="link.semantic"><span>есть СЯ</span><span class="available glyphicon glyphicon-ok success" ></span></div>
+
 
             <div class="updated-link" ng-if="link.updated">
                 <div class="glyphicon glyphicon-time list-time" style="padding-right: 5px !important;"></div>
                 <div class="list-time">{{link.updated}}</div>
+            </div>
+        </div>
+
+        <div class="child-statistic outer" ng-if="link.statistic.ru">
+            <div class="section">
+                <div ng-class="{'text-success':link.statistic.ru.title, 'text-danger':!link.statistic.ru.title}">title: {{link.statistic.ru.title}}</div>
+                <div ng-class="{'text-success':link.statistic.ru.description, 'text-danger':!link.statistic.ru.description}">description: {{link.statistic.ru.description}}</div>
+                <div ng-class="{'text-success':link.statistic.ru.seotext, 'text-danger':!link.statistic.ru.seotext}">seotext: {{link.statistic.ru.seotext}}</div>
+                <div ng-class="{'text-success':link.statistic.ru.h1, 'text-danger':!link.statistic.ru.h1}">H1: {{link.statistic.ru.h1}}</div>
+            </div>
+            <div class="section">
+                Canonical:
+                <div ng-repeat="canonical in link.statistic.ru.canonical" style="font-size: 12px;color: #5B900A;">{{canonical}}</div>
+            </div>
+            <div class="section">
+                <div>images: <strong>{{link.statistic.ru.img.src}}</strong></div>
+                <div>alts: {{link.statistic.ru.img.alt}}</div>
+                <div>titles: {{link.statistic.ru.img.title}}</div>
             </div>
         </div>
 
