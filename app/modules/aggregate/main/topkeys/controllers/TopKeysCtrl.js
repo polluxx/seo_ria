@@ -148,7 +148,7 @@ define([
 
                 console.log(url);
                 alertify.log("Запрос успешно поставлен в очередь");
-                //$location.url(url);
+                $location.url(url);
             },
             checkboxes: function(){
                 var self = this;
@@ -286,7 +286,7 @@ define([
 
         document.addEventListener('updated', listener, true);
         $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-            if("aggregateTopkeys" != current.$$route.segment) return;
+            if(!~["aggregateTopkeys", "aggregateRequests"].indexOf(current.$$route.segment)) return;
             document.removeEventListener('updated', listener, true);
         });
 
