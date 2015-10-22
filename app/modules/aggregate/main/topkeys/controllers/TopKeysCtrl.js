@@ -148,7 +148,7 @@ define([
 
                 console.log(url);
                 alertify.log("Запрос успешно поставлен в очередь");
-                $location.url(url);
+                //$location.url(url);
             },
             checkboxes: function(){
                 var self = this;
