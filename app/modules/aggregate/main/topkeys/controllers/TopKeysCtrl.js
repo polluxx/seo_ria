@@ -250,7 +250,7 @@ define([
             },
             processed: function() {
                 if($scope.currentAction !== 'requests') return;
-
+                return;
                 var params = {},
                     query = "MATCH (n:Link)-[:CONTAINS]->()-[:TOP10]-(concurrent)-[:CONTAINS]-() WHERE n.src = '"+$scope.target+"' OPTIONAL MATCH (n:Link)-[:CONTAINS]->()-[:TOP10]-(con) WHERE n.src = '"+$scope.target+"' RETURN  count(distinct concurrent) as c , count(distinct con) as t";
                 params.query = query;
